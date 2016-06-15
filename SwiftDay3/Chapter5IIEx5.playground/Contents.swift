@@ -20,17 +20,38 @@ func diagonalMatrix(array: Array<Array<Int>>) -> Array<Array<Int>> {
     var result = array
     for i in 0..<result.count {
         var max = result[i][0]
+        var index = 0
         for j in 1..<result.count {
             if result[i][j] > max {
                 max = result[i][j]
-            }
-            if j == result.count - 1 {
-                
+                index = j
             }
         }
+        result[i][index] = result[i][result.count/2]
+        result[i][result.count/2] = max
     }
     return result
 }
+
 let array = declareTwoDimensionalArray(3, rows: 3)
 
-diagonalMatrix(array)
+//diagonalMatrix(array)
+
+func minInRowToLast(array: Array<Array<Int>>) -> Array<Array<Int>> {
+    var result = array
+    for i in 0..<result.count {
+        var min = result[i][0]
+        var index = 0
+        for j in 1..<result.count {
+            if result[i][j] < min {
+                min = result[i][j]
+                index = j
+            }
+        }
+        result[i][index] = result[i][result.count - 1]
+        result[i][result.count - 1] = min
+    }
+    return result
+}
+
+minInRowToLast(array)
