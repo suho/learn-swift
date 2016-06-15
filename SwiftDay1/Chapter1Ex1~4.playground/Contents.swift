@@ -17,7 +17,7 @@ print("Bán kính: \(banKinh)")
 print("Thể Tích Hình Cầu = \(theTich), Diện Tích Hình Cầu = \(dienTich)")
 
 
-
+//Bai tap 2
 print("----Bài 2----")
 func giaTriBieuThuc(bien: (Double, Double)) -> Double {
     let tu = log(fabs(bien.0*bien.0 - bien.1*bien.1))/log(5) + atan(bien.0 + bien.1)
