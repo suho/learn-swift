@@ -13,6 +13,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var moveObject: UIImageView!
     
     var location = CGPoint(x: 0, y: 0)
+    var locationOld = CGPoint(x: 0, y: 0)
+    
+    var touchOld: UITouch! = nil
+    var touch: UITouch! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +28,26 @@ class HomeViewController: UIViewController {
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let touch: UITouch! = touches.first! as UITouch
-        location = touch.locationInView(self.view)
-        if isTouchedObject(location) {
-            self.moveObject.center = location
+        if touch == nil {
+            touch = touches.first! as UITouch
+            location = touch.locationInView(self.view)
+            
+            touchOld = touch
+            locationOld = touchOld.locationInView(self.view)
+            
         } else {
-            return
+            touch = touches.first! as UITouch
+            location = touch.locationInView(self.view)
+            
+            if touch != touchOld {
+                touchOld = touch
+                locationOld = touchOld.locationInView(self.view)
+                self.move()
+            } else {
+                self.move()
+            }
+
+            
         }
     }
     
@@ -49,6 +67,24 @@ class HomeViewController: UIViewController {
             return true
         } else {
             return false
+        }
+    }
+    
+    func move() {
+        if isTouchedObject(location) {
+            
+            let moveX = location.x - locationOld.x
+            let moveY = location.y - locationOld.y
+            
+            let imageX = self.moveObject.frame.origin.x
+            let imageY = self.moveObject.frame.origin.y
+            
+            self.moveObject.frame.origin.x = imageX + moveX
+            self.moveObject.frame.origin.y = imageY + moveY
+            
+            locationOld = location
+        } else {
+            return
         }
     }
     
