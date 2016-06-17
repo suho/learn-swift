@@ -55,7 +55,7 @@ class HomeViewController: UIViewController {
     
     
     func checkLogin(username: String, password: String) -> Bool {
-        if username == "admin" && password == "admin" {
+        if (username == "admin" && password == "admin") || (username == "hovansu" && password == "hovansu") {
             return true
         } else {
             return false
