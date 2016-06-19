@@ -65,31 +65,48 @@ class HomeViewController: UIViewController {
         let imageY = self.ball.center.y
         
         let bottomFullBar = self.disableView.frame.size.height
-            
-        print(imageY)
         
-        
-        if !(imageY < 0 || imageY > bottomFullBar) {
+        if isTouchedObject(location) {
+            if !(imageY < 0 || imageY > bottomFullBar) {
                 
-            self.ball.center.y = imageY + moveY
-            self.availableView.frame.origin.y = imageY + moveY
-            self.availableView.frame.size.height -= moveY
-            let heightAvailable = self.availableView.frame.size.height
-            let heightDisable = self.disableView.frame.size.height
-            let percent = (heightAvailable/heightDisable)*100
-            self.lblPercent.text = "\(percent)%"
-            
-
-        } else {
-            if imageY < 0 {
-                self.ball.center.y = 0
-                self.availableView.frame.size.height = self.disableView.frame.size.height
+                self.ball.center.y = imageY + moveY
+                self.availableView.frame.origin.y = imageY + moveY
+                self.availableView.frame.size.height -= moveY
+                let heightAvailable = self.availableView.frame.size.height
+                let heightDisable = self.disableView.frame.size.height
+                let percent = (heightAvailable/heightDisable)*100
+                self.lblPercent.text = "\(percent)%"
+                
+                
             } else {
-                self.ball.center.y = bottomFullBar
-                self.availableView.frame.size.height = 0
+                if imageY < 0 {
+                    self.ball.center.y = 0
+                    self.availableView.frame.size.height = self.disableView.frame.size.height
+                } else {
+                    self.ball.center.y = bottomFullBar
+                    self.availableView.frame.size.height = 0
+                }
             }
+            locationOld = location
+        } else {
+            return
         }
-        locationOld = location
+        
+    }
+    
+    func isTouchedObject(touch: CGPoint) -> Bool {
+        let frameImage = self.disableView.frame
+        let leftBall = frameImage.origin.x + self.ball.frame.origin.x
+        let widthBall = self.ball.frame.size.width
+        let topBall = frameImage.origin.y + self.ball.frame.origin.y
+        let heightBall = self.ball.frame.size.width
+        
+        
+        if (touch.x >= leftBall) && (touch.x <= widthBall + leftBall) && (touch.y >= topBall) && (touch.y <= heightBall + topBall) {
+            return true
+        } else {
+            return false
+        }
     }
 
 }
