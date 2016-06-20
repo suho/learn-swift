@@ -15,12 +15,14 @@ class HomeViewController: UIViewController {
     var isTypingNumber = false
     var resultNumber = 0
     var calculation: String?
+    var lastNumber: Int? = nil
     
     @IBAction func btnAc(sender: AnyObject) {
         self.txtFieldResult.text = "0"
         self.isTypingNumber = false
         self.resultNumber = 0
         self.calculation = ""
+        self.lastNumber = nil
 
     }
     @IBAction func btnNumber(sender: AnyObject) {
@@ -30,13 +32,15 @@ class HomeViewController: UIViewController {
                 return
             } else {
                 self.txtFieldResult.text = self.txtFieldResult.text! + number!!
+                self.lastNumber = Int(self.txtFieldResult.text!)!
             }
         } else {
-            self.txtFieldResult.text = "0"
+            //self.txtFieldResult.text = "0"
             if number == "0" {
                 return
             } else {
                 self.txtFieldResult.text = number
+                self.lastNumber = Int(self.txtFieldResult.text!)!
                 self.isTypingNumber = true
             }
         }
@@ -82,6 +86,7 @@ class HomeViewController: UIViewController {
                 }
             } else {
                 self.calculation = "-"
+                self.lastNumber = Int(self.txtFieldResult.text!)!
                 return
             }
             
@@ -90,18 +95,35 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func btnEquals(sender: AnyObject) {
-        self.isTypingNumber = false
-        switch self.calculation {
-        case "+"?:
-            self.resultNumber += Int(self.txtFieldResult.text!)!
-        case "-"?:
-            self.resultNumber -= Int(self.txtFieldResult.text!)!
-        default:
-            self.resultNumber += Int(self.txtFieldResult.text!)!
+        if (calculation == "+" || calculation == "-") && !isTypingNumber {
+             self.lastNumber = self.resultNumber
+            switch self.calculation {
+            case "+"?:
+                calculation = "+="
+            default:
+                calculation = "-="
+            }
+        }
+        if calculation != "" {
+            switch self.calculation {
+            case "+"?:
+                self.resultNumber += Int(self.txtFieldResult.text!)!
+                self.calculation = "+="
+            case "-"?:
+                self.resultNumber -= Int(self.txtFieldResult.text!)!
+                self.calculation = "-="
+            case "+="?:
+                self.resultNumber += self.lastNumber!
+                self.calculation = "+="
+            case "-="?:
+                self.resultNumber -= self.lastNumber!
+                self.calculation = "-="
+            default:
+                self.resultNumber += Int(self.txtFieldResult.text!)!
+            }
         }
         self.txtFieldResult.text = "\(resultNumber)"
         self.isTypingNumber = false
-        self.calculation = ""
     }
     
     override func viewDidLoad() {
