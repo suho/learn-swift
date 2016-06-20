@@ -96,7 +96,7 @@ class HomeViewController: UIViewController {
     
     @IBAction func btnEquals(sender: AnyObject) {
         if (calculation == "+" || calculation == "-") && !isTypingNumber {
-             self.lastNumber = self.resultNumber
+            self.lastNumber = self.resultNumber
             switch self.calculation {
             case "+"?:
                 calculation = "+="
