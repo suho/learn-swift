@@ -68,6 +68,7 @@ extension Array {
 
 increaseArray.random()
 
+["a", "b", "c", "d", "e"].random()
 
 
 
