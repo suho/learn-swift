@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,17 +13,17 @@
             <rect key="frame" x="0.0" y="0.0" width="200" height="240"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3VN-Fc-GPu">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3VN-Fc-GPu">
                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yW2-pT-buz">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yW2-pT-buz">
                     <rect key="frame" x="0.0" y="200" width="200" height="40"/>
                     <color key="backgroundColor" red="1" green="0.84465495747479535" blue="0.6038049023592309" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Foz-Lu-dpo">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Foz-Lu-dpo">
                     <rect key="frame" x="0.0" y="0.0" width="200" height="240"/>
                     <connections>
                         <action selector="tapButton:" destination="wMd-G6-Kp5" eventType="touchUpInside" id="IQW-jP-o31"/>
@@ -29,12 +31,35 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3VN-Fc-GPu" firstAttribute="height" secondItem="wMd-G6-Kp5" secondAttribute="height" multiplier="5/6" id="9Y9-Ch-sk9"/>
+                <constraint firstItem="yW2-pT-buz" firstAttribute="height" secondItem="wMd-G6-Kp5" secondAttribute="height" multiplier="1/6" id="AVa-a5-dz5"/>
+                <constraint firstItem="yW2-pT-buz" firstAttribute="centerX" secondItem="wMd-G6-Kp5" secondAttribute="centerX" id="GzO-b0-HoT"/>
+                <constraint firstItem="3VN-Fc-GPu" firstAttribute="centerX" secondItem="wMd-G6-Kp5" secondAttribute="centerX" id="QJq-C5-iLY"/>
+                <constraint firstItem="Foz-Lu-dpo" firstAttribute="top" secondItem="3VN-Fc-GPu" secondAttribute="top" id="Sqe-XL-pkf"/>
+                <constraint firstItem="Foz-Lu-dpo" firstAttribute="top" secondItem="wMd-G6-Kp5" secondAttribute="top" id="T7g-1V-dJK"/>
+                <constraint firstItem="3VN-Fc-GPu" firstAttribute="top" secondItem="wMd-G6-Kp5" secondAttribute="top" id="VR7-lh-dhI"/>
+                <constraint firstItem="Foz-Lu-dpo" firstAttribute="trailing" secondItem="3VN-Fc-GPu" secondAttribute="trailing" id="W3J-JN-3la"/>
+                <constraint firstItem="Foz-Lu-dpo" firstAttribute="leading" secondItem="yW2-pT-buz" secondAttribute="leading" id="WSA-Cw-yRs"/>
+                <constraint firstItem="3VN-Fc-GPu" firstAttribute="width" secondItem="wMd-G6-Kp5" secondAttribute="height" multiplier="5:6" id="Xbo-5n-XvV"/>
+                <constraint firstItem="Foz-Lu-dpo" firstAttribute="leading" secondItem="wMd-G6-Kp5" secondAttribute="leading" id="cyD-NP-RU8"/>
+                <constraint firstItem="yW2-pT-buz" firstAttribute="width" secondItem="wMd-G6-Kp5" secondAttribute="height" multiplier="5:6" id="eUz-Ue-z7Q"/>
+                <constraint firstItem="Foz-Lu-dpo" firstAttribute="leading" secondItem="3VN-Fc-GPu" secondAttribute="leading" id="eYl-QZ-YC8"/>
+                <constraint firstItem="Foz-Lu-dpo" firstAttribute="height" secondItem="wMd-G6-Kp5" secondAttribute="height" id="gox-Ce-H7d"/>
+                <constraint firstItem="3VN-Fc-GPu" firstAttribute="width" secondItem="wMd-G6-Kp5" secondAttribute="width" id="jF2-2N-1j5"/>
+                <constraint firstItem="Foz-Lu-dpo" firstAttribute="width" secondItem="wMd-G6-Kp5" secondAttribute="height" multiplier="5:6" id="kAM-XZ-hqy"/>
+                <constraint firstItem="Foz-Lu-dpo" firstAttribute="trailing" secondItem="yW2-pT-buz" secondAttribute="trailing" id="kfz-oX-EVh"/>
+                <constraint firstItem="3VN-Fc-GPu" firstAttribute="leading" secondItem="wMd-G6-Kp5" secondAttribute="leading" id="oQR-qv-M1i"/>
+                <constraint firstItem="Foz-Lu-dpo" firstAttribute="bottom" secondItem="yW2-pT-buz" secondAttribute="bottom" id="s6M-Yv-tEO"/>
+                <constraint firstItem="Foz-Lu-dpo" firstAttribute="width" secondItem="wMd-G6-Kp5" secondAttribute="width" id="ucY-gV-orK"/>
+                <constraint firstItem="yW2-pT-buz" firstAttribute="width" secondItem="wMd-G6-Kp5" secondAttribute="width" id="y92-id-FX8"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="labelMyName" destination="yW2-pT-buz" id="yfq-eh-cve"/>
                 <outlet property="myAvatarImage" destination="3VN-Fc-GPu" id="LEQ-0Y-osw"/>
             </connections>
-            <point key="canvasLocation" x="-782" y="-68"/>
+            <point key="canvasLocation" x="-835" y="-57"/>
         </view>
     </objects>
 </document>
