@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10117"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Exercise3" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qff-eI-0Ps" userLabel="First">
+                    <rect key="frame" x="10" y="211" width="145" height="145"/>
+                    <color key="backgroundColor" red="0.2484432385" green="0.59314147110000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="qff-eI-0Ps" secondAttribute="height" multiplier="1:1" id="fZI-0U-FfU"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6x0-uC-8Xz" userLabel="Second">
+                    <rect key="frame" x="165" y="211.5" width="145" height="145"/>
+                    <color key="backgroundColor" red="1" green="0.84465495749999997" blue="0.60380490239999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="6x0-uC-8Xz" secondAttribute="height" multiplier="1:1" id="fde-Yd-UCU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="qff-eI-0Ps" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Img-iX-Uhk"/>
+                <constraint firstItem="6x0-uC-8Xz" firstAttribute="leading" secondItem="qff-eI-0Ps" secondAttribute="trailing" constant="10" id="Ngp-5G-O3p"/>
+                <constraint firstAttribute="trailing" secondItem="6x0-uC-8Xz" secondAttribute="trailing" constant="10" id="R00-m9-kGd"/>
+                <constraint firstItem="6x0-uC-8Xz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Z35-t6-alK"/>
+                <constraint firstItem="qff-eI-0Ps" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="daj-Au-SEX"/>
+                <constraint firstItem="6x0-uC-8Xz" firstAttribute="leading" secondItem="qff-eI-0Ps" secondAttribute="trailing" constant="10" id="i98-G8-S0Y"/>
+                <constraint firstItem="qff-eI-0Ps" firstAttribute="width" secondItem="6x0-uC-8Xz" secondAttribute="width" id="iNQ-xB-UTO"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

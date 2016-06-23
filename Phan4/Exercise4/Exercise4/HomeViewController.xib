@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10117"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Exercise4" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQG-FJ-aSC">
+                    <rect key="frame" x="45" y="234" width="230" height="100"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ywb-Vl-ecY" userLabel="Second">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                            <color key="backgroundColor" red="0.2484432385" green="0.59314147110000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="CzG-an-uto"/>
+                                <constraint firstAttribute="width" constant="100" id="L3y-tu-Eqg"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fpc-g8-1us" userLabel="First">
+                            <rect key="frame" x="130" y="0.0" width="100" height="100"/>
+                            <color key="backgroundColor" red="1" green="0.84465495749999997" blue="0.60380490239999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="kyX-7G-mLy"/>
+                                <constraint firstAttribute="width" constant="100" id="rZ3-j5-9SM"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Ywb-Vl-ecY" firstAttribute="leading" secondItem="vQG-FJ-aSC" secondAttribute="leading" id="8vc-Lw-KpV"/>
+                        <constraint firstAttribute="bottom" secondItem="Ywb-Vl-ecY" secondAttribute="bottom" id="Jcs-T7-a4W"/>
+                        <constraint firstItem="Fpc-g8-1us" firstAttribute="leading" secondItem="Ywb-Vl-ecY" secondAttribute="trailing" constant="30" id="aDO-bG-b2S"/>
+                        <constraint firstItem="Ywb-Vl-ecY" firstAttribute="top" secondItem="vQG-FJ-aSC" secondAttribute="top" id="fdb-ky-F9D"/>
+                        <constraint firstAttribute="trailing" secondItem="Fpc-g8-1us" secondAttribute="trailing" id="fpn-Ms-b2j"/>
+                        <constraint firstItem="Fpc-g8-1us" firstAttribute="leading" secondItem="Ywb-Vl-ecY" secondAttribute="trailing" id="uCf-lP-Z9C"/>
+                        <constraint firstAttribute="bottom" secondItem="Fpc-g8-1us" secondAttribute="bottom" id="w12-KK-xny"/>
+                        <constraint firstItem="Fpc-g8-1us" firstAttribute="top" secondItem="vQG-FJ-aSC" secondAttribute="top" id="zrP-b8-enk"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="uCf-lP-Z9C"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vQG-FJ-aSC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="2rl-do-OeS"/>
+                <constraint firstItem="vQG-FJ-aSC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fhn-oB-ree"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
