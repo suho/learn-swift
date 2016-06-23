@@ -27,7 +27,7 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="045-mm-Ko3">
                             <rect key="frame" x="5" y="0.0" width="310" height="1217.5"/>
-                            <mutableString key="text">Ông Đinh La Thăng phát biểu như trên tại Hội nghị lần thứ 6 Ban Chấp hành Đảng bộ TPHCM khóa X, diễn ra ngày 23/6.
+                            <string key="text">Ông Đinh La Thăng phát biểu như trên tại Hội nghị lần thứ 6 Ban Chấp hành Đảng bộ TPHCM khóa X, diễn ra ngày 23/6.
 
 Bí thư Thăng cho biết, hội nghị cơ bản đồng tình tờ trình của UBND TP về tình hình kinh tế – xã hội 6 tháng đầu năm. Theo ông Thăng, kinh tế thành phố tiếp tục tăng trưởng khá (tổng sản phẩm nội địa tăng 7,47%, cùng kỳ tăng 7,22%), đầu tư trong nước có chuyển biến tích cực. Công tác quản lý đô thị, phát triển kết cấu hạ tầng, an ninh trật tự được đảm bảo. Tuy nhiên, Bí thư Thành ủy cho rằng, kinh tế thành phố vẫn còn khó khăn, một số ngành có xu hướng tăng trưởng chậm lại so với cùng kỳ, đầu tư nước ngoài giảm 35% so với cùng kỳ. Thành phố vẫn còn xảy ra tình trạng xây dựng không phép, sai phép; trật tự lòng lề đường, mỹ quan đô thị có chuyển biến nhưng chưa rõ nét; công tác quản lý đất đai còn nhiều bất cập, đấu giá đất còn chậm; kết quả giải quyết những vấn đề bức xúc của dân đặt chưa đạt yêu cầu…
 
@@ -35,7 +35,7 @@ Về nhiệm vụ, giải pháp trọng tâm 6 tháng cuối năm, ông Thăng y
 
 Ngoài ra, Bí thư Thăng cũng yêu cầu đẩy mạnh và quyết liệt thực hiện cải cách hành chính đồng bộ, chặt chẽ ở các cấp, các ngành theo hướng công khai, minh bạch, xã hội hóa các dịch vụ công; ứng dụng công nghệ thông tin trong quản lý nhà nước, tiến tới xây dựng chính quyền điện tử. Tăng cường phân cấp, ủy quyền nhằm nâng cao tính chủ động và trách nhiệm của các thủ trưởng sở, ngành, quận, huyện để khắc phục tình trạng đùn đẩy trách nhiệm.
 
-Bên cạnh đó, ông Đinh La Thăng cũng trăn trở về chất lượng công tác kiểm tra, giám sát của cấp ủy, ủy ban kiểm tra. “Phải thẳng thắn nhìn nhận công tác kiểm tra, giám sát của Đảng bộ thành phố vẫn còn những hạn chế, yếu kém mà nguyên nhân chủ yếu là do còn có cấp ủy, tổ chức đảng, người đứng đầu các đơn vị chưa quan tâm đúng mức, đầy đủ về công tác kiểm tra, giám sát”, ông Thăng nói</mutableString>
+Bên cạnh đó, ông Đinh La Thăng cũng trăn trở về chất lượng công tác kiểm tra, giám sát của cấp ủy, ủy ban kiểm tra. “Phải thẳng thắn nhìn nhận công tác kiểm tra, giám sát của Đảng bộ thành phố vẫn còn những hạn chế, yếu kém mà nguyên nhân chủ yếu là do còn có cấp ủy, tổ chức đảng, người đứng đầu các đơn vị chưa quan tâm đúng mức, đầy đủ về công tác kiểm tra, giám sát”, ông Thăng nói</string>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
