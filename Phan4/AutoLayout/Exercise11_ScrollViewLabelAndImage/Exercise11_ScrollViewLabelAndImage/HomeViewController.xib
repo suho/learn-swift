@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Exercise11_ScrollViewLabelAndImage" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CmN-bt-dVR">
+                    <rect key="frame" x="5" y="20" width="310" height="543"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIx-bO-o1Q">
+                            <rect key="frame" x="5" y="5" width="300" height="1380"/>
+                            <mutableString key="text">Giáo sư John Reilly, thuộc khoa Tâm lý học và sức khỏe của trường ĐH Strathclyde, là người đứng đầu nhóm nghiên cứu đề tài này. Ông cho biết “Số lượng thời gian trẻ em ngồi trước các màn hình đã ảnh hưởng đến sự phát triển của trẻ cả về thể chất và tinh thần trong nhiều năm qua. Sự phát triển nhanh chóng của Internet, điện thoại thông minh (smart phone), các chương trình mạng xã hội cùng với các loại game trên máy tính… đã làm gia tăng thêm tình trạng này”.
+
+Theo bản báo cáo của Scotland về các vấn đề sức khỏe cho trẻ trong năm 2016, thời gian trẻ dùng để tham gia các hoạt động thể chất đang giảm đi rõ rệt. Ngược lại, thời gian xem ti- vi và các loại máy móc khác như điện thoại và máy tính đang vượt quá giới hạn 2 tiếng một ngày.
+
+Các loại hoạt động thể chất của trẻ em giảm xuống mức dưới trung bình so với nhu cầu cần thiết sẽ không chỉ có những ảnh hưởng ngắn hạn và dài hạn đến sức khỏe và sự phát triển mà còn ảnh hưởng đến khả năng học tập của trẻ. “Trên thực tế, việc cho trẻ dành quá nhiều thời gian trước các loại màn hình vượt quá mức thời gian cho phép sẽ có ảnh hưởng tiêu cực đến sức khỏe và khả năng tiếp thu kiến thức trong học tập của trẻ.”- Giáo sư John Reilly chia sẻ thông tin.
+
+Các nhà nghiên cứu đã đưa ra những giải pháp giúp đẩy mạnh các hoạt động thể chất, trong đó tập trung vào việc tăng hoạt động ngoài trời và giảm bớt thời gian trước màn hình, điều mà trẻ có thể thực hiện hàng ngày.
+
+Có một số phương pháp để giải quyết vấn đề này đã được áp dụng ở Scotland nhằm tăng hoạt động thể chất cho học sinh như tăng thời gian hoạt động hàng ngày ở trường, giờ nghỉ giải lao hay các lớp thể dục ... Thế nhưng điều này không có quá nhiều tác dụng vì chưa thực sự tăng thời gian hoạt động ngoài trời cho trẻ. “Trẻ em nên có nhiều thời gian dành cho các hoạt động và vui chơi ngoài trời thực sự nhiều hơn nữa”- Giáo sư John Reilly cho biết.
+
+“Việc gia tăng các hoạt động ngoài trời còn có thể giúp cải thiện tinh thần và phát triển các kỹ năng giao tiếp xã hội ở trẻ tốt hơn. Ngoài việc giúp phát triển về thể chất, khi được tham gia thường xuyên vào các hoạt động và vui chơi ngoài trời sẽ mang đến ích lợi về tinh thần và kết quả học tập, giảm đi nguy cơ béo phì ở trẻ”- các nhà khoa học khẳng định.</mutableString>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aQn-1o-wr9">
+                            <rect key="frame" x="5" y="1395" width="300" height="160"/>
+                            <color key="backgroundColor" red="0.2484432385" green="0.59314147110000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="aQn-1o-wr9" secondAttribute="height" multiplier="15:8" id="06a-E9-FvS"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="aQn-1o-wr9" secondAttribute="bottom" constant="5" id="5uM-cm-LbJ"/>
+                        <constraint firstItem="NIx-bO-o1Q" firstAttribute="leading" secondItem="CmN-bt-dVR" secondAttribute="leading" constant="5" id="9hZ-gq-aMT"/>
+                        <constraint firstAttribute="trailing" secondItem="NIx-bO-o1Q" secondAttribute="trailing" constant="5" id="EXc-LQ-JF4"/>
+                        <constraint firstItem="aQn-1o-wr9" firstAttribute="top" secondItem="NIx-bO-o1Q" secondAttribute="bottom" constant="10" id="KC9-dH-OOM"/>
+                        <constraint firstAttribute="trailing" secondItem="aQn-1o-wr9" secondAttribute="trailing" constant="5" id="bn0-fh-Hj6"/>
+                        <constraint firstItem="aQn-1o-wr9" firstAttribute="leading" secondItem="CmN-bt-dVR" secondAttribute="leading" constant="5" id="fKB-c2-H3v"/>
+                        <constraint firstItem="NIx-bO-o1Q" firstAttribute="top" secondItem="CmN-bt-dVR" secondAttribute="top" constant="5" id="wRz-Y5-7vj"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="CmN-bt-dVR" secondAttribute="trailing" constant="5" id="GmF-5H-YZb"/>
+                <constraint firstAttribute="bottom" secondItem="CmN-bt-dVR" secondAttribute="bottom" constant="5" id="Pz6-1D-rsz"/>
+                <constraint firstItem="NIx-bO-o1Q" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" constant="-20" id="UxP-tL-0MR"/>
+                <constraint firstItem="CmN-bt-dVR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="YJr-eA-xiK"/>
+                <constraint firstItem="CmN-bt-dVR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="chq-zW-hAs"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UCT-7c-GtH">
+            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+            <nil key="highlightedColor"/>
+        </label>
+    </objects>
+</document>
