@@ -68,12 +68,15 @@ class CustomSliderView: UIView {
                 ballViewCenter.y = 200 - 2*CGFloat(rightPercent)
                 availableViewFrame.size.height = 2*CGFloat(rightPercent)
                 availableViewFrame.origin.y = ballViewCenter.y
+                
+                
                 UIView.animateWithDuration(2, animations: {
                     self.availableView.frame = availableViewFrame
                     self.ballView.center = ballViewCenter
                     }, completion: { (complete) in
                         self.ballLabel.text = "\(rightPercent)%"
                 })
+                
             } else {
                 if let delegate = self.delegate {
                     delegate.messageError("Value Percent More Than 0 Or Less Thanh 100!!")
