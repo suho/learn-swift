@@ -20,6 +20,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         self.studentTableView.dataSource = self
         self.studentTableView.delegate = self
+        //self.studentTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        
         
         let student1 = Student(name: "John Smith", avatar: "1", age: 18, gender: "Male")
         students.append(student1)
@@ -57,6 +59,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier)
+        
         if cell == nil {
             cell = UITableViewCell(style: .Subtitle, reuseIdentifier: self.cellIdentifier)
         }
@@ -70,8 +73,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell!.detailTextLabel?.text = "\(student.age!)\t\t\t\(student.gender!)"
         
         cell!.accessoryType = UITableViewCellAccessoryType.DetailButton
+        
 
         return cell!
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("You Select \(students[indexPath.row].name!)")
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

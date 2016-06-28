@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>avatar</key>
+		<string>1</string>
+		<key>name</key>
+		<string>John Smith</string>
+		<key>age</key>
+		<integer>18</integer>
+		<key>gender</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>2</string>
+		<key>name</key>
+		<string>Janes Beck</string>
+		<key>age</key>
+		<integer>21</integer>
+		<key>gender</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>3</string>
+		<key>name</key>
+		<string>Johnson</string>
+		<key>age</key>
+		<integer>20</integer>
+		<key>gender</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>4</string>
+		<key>name</key>
+		<string>David</string>
+		<key>age</key>
+		<integer>17</integer>
+		<key>gender</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>5</string>
+		<key>name</key>
+		<string>Nick</string>
+		<key>age</key>
+		<integer>18</integer>
+		<key>gender</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>2</string>
+		<key>name</key>
+		<string>Natalie Smith</string>
+		<key>age</key>
+		<integer>16</integer>
+		<key>gender</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>1</string>
+		<key>name</key>
+		<string>John Smith</string>
+		<key>age</key>
+		<integer>15</integer>
+		<key>gender</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>4</string>
+		<key>name</key>
+		<string>Ethan Smith</string>
+		<key>age</key>
+		<integer>14</integer>
+		<key>gender</key>
+		<true/>
+	</dict>
+</array>
+</plist>

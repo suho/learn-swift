@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="Exercise4_CustomCell_Navi" customModuleProvider="target">
+            <connections>
+                <outlet property="age" destination="1El-1E-B8g" id="S9k-a7-PAx"/>
+                <outlet property="avatar" destination="bIJ-3i-Xpc" id="bWl-of-Gra"/>
+                <outlet property="gender" destination="SeC-WC-h9d" id="D4k-HB-LZc"/>
+                <outlet property="name" destination="kon-D6-xnM" id="0hp-b8-2oW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bIJ-3i-Xpc">
+                    <rect key="frame" x="106" y="100" width="107" height="106.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="bIJ-3i-Xpc" secondAttribute="height" multiplier="1:1" id="Ojg-fk-xja"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kon-D6-xnM">
+                    <rect key="frame" x="106" y="226" width="107" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1El-1E-B8g">
+                    <rect key="frame" x="106" y="271" width="107" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="SeC-WC-h9d">
+                    <rect key="frame" x="106" y="316.5" width="107" height="29"/>
+                    <segments>
+                        <segment title="Male"/>
+                        <segment title="Female"/>
+                    </segments>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="bIJ-3i-Xpc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="5Od-nd-83P"/>
+                <constraint firstItem="1El-1E-B8g" firstAttribute="centerX" secondItem="kon-D6-xnM" secondAttribute="centerX" id="629-W0-bbm"/>
+                <constraint firstItem="bIJ-3i-Xpc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MFZ-Wa-ion"/>
+                <constraint firstItem="SeC-WC-h9d" firstAttribute="top" secondItem="1El-1E-B8g" secondAttribute="bottom" constant="15" id="Mn6-6q-T6f"/>
+                <constraint firstItem="SeC-WC-h9d" firstAttribute="width" secondItem="1El-1E-B8g" secondAttribute="width" id="Pby-ks-EKM"/>
+                <constraint firstItem="1El-1E-B8g" firstAttribute="width" secondItem="kon-D6-xnM" secondAttribute="width" id="b2y-AH-BlY"/>
+                <constraint firstItem="kon-D6-xnM" firstAttribute="top" secondItem="bIJ-3i-Xpc" secondAttribute="bottom" constant="20" id="eMy-p7-W2c"/>
+                <constraint firstItem="SeC-WC-h9d" firstAttribute="centerX" secondItem="bIJ-3i-Xpc" secondAttribute="centerX" id="h3P-XO-7WC"/>
+                <constraint firstItem="kon-D6-xnM" firstAttribute="width" secondItem="bIJ-3i-Xpc" secondAttribute="width" id="jxV-WK-m4x"/>
+                <constraint firstItem="kon-D6-xnM" firstAttribute="centerX" secondItem="bIJ-3i-Xpc" secondAttribute="centerX" id="qgT-Nl-QpI"/>
+                <constraint firstItem="1El-1E-B8g" firstAttribute="top" secondItem="kon-D6-xnM" secondAttribute="bottom" constant="15" id="tFw-gf-j9t"/>
+                <constraint firstItem="bIJ-3i-Xpc" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/3" id="ySM-E3-8F1"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

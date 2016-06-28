@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var textFieldPercent: UITextField!
+    
     @IBAction func buttonChangeSlider(sender: AnyObject) {
         self.customSliderView.setPercent(self.textFieldPercent.text!)
         self.textFieldPercent.resignFirstResponder()
