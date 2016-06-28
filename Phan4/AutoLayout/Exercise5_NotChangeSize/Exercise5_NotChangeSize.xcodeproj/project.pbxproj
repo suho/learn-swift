@@ -284,6 +284,7 @@
 				993B215B1D1BBA6700F87FC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
