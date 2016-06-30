@@ -13,6 +13,10 @@
 		9915B0821D2281EF007E0999 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9915B0801D2281EF007E0999 /* LaunchScreen.storyboard */; };
 		9915B08B1D228280007E0999 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9915B0891D228280007E0999 /* HomeViewController.swift */; };
 		9915B08C1D228280007E0999 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9915B08A1D228280007E0999 /* HomeViewController.xib */; };
+		99D829921D2375EF007CFB65 /* CustomHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D829901D2375EF007CFB65 /* CustomHeaderViewCell.swift */; };
+		99D829931D2375EF007CFB65 /* CustomHeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99D829911D2375EF007CFB65 /* CustomHeaderViewCell.xib */; };
+		99D829961D237D39007CFB65 /* CustomFooterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D829941D237D39007CFB65 /* CustomFooterViewCell.swift */; };
+		99D829971D237D39007CFB65 /* CustomFooterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99D829951D237D39007CFB65 /* CustomFooterViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		9915B0831D2281EF007E0999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9915B0891D228280007E0999 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9915B08A1D228280007E0999 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		99D829901D2375EF007CFB65 /* CustomHeaderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHeaderViewCell.swift; sourceTree = "<group>"; };
+		99D829911D2375EF007CFB65 /* CustomHeaderViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomHeaderViewCell.xib; sourceTree = "<group>"; };
+		99D829941D237D39007CFB65 /* CustomFooterViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFooterViewCell.swift; sourceTree = "<group>"; };
+		99D829951D237D39007CFB65 /* CustomFooterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomFooterViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				9915B0831D2281EF007E0999 /* Info.plist */,
 				9915B0891D228280007E0999 /* HomeViewController.swift */,
 				9915B08A1D228280007E0999 /* HomeViewController.xib */,
+				99D829901D2375EF007CFB65 /* CustomHeaderViewCell.swift */,
+				99D829911D2375EF007CFB65 /* CustomHeaderViewCell.xib */,
+				99D829941D237D39007CFB65 /* CustomFooterViewCell.swift */,
+				99D829951D237D39007CFB65 /* CustomFooterViewCell.xib */,
 			);
 			path = Multiple_Section_TableView;
 			sourceTree = "<group>";
@@ -125,6 +137,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99D829931D2375EF007CFB65 /* CustomHeaderViewCell.xib in Resources */,
+				99D829971D237D39007CFB65 /* CustomFooterViewCell.xib in Resources */,
 				9915B0821D2281EF007E0999 /* LaunchScreen.storyboard in Resources */,
 				9915B07F1D2281EF007E0999 /* Assets.xcassets in Resources */,
 				9915B08C1D228280007E0999 /* HomeViewController.xib in Resources */,
@@ -138,8 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99D829921D2375EF007CFB65 /* CustomHeaderViewCell.swift in Sources */,
 				9915B07A1D2281EF007E0999 /* ViewController.swift in Sources */,
 				9915B0781D2281EF007E0999 /* AppDelegate.swift in Sources */,
+				99D829961D237D39007CFB65 /* CustomFooterViewCell.swift in Sources */,
 				9915B08B1D228280007E0999 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +300,7 @@
 				9915B0881D2281EF007E0999 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

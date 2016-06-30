@@ -27,10 +27,15 @@ class DetailProfileViewController: UIViewController {
     var student = Student(name: "John Smith.", age: 31, gender: true, avatar: "3", avatarPath: "")
     
     var studentChange = Student(name: "", age: 0, gender: true, avatar: "", avatarPath: "")
+    
+    var isChangeImage = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "PROFILE"
+        
+        self.age.delegate = self
+        
         let doneButton: UIBarButtonItem = UIBarButtonItem(title: "DONE", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(self.updateInformation))
         self.navigationItem.rightBarButtonItem = doneButton
         
@@ -74,11 +79,12 @@ class DetailProfileViewController: UIViewController {
     
     func updateInformation() {
         
-        let path = pathOfFile(convertDateToNameImage())
-        saveImage(self.avatar.image!, path: path)
-        self.studentChange.avatar = ""
-        self.studentChange.avatarPath = path
-        
+        if isChangeImage {
+            let path = pathOfFile(convertDateToNameImage())
+            saveImage(self.avatar.image!, path: path)
+            self.studentChange.avatar = ""
+            self.studentChange.avatarPath = path
+        }
         self.studentChange.name = self.name.text!
         
         if let ageChange = Int(self.age.text!) {
@@ -110,16 +116,22 @@ class DetailProfileViewController: UIViewController {
     
 }
 
-extension DetailProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    override func willMoveToParentViewController(parent: UIViewController?) {
-        super.willMoveToParentViewController(parent)
-        if parent == nil {
-            if let delegate = self.delegate {
-                delegate.dataStudentChange(self.indexRow, student: self.student)
-            }
-        }
+extension DetailProfileViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(textField: UITextField) {
+//        let datePicker = UIDatePicker()
+//        datePicker.datePickerMode = UIDatePickerMode.Date
+//        textField.inputView = datePicker
+//        
+//        
+//        let dateFormatter = NSDateFormatter()
+//        dateFormatter.dateFormat = "dd MM yyyy"
+//        let selectedDate = dateFormatter.stringFromDate(datePicker.date)
+//        print(selectedDate)
+        
     }
+}
+
+extension DetailProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func tapImage(sender: AnyObject) {
         self.imagePicker.allowsEditing = false
@@ -132,6 +144,7 @@ extension DetailProfileViewController: UIImagePickerControllerDelegate, UINaviga
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             avatar.contentMode = .ScaleToFill
             avatar.image = pickedImage
+            self.isChangeImage = true
         }
         
         dismissViewControllerAnimated(true, completion: nil)

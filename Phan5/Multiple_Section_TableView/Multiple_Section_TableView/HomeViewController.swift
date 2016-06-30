@@ -12,9 +12,9 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var sectionTableView: UITableView!
     
-    let sections = ["Students", "Teachers", "Ghosts"]
+    let sections = ["Students", "Teachers", "Ghosts", "Gods", "Angels", "Demons"]
     
-    let names = [["Student 1", "Student 2", "Student 3"], ["Teacher 1", "Teacher 2"], ["Ghost 1", "Ghost 2", "Ghost 3"]]
+    let names = [["Student 1", "Student 2", "Student 3"], ["Teacher 1", "Teacher 2"], ["Ghost 1", "Ghost 2", "Ghost 3"], ["God 1", "God 2", "God 3", "God 4"], ["Angel 1", "Angel 2", "Angel 3", "Angel 4", "Angel 5"], ["Demon 1"] ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,17 +36,32 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return self.sections.count
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.sections[section]
-    }
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.names[section].count
     }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         cell.textLabel?.text = self.names[indexPath.section][indexPath.row]
         return cell
     }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerCell: CustomHeaderViewCell = NSBundle.mainBundle().loadNibNamed("CustomHeaderViewCell", owner: nil, options: nil)[0] as! CustomHeaderViewCell
+        headerCell.backgroundColor = UIColor.grayColor()
+        headerCell.label?.text = self.sections[section]
+        return headerCell
+    }
+    
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 4
+    }
+    
+    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerCell: CustomFooterViewCell = NSBundle.mainBundle().loadNibNamed("CustomFooterViewCell", owner: nil, options: nil)[0] as! CustomFooterViewCell
+        footerCell.backgroundColor = UIColor.brownColor()
+        return footerCell
+    }
+    
     
 }

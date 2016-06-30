@@ -22,8 +22,8 @@ class HomeViewController: UIViewController {
         let screenHeight = UIScreen.mainScreen().bounds.size.height
         
         self.clock = BallView(frame: CGRect(x: screenWidth/2 - 100, y: screenHeight/2-200, width: 200, height: 200))
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(self.setTimeForClock), userInfo: nil, repeats: true)
         self.secondLine = LineView(frame: clock.bounds)
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(self.setTimeForClock), userInfo: nil, repeats: true)
         self.clock.addSubview(secondLine)
         self.minuteLine = LineView(frame: clock.bounds)
         self.minuteLine.boldNumber = 2
@@ -57,7 +57,7 @@ class HomeViewController: UIViewController {
         let second = Double(splitTime[2])
         let radian = (second! * 2 * M_PI)/60 - (M_PI/2)
         self.secondLine.pointEnd = CGPoint(x: 100 + CGFloat(90*cos(radian)),y: 100 + CGFloat(90*sin(radian)))
-        self.clock.addSubview(secondLine)
+        self.view.reloadInputViews()
     }
 
 }

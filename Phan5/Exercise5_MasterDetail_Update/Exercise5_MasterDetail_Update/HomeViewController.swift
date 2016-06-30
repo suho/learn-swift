@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class HomeViewController: UIViewController {
     
@@ -14,15 +15,13 @@ class HomeViewController: UIViewController {
     
     var students = [Student]()
     
-    let cellIdentifier = "ProfileCell"
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "HOME"
     
         self.profileTableView.delegate = self
         self.profileTableView.dataSource = self
-        self.profileTableView.registerNib(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        self.profileTableView.registerNib(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "cellDetail")
         self.getDataFromPList()
     }
 
@@ -34,18 +33,26 @@ class HomeViewController: UIViewController {
     func getDataFromPList() {
         let path = NSBundle.mainBundle().pathForResource("students", ofType: "plist")
         let dataArray = NSArray(contentsOfFile: path!)
+        
         for student in dataArray! {
+            
             let avatar = student.objectForKey("avatar") as! String
             let name = student.objectForKey("name") as! String
             let age = student.objectForKey("age") as! Int
             let gender = student.objectForKey("gender") as! Bool
-            let dataStudent = Student(name: name, age: age, gender: gender, avatar: avatar, avatarPath: "")
+            let avatarPath = student.objectForKey("avatarPath") as! String
+            
+            let dataStudent = Student(name: name, age: age, gender: gender, avatar: avatar, avatarPath: avatarPath)
             students.append(dataStudent)
         }
     }
     
-    
-    
+    func updateData(indexRow: Int, student: Dictionary<String, AnyObject>) {
+        let path = NSBundle.mainBundle().pathForResource("students", ofType: "plist")
+        let dataArray = NSMutableArray(contentsOfFile: path!)
+        dataArray!.replaceObjectAtIndex(indexRow, withObject: student)
+        dataArray!.writeToFile(path!, atomically: false)
+    }
 
 }
 
@@ -64,7 +71,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier, forIndexPath: indexPath) as! ProfileTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cellDetail", forIndexPath: indexPath) as! ProfileTableViewCell
         let student = students[indexPath.row]
         
         if student.avatar == "" {
@@ -72,6 +79,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             cell.avatar.image = UIImage(named: student.avatar)
         }
+        
         cell.name.text = student.name
         cell.age.text = "\(student.age)"
         cell.gender.text = (student.gender) ? "Male" : "Female"
@@ -98,7 +106,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension HomeViewController: DetailProfileDelegate {
     func dataStudentChange(indexRow: Int, student: Student) {
-        self.students[indexRow] = student
+        updateData(indexRow, student: student.getDictionary())
         self.profileTableView.reloadData()
     }
 }

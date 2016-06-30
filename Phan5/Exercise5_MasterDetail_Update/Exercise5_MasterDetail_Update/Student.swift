@@ -22,4 +22,8 @@ class Student {
         self.avatar = avatar
         self.avatarPath = avatarPath
     }
+    
+    func getDictionary() -> Dictionary<String, AnyObject> {
+        return ["avatar": self.avatar, "name": self.name, "age": self.age, "gender": self.gender, "avatarPath": self.avatarPath]
+    }
 }
