@@ -9,17 +9,21 @@
 /* Begin PBXBuildFile section */
 		99F2B96B1D2A543B009B502C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2B96A1D2A543B009B502C /* AppDelegate.swift */; };
 		99F2B96D1D2A543B009B502C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2B96C1D2A543B009B502C /* ViewController.swift */; };
-		99F2B9721D2A543B009B502C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99F2B9711D2A543B009B502C /* Assets.xcassets */; };
 		99F2B9751D2A543B009B502C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99F2B9731D2A543B009B502C /* LaunchScreen.storyboard */; };
+		99F2B97E1D2A553C009B502C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2B97C1D2A553C009B502C /* LoginViewController.swift */; };
+		99F2B97F1D2A553C009B502C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F2B97D1D2A553C009B502C /* LoginViewController.xib */; };
+		99F2B9831D2A5DC7009B502C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99F2B9821D2A5DC7009B502C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		99F2B9671D2A543B009B502C /* SFoodProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFoodProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F2B96A1D2A543B009B502C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99F2B96C1D2A543B009B502C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		99F2B9711D2A543B009B502C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99F2B9741D2A543B009B502C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99F2B9761D2A543B009B502C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99F2B97C1D2A553C009B502C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		99F2B97D1D2A553C009B502C /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		99F2B9821D2A5DC7009B502C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +56,13 @@
 		99F2B9691D2A543B009B502C /* SFoodProject */ = {
 			isa = PBXGroup;
 			children = (
+				99F2B9821D2A5DC7009B502C /* Assets.xcassets */,
 				99F2B96A1D2A543B009B502C /* AppDelegate.swift */,
 				99F2B96C1D2A543B009B502C /* ViewController.swift */,
-				99F2B9711D2A543B009B502C /* Assets.xcassets */,
 				99F2B9731D2A543B009B502C /* LaunchScreen.storyboard */,
 				99F2B9761D2A543B009B502C /* Info.plist */,
+				99F2B97C1D2A553C009B502C /* LoginViewController.swift */,
+				99F2B97D1D2A553C009B502C /* LoginViewController.xib */,
 			);
 			path = SFoodProject;
 			sourceTree = "<group>";
@@ -120,7 +126,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				99F2B9751D2A543B009B502C /* LaunchScreen.storyboard in Resources */,
-				99F2B9721D2A543B009B502C /* Assets.xcassets in Resources */,
+				99F2B9831D2A5DC7009B502C /* Assets.xcassets in Resources */,
+				99F2B97F1D2A553C009B502C /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F2B97E1D2A553C009B502C /* LoginViewController.swift in Sources */,
 				99F2B96D1D2A543B009B502C /* ViewController.swift in Sources */,
 				99F2B96B1D2A543B009B502C /* AppDelegate.swift in Sources */,
 			);
@@ -276,6 +284,7 @@
 				99F2B97B1D2A543B009B502C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
