@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		99EAA7991D2600240053668C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EAA7981D2600240053668C /* AppDelegate.swift */; };
+		99EAA79B1D2600240053668C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EAA79A1D2600240053668C /* ViewController.swift */; };
+		99EAA7A01D2600240053668C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EAA79F1D2600240053668C /* Assets.xcassets */; };
+		99EAA7A31D2600240053668C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EAA7A11D2600240053668C /* LaunchScreen.storyboard */; };
+		99EAA7AC1D2601AE0053668C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EAA7AA1D2601AE0053668C /* HomeViewController.swift */; };
+		99EAA7AD1D2601AE0053668C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99EAA7AB1D2601AE0053668C /* HomeViewController.xib */; };
+		99EAA7B41D26530D0053668C /* CardBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EAA7B21D26530D0053668C /* CardBookTableViewCell.swift */; };
+		99EAA7B51D26530D0053668C /* CardBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99EAA7B31D26530D0053668C /* CardBookTableViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		99EAA7951D2600240053668C /* Excercise9_CardBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Excercise9_CardBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99EAA7981D2600240053668C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		99EAA79A1D2600240053668C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99EAA79F1D2600240053668C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99EAA7A21D2600240053668C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99EAA7A41D2600240053668C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99EAA7AA1D2601AE0053668C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		99EAA7AB1D2601AE0053668C /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		99EAA7B21D26530D0053668C /* CardBookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBookTableViewCell.swift; sourceTree = "<group>"; };
+		99EAA7B31D26530D0053668C /* CardBookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardBookTableViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99EAA7921D2600240053668C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		99EAA78C1D2600240053668C = {
+			isa = PBXGroup;
+			children = (
+				99EAA7971D2600240053668C /* Excercise9_CardBook */,
+				99EAA7961D2600240053668C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		99EAA7961D2600240053668C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99EAA7951D2600240053668C /* Excercise9_CardBook.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99EAA7971D2600240053668C /* Excercise9_CardBook */ = {
+			isa = PBXGroup;
+			children = (
+				99EAA7981D2600240053668C /* AppDelegate.swift */,
+				99EAA79A1D2600240053668C /* ViewController.swift */,
+				99EAA79F1D2600240053668C /* Assets.xcassets */,
+				99EAA7A11D2600240053668C /* LaunchScreen.storyboard */,
+				99EAA7A41D2600240053668C /* Info.plist */,
+				99EAA7AA1D2601AE0053668C /* HomeViewController.swift */,
+				99EAA7AB1D2601AE0053668C /* HomeViewController.xib */,
+				99EAA7B21D26530D0053668C /* CardBookTableViewCell.swift */,
+				99EAA7B31D26530D0053668C /* CardBookTableViewCell.xib */,
+			);
+			path = Excercise9_CardBook;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99EAA7941D2600240053668C /* Excercise9_CardBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99EAA7A71D2600240053668C /* Build configuration list for PBXNativeTarget "Excercise9_CardBook" */;
+			buildPhases = (
+				99EAA7911D2600240053668C /* Sources */,
+				99EAA7921D2600240053668C /* Frameworks */,
+				99EAA7931D2600240053668C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Excercise9_CardBook;
+			productName = Excercise9_CardBook;
+			productReference = 99EAA7951D2600240053668C /* Excercise9_CardBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99EAA78D1D2600240053668C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Ho Van Su";
+				TargetAttributes = {
+					99EAA7941D2600240053668C = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 99EAA7901D2600240053668C /* Build configuration list for PBXProject "Excercise9_CardBook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 99EAA78C1D2600240053668C;
+			productRefGroup = 99EAA7961D2600240053668C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99EAA7941D2600240053668C /* Excercise9_CardBook */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99EAA7931D2600240053668C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99EAA7A31D2600240053668C /* LaunchScreen.storyboard in Resources */,
+				99EAA7A01D2600240053668C /* Assets.xcassets in Resources */,
+				99EAA7B51D26530D0053668C /* CardBookTableViewCell.xib in Resources */,
+				99EAA7AD1D2601AE0053668C /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99EAA7911D2600240053668C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99EAA79B1D2600240053668C /* ViewController.swift in Sources */,
+				99EAA7991D2600240053668C /* AppDelegate.swift in Sources */,
+				99EAA7B41D26530D0053668C /* CardBookTableViewCell.swift in Sources */,
+				99EAA7AC1D2601AE0053668C /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		99EAA7A11D2600240053668C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99EAA7A21D2600240053668C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		99EAA7A51D2600240053668C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99EAA7A61D2600240053668C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		99EAA7A81D2600240053668C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Excercise9_CardBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.suhv.Excercise9-CardBook";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		99EAA7A91D2600240053668C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Excercise9_CardBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.suhv.Excercise9-CardBook";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99EAA7901D2600240053668C /* Build configuration list for PBXProject "Excercise9_CardBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99EAA7A51D2600240053668C /* Debug */,
+				99EAA7A61D2600240053668C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99EAA7A71D2600240053668C /* Build configuration list for PBXNativeTarget "Excercise9_CardBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99EAA7A81D2600240053668C /* Debug */,
+				99EAA7A91D2600240053668C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 99EAA78D1D2600240053668C /* Project object */;
+}
