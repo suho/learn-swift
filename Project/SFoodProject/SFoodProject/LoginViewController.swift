@@ -66,11 +66,18 @@ class LoginViewController: UIViewController {
     }
     
     func checkAccount(username: String, password: String) -> Bool {
-        if username == "admin" && password == "admin" {
-            return true
-        } else {
-            return false
+        let path = NSBundle.mainBundle().pathForResource("users", ofType: "plist")
+        let users = NSArray(contentsOfFile: path!)
+        
+        for user in users! {
+            let _username = user.objectForKey("username") as! String
+            let _password = user.objectForKey("password") as! String
+            if username == _username && password == _password {
+                return true
+            }
         }
+        
+        return false
     }
     
     func checkValid(username: String, password: String) -> Bool {
