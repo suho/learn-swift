@@ -36,8 +36,8 @@ class LoginViewController: UIViewController {
         let password = self.passwordTextField.text!
         
         if self.checkAccount(username, password: password) {
-            print("Dang nhap thanh cong")
-            //Will Push Navi Here
+            //print("Dang nhap thanh cong")
+            AppDelegate.sharedInstance().changeRootViewWhenLoginSuccess()
         } else {
             if self.checkValid(username, password: password) {
                 self.showMessage("Input Not Valid", viewController: self)
