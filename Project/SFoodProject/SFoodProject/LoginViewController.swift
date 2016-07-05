@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = true
+        self.navigationController?.navigationBar.tintColor = UIColor.orangeColor()
         self.usernameTextField.delegate = self
         self.passwordTextField.delegate = self
         // Do any additional setup after loading the view.
@@ -53,16 +54,12 @@ class LoginViewController: UIViewController {
         
     }
     @IBAction func registerAction(sender: AnyObject) {
-        print("Dang Ky")
-        //Will Push Navi Here
+        //print("Dang Ky")
+        let register = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
+        self.navigationController?.pushViewController(register, animated: true)
     }
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let touch = touches.first! as UITouch
-        
-        if touch.view == self.view {
-            self.usernameTextField.resignFirstResponder()
-            self.passwordTextField.resignFirstResponder()
-        }
+        self.view.endEditing(true)
     }
     
     func checkAccount(username: String, password: String) -> Bool {
