@@ -5,12 +5,12 @@
 	<dict>
 		<key>images</key>
 		<array>
-			<string>1</string>
+			<string>food</string>
 			<string>2</string>
 			<string>3</string>
 		</array>
 		<key>name</key>
-		<string>Cafe ABC</string>
+		<string>Cafe 1</string>
 		<key>address</key>
 		<string>123 ABC, DEF, GHI</string>
 		<key>previewText</key>
@@ -28,12 +28,12 @@
 	<dict>
 		<key>images</key>
 		<array>
-			<string>1</string>
+			<string>food</string>
 			<string>2</string>
 			<string>3</string>
 		</array>
 		<key>name</key>
-		<string>Cafe ABC</string>
+		<string>Cafe 2</string>
 		<key>address</key>
 		<string>123 ABC, DEF, GHI</string>
 		<key>previewText</key>
@@ -51,12 +51,12 @@
 	<dict>
 		<key>images</key>
 		<array>
-			<string>1</string>
+			<string>food</string>
 			<string>2</string>
 			<string>3</string>
 		</array>
 		<key>name</key>
-		<string>Cafe ABC</string>
+		<string>Cafe 3</string>
 		<key>address</key>
 		<string>123 ABC, DEF, GHI</string>
 		<key>previewText</key>
@@ -74,12 +74,12 @@
 	<dict>
 		<key>images</key>
 		<array>
-			<string>1</string>
+			<string>food</string>
 			<string>2</string>
 			<string>3</string>
 		</array>
 		<key>name</key>
-		<string>Cafe ABC</string>
+		<string>Cafe 4</string>
 		<key>address</key>
 		<string>123 ABC, DEF, GHI</string>
 		<key>previewText</key>
@@ -97,12 +97,12 @@
 	<dict>
 		<key>images</key>
 		<array>
-			<string>1</string>
+			<string>food</string>
 			<string>2</string>
 			<string>3</string>
 		</array>
 		<key>name</key>
-		<string>Cafe ABC</string>
+		<string>Cafe 5</string>
 		<key>address</key>
 		<string>123 ABC, DEF, GHI</string>
 		<key>previewText</key>
