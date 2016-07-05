@@ -36,8 +36,8 @@ class LoginViewController: UIViewController {
         let password = self.passwordTextField.text!
         
         if self.checkAccount(username, password: password) {
-            //print("Dang nhap thanh cong")
-            AppDelegate.sharedInstance().changeRootViewWhenLoginSuccess()
+            print("Dang nhap thanh cong")
+            //Will Push Navi Here
         } else {
             if self.checkValid(username, password: password) {
                 self.showMessage("Input Not Valid", viewController: self)
@@ -66,11 +66,18 @@ class LoginViewController: UIViewController {
     }
     
     func checkAccount(username: String, password: String) -> Bool {
-        if username == "admin" && password == "admin" {
-            return true
-        } else {
-            return false
+        let path = NSBundle.mainBundle().pathForResource("users", ofType: "plist")
+        let users = NSArray(contentsOfFile: path!)
+        
+        for user in users! {
+            let _username = user.objectForKey("username") as! String
+            let _password = user.objectForKey("password") as! String
+            if username == _username && password == _password {
+                return true
+            }
         }
+        
+        return false
     }
     
     func checkValid(username: String, password: String) -> Bool {

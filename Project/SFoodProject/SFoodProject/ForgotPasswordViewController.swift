@@ -16,13 +16,13 @@ class ForgotPasswordViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Forgot Password"
         self.navigationController?.navigationBarHidden = false
+        self.emailTextField.delegate = self
     }
 
     @IBAction func resetPasswordAction(sender: AnyObject) {
         let email = emailTextField.text!
         if email.checkValidEmail() {
             self.sendEmail(email)
-            self.navigationController?.popViewControllerAnimated(true)
         } else {
             self.showMessage("Email Not Valid", viewController: self)
         }
@@ -33,6 +33,10 @@ class ForgotPasswordViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func showMessage(message: String, viewController: UIViewController) {
         let alertController = UIAlertController(title: "Message", message: "\(message)", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
@@ -41,7 +45,15 @@ class ForgotPasswordViewController: UIViewController {
     
     func sendEmail(email: String) {
         //Do Something Here
+        self.navigationController?.popViewControllerAnimated(true)
     }
 
+}
+
+extension ForgotPasswordViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.sendEmail(textField.text!)
+        return true
+    }
 }
 
