@@ -66,7 +66,6 @@ extension HomeTabBarViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cellLocation", forIndexPath: indexPath) as! LocationTableViewCell
         cell.setData(locations[indexPath.row])
-        cell.accessoryType = .DetailButton
         cell.tintColor = UIColor.orangeColor()
         return cell
     }

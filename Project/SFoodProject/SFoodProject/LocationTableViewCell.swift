@@ -14,8 +14,8 @@ class LocationTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var contentViewCustom: UIView!
-    
     @IBOutlet weak var contentBasic: UIView!
+    
     var location: Location = Location(images: ["a", "abc"], name: "Cafe ABC", address: "123 ABC, DEF, GHI", previewText: "", detailText: "", coordinates: (0, 0))
 
     override func awakeFromNib() {
@@ -29,11 +29,11 @@ class LocationTableViewCell: UITableViewCell {
     }
     
     func setView() {
-//        self.contentBasic.layer.borderWidth = 1
-//        self.contentBasic.layer.borderColor = UIColor.orangeColor().CGColor
-//        self.contentBasic.layer.masksToBounds = false
-//        self.contentBasic.layer.cornerRadius = self.contentViewCustom.frame.size.height/10
-//        self.contentBasic.clipsToBounds = true
+        self.contentViewCustom.layer.borderWidth = 1
+        self.contentViewCustom.layer.borderColor = UIColor.orangeColor().CGColor
+        self.contentViewCustom.layer.masksToBounds = false
+        self.contentViewCustom.layer.cornerRadius = self.contentViewCustom.frame.size.height/10
+        self.contentViewCustom.clipsToBounds = true
     }
     
     func setData(location: Location) {
