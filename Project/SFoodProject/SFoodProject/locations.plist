@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>1</string>
+			<string>2</string>
+			<string>3</string>
+		</array>
+		<key>name</key>
+		<string>Cafe ABC</string>
+		<key>address</key>
+		<string>123 ABC, DEF, GHI</string>
+		<key>previewText</key>
+		<string>Coffe Shop At Da Nang</string>
+		<key>detailText</key>
+		<string>Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe </string>
+		<key>coordinates</key>
+		<dict>
+			<key>x</key>
+			<real>0.1</real>
+			<key>y</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>1</string>
+			<string>2</string>
+			<string>3</string>
+		</array>
+		<key>name</key>
+		<string>Cafe ABC</string>
+		<key>address</key>
+		<string>123 ABC, DEF, GHI</string>
+		<key>previewText</key>
+		<string>Coffe Shop At Da Nang</string>
+		<key>detailText</key>
+		<string>Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe </string>
+		<key>coordinates</key>
+		<dict>
+			<key>x</key>
+			<real>0.1</real>
+			<key>y</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>1</string>
+			<string>2</string>
+			<string>3</string>
+		</array>
+		<key>name</key>
+		<string>Cafe ABC</string>
+		<key>address</key>
+		<string>123 ABC, DEF, GHI</string>
+		<key>previewText</key>
+		<string>Coffe Shop At Da Nang</string>
+		<key>detailText</key>
+		<string>Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe </string>
+		<key>coordinates</key>
+		<dict>
+			<key>x</key>
+			<real>0.1</real>
+			<key>y</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>1</string>
+			<string>2</string>
+			<string>3</string>
+		</array>
+		<key>name</key>
+		<string>Cafe ABC</string>
+		<key>address</key>
+		<string>123 ABC, DEF, GHI</string>
+		<key>previewText</key>
+		<string>Coffe Shop At Da Nang</string>
+		<key>detailText</key>
+		<string>Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe </string>
+		<key>coordinates</key>
+		<dict>
+			<key>x</key>
+			<real>0.1</real>
+			<key>y</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>1</string>
+			<string>2</string>
+			<string>3</string>
+		</array>
+		<key>name</key>
+		<string>Cafe ABC</string>
+		<key>address</key>
+		<string>123 ABC, DEF, GHI</string>
+		<key>previewText</key>
+		<string>Coffe Shop At Da Nang</string>
+		<key>detailText</key>
+		<string>Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe </string>
+		<key>coordinates</key>
+		<dict>
+			<key>x</key>
+			<real>0.1</real>
+			<key>y</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+</array>
+</plist>
