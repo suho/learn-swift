@@ -16,7 +16,7 @@ class HomeTabBarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Home"
-        self.locationTableView.backgroundColor = UIColor.darkGrayColor()
+        //self.locationTableView.backgroundColor = UIColor.darkGrayColor()
         self.locationTableView.delegate = self
         self.locationTableView.dataSource = self
         self.locationTableView.registerNib(UINib(nibName: "LocationTableViewCell", bundle: nil),forCellReuseIdentifier: "cellLocation")
@@ -43,8 +43,9 @@ class HomeTabBarViewController: UIViewController {
             let coordinatesX = coordinates.objectForKey("x") as! Double
             let coordinatesY = coordinates.objectForKey("y") as! Double
             let coordinate = (coordinatesX, coordinatesY)
+            let isFavorite = location.objectForKey("isFavorite") as! Bool
             
-            let dataLocation = Location(images: images as! [String], name: name, address: address, previewText: previewText, detailText: detailText, coordinates: coordinate)
+            let dataLocation = Location(images: images as! [String], name: name, address: address, previewText: previewText, detailText: detailText, coordinates: coordinate, isFavorite: isFavorite)
             self.locations.append(dataLocation)
         }
     }

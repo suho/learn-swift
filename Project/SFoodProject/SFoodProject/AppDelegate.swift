@@ -38,11 +38,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let homeViewController = HomeTabBarViewController(nibName: "HomeTabBarViewController", bundle: nil)
             homeNavigation.viewControllers = [homeViewController]
             homeNavigation.title = "Home"
+            homeNavigation.tabBarItem.image = UIImage(named: "home-logo")?.imageWithRenderingMode(.Automatic)
             
             
             //set mainTabBar
             self.mainTabBar = UITabBarController()
             self.mainTabBar?.viewControllers = [homeNavigation]
+            self.mainTabBar?.tabBar.tintColor = UIColor.orangeColor()
+            
             
             //set rootViewController
             window.rootViewController = self.loginNavigation

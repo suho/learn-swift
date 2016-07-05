@@ -16,13 +16,15 @@ class Location {
     var previewText: String = ""
     var detailText: String = ""
     var coordinates: (Double, Double) = (0.0, 0.0)
+    var isFavorite: Bool = false
     
-    init(images: [String], name: String, address: String, previewText: String, detailText: String, coordinates: (Double, Double)) {
+    init(images: [String], name: String, address: String, previewText: String, detailText: String, coordinates: (Double, Double), isFavorite: Bool) {
         self.images = images
         self.name = name
         self.address = address
         self.previewText = previewText
         self.detailText = detailText
         self.coordinates = coordinates
+        self.isFavorite = isFavorite
     }
 }
