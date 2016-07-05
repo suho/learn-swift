@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         self.usernameTextField.text = ""
         self.passwordTextField.text = ""
+        self.navigationController?.navigationBarHidden = true
     }
     
     @IBAction func loginAction(sender: AnyObject) {
@@ -46,8 +47,10 @@ class LoginViewController: UIViewController {
         }
     }
     @IBAction func forgotPasswordAction(sender: AnyObject) {
-        print("Quen Mat Khau")
-        //Will Push Navi Here
+        //print("Quen Mat Khau")
+        let forgotPassword = ForgotPasswordViewController(nibName: "ForgotPasswordViewController", bundle: nil)
+        self.navigationController?.pushViewController(forgotPassword, animated: true)
+        
     }
     @IBAction func registerAction(sender: AnyObject) {
         print("Dang Ky")
