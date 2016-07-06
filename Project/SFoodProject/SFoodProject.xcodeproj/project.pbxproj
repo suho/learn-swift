@@ -18,6 +18,8 @@
 		991B827B1D2BB721002F0BC6 /* locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 991B827A1D2BB721002F0BC6 /* locations.plist */; };
 		991B827E1D2BBBA4002F0BC6 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B827C1D2BBBA4002F0BC6 /* LocationTableViewCell.swift */; };
 		991B827F1D2BBBA4002F0BC6 /* LocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 991B827D1D2BBBA4002F0BC6 /* LocationTableViewCell.xib */; };
+		99EB4F7D1D2CC60900C853B0 /* MapsTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB4F7B1D2CC60900C853B0 /* MapsTabBarViewController.swift */; };
+		99EB4F7E1D2CC60900C853B0 /* MapsTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99EB4F7C1D2CC60900C853B0 /* MapsTabBarViewController.xib */; };
 		99F2B96B1D2A543B009B502C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2B96A1D2A543B009B502C /* AppDelegate.swift */; };
 		99F2B96D1D2A543B009B502C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2B96C1D2A543B009B502C /* ViewController.swift */; };
 		99F2B9751D2A543B009B502C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99F2B9731D2A543B009B502C /* LaunchScreen.storyboard */; };
@@ -38,6 +40,8 @@
 		991B827A1D2BB721002F0BC6 /* locations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = locations.plist; sourceTree = "<group>"; };
 		991B827C1D2BBBA4002F0BC6 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		991B827D1D2BBBA4002F0BC6 /* LocationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationTableViewCell.xib; sourceTree = "<group>"; };
+		99EB4F7B1D2CC60900C853B0 /* MapsTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsTabBarViewController.swift; sourceTree = "<group>"; };
+		99EB4F7C1D2CC60900C853B0 /* MapsTabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapsTabBarViewController.xib; sourceTree = "<group>"; };
 		99F2B9671D2A543B009B502C /* SFoodProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFoodProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F2B96A1D2A543B009B502C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99F2B96C1D2A543B009B502C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 				991B827A1D2BB721002F0BC6 /* locations.plist */,
 				991B827C1D2BBBA4002F0BC6 /* LocationTableViewCell.swift */,
 				991B827D1D2BBBA4002F0BC6 /* LocationTableViewCell.xib */,
+				99EB4F7B1D2CC60900C853B0 /* MapsTabBarViewController.swift */,
+				99EB4F7C1D2CC60900C853B0 /* MapsTabBarViewController.xib */,
 			);
 			path = SFoodProject;
 			sourceTree = "<group>";
@@ -158,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99EB4F7E1D2CC60900C853B0 /* MapsTabBarViewController.xib in Resources */,
 				9916C3D51D2A72D3003CF835 /* ForgotPasswordViewController.xib in Resources */,
 				991B82741D2B9F86002F0BC6 /* HomeTabBarViewController.xib in Resources */,
 				991B826D1D2B8E2E002F0BC6 /* users.plist in Resources */,
@@ -179,6 +186,7 @@
 				9916C3D41D2A72D3003CF835 /* ForgotPasswordViewController.swift in Sources */,
 				991B82751D2B9F86002F0BC6 /* SingletonClass.swift in Sources */,
 				991B82791D2BB51B002F0BC6 /* Location.swift in Sources */,
+				99EB4F7D1D2CC60900C853B0 /* MapsTabBarViewController.swift in Sources */,
 				991B827E1D2BBBA4002F0BC6 /* LocationTableViewCell.swift in Sources */,
 				99F2B97E1D2A553C009B502C /* LoginViewController.swift in Sources */,
 				9916C3D71D2A7D95003CF835 /* StringExtension.swift in Sources */,

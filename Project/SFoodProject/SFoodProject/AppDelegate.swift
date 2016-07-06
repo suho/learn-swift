@@ -40,10 +40,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             homeNavigation.title = "Home"
             homeNavigation.tabBarItem.image = UIImage(named: "home-logo")?.imageWithRenderingMode(.Automatic)
             
+            //navi Map
+            let mapsNavigation = UINavigationController()
+            let mapsViewController = MapsTabBarViewController(nibName: "MapsTabBarViewController", bundle: nil)
+            mapsNavigation.viewControllers = [mapsViewController]
+            mapsNavigation.title = "Maps"
+            mapsNavigation.tabBarItem.image = UIImage(named: "map-icon")?.imageWithRenderingMode(.Automatic)
+            
             
             //set mainTabBar
             self.mainTabBar = UITabBarController()
-            self.mainTabBar?.viewControllers = [homeNavigation]
+            self.mainTabBar?.viewControllers = [homeNavigation, mapsNavigation]
             self.mainTabBar?.tabBar.tintColor = UIColor.orangeColor()
             self.mainTabBar?.tabBar.barTintColor = UIColor.whiteColor()
             
