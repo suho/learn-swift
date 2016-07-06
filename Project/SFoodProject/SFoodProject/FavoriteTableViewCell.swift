@@ -26,15 +26,14 @@ class FavoriteTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        self.starButton.setImage(UIImage(named: "no-star"), forState: .Normal)
-        self.location.isFavorite = false
-        
-        //Save Data
-        //Reload TableView
     }
     
     @IBAction func setFavoriteAction(sender: AnyObject) {
+        self.starButton.setImage(UIImage(named: "no-star"), forState: .Normal)
+        //self.location.isFavorite = false
+        
+        //Save Data
+        //Reload TableView
     }
     
     func setView() -> Void {
@@ -48,7 +47,11 @@ class FavoriteTableViewCell: UITableViewCell {
         self.imageFirst.image = UIImage(named: location.images.first!)
         self.name.text = location.name
         self.address.text = location.address
-        self.starButton.setImage(UIImage(named: "orange-star"), forState: .Normal)
+        if self.location.isFavorite {
+            self.starButton.setImage(UIImage(named: "orange-star"), forState: .Normal)
+        } else {
+            self.starButton.setImage(UIImage(named: "no-star"), forState: .Normal)
+        }
     }
     
 }

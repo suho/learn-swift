@@ -27,8 +27,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caffe ABC" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xMT-RL-sSB">
-                                <rect key="frame" x="137" y="5" width="130.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <rect key="frame" x="137" y="10" width="130.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
@@ -53,7 +53,7 @@
                         <constraints>
                             <constraint firstItem="a6N-no-v6I" firstAttribute="bottom" secondItem="0Re-QU-oQB" secondAttribute="bottom" constant="-5" id="4jE-ET-rcx"/>
                             <constraint firstItem="soy-6a-LYv" firstAttribute="height" secondItem="yfJ-zb-JpZ" secondAttribute="height" multiplier="40/117.5" id="5VP-ea-bBp"/>
-                            <constraint firstItem="xMT-RL-sSB" firstAttribute="top" secondItem="0Re-QU-oQB" secondAttribute="top" constant="5" id="FDv-su-5qi"/>
+                            <constraint firstItem="xMT-RL-sSB" firstAttribute="top" secondItem="0Re-QU-oQB" secondAttribute="top" constant="10" id="FDv-su-5qi"/>
                             <constraint firstItem="xMT-RL-sSB" firstAttribute="leading" secondItem="0Re-QU-oQB" secondAttribute="trailing" constant="20" id="MuK-ho-mND"/>
                             <constraint firstItem="0Re-QU-oQB" firstAttribute="height" secondItem="yfJ-zb-JpZ" secondAttribute="height" id="S3n-Vv-Dtn"/>
                             <constraint firstItem="soy-6a-LYv" firstAttribute="centerY" secondItem="0Re-QU-oQB" secondAttribute="centerY" id="SGu-M4-qc4"/>
