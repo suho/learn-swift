@@ -30,6 +30,11 @@ class HomeTabBarViewController: UIViewController {
         
         self.locations = self.readDataFromPlist()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.locations = self.readDataFromPlist()
+        self.locationTableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

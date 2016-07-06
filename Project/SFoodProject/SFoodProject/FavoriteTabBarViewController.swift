@@ -37,6 +37,10 @@ class FavoriteTabBarViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        for i in 0..<self.favorites.count {
+            self.favorites[i].isFavorite = true
+        }
+
         self.favoriteTableView.reloadData()
     }
     
@@ -53,11 +57,20 @@ class FavoriteTabBarViewController: UIViewController {
     }
     
     func deleteAllFavoritesAciton() {
+        
+//        self.showMessage("Delete All?", viewController: self)
+        
         for i in 0..<self.favorites.count {
             self.favorites[i].isFavorite = false
         }
         self.favoriteTableView.reloadData()
     }
+    
+//    func showMessage(message: String, viewController: UIViewController) {
+//        let alertController = UIAlertController(title: "Message", message: "\(message)", preferredStyle: UIAlertControllerStyle.Alert)
+//        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+//        viewController.presentViewController(alertController, animated: true, completion: nil)
+//    }
 }
 
 extension FavoriteTabBarViewController: UITableViewDelegate, UITableViewDataSource {
