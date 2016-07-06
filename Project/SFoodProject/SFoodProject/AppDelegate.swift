@@ -45,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.mainTabBar = UITabBarController()
             self.mainTabBar?.viewControllers = [homeNavigation]
             self.mainTabBar?.tabBar.tintColor = UIColor.orangeColor()
+            self.mainTabBar?.tabBar.barTintColor = UIColor.whiteColor()
             
             
             //set rootViewController
