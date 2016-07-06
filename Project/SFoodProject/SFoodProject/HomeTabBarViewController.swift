@@ -13,6 +13,13 @@ class HomeTabBarViewController: UIViewController {
     @IBOutlet weak var locationTableView: UITableView!
     var locations = [Location]()
     
+    class var sharedInstance: HomeTabBarViewController {
+        struct Singleton {
+            static let instance = HomeTabBarViewController()
+        }
+        return Singleton.instance
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Home"
@@ -21,7 +28,12 @@ class HomeTabBarViewController: UIViewController {
         self.locationTableView.dataSource = self
         self.locationTableView.registerNib(UINib(nibName: "LocationTableViewCell", bundle: nil),forCellReuseIdentifier: "cellLocation")
         
-        self.readDataFromPlist()
+        self.locations = self.readDataFromPlist()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.locations = self.readDataFromPlist()
+        self.locationTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,9 +41,11 @@ class HomeTabBarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func readDataFromPlist() {
+    func readDataFromPlist() -> [Location] {
         let path = NSBundle.mainBundle().pathForResource("locations", ofType: "plist")
         let locations = NSArray(contentsOfFile: path!)
+        
+        var result = [Location]()
         
         for location in locations! {
             let images = location.objectForKey("images") as! NSArray
@@ -46,8 +60,10 @@ class HomeTabBarViewController: UIViewController {
             let isFavorite = location.objectForKey("isFavorite") as! Bool
             
             let dataLocation = Location(images: images as! [String], name: name, address: address, previewText: previewText, detailText: detailText, coordinates: coordinate, isFavorite: isFavorite)
-            self.locations.append(dataLocation)
+            result.append(dataLocation)
         }
+        
+        return result
     }
 
 }

@@ -18,9 +18,13 @@
 		991B827B1D2BB721002F0BC6 /* locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 991B827A1D2BB721002F0BC6 /* locations.plist */; };
 		991B827E1D2BBBA4002F0BC6 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B827C1D2BBBA4002F0BC6 /* LocationTableViewCell.swift */; };
 		991B827F1D2BBBA4002F0BC6 /* LocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 991B827D1D2BBBA4002F0BC6 /* LocationTableViewCell.xib */; };
-		99EB4F7D1D2CC60900C853B0 /* MapsTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB4F7B1D2CC60900C853B0 /* MapsTabBarViewController.swift */; };
-		99EB4F7E1D2CC60900C853B0 /* MapsTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99EB4F7C1D2CC60900C853B0 /* MapsTabBarViewController.xib */; };
-		99EB4F801D2CE21700C853B0 /* LocationMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB4F7F1D2CE21700C853B0 /* LocationMaps.swift */; };
+		99EB4F711D2C9F8900C853B0 /* FavoriteTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB4F6F1D2C9F8900C853B0 /* FavoriteTabBarViewController.swift */; };
+		99EB4F721D2C9F8900C853B0 /* FavoriteTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99EB4F701D2C9F8900C853B0 /* FavoriteTabBarViewController.xib */; };
+		99EB4F751D2CA1BD00C853B0 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB4F731D2CA1BD00C853B0 /* FavoriteTableViewCell.swift */; };
+		99EB4F761D2CA1BD00C853B0 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99EB4F741D2CA1BD00C853B0 /* FavoriteTableViewCell.xib */; };
+		99EB4F841D2D022400C853B0 /* LocationMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB4F831D2D022400C853B0 /* LocationMaps.swift */; };
+		99EB4F861D2D022B00C853B0 /* MapsTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB4F851D2D022B00C853B0 /* MapsTabBarViewController.swift */; };
+		99EB4F881D2D023000C853B0 /* MapsTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99EB4F871D2D023000C853B0 /* MapsTabBarViewController.xib */; };
 		99F2B96B1D2A543B009B502C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2B96A1D2A543B009B502C /* AppDelegate.swift */; };
 		99F2B96D1D2A543B009B502C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2B96C1D2A543B009B502C /* ViewController.swift */; };
 		99F2B9751D2A543B009B502C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99F2B9731D2A543B009B502C /* LaunchScreen.storyboard */; };
@@ -41,9 +45,13 @@
 		991B827A1D2BB721002F0BC6 /* locations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = locations.plist; sourceTree = "<group>"; };
 		991B827C1D2BBBA4002F0BC6 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		991B827D1D2BBBA4002F0BC6 /* LocationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationTableViewCell.xib; sourceTree = "<group>"; };
-		99EB4F7B1D2CC60900C853B0 /* MapsTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsTabBarViewController.swift; sourceTree = "<group>"; };
-		99EB4F7C1D2CC60900C853B0 /* MapsTabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapsTabBarViewController.xib; sourceTree = "<group>"; };
-		99EB4F7F1D2CE21700C853B0 /* LocationMaps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMaps.swift; sourceTree = "<group>"; };
+		99EB4F6F1D2C9F8900C853B0 /* FavoriteTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTabBarViewController.swift; sourceTree = "<group>"; };
+		99EB4F701D2C9F8900C853B0 /* FavoriteTabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteTabBarViewController.xib; sourceTree = "<group>"; };
+		99EB4F731D2CA1BD00C853B0 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		99EB4F741D2CA1BD00C853B0 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		99EB4F831D2D022400C853B0 /* LocationMaps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMaps.swift; sourceTree = "<group>"; };
+		99EB4F851D2D022B00C853B0 /* MapsTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsTabBarViewController.swift; sourceTree = "<group>"; };
+		99EB4F871D2D023000C853B0 /* MapsTabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapsTabBarViewController.xib; sourceTree = "<group>"; };
 		99F2B9671D2A543B009B502C /* SFoodProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFoodProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F2B96A1D2A543B009B502C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99F2B96C1D2A543B009B502C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +92,9 @@
 		99F2B9691D2A543B009B502C /* SFoodProject */ = {
 			isa = PBXGroup;
 			children = (
+				99EB4F871D2D023000C853B0 /* MapsTabBarViewController.xib */,
+				99EB4F851D2D022B00C853B0 /* MapsTabBarViewController.swift */,
+				99EB4F831D2D022400C853B0 /* LocationMaps.swift */,
 				991B82701D2B9F86002F0BC6 /* HomeTabBarViewController.swift */,
 				991B82711D2B9F86002F0BC6 /* HomeTabBarViewController.xib */,
 				991B82721D2B9F86002F0BC6 /* SingletonClass.swift */,
@@ -102,9 +113,10 @@
 				991B827A1D2BB721002F0BC6 /* locations.plist */,
 				991B827C1D2BBBA4002F0BC6 /* LocationTableViewCell.swift */,
 				991B827D1D2BBBA4002F0BC6 /* LocationTableViewCell.xib */,
-				99EB4F7B1D2CC60900C853B0 /* MapsTabBarViewController.swift */,
-				99EB4F7C1D2CC60900C853B0 /* MapsTabBarViewController.xib */,
-				99EB4F7F1D2CE21700C853B0 /* LocationMaps.swift */,
+				99EB4F6F1D2C9F8900C853B0 /* FavoriteTabBarViewController.swift */,
+				99EB4F701D2C9F8900C853B0 /* FavoriteTabBarViewController.xib */,
+				99EB4F731D2CA1BD00C853B0 /* FavoriteTableViewCell.swift */,
+				99EB4F741D2CA1BD00C853B0 /* FavoriteTableViewCell.xib */,
 			);
 			path = SFoodProject;
 			sourceTree = "<group>";
@@ -167,13 +179,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99EB4F7E1D2CC60900C853B0 /* MapsTabBarViewController.xib in Resources */,
 				9916C3D51D2A72D3003CF835 /* ForgotPasswordViewController.xib in Resources */,
 				991B82741D2B9F86002F0BC6 /* HomeTabBarViewController.xib in Resources */,
+				99EB4F721D2C9F8900C853B0 /* FavoriteTabBarViewController.xib in Resources */,
 				991B826D1D2B8E2E002F0BC6 /* users.plist in Resources */,
 				99F2B9751D2A543B009B502C /* LaunchScreen.storyboard in Resources */,
 				991B827B1D2BB721002F0BC6 /* locations.plist in Resources */,
+				99EB4F881D2D023000C853B0 /* MapsTabBarViewController.xib in Resources */,
 				99F2B9831D2A5DC7009B502C /* Assets.xcassets in Resources */,
+				99EB4F761D2CA1BD00C853B0 /* FavoriteTableViewCell.xib in Resources */,
 				991B827F1D2BBBA4002F0BC6 /* LocationTableViewCell.xib in Resources */,
 				99F2B97F1D2A553C009B502C /* LoginViewController.xib in Resources */,
 			);
@@ -187,16 +201,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9916C3D41D2A72D3003CF835 /* ForgotPasswordViewController.swift in Sources */,
-				99EB4F801D2CE21700C853B0 /* LocationMaps.swift in Sources */,
 				991B82751D2B9F86002F0BC6 /* SingletonClass.swift in Sources */,
 				991B82791D2BB51B002F0BC6 /* Location.swift in Sources */,
-				99EB4F7D1D2CC60900C853B0 /* MapsTabBarViewController.swift in Sources */,
 				991B827E1D2BBBA4002F0BC6 /* LocationTableViewCell.swift in Sources */,
+				99EB4F711D2C9F8900C853B0 /* FavoriteTabBarViewController.swift in Sources */,
 				99F2B97E1D2A553C009B502C /* LoginViewController.swift in Sources */,
+				99EB4F861D2D022B00C853B0 /* MapsTabBarViewController.swift in Sources */,
 				9916C3D71D2A7D95003CF835 /* StringExtension.swift in Sources */,
+				99EB4F841D2D022400C853B0 /* LocationMaps.swift in Sources */,
 				991B82731D2B9F86002F0BC6 /* HomeTabBarViewController.swift in Sources */,
 				99F2B96D1D2A543B009B502C /* ViewController.swift in Sources */,
 				99F2B96B1D2A543B009B502C /* AppDelegate.swift in Sources */,
+				99EB4F751D2CA1BD00C853B0 /* FavoriteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

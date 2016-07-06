@@ -46,11 +46,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             mapsNavigation.viewControllers = [mapsViewController]
             mapsNavigation.title = "Maps"
             mapsNavigation.tabBarItem.image = UIImage(named: "map-icon")?.imageWithRenderingMode(.Automatic)
+
+            //navi Favorite
+            let favoriteNavigation = UINavigationController()
+            let favoriteViewController = FavoriteTabBarViewController(nibName: "FavoriteTabBarViewController", bundle: nil)
+            favoriteNavigation.viewControllers = [favoriteViewController]
+            favoriteNavigation.title = "Favorite"
+            favoriteNavigation.tabBarItem.image = UIImage(named: "bookmark-icon")?.imageWithRenderingMode(.Automatic)
             
             
             //set mainTabBar
             self.mainTabBar = UITabBarController()
-            self.mainTabBar?.viewControllers = [homeNavigation, mapsNavigation]
+            self.mainTabBar?.viewControllers = [homeNavigation, favoriteNavigation, mapsNavigation]
             self.mainTabBar?.tabBar.tintColor = UIColor.orangeColor()
             self.mainTabBar?.tabBar.barTintColor = UIColor.whiteColor()
             
