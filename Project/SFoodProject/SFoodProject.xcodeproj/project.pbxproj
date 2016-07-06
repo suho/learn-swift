@@ -25,6 +25,8 @@
 		99EB4F841D2D022400C853B0 /* LocationMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB4F831D2D022400C853B0 /* LocationMaps.swift */; };
 		99EB4F861D2D022B00C853B0 /* MapsTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB4F851D2D022B00C853B0 /* MapsTabBarViewController.swift */; };
 		99EB4F881D2D023000C853B0 /* MapsTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99EB4F871D2D023000C853B0 /* MapsTabBarViewController.xib */; };
+		99EB4F8B1D2D0CF900C853B0 /* SettingTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB4F891D2D0CF900C853B0 /* SettingTabBarViewController.swift */; };
+		99EB4F8C1D2D0CF900C853B0 /* SettingTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99EB4F8A1D2D0CF900C853B0 /* SettingTabBarViewController.xib */; };
 		99F2B96B1D2A543B009B502C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2B96A1D2A543B009B502C /* AppDelegate.swift */; };
 		99F2B96D1D2A543B009B502C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2B96C1D2A543B009B502C /* ViewController.swift */; };
 		99F2B9751D2A543B009B502C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99F2B9731D2A543B009B502C /* LaunchScreen.storyboard */; };
@@ -52,6 +54,8 @@
 		99EB4F831D2D022400C853B0 /* LocationMaps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMaps.swift; sourceTree = "<group>"; };
 		99EB4F851D2D022B00C853B0 /* MapsTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsTabBarViewController.swift; sourceTree = "<group>"; };
 		99EB4F871D2D023000C853B0 /* MapsTabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapsTabBarViewController.xib; sourceTree = "<group>"; };
+		99EB4F891D2D0CF900C853B0 /* SettingTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTabBarViewController.swift; sourceTree = "<group>"; };
+		99EB4F8A1D2D0CF900C853B0 /* SettingTabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTabBarViewController.xib; sourceTree = "<group>"; };
 		99F2B9671D2A543B009B502C /* SFoodProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFoodProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F2B96A1D2A543B009B502C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99F2B96C1D2A543B009B502C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 				99EB4F701D2C9F8900C853B0 /* FavoriteTabBarViewController.xib */,
 				99EB4F731D2CA1BD00C853B0 /* FavoriteTableViewCell.swift */,
 				99EB4F741D2CA1BD00C853B0 /* FavoriteTableViewCell.xib */,
+				99EB4F891D2D0CF900C853B0 /* SettingTabBarViewController.swift */,
+				99EB4F8A1D2D0CF900C853B0 /* SettingTabBarViewController.xib */,
 			);
 			path = SFoodProject;
 			sourceTree = "<group>";
@@ -188,6 +194,7 @@
 				99EB4F881D2D023000C853B0 /* MapsTabBarViewController.xib in Resources */,
 				99F2B9831D2A5DC7009B502C /* Assets.xcassets in Resources */,
 				99EB4F761D2CA1BD00C853B0 /* FavoriteTableViewCell.xib in Resources */,
+				99EB4F8C1D2D0CF900C853B0 /* SettingTabBarViewController.xib in Resources */,
 				991B827F1D2BBBA4002F0BC6 /* LocationTableViewCell.xib in Resources */,
 				99F2B97F1D2A553C009B502C /* LoginViewController.xib in Resources */,
 			);
@@ -201,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9916C3D41D2A72D3003CF835 /* ForgotPasswordViewController.swift in Sources */,
+				99EB4F8B1D2D0CF900C853B0 /* SettingTabBarViewController.swift in Sources */,
 				991B82751D2B9F86002F0BC6 /* SingletonClass.swift in Sources */,
 				991B82791D2BB51B002F0BC6 /* Location.swift in Sources */,
 				991B827E1D2BBBA4002F0BC6 /* LocationTableViewCell.swift in Sources */,

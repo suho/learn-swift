@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let homeViewController = HomeTabBarViewController(nibName: "HomeTabBarViewController", bundle: nil)
             homeNavigation.viewControllers = [homeViewController]
             homeNavigation.title = "Home"
-            homeNavigation.tabBarItem.image = UIImage(named: "home-logo")?.imageWithRenderingMode(.Automatic)
+            homeNavigation.tabBarItem.image = UIImage(named: "home-logo")?.imageWithRenderingMode(.AlwaysTemplate)
             
             //navi Map
             let mapsNavigation = UINavigationController()
@@ -54,10 +54,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             favoriteNavigation.title = "Favorite"
             favoriteNavigation.tabBarItem.image = UIImage(named: "bookmark-icon")?.imageWithRenderingMode(.Automatic)
             
+            //navi Setting
+            
+            let settingsNavigation = UINavigationController()
+            let settingsViewController = SettingTabBarViewController(nibName: "SettingTabBarViewController", bundle: nil)
+            settingsNavigation.viewControllers = [settingsViewController]
+            settingsNavigation.title = "Settings"
+            settingsNavigation.tabBarItem.image = UIImage(named: "settings-icon")?.imageWithRenderingMode(.Automatic)
+            
             
             //set mainTabBar
             self.mainTabBar = UITabBarController()
-            self.mainTabBar?.viewControllers = [homeNavigation, favoriteNavigation, mapsNavigation]
+            self.mainTabBar?.viewControllers = [homeNavigation, favoriteNavigation, mapsNavigation, settingsNavigation]
             self.mainTabBar?.tabBar.tintColor = UIColor.orangeColor()
             self.mainTabBar?.tabBar.barTintColor = UIColor.whiteColor()
             
