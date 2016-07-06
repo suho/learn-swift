@@ -40,10 +40,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             homeNavigation.title = "Home"
             homeNavigation.tabBarItem.image = UIImage(named: "home-logo")?.imageWithRenderingMode(.Automatic)
             
+            //navi Favorite
+            let favoriteNavigation = UINavigationController()
+            let favoriteViewController = FavoriteTabBarViewController(nibName: "FavoriteTabBarViewController", bundle: nil)
+            favoriteNavigation.viewControllers = [favoriteViewController]
+            favoriteNavigation.title = "Favorite"
+            favoriteNavigation.tabBarItem.image = UIImage(named: "bookmark-icon")?.imageWithRenderingMode(.Automatic)
+            
             
             //set mainTabBar
             self.mainTabBar = UITabBarController()
-            self.mainTabBar?.viewControllers = [homeNavigation]
+            self.mainTabBar?.viewControllers = [homeNavigation, favoriteNavigation]
             self.mainTabBar?.tabBar.tintColor = UIColor.orangeColor()
             self.mainTabBar?.tabBar.barTintColor = UIColor.whiteColor()
             
