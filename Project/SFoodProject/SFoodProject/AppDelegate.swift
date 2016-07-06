@@ -12,23 +12,55 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var loginNavigation: UINavigationController?
+    var mainTabBar: UITabBarController?
+    
+    class func sharedInstance() -> AppDelegate {
+        return UIApplication.sharedApplication().delegate as! AppDelegate
+    }
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        if let window = window {
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        if let window = self.window {
+            
+            //init loginNavigation
+            //init LoginViewController
             
             let loginViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+            self.loginNavigation = UINavigationController(rootViewController: loginViewController)
             
-            let navi = UINavigationController(rootViewController: loginViewController)
+            //init mainTabBar
+            //navi Home
+            let homeNavigation = UINavigationController()
+            let homeViewController = HomeTabBarViewController(nibName: "HomeTabBarViewController", bundle: nil)
+            homeNavigation.viewControllers = [homeViewController]
+            homeNavigation.title = "Home"
+            homeNavigation.tabBarItem.image = UIImage(named: "home-logo")?.imageWithRenderingMode(.Automatic)
             
-            window.rootViewController = navi
             
+            //set mainTabBar
+            self.mainTabBar = UITabBarController()
+            self.mainTabBar?.viewControllers = [homeNavigation]
+            self.mainTabBar?.tabBar.tintColor = UIColor.orangeColor()
+            self.mainTabBar?.tabBar.barTintColor = UIColor.whiteColor()
+            
+            
+            //set rootViewController
+            window.rootViewController = self.loginNavigation
             window.backgroundColor = UIColor.whiteColor()
             window.makeKeyAndVisible()
+            
         }
         return true
+    }
+    
+    func changeRootViewWhenLoginSuccess() {
+        if let window = self.window {
+            window.rootViewController = self.mainTabBar
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {
