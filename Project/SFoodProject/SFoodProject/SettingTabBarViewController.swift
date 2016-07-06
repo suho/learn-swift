@@ -11,6 +11,9 @@ import UIKit
 class SettingTabBarViewController: UIViewController {
 
     @IBOutlet weak var settingsTableView: UITableView!
+    
+    let sections = ["Account", "Peoples"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Settings"

@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let homeViewController = HomeTabBarViewController(nibName: "HomeTabBarViewController", bundle: nil)
             homeNavigation.viewControllers = [homeViewController]
             homeNavigation.title = "Home"
-            homeNavigation.tabBarItem.image = UIImage(named: "home-logo")?.imageWithRenderingMode(.AlwaysTemplate)
+            homeNavigation.tabBarItem.image = UIImage(named: "home-logo")?.imageWithRenderingMode(.Automatic)
             
             //navi Map
             let mapsNavigation = UINavigationController()
