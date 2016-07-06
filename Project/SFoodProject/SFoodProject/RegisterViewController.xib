@@ -68,7 +68,7 @@
                                 <segment title="Male"/>
                                 <segment title="Female"/>
                             </segments>
-                            <color key="tintColor" red="1" green="0.64570451090000003" blue="0.25194880089999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="1" green="0.72191748420000001" blue="0.31194741990000002" alpha="1" colorSpace="calibratedRGB"/>
                         </segmentedControl>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jv2-ia-4Vh">
                             <rect key="frame" x="54" y="397" width="213" height="30"/>

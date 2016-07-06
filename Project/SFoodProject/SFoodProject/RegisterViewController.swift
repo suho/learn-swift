@@ -19,6 +19,7 @@ class RegisterViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var phone: UITextField!
     @IBOutlet weak var gender: UISegmentedControl!
     @IBAction func registerAction(sender: AnyObject) {
+        print("Dang Ky")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
