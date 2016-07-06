@@ -10,13 +10,15 @@ import Foundation
 import MapKit
 
 class LocationMaps: NSObject, MKAnnotation {
+    var image: String = ""
     var title: String? = ""
     var locationName: String = ""
     var discipline: String = ""
     var coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 16.072056, longitude: 108.226926)
     
-    init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D) {
+    init(image: String, title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D) {
         super.init()
+        self.image = image
         self.title = title
         self.locationName = locationName
         self.discipline = discipline
