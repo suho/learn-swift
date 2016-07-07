@@ -14,6 +14,7 @@
 		99DFF6771D2DEBF70007CB2B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DFF6751D2DEBF70007CB2B /* HomeViewController.swift */; };
 		99DFF6781D2DEBF70007CB2B /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99DFF6761D2DEBF70007CB2B /* HomeViewController.xib */; };
 		99DFF67A1D2DEEEA0007CB2B /* CustomMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DFF6791D2DEEEA0007CB2B /* CustomMenuView.swift */; };
+		99DFF67E1D2E63EB0007CB2B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DFF67D1D2E63EB0007CB2B /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		99DFF6751D2DEBF70007CB2B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		99DFF6761D2DEBF70007CB2B /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		99DFF6791D2DEEEA0007CB2B /* CustomMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMenuView.swift; sourceTree = "<group>"; };
+		99DFF67D1D2E63EB0007CB2B /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				99DFF6751D2DEBF70007CB2B /* HomeViewController.swift */,
 				99DFF6761D2DEBF70007CB2B /* HomeViewController.xib */,
 				99DFF6791D2DEEEA0007CB2B /* CustomMenuView.swift */,
+				99DFF67D1D2E63EB0007CB2B /* Extension.swift */,
 			);
 			path = Exam_Zexy;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99DFF67E1D2E63EB0007CB2B /* Extension.swift in Sources */,
 				99DFF6661D2DEBCF0007CB2B /* ViewController.swift in Sources */,
 				99DFF6641D2DEBCF0007CB2B /* AppDelegate.swift in Sources */,
 				99DFF67A1D2DEEEA0007CB2B /* CustomMenuView.swift in Sources */,
@@ -288,6 +292,7 @@
 				99DFF6741D2DEBCF0007CB2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
