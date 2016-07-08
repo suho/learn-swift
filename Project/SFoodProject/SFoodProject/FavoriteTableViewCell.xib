@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="126" id="KGk-i7-Jjw" customClass="FavoriteTableViewCell" customModule="SFoodProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="134"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="133.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfJ-zb-JpZ">
+                        <rect key="frame" x="8" y="8" width="384" height="117.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="0Re-QU-oQB">
+                                <rect key="frame" x="0.0" y="0.0" width="117.5" height="117.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0Re-QU-oQB" secondAttribute="height" multiplier="1:1" id="RWt-3F-dSH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caffe ABC" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xMT-RL-sSB">
+                                <rect key="frame" x="137" y="10" width="130.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soy-6a-LYv">
+                                <rect key="frame" x="334" y="39" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="soy-6a-LYv" secondAttribute="height" multiplier="1:1" id="25a-47-rGs"/>
+                                </constraints>
+                                <state key="normal" image="no-star"/>
+                                <connections>
+                                    <action selector="setFavoriteAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lzG-Sy-g1E"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="123 ABC, DEF, GHI" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="a6N-no-v6I">
+                                <rect key="frame" x="137" y="72" width="200.5" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a6N-no-v6I" firstAttribute="bottom" secondItem="0Re-QU-oQB" secondAttribute="bottom" constant="-5" id="4jE-ET-rcx"/>
+                            <constraint firstItem="soy-6a-LYv" firstAttribute="height" secondItem="yfJ-zb-JpZ" secondAttribute="height" multiplier="40/117.5" id="5VP-ea-bBp"/>
+                            <constraint firstItem="xMT-RL-sSB" firstAttribute="top" secondItem="0Re-QU-oQB" secondAttribute="top" constant="10" id="FDv-su-5qi"/>
+                            <constraint firstItem="xMT-RL-sSB" firstAttribute="leading" secondItem="0Re-QU-oQB" secondAttribute="trailing" constant="20" id="MuK-ho-mND"/>
+                            <constraint firstItem="0Re-QU-oQB" firstAttribute="height" secondItem="yfJ-zb-JpZ" secondAttribute="height" id="S3n-Vv-Dtn"/>
+                            <constraint firstItem="soy-6a-LYv" firstAttribute="centerY" secondItem="0Re-QU-oQB" secondAttribute="centerY" id="SGu-M4-qc4"/>
+                            <constraint firstItem="a6N-no-v6I" firstAttribute="width" secondItem="yfJ-zb-JpZ" secondAttribute="width" multiplier="200.5/384" id="UOK-V7-lxL"/>
+                            <constraint firstItem="0Re-QU-oQB" firstAttribute="top" secondItem="yfJ-zb-JpZ" secondAttribute="top" id="Wd8-ED-25j"/>
+                            <constraint firstAttribute="trailing" secondItem="soy-6a-LYv" secondAttribute="trailing" constant="10" id="X0b-8M-WNY"/>
+                            <constraint firstItem="0Re-QU-oQB" firstAttribute="leading" secondItem="yfJ-zb-JpZ" secondAttribute="leading" id="aDn-DN-hSE"/>
+                            <constraint firstItem="xMT-RL-sSB" firstAttribute="width" secondItem="yfJ-zb-JpZ" secondAttribute="width" multiplier="130.5/384" id="bbR-Qn-3MV"/>
+                            <constraint firstItem="a6N-no-v6I" firstAttribute="height" secondItem="yfJ-zb-JpZ" secondAttribute="height" multiplier="37/117.5" id="d23-0Z-UM9"/>
+                            <constraint firstItem="a6N-no-v6I" firstAttribute="leading" secondItem="xMT-RL-sSB" secondAttribute="leading" id="mNI-mq-KE5"/>
+                            <constraint firstItem="xMT-RL-sSB" firstAttribute="height" secondItem="yfJ-zb-JpZ" secondAttribute="height" multiplier="24/117.5" id="zyE-e7-ElM"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="yfJ-zb-JpZ" secondAttribute="trailing" id="38E-g4-Azq"/>
+                    <constraint firstItem="yfJ-zb-JpZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="R3M-J0-TRH"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="yfJ-zb-JpZ" secondAttribute="bottom" id="Va4-gC-iEK"/>
+                    <constraint firstItem="yfJ-zb-JpZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="yhs-Nu-YcG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="address" destination="a6N-no-v6I" id="5b1-vl-Dgd"/>
+                <outlet property="contentViewCustom" destination="yfJ-zb-JpZ" id="AZ7-lz-nAa"/>
+                <outlet property="imageFirst" destination="0Re-QU-oQB" id="Kom-0H-h3Q"/>
+                <outlet property="name" destination="xMT-RL-sSB" id="OT7-V1-ceu"/>
+                <outlet property="starButton" destination="soy-6a-LYv" id="Amd-Up-lt5"/>
+            </connections>
+            <point key="canvasLocation" x="244.5" y="323"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="food" width="806" height="806"/>
+        <image name="no-star" width="150" height="150"/>
+    </resources>
+</document>

@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "logo-apple.png",
+      "filename" : "Icon-Small-40.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Icon-Small-40@2x.png",
       "scale" : "2x"
     },
     {

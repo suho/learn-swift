@@ -15,9 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var loginNavigation: UINavigationController?
     var mainTabBar: UITabBarController?
     
-    class func sharedInstance() -> AppDelegate {
-        return UIApplication.sharedApplication().delegate as! AppDelegate
+    
+    class var sharedInstance: AppDelegate {
+        struct Static {
+            static var onceToken: dispatch_once_t = 0
+            static var instance: AppDelegate? = nil
+        }
+        dispatch_once(&Static.onceToken) {
+            Static.instance = UIApplication.sharedApplication().delegate as? AppDelegate
+        }
+        return Static.instance!
     }
+    
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -40,10 +49,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             homeNavigation.title = "Home"
             homeNavigation.tabBarItem.image = UIImage(named: "home-logo")?.imageWithRenderingMode(.Automatic)
             
+            //navi Map
+            let mapsNavigation = UINavigationController()
+            let mapsViewController = MapsTabBarViewController(nibName: "MapsTabBarViewController", bundle: nil)
+            mapsNavigation.viewControllers = [mapsViewController]
+            mapsNavigation.title = "Maps"
+            mapsNavigation.tabBarItem.image = UIImage(named: "map-icon")?.imageWithRenderingMode(.Automatic)
+
+            //navi Favorite
+            let favoriteNavigation = UINavigationController()
+            let favoriteViewController = FavoriteTabBarViewController(nibName: "FavoriteTabBarViewController", bundle: nil)
+            favoriteNavigation.viewControllers = [favoriteViewController]
+            favoriteNavigation.title = "Favorite"
+            favoriteNavigation.tabBarItem.image = UIImage(named: "bookmark-icon")?.imageWithRenderingMode(.Automatic)
+            
+            //navi Setting
+            
+            let settingsNavigation = UINavigationController()
+            let settingsViewController = SettingTabBarViewController(nibName: "SettingTabBarViewController", bundle: nil)
+            settingsNavigation.viewControllers = [settingsViewController]
+            settingsNavigation.title = "Settings"
+            settingsNavigation.tabBarItem.image = UIImage(named: "settings-icon")?.imageWithRenderingMode(.Automatic)
+            
             
             //set mainTabBar
             self.mainTabBar = UITabBarController()
-            self.mainTabBar?.viewControllers = [homeNavigation]
+            self.mainTabBar?.viewControllers = [homeNavigation, favoriteNavigation, mapsNavigation, settingsNavigation]
             self.mainTabBar?.tabBar.tintColor = UIColor.orangeColor()
             self.mainTabBar?.tabBar.barTintColor = UIColor.whiteColor()
             
@@ -59,7 +90,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func changeRootViewWhenLoginSuccess() {
         if let window = self.window {
+            
+            self.mainTabBar?.selectedIndex = 0
+
             window.rootViewController = self.mainTabBar
+
+        }
+    }
+    
+    func changeRootWhenLogout() {
+        if let window = self.window {
+            let loginViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+            loginNavigation = UINavigationController(rootViewController: loginViewController)
+            
+            UIView.transitionWithView(window, duration: 0.6, options: UIViewAnimationOptions.TransitionCrossDissolve,
+                                      animations: {
+                                        window.rootViewController = self.loginNavigation
+                                        }, completion: nil)
         }
     }
 

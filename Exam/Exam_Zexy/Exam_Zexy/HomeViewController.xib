@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Exam_Zexy" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMw-9G-P3k">
+                    <rect key="frame" x="133.5" y="435" width="53" height="53"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="kMw-9G-P3k" secondAttribute="height" multiplier="1:1" id="N9n-1d-bO0"/>
+                    </constraints>
+                    <state key="normal" image="Icon-Small-40"/>
+                    <connections>
+                        <action selector="showMenuAction:" destination="-1" eventType="touchUpInside" id="7B4-sB-R9D"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1g-u7-Kqe">
+                    <rect key="frame" x="0.0" y="488" width="320" height="80"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="K1g-u7-Kqe" secondAttribute="bottom" id="AqK-nC-1ty"/>
+                <constraint firstItem="K1g-u7-Kqe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JQr-Gp-Vie"/>
+                <constraint firstItem="kMw-9G-P3k" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OG9-V2-hYS"/>
+                <constraint firstItem="K1g-u7-Kqe" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="80/568" id="YCd-OB-b0T"/>
+                <constraint firstAttribute="trailing" secondItem="K1g-u7-Kqe" secondAttribute="trailing" id="f9c-D4-daR"/>
+                <constraint firstItem="K1g-u7-Kqe" firstAttribute="top" secondItem="kMw-9G-P3k" secondAttribute="bottom" id="lxr-AT-ZIU"/>
+                <constraint firstItem="kMw-9G-P3k" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/6" id="r4R-fc-4E4"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Icon-Small-40" width="40" height="40"/>
+    </resources>
+</document>
