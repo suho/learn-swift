@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
         
         if self.checkAccount(username, password: password) {
             //print("Dang nhap thanh cong")
-            AppDelegate.sharedInstance().changeRootViewWhenLoginSuccess()
+            AppDelegate.sharedInstance.changeRootViewWhenLoginSuccess()
         } else {
             if self.checkValid(username, password: password) {
                 self.showMessage("Input Not Valid", viewController: self)

@@ -20,6 +20,8 @@ class MapsTabBarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Maps"
         let initialLocation = CLLocation(latitude: 16.072056, longitude: 108.226926)
         self.centerMapOnLocation(initialLocation)
         
