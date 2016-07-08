@@ -6,8 +6,8 @@
 		<key>images</key>
 		<array>
 			<string>food</string>
-			<string>2</string>
-			<string>3</string>
+			<string>food</string>
+			<string>food</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 1</string>
@@ -16,7 +16,7 @@
 		<key>previewText</key>
 		<string>Coffe Shop At Da Nang</string>
 		<key>detailText</key>
-		<string>Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe </string>
+		<string>Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe </string>
 		<key>coordinates</key>
 		<dict>
 			<key>x</key>
@@ -31,8 +31,8 @@
 		<key>images</key>
 		<array>
 			<string>food</string>
-			<string>2</string>
-			<string>3</string>
+			<string>food</string>
+			<string>food</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 2</string>
@@ -56,8 +56,8 @@
 		<key>images</key>
 		<array>
 			<string>food</string>
-			<string>2</string>
-			<string>3</string>
+			<string>food</string>
+			<string>food</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 3</string>
@@ -81,8 +81,8 @@
 		<key>images</key>
 		<array>
 			<string>food</string>
-			<string>2</string>
-			<string>3</string>
+			<string>food</string>
+			<string>food</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 4</string>
@@ -106,8 +106,8 @@
 		<key>images</key>
 		<array>
 			<string>food</string>
-			<string>2</string>
-			<string>3</string>
+			<string>food</string>
+			<string>food</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 5</string>
@@ -131,8 +131,8 @@
 		<key>images</key>
 		<array>
 			<string>food</string>
-			<string>2</string>
-			<string>3</string>
+			<string>food</string>
+			<string>food</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 6</string>
@@ -156,8 +156,8 @@
 		<key>images</key>
 		<array>
 			<string>food</string>
-			<string>2</string>
-			<string>3</string>
+			<string>food</string>
+			<string>food</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 7</string>
@@ -206,8 +206,8 @@
 		<key>images</key>
 		<array>
 			<string>food</string>
-			<string>2</string>
-			<string>3</string>
+			<string>food</string>
+			<string>food</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 9</string>
@@ -231,8 +231,8 @@
 		<key>images</key>
 		<array>
 			<string>food</string>
-			<string>2</string>
-			<string>3</string>
+			<string>food</string>
+			<string>food</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 6</string>
@@ -256,8 +256,8 @@
 		<key>images</key>
 		<array>
 			<string>food</string>
-			<string>2</string>
-			<string>3</string>
+			<string>food</string>
+			<string>food</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 10</string>
