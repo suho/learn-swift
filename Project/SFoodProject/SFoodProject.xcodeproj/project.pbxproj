@@ -33,6 +33,8 @@
 		99F2B97E1D2A553C009B502C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2B97C1D2A553C009B502C /* LoginViewController.swift */; };
 		99F2B97F1D2A553C009B502C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F2B97D1D2A553C009B502C /* LoginViewController.xib */; };
 		99F2B9831D2A5DC7009B502C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99F2B9821D2A5DC7009B502C /* Assets.xcassets */; };
+		99F4132B1D2F52750015BB24 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F4132A1D2F52750015BB24 /* RegisterViewController.xib */; };
+		99F4132D1D2F527B0015BB24 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F4132C1D2F527B0015BB24 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		99F2B97C1D2A553C009B502C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		99F2B97D1D2A553C009B502C /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		99F2B9821D2A5DC7009B502C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99F4132A1D2F52750015BB24 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		99F4132C1D2F527B0015BB24 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 		99F2B9691D2A543B009B502C /* SFoodProject */ = {
 			isa = PBXGroup;
 			children = (
+				99F4132C1D2F527B0015BB24 /* RegisterViewController.swift */,
+				99F4132A1D2F52750015BB24 /* RegisterViewController.xib */,
 				99EB4F871D2D023000C853B0 /* MapsTabBarViewController.xib */,
 				99EB4F851D2D022B00C853B0 /* MapsTabBarViewController.swift */,
 				99EB4F831D2D022400C853B0 /* LocationMaps.swift */,
@@ -186,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9916C3D51D2A72D3003CF835 /* ForgotPasswordViewController.xib in Resources */,
+				99F4132B1D2F52750015BB24 /* RegisterViewController.xib in Resources */,
 				991B82741D2B9F86002F0BC6 /* HomeTabBarViewController.xib in Resources */,
 				99EB4F721D2C9F8900C853B0 /* FavoriteTabBarViewController.xib in Resources */,
 				991B826D1D2B8E2E002F0BC6 /* users.plist in Resources */,
@@ -213,6 +220,7 @@
 				991B82791D2BB51B002F0BC6 /* Location.swift in Sources */,
 				991B827E1D2BBBA4002F0BC6 /* LocationTableViewCell.swift in Sources */,
 				99EB4F711D2C9F8900C853B0 /* FavoriteTabBarViewController.swift in Sources */,
+				99F4132D1D2F527B0015BB24 /* RegisterViewController.swift in Sources */,
 				99F2B97E1D2A553C009B502C /* LoginViewController.swift in Sources */,
 				99EB4F861D2D022B00C853B0 /* MapsTabBarViewController.swift in Sources */,
 				9916C3D71D2A7D95003CF835 /* StringExtension.swift in Sources */,
