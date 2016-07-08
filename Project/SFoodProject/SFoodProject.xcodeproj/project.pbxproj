@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		990188B61D2F5C4700C9977F /* DetailLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990188B41D2F5C4700C9977F /* DetailLocationViewController.swift */; };
+		990188B71D2F5C4700C9977F /* DetailLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 990188B51D2F5C4700C9977F /* DetailLocationViewController.xib */; };
+		990188BA1D2F84DA00C9977F /* LocationDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990188B81D2F84DA00C9977F /* LocationDetailCollectionViewCell.swift */; };
+		990188BB1D2F84DA00C9977F /* LocationDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 990188B91D2F84DA00C9977F /* LocationDetailCollectionViewCell.xib */; };
+		990188BE1D2F9EB900C9977F /* DetailMapLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990188BC1D2F9EB900C9977F /* DetailMapLocationViewController.swift */; };
+		990188BF1D2F9EB900C9977F /* DetailMapLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 990188BD1D2F9EB900C9977F /* DetailMapLocationViewController.xib */; };
 		9916C3D41D2A72D3003CF835 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916C3D21D2A72D3003CF835 /* ForgotPasswordViewController.swift */; };
 		9916C3D51D2A72D3003CF835 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9916C3D31D2A72D3003CF835 /* ForgotPasswordViewController.xib */; };
 		9916C3D71D2A7D95003CF835 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916C3D61D2A7D95003CF835 /* StringExtension.swift */; };
@@ -38,6 +44,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		990188B41D2F5C4700C9977F /* DetailLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailLocationViewController.swift; sourceTree = "<group>"; };
+		990188B51D2F5C4700C9977F /* DetailLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailLocationViewController.xib; sourceTree = "<group>"; };
+		990188B81D2F84DA00C9977F /* LocationDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		990188B91D2F84DA00C9977F /* LocationDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		990188BC1D2F9EB900C9977F /* DetailMapLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailMapLocationViewController.swift; sourceTree = "<group>"; };
+		990188BD1D2F9EB900C9977F /* DetailMapLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailMapLocationViewController.xib; sourceTree = "<group>"; };
 		9916C3D21D2A72D3003CF835 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		9916C3D31D2A72D3003CF835 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		9916C3D61D2A7D95003CF835 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -129,6 +141,12 @@
 				99EB4F741D2CA1BD00C853B0 /* FavoriteTableViewCell.xib */,
 				99EB4F891D2D0CF900C853B0 /* SettingTabBarViewController.swift */,
 				99EB4F8A1D2D0CF900C853B0 /* SettingTabBarViewController.xib */,
+				990188B41D2F5C4700C9977F /* DetailLocationViewController.swift */,
+				990188B51D2F5C4700C9977F /* DetailLocationViewController.xib */,
+				990188B81D2F84DA00C9977F /* LocationDetailCollectionViewCell.swift */,
+				990188B91D2F84DA00C9977F /* LocationDetailCollectionViewCell.xib */,
+				990188BC1D2F9EB900C9977F /* DetailMapLocationViewController.swift */,
+				990188BD1D2F9EB900C9977F /* DetailMapLocationViewController.xib */,
 			);
 			path = SFoodProject;
 			sourceTree = "<group>";
@@ -165,6 +183,7 @@
 				TargetAttributes = {
 					99F2B9661D2A543B009B502C = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = W6VWBYHU5C;
 					};
 				};
 			};
@@ -196,13 +215,16 @@
 				991B82741D2B9F86002F0BC6 /* HomeTabBarViewController.xib in Resources */,
 				99EB4F721D2C9F8900C853B0 /* FavoriteTabBarViewController.xib in Resources */,
 				991B826D1D2B8E2E002F0BC6 /* users.plist in Resources */,
+				990188BF1D2F9EB900C9977F /* DetailMapLocationViewController.xib in Resources */,
 				99F2B9751D2A543B009B502C /* LaunchScreen.storyboard in Resources */,
 				991B827B1D2BB721002F0BC6 /* locations.plist in Resources */,
 				99EB4F881D2D023000C853B0 /* MapsTabBarViewController.xib in Resources */,
 				99F2B9831D2A5DC7009B502C /* Assets.xcassets in Resources */,
 				99EB4F761D2CA1BD00C853B0 /* FavoriteTableViewCell.xib in Resources */,
+				990188BB1D2F84DA00C9977F /* LocationDetailCollectionViewCell.xib in Resources */,
 				99EB4F8C1D2D0CF900C853B0 /* SettingTabBarViewController.xib in Resources */,
 				991B827F1D2BBBA4002F0BC6 /* LocationTableViewCell.xib in Resources */,
+				990188B71D2F5C4700C9977F /* DetailLocationViewController.xib in Resources */,
 				99F2B97F1D2A553C009B502C /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,11 +239,14 @@
 				9916C3D41D2A72D3003CF835 /* ForgotPasswordViewController.swift in Sources */,
 				99EB4F8B1D2D0CF900C853B0 /* SettingTabBarViewController.swift in Sources */,
 				991B82751D2B9F86002F0BC6 /* SingletonClass.swift in Sources */,
+				990188BE1D2F9EB900C9977F /* DetailMapLocationViewController.swift in Sources */,
 				991B82791D2BB51B002F0BC6 /* Location.swift in Sources */,
 				991B827E1D2BBBA4002F0BC6 /* LocationTableViewCell.swift in Sources */,
 				99EB4F711D2C9F8900C853B0 /* FavoriteTabBarViewController.swift in Sources */,
+				990188BA1D2F84DA00C9977F /* LocationDetailCollectionViewCell.swift in Sources */,
 				99F4132D1D2F527B0015BB24 /* RegisterViewController.swift in Sources */,
 				99F2B97E1D2A553C009B502C /* LoginViewController.swift in Sources */,
+				990188B61D2F5C4700C9977F /* DetailLocationViewController.swift in Sources */,
 				99EB4F861D2D022B00C853B0 /* MapsTabBarViewController.swift in Sources */,
 				9916C3D71D2A7D95003CF835 /* StringExtension.swift in Sources */,
 				99EB4F841D2D022400C853B0 /* LocationMaps.swift in Sources */,
@@ -335,10 +360,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SFoodProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.suhv.SFoodProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -346,10 +374,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SFoodProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.suhv.SFoodProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

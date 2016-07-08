@@ -22,6 +22,7 @@ class LocationTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setView()
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

@@ -22,11 +22,11 @@ class FavoriteTabBarViewController: UIViewController {
         self.favoriteTableView.dataSource = self
         self.favoriteTableView.registerNib(UINib(nibName: "FavoriteTableViewCell", bundle: nil), forCellReuseIdentifier: "cellFavorite")
         
-        let doneButton: UIBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(self.deleteAllFavoritesAciton))
-        doneButton.image = UIImage(named: "delete-icon")
-        doneButton.tintColor = UIColor.orangeColor()
+        let deleteButton: UIBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(self.deleteAllFavoritesAciton))
+        deleteButton.image = UIImage(named: "delete-icon")
+        deleteButton.tintColor = UIColor.orangeColor()
         
-        self.navigationItem.rightBarButtonItem = doneButton
+        self.navigationItem.rightBarButtonItem = deleteButton
         
         self.favorites = self.getFavoriteData()
     }

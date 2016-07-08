@@ -86,6 +86,12 @@ extension HomeTabBarViewController: UITableViewDelegate, UITableViewDataSource {
         cell.tintColor = UIColor.orangeColor()
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let detailView = DetailLocationViewController(nibName: "DetailLocationViewController", bundle: nil)
+        detailView.location = locations[indexPath.row]
+        self.navigationController?.pushViewController(detailView, animated: true)
+    }
 
 }
 

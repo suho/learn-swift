@@ -14,7 +14,7 @@ class MapsTabBarViewController: UIViewController {
     @IBOutlet weak var mapsView: MKMapView!
     
     
-    let regionRadius: CLLocationDistance = 2000
+    let regionRadius: CLLocationDistance = 1500
     
     var locations = [Location]()
     
