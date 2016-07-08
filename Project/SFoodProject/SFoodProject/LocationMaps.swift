@@ -28,4 +28,8 @@ class LocationMaps: NSObject, MKAnnotation {
     var subtitle: String? {
         return locationName
     }
+    
+    override init() {
+        super.init()
+    }
 }

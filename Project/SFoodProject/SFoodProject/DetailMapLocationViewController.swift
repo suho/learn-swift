@@ -19,6 +19,8 @@ class DetailMapLocationViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     
+    var locationMap = LocationMaps()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,12 +29,12 @@ class DetailMapLocationViewController: UIViewController {
         let initialLocation = CLLocation(latitude: CLLocationDegrees(self.location.coordinates.0), longitude: CLLocationDegrees(self.location.coordinates.1))
         self.centerMapOnLocation(initialLocation)
         
-        let locationMap = LocationMaps(image: "\(self.location.images.first!)", title: "\(self.location.name)",
+        self.locationMap = LocationMaps(image: "\(self.location.images.first!)", title: "\(self.location.name)",
                                        locationName: "\(self.location.address)",
                                        discipline: "\(self.location.previewText)",
                                        coordinate: CLLocationCoordinate2D(latitude: CLLocationDegrees(self.location.coordinates.0), longitude: CLLocationDegrees(self.location.coordinates.1)))
         
-        self.detailMapView.addAnnotation(locationMap)
+        self.detailMapView.addAnnotation(self.locationMap)
         self.detailMapView.delegate = self
         
         self.locationManager.delegate = self
@@ -42,16 +44,6 @@ class DetailMapLocationViewController: UIViewController {
         
         self.detailMapView.showsUserLocation = true
         
-        let locationUser = (locationManager.location?.coordinate)
-        
-        let latitudeUser = (locationUser?.latitude)!
-        let longitudeUser = (locationUser?.longitude)!
-        
-        
-        let coordinateMyLocation = CLLocationCoordinate2D(latitude: latitudeUser, longitude: longitudeUser)
-        let coordinateFoodLocation = CLLocationCoordinate2D(latitude: locationMap.coordinate.latitude, longitude: locationMap.coordinate.longitude)
-        
-        self.drawTwoPins(coordinateMyLocation, coordinateFoodLocation: coordinateFoodLocation)
         
     }
     
@@ -139,6 +131,35 @@ extension DetailMapLocationViewController: MKMapViewDelegate, CLLocationManagerD
         renderer.lineWidth = 4.0
         
         return renderer
+    }
+    
+    //MARK: - Location Delegate Methods
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        self.locationManager.stopUpdatingLocation()
+    }
+    
+    
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("Error: " + error.localizedDescription)
+    }
+    
+    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+        
+        let locationUser = (locationManager.location?.coordinate)!
+        
+        let latitudeUser = locationUser.latitude
+        let longitudeUser = locationUser.longitude
+        
+        let latitudeLocation = self.locationMap.coordinate.latitude
+        let longitudeLocation = self.locationMap.coordinate.longitude
+        
+        
+        let coordinateMyLocation = CLLocationCoordinate2D(latitude: latitudeUser, longitude: longitudeUser)
+        let coordinateFoodLocation = CLLocationCoordinate2D(latitude: latitudeLocation, longitude: longitudeLocation)
+        
+        self.drawTwoPins(coordinateMyLocation, coordinateFoodLocation: coordinateFoodLocation)
     }
     
 }
