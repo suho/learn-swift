@@ -61,12 +61,23 @@ extension SettingTabBarViewController: UITableViewDelegate, UITableViewDataSourc
         print("Tapped \(indexPath.section), \(indexPath.row)")
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print(indexPath.row)
         let selectedCell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         if (indexPath.section == 0 && indexPath.row == 2) || (indexPath.section == 1 && indexPath.row != 2) || (indexPath.section == 2) {
-            selectedCell.contentView.backgroundColor = UIColor(red: 240/255, green: 151/255, blue: 103/255, alpha: 1)
+            selectedCell.backgroundColor = UIColor.whiteColor()
+            selectedCell.contentView.backgroundColor = UIColor.whiteColor()
         }
         
+        
+        switch indexPath.section {
+        case 0:
+            print("profile")
+        case 1:
+            print("follow")
+        default:
+            AppDelegate.sharedInstance.changeRootWhenLogout()
+        }
     }
+    
+    
     
 }
