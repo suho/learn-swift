@@ -38,6 +38,7 @@ class LoginViewController: UIViewController {
         
         if self.checkAccount(username, password: password) {
             //print("Dang nhap thanh cong")
+            AppDelegate.sharedInstance.idUser = self.getIdUser(username, password: password)
             AppDelegate.sharedInstance.changeRootViewWhenLoginSuccess()
         } else {
             if self.checkValid(username, password: password) {
@@ -75,6 +76,23 @@ class LoginViewController: UIViewController {
         }
         
         return false
+    }
+    
+    func getIdUser(username: String, password: String) -> Int {
+        
+        let path = NSBundle.mainBundle().pathForResource("users", ofType: "plist")
+        let users = NSArray(contentsOfFile: path!)
+        
+        for user in users! {
+            let _id = user.objectForKey("id") as! Int
+            let _username = user.objectForKey("username") as! String
+            let _password = user.objectForKey("password") as! String
+            if username == _username && password == _password {
+                return _id
+            }
+        }
+        return 0
+
     }
     
     func checkValid(username: String, password: String) -> Bool {

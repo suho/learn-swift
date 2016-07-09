@@ -28,6 +28,10 @@ class SettingTabBarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        self.settingsTableView.reloadData()
+    }
+    
 
 }
 
@@ -41,17 +45,16 @@ extension SettingTabBarViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return self.sections[section]
     }
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0
-    }
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
-    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("tableCell", forIndexPath: indexPath)
         cell.tintColor = UIColor.orangeColor()
-        cell.textLabel?.text = self.items[indexPath.section][indexPath.row]
-    
+        
+        var detailUser = ""
+        if indexPath.section == 0 && indexPath.row < 2 {
+            detailUser = ": \(AppDelegate.sharedInstance.idUser)"
+        }
+        cell.textLabel?.text = "\(self.items[indexPath.section][indexPath.row])\(detailUser)"
         cell.userInteractionEnabled = false
         if (indexPath.section == 0 && indexPath.row == 2) || (indexPath.section == 1 && indexPath.row != 2) || (indexPath.section == 2) {
             cell.userInteractionEnabled = true

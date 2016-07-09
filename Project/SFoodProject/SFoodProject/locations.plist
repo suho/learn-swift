@@ -170,9 +170,9 @@
 		<key>coordinates</key>
 		<dict>
 			<key>x</key>
-			<real>0.1</real>
+			<real>16.065911</real>
 			<key>y</key>
-			<real>0.1</real>
+			<real>108.222505</real>
 		</dict>
 		<key>isFavorite</key>
 		<false/>
@@ -195,9 +195,9 @@
 		<key>coordinates</key>
 		<dict>
 			<key>x</key>
-			<real>0.1</real>
+			<real>16.070349</real>
 			<key>y</key>
-			<real>0.1</real>
+			<real>108.2137521</real>
 		</dict>
 		<key>isFavorite</key>
 		<true/>
@@ -235,7 +235,7 @@
 			<string>food</string>
 		</array>
 		<key>name</key>
-		<string>Cafe 6</string>
+		<string>Cafe 10</string>
 		<key>address</key>
 		<string>123 ABC, DEF, GHI</string>
 		<key>previewText</key>
@@ -245,9 +245,9 @@
 		<key>coordinates</key>
 		<dict>
 			<key>x</key>
-			<real>0.1</real>
+			<real>16.069585</real>
 			<key>y</key>
-			<real>0.1</real>
+			<real>108.185206</real>
 		</dict>
 		<key>isFavorite</key>
 		<true/>
@@ -260,7 +260,7 @@
 			<string>food</string>
 		</array>
 		<key>name</key>
-		<string>Cafe 10</string>
+		<string>Cafe 11</string>
 		<key>address</key>
 		<string>123 ABC, DEF, GHI</string>
 		<key>previewText</key>
@@ -270,9 +270,9 @@
 		<key>coordinates</key>
 		<dict>
 			<key>x</key>
-			<real>0.1</real>
-			<key>y</key>
-			<real>0.1</real>
+            <real>16.069585</real>
+            <key>y</key>
+            <real>108.185100</real>
 		</dict>
 		<key>isFavorite</key>
 		<true/>

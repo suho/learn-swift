@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var loginNavigation: UINavigationController?
     var mainTabBar: UITabBarController?
-    
+    var idUser = Int()
     
     class var sharedInstance: AppDelegate {
         struct Static {
