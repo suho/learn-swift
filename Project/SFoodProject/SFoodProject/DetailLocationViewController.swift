@@ -61,6 +61,8 @@ class DetailLocationViewController: UIViewController {
         self.mapLocationView.delegate = self
         self.mapLocationView.scrollEnabled = false
         self.mapLocationView.zoomEnabled = false
+        
+        
 
 
     }
@@ -68,6 +70,13 @@ class DetailLocationViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
        
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let touch = touches.first! as UITouch
+        if touch.view == self.mapLocationView {
+            print("")
+        }
     }
     
     func changeFavorite() {
@@ -138,6 +147,8 @@ extension DetailLocationViewController: MKMapViewDelegate {
                 
                 view.canShowCallout = true
                 view.calloutOffset = CGPoint(x: -5, y: 5)
+                view.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
+                
                 let buttonleft: UIButton = UIButton(type: UIButtonType.Custom)
                 buttonleft.frame.size.width = view.frame.size.height
                 buttonleft.frame.size.height = view.frame.size.height
@@ -157,6 +168,11 @@ extension DetailLocationViewController: MKMapViewDelegate {
         self.navigationController?.pushViewController(detailMapView, animated: true)
     }
     
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let detailMapView = DetailMapLocationViewController(nibName: "DetailMapLocationViewController", bundle: nil)
+        detailMapView.location = self.location
+        self.navigationController?.pushViewController(detailMapView, animated: true)
+    }
     
 }
 

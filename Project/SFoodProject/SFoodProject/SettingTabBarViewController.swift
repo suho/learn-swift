@@ -51,6 +51,7 @@ extension SettingTabBarViewController: UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCellWithIdentifier("tableCell", forIndexPath: indexPath)
         cell.tintColor = UIColor.orangeColor()
         cell.textLabel?.text = self.items[indexPath.section][indexPath.row]
+    
         cell.userInteractionEnabled = false
         if (indexPath.section == 0 && indexPath.row == 2) || (indexPath.section == 1 && indexPath.row != 2) || (indexPath.section == 2) {
             cell.userInteractionEnabled = true
@@ -66,8 +67,6 @@ extension SettingTabBarViewController: UITableViewDelegate, UITableViewDataSourc
             selectedCell.backgroundColor = UIColor.whiteColor()
             selectedCell.contentView.backgroundColor = UIColor.whiteColor()
         }
-        
-        
         switch indexPath.section {
         case 0:
             print("profile")

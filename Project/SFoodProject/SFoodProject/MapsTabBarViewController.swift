@@ -112,12 +112,18 @@ extension MapsTabBarViewController: MKMapViewDelegate {
     }
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        
         if control == view.rightCalloutAccessoryView {
-            print("You Tapped Right")
-        } else {
-            print("You Tapped Left")
+          //print("You Tapped Right")
+            let locationMap = view.annotation as! LocationMaps
+            for location in self.locations {
+                if location.name == locationMap.title {
+                    let detailView = DetailLocationViewController(nibName: "DetailLocationViewController", bundle: nil)
+                    detailView.location = location
+                    self.navigationController?.pushViewController(detailView, animated: true)
+                }
+            }
+            
+            
         }
-        
     }
 }

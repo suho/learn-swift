@@ -143,11 +143,12 @@ extension DetailMapLocationViewController: MKMapViewDelegate, CLLocationManagerD
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("Error: " + error.localizedDescription)
+        self.locationManager.stopUpdatingLocation()
     }
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         
-        let locationUser = (locationManager.location?.coordinate)!
+        let locationUser = (self.locationManager.location?.coordinate)!
         
         let latitudeUser = locationUser.latitude
         let longitudeUser = locationUser.longitude

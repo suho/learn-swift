@@ -22,11 +22,7 @@ class FavoriteTabBarViewController: UIViewController {
         self.favoriteTableView.dataSource = self
         self.favoriteTableView.registerNib(UINib(nibName: "FavoriteTableViewCell", bundle: nil), forCellReuseIdentifier: "cellFavorite")
         
-        let deleteButton: UIBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(self.deleteAllFavoritesAciton))
-        deleteButton.image = UIImage(named: "delete-icon")
-        deleteButton.tintColor = UIColor.orangeColor()
-        
-        self.navigationItem.rightBarButtonItem = deleteButton
+
         
         self.favorites = self.getFavoriteData()
     }
@@ -37,6 +33,13 @@ class FavoriteTabBarViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        
+        let deleteButton: UIBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(self.deleteAllFavoritesAciton))
+        deleteButton.image = UIImage(named: "delete-icon")
+        deleteButton.tintColor = UIColor.orangeColor()
+        
+        self.navigationItem.rightBarButtonItem = deleteButton
+        
         for i in 0..<self.favorites.count {
             self.favorites[i].isFavorite = true
         }
@@ -91,6 +94,22 @@ extension FavoriteTabBarViewController: UITableViewDelegate, UITableViewDataSour
         cell.setData(self.favorites[indexPath.row])
         cell.tintColor = UIColor.orangeColor()
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let detailView = DetailLocationViewController(nibName: "DetailLocationViewController", bundle: nil)
+        detailView.location = self.favorites[indexPath.row]
+        self.navigationController?.pushViewController(detailView, animated: true)
+    }
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Delete") { (action , indexPath) -> Void in
+            self.editing = false
+            self.favorites.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+        shareAction.backgroundColor = UIColor.orangeColor()
+        return [shareAction]
     }
 
     
