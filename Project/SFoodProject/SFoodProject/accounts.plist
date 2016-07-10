@@ -11,8 +11,8 @@
 		<string>admin</string>
 	</dict>
 	<dict>
-        <key>id</key>
-        <integer>2</integer>
+		<key>id</key>
+		<integer>2</integer>
 		<key>username</key>
 		<string>hovansu</string>
 		<key>password</key>

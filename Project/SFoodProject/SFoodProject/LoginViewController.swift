@@ -64,7 +64,7 @@ class LoginViewController: UIViewController {
     }
     
     func checkAccount(username: String, password: String) -> Bool {
-        let path = NSBundle.mainBundle().pathForResource("users", ofType: "plist")
+        let path = NSBundle.mainBundle().pathForResource("accounts", ofType: "plist")
         let users = NSArray(contentsOfFile: path!)
         
         for user in users! {
@@ -80,7 +80,7 @@ class LoginViewController: UIViewController {
     
     func getIdUser(username: String, password: String) -> Int {
         
-        let path = NSBundle.mainBundle().pathForResource("users", ofType: "plist")
+        let path = NSBundle.mainBundle().pathForResource("accounts", ofType: "plist")
         let users = NSArray(contentsOfFile: path!)
         
         for user in users! {
