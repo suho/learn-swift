@@ -41,6 +41,10 @@
 		99F2B9831D2A5DC7009B502C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99F2B9821D2A5DC7009B502C /* Assets.xcassets */; };
 		99F4132B1D2F52750015BB24 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F4132A1D2F52750015BB24 /* RegisterViewController.xib */; };
 		99F4132D1D2F527B0015BB24 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F4132C1D2F527B0015BB24 /* RegisterViewController.swift */; };
+		99FE87E01D332AEE00475F73 /* users.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99FE87DF1D332AEE00475F73 /* users.plist */; };
+		99FE87E31D332ED000475F73 /* DetailProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE87E11D332ED000475F73 /* DetailProfileViewController.swift */; };
+		99FE87E41D332ED000475F73 /* DetailProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99FE87E21D332ED000475F73 /* DetailProfileViewController.xib */; };
+		99FE87E61D334F4700475F73 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE87E51D334F4700475F73 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +84,10 @@
 		99F2B9821D2A5DC7009B502C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99F4132A1D2F52750015BB24 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		99F4132C1D2F527B0015BB24 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		99FE87DF1D332AEE00475F73 /* users.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = users.plist; sourceTree = "<group>"; };
+		99FE87E11D332ED000475F73 /* DetailProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailProfileViewController.swift; sourceTree = "<group>"; };
+		99FE87E21D332ED000475F73 /* DetailProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailProfileViewController.xib; sourceTree = "<group>"; };
+		99FE87E51D334F4700475F73 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +155,10 @@
 				990188B91D2F84DA00C9977F /* LocationDetailCollectionViewCell.xib */,
 				990188BC1D2F9EB900C9977F /* DetailMapLocationViewController.swift */,
 				990188BD1D2F9EB900C9977F /* DetailMapLocationViewController.xib */,
+				99FE87DF1D332AEE00475F73 /* users.plist */,
+				99FE87E11D332ED000475F73 /* DetailProfileViewController.swift */,
+				99FE87E21D332ED000475F73 /* DetailProfileViewController.xib */,
+				99FE87E51D334F4700475F73 /* User.swift */,
 			);
 			path = SFoodProject;
 			sourceTree = "<group>";
@@ -221,11 +233,13 @@
 				99EB4F881D2D023000C853B0 /* MapsTabBarViewController.xib in Resources */,
 				99F2B9831D2A5DC7009B502C /* Assets.xcassets in Resources */,
 				99EB4F761D2CA1BD00C853B0 /* FavoriteTableViewCell.xib in Resources */,
+				99FE87E01D332AEE00475F73 /* users.plist in Resources */,
 				990188BB1D2F84DA00C9977F /* LocationDetailCollectionViewCell.xib in Resources */,
 				99EB4F8C1D2D0CF900C853B0 /* SettingTabBarViewController.xib in Resources */,
 				991B827F1D2BBBA4002F0BC6 /* LocationTableViewCell.xib in Resources */,
 				990188B71D2F5C4700C9977F /* DetailLocationViewController.xib in Resources */,
 				99F2B97F1D2A553C009B502C /* LoginViewController.xib in Resources */,
+				99FE87E41D332ED000475F73 /* DetailProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +258,7 @@
 				991B827E1D2BBBA4002F0BC6 /* LocationTableViewCell.swift in Sources */,
 				99EB4F711D2C9F8900C853B0 /* FavoriteTabBarViewController.swift in Sources */,
 				990188BA1D2F84DA00C9977F /* LocationDetailCollectionViewCell.swift in Sources */,
+				99FE87E61D334F4700475F73 /* User.swift in Sources */,
 				99F4132D1D2F527B0015BB24 /* RegisterViewController.swift in Sources */,
 				99F2B97E1D2A553C009B502C /* LoginViewController.swift in Sources */,
 				990188B61D2F5C4700C9977F /* DetailLocationViewController.swift in Sources */,
@@ -252,6 +267,7 @@
 				99EB4F841D2D022400C853B0 /* LocationMaps.swift in Sources */,
 				991B82731D2B9F86002F0BC6 /* HomeTabBarViewController.swift in Sources */,
 				99F2B96D1D2A543B009B502C /* ViewController.swift in Sources */,
+				99FE87E31D332ED000475F73 /* DetailProfileViewController.swift in Sources */,
 				99F2B96B1D2A543B009B502C /* AppDelegate.swift in Sources */,
 				99EB4F751D2CA1BD00C853B0 /* FavoriteTableViewCell.swift in Sources */,
 			);
