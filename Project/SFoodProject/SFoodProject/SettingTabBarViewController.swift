@@ -23,8 +23,8 @@ class SettingTabBarViewController: UIViewController {
         self.settingsTableView.delegate = self
         self.settingsTableView.dataSource = self
         self.settingsTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "tableCell")
+        //self.user = self.getUserById(AppDelegate.sharedInstance.idUser)
         
-        self.user = self.getUserById(AppDelegate.sharedInstance.idUser)
         
     }
 
@@ -33,8 +33,10 @@ class SettingTabBarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
+        self.user = self.getUserById(AppDelegate.sharedInstance.idUser)
         self.settingsTableView.reloadData()
+
     }
     
     func getUserById(idUser: Int) -> User {
@@ -110,10 +112,12 @@ extension SettingTabBarViewController: UITableViewDelegate, UITableViewDataSourc
         case 0:
             //print("profile")
             let detailProfile = DetailProfileViewController(nibName: "DetailProfileViewController", bundle: nil)
+            detailProfile.user = self.user
             self.navigationController?.pushViewController(detailProfile, animated: true)
         case 1:
             print("follow")
         default:
+            self.user = User()
             AppDelegate.sharedInstance.changeRootWhenLogout()
         }
     }

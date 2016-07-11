@@ -20,6 +20,8 @@ class DetailProfileViewController: UIViewController {
     
     var isChangeInformation = false
     
+    var user = User()
+    
     @IBAction func changeInformationAction(sender: AnyObject) {
         
         if isChangeInformation {
@@ -41,6 +43,8 @@ class DetailProfileViewController: UIViewController {
         let changeAccountButton: UIBarButtonItem = UIBarButtonItem(title: "Change Password", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(self.changePasword))
         
         self.navigationItem.rightBarButtonItem = changeAccountButton
+        
+        self.reloadInputViews()
     }
     
     func changePasword() {
@@ -51,6 +55,14 @@ class DetailProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.orangeColor()
+        
+        self.fullName.text = self.user.fullName
+        self.age.text = "\(self.user.age)"
+        self.email.text = self.user.email
+        self.phone.text = self.user.phone
+        self.gender.selectedSegmentIndex = (self.user.gender) ? 0 : 1
+        self.username.text = self.user.username
+        
     }
 
     override func didReceiveMemoryWarning() {
