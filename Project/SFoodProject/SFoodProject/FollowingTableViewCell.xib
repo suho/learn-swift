@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="98" id="KGk-i7-Jjw" customClass="FollowingTableViewCell" customModule="SFoodProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="97.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-avatar" translatesAutoresizingMaskIntoConstraints="NO" id="hgQ-Jz-YQ0">
+                        <rect key="frame" x="8" y="8" width="81.5" height="81.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="hgQ-Jz-YQ0" secondAttribute="height" multiplier="1:1" id="dTc-V8-mf5"/>
+                        </constraints>
+                    </imageView>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Boss" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="34q-gO-644">
+                        <rect key="frame" x="109" y="13" width="57" height="30"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="boss@gmail.com" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1W-nh-htn">
+                        <rect key="frame" x="109" y="61.5" width="117" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hgQ-Jz-YQ0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="1iG-bU-hud"/>
+                    <constraint firstItem="hgQ-Jz-YQ0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Dq6-yy-JG5"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="I1W-nh-htn" secondAttribute="bottom" constant="10" id="EB7-Gn-yNM"/>
+                    <constraint firstItem="I1W-nh-htn" firstAttribute="leading" secondItem="34q-gO-644" secondAttribute="leading" id="FZ5-OF-UTk"/>
+                    <constraint firstItem="34q-gO-644" firstAttribute="top" secondItem="hgQ-Jz-YQ0" secondAttribute="top" constant="5" id="bQJ-CR-GKz"/>
+                    <constraint firstItem="34q-gO-644" firstAttribute="leading" secondItem="hgQ-Jz-YQ0" secondAttribute="trailing" constant="20" id="eWL-Tz-g1V"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="hgQ-Jz-YQ0" secondAttribute="bottom" id="r4J-z4-nlo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatar" destination="hgQ-Jz-YQ0" id="z8f-EA-w5w"/>
+                <outlet property="mail" destination="I1W-nh-htn" id="cBy-zN-CDJ"/>
+                <outlet property="name" destination="34q-gO-644" id="liL-uP-7ze"/>
+            </connections>
+            <point key="canvasLocation" x="280" y="295"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="default-avatar" width="1032" height="1032"/>
+    </resources>
+</document>

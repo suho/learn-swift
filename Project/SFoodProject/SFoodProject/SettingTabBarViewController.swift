@@ -116,10 +116,11 @@ extension SettingTabBarViewController: UITableViewDelegate, UITableViewDataSourc
             self.navigationController?.pushViewController(detailProfile, animated: true)
         case 1:
             if indexPath.row == 0 {
-                let followingView = FollowingViewController(nibName: "FollowingViewController", bundle: nil)
+                let followingView = FollowViewController(nibName: "FollowViewController", bundle: nil)
                 self.navigationController?.pushViewController(followingView, animated: true)
             } else {
-                print("abc")
+                let followingView = FollowViewController(nibName: "FollowViewController", bundle: nil)
+                self.navigationController?.pushViewController(followingView, animated: true)
             }
         default:
             self.user = User()

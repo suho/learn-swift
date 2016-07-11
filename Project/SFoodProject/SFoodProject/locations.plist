@@ -219,10 +219,10 @@
 		<string>Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe </string>
 		<key>coordinates</key>
 		<dict>
-			<key>x</key>
-			<real>0.1</real>
-			<key>y</key>
-			<real>0.1</real>
+            <key>x</key>
+            <real>16.070349</real>
+            <key>y</key>
+            <real>108.2137421</real>
 		</dict>
 		<key>isFavorite</key>
 		<false/>

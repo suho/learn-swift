@@ -1,5 +1,5 @@
 //
-//  FollowingViewController.swift
+//  DetailFollowViewController.swift
 //  SFoodProject
 //
 //  Created by Mylo Ho on 7/11/16.
@@ -8,12 +8,18 @@
 
 import UIKit
 
-class FollowingViewController: UIViewController {
-    @IBOutlet weak var followingTableView: UITableView!
+class DetailFollowViewController: UIViewController {
+    @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var fullName: UITextField!
+    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var age: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var phone: UITextField!
+    @IBOutlet weak var gender: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Following"
+
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +27,5 @@ class FollowingViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
+
 }
