@@ -115,7 +115,12 @@ extension SettingTabBarViewController: UITableViewDelegate, UITableViewDataSourc
             detailProfile.user = self.user
             self.navigationController?.pushViewController(detailProfile, animated: true)
         case 1:
-            print("follow")
+            if indexPath.row == 0 {
+                let followingView = FollowingViewController(nibName: "FollowingViewController", bundle: nil)
+                self.navigationController?.pushViewController(followingView, animated: true)
+            } else {
+                print("abc")
+            }
         default:
             self.user = User()
             AppDelegate.sharedInstance.changeRootWhenLogout()

@@ -32,7 +32,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="170.5"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-avatar" translatesAutoresizingMaskIntoConstraints="NO" id="lLw-Cb-fG7">
-                                    <rect key="frame" x="106" y="32" width="107" height="106.5"/>
+                                    <rect key="frame" x="106" y="32" width="107" height="107"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="lLw-Cb-fG7" secondAttribute="height" multiplier="1:1" id="rKx-up-h5s"/>
                                     </constraints>
@@ -193,7 +193,7 @@
                 <constraint firstItem="IEP-Lm-Zgx" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/2" id="7r0-J0-mSY"/>
                 <constraint firstItem="7su-Y3-ipL" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="LFf-jz-lXQ"/>
                 <constraint firstAttribute="bottom" secondItem="CcF-iS-Vgf" secondAttribute="bottom" id="LlK-am-G9f"/>
-                <constraint firstItem="lLw-Cb-fG7" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/3" id="U5u-5o-gJz"/>
+                <constraint firstItem="lLw-Cb-fG7" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="107/320" id="U5u-5o-gJz"/>
                 <constraint firstItem="2CE-vd-DjC" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="WYA-hL-Iki"/>
                 <constraint firstItem="CcF-iS-Vgf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jIA-ej-aJz"/>
                 <constraint firstItem="CcF-iS-Vgf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qYY-fP-Z2L"/>

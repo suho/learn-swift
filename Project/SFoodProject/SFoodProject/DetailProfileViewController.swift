@@ -32,7 +32,7 @@ class DetailProfileViewController: UIViewController {
             self.email.enabled = true
             self.phone.enabled = true
             self.gender.enabled = true
-            self.changeInforButton.setTitle("Done", forState: .Normal)
+            self.changeInforButton.setTitle("Save", forState: .Normal)
             self.isChangeInformation = true
         }
     }
@@ -44,11 +44,21 @@ class DetailProfileViewController: UIViewController {
         
         self.navigationItem.rightBarButtonItem = changeAccountButton
         
-        self.reloadInputViews()
+        
     }
     
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.avatar.border(self.avatar.frame.size.width / 2)
+        
+    }
+    
+    
     func changePasword() {
-        print("Change Account")
+        let changePassword = ChangePasswordViewController(nibName: "ChangePasswordViewController", bundle: nil)
+        changePassword.user = self.user
+        self.navigationController?.pushViewController(changePassword, animated: true)
     }
     
     
@@ -62,6 +72,11 @@ class DetailProfileViewController: UIViewController {
         self.phone.text = self.user.phone
         self.gender.selectedSegmentIndex = (self.user.gender) ? 0 : 1
         self.username.text = self.user.username
+        if let image = UIImage(named: self.user.avatar) {
+            self.avatar.image = image
+        } else {
+            self.avatar.image = UIImage(contentsOfFile: self.user.avatar)
+        }
         
     }
 
@@ -70,4 +85,11 @@ class DetailProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+}
+
+extension UIView {
+    func border(width: CGFloat) {
+        self.layer.cornerRadius = width
+        self.clipsToBounds = true
+    }
 }

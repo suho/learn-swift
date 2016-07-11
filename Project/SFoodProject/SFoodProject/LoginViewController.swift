@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.orangeColor()
         self.usernameTextField.delegate = self
         self.passwordTextField.delegate = self
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         // Do any additional setup after loading the view.
     }
 
@@ -26,6 +27,9 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
     override func viewWillAppear(animated: Bool) {
         self.usernameTextField.text = ""
         self.passwordTextField.text = ""

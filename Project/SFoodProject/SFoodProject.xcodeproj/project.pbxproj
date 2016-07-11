@@ -44,6 +44,10 @@
 		99FE87E31D332ED000475F73 /* DetailProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE87E11D332ED000475F73 /* DetailProfileViewController.swift */; };
 		99FE87E41D332ED000475F73 /* DetailProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99FE87E21D332ED000475F73 /* DetailProfileViewController.xib */; };
 		99FE87E61D334F4700475F73 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE87E51D334F4700475F73 /* User.swift */; };
+		99FE87E91D33940A00475F73 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE87E71D33940A00475F73 /* ChangePasswordViewController.swift */; };
+		99FE87EA1D33940A00475F73 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99FE87E81D33940A00475F73 /* ChangePasswordViewController.xib */; };
+		99FE87ED1D339FDF00475F73 /* FollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE87EB1D339FDF00475F73 /* FollowingViewController.swift */; };
+		99FE87EE1D339FDF00475F73 /* FollowingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99FE87EC1D339FDF00475F73 /* FollowingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +90,10 @@
 		99FE87E11D332ED000475F73 /* DetailProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailProfileViewController.swift; sourceTree = "<group>"; };
 		99FE87E21D332ED000475F73 /* DetailProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailProfileViewController.xib; sourceTree = "<group>"; };
 		99FE87E51D334F4700475F73 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		99FE87E71D33940A00475F73 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		99FE87E81D33940A00475F73 /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
+		99FE87EB1D339FDF00475F73 /* FollowingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowingViewController.swift; sourceTree = "<group>"; };
+		99FE87EC1D339FDF00475F73 /* FollowingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +164,10 @@
 				99FE87E11D332ED000475F73 /* DetailProfileViewController.swift */,
 				99FE87E21D332ED000475F73 /* DetailProfileViewController.xib */,
 				99FE87E51D334F4700475F73 /* User.swift */,
+				99FE87E71D33940A00475F73 /* ChangePasswordViewController.swift */,
+				99FE87E81D33940A00475F73 /* ChangePasswordViewController.xib */,
+				99FE87EB1D339FDF00475F73 /* FollowingViewController.swift */,
+				99FE87EC1D339FDF00475F73 /* FollowingViewController.xib */,
 			);
 			path = SFoodProject;
 			sourceTree = "<group>";
@@ -224,6 +236,7 @@
 				991B82741D2B9F86002F0BC6 /* HomeTabBarViewController.xib in Resources */,
 				99EB4F721D2C9F8900C853B0 /* FavoriteTabBarViewController.xib in Resources */,
 				990188BF1D2F9EB900C9977F /* DetailMapLocationViewController.xib in Resources */,
+				99FE87EE1D339FDF00475F73 /* FollowingViewController.xib in Resources */,
 				99F2B9751D2A543B009B502C /* LaunchScreen.storyboard in Resources */,
 				991B827B1D2BB721002F0BC6 /* locations.plist in Resources */,
 				99EB4F881D2D023000C853B0 /* MapsTabBarViewController.xib in Resources */,
@@ -235,6 +248,7 @@
 				991B827F1D2BBBA4002F0BC6 /* LocationTableViewCell.xib in Resources */,
 				990188B71D2F5C4700C9977F /* DetailLocationViewController.xib in Resources */,
 				99F2B97F1D2A553C009B502C /* LoginViewController.xib in Resources */,
+				99FE87EA1D33940A00475F73 /* ChangePasswordViewController.xib in Resources */,
 				99FE87E41D332ED000475F73 /* DetailProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +266,7 @@
 				990188BE1D2F9EB900C9977F /* DetailMapLocationViewController.swift in Sources */,
 				991B82791D2BB51B002F0BC6 /* Location.swift in Sources */,
 				991B827E1D2BBBA4002F0BC6 /* LocationTableViewCell.swift in Sources */,
+				99FE87E91D33940A00475F73 /* ChangePasswordViewController.swift in Sources */,
 				99EB4F711D2C9F8900C853B0 /* FavoriteTabBarViewController.swift in Sources */,
 				990188BA1D2F84DA00C9977F /* LocationDetailCollectionViewCell.swift in Sources */,
 				99FE87E61D334F4700475F73 /* User.swift in Sources */,
@@ -261,6 +276,7 @@
 				99EB4F861D2D022B00C853B0 /* MapsTabBarViewController.swift in Sources */,
 				9916C3D71D2A7D95003CF835 /* StringExtension.swift in Sources */,
 				99EB4F841D2D022400C853B0 /* LocationMaps.swift in Sources */,
+				99FE87ED1D339FDF00475F73 /* FollowingViewController.swift in Sources */,
 				991B82731D2B9F86002F0BC6 /* HomeTabBarViewController.swift in Sources */,
 				99F2B96D1D2A543B009B502C /* ViewController.swift in Sources */,
 				99FE87E31D332ED000475F73 /* DetailProfileViewController.swift in Sources */,
