@@ -15,7 +15,6 @@
 		990188BF1D2F9EB900C9977F /* DetailMapLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 990188BD1D2F9EB900C9977F /* DetailMapLocationViewController.xib */; };
 		9916C3D41D2A72D3003CF835 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916C3D21D2A72D3003CF835 /* ForgotPasswordViewController.swift */; };
 		9916C3D51D2A72D3003CF835 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9916C3D31D2A72D3003CF835 /* ForgotPasswordViewController.xib */; };
-		9916C3D71D2A7D95003CF835 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916C3D61D2A7D95003CF835 /* StringExtension.swift */; };
 		991B82731D2B9F86002F0BC6 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B82701D2B9F86002F0BC6 /* HomeTabBarViewController.swift */; };
 		991B82741D2B9F86002F0BC6 /* HomeTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 991B82711D2B9F86002F0BC6 /* HomeTabBarViewController.xib */; };
 		991B82751D2B9F86002F0BC6 /* SingletonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B82721D2B9F86002F0BC6 /* SingletonClass.swift */; };
@@ -64,7 +63,6 @@
 		990188BD1D2F9EB900C9977F /* DetailMapLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailMapLocationViewController.xib; sourceTree = "<group>"; };
 		9916C3D21D2A72D3003CF835 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		9916C3D31D2A72D3003CF835 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
-		9916C3D61D2A7D95003CF835 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		991B82701D2B9F86002F0BC6 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		991B82711D2B9F86002F0BC6 /* HomeTabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTabBarViewController.xib; sourceTree = "<group>"; };
 		991B82721D2B9F86002F0BC6 /* SingletonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonClass.swift; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 				99F2B97D1D2A553C009B502C /* LoginViewController.xib */,
 				9916C3D21D2A72D3003CF835 /* ForgotPasswordViewController.swift */,
 				9916C3D31D2A72D3003CF835 /* ForgotPasswordViewController.xib */,
-				9916C3D61D2A7D95003CF835 /* StringExtension.swift */,
 				991B82781D2BB51B002F0BC6 /* Location.swift */,
 				991B827A1D2BB721002F0BC6 /* locations.plist */,
 				991B827C1D2BBBA4002F0BC6 /* LocationTableViewCell.swift */,
@@ -292,7 +289,6 @@
 				99F2B97E1D2A553C009B502C /* LoginViewController.swift in Sources */,
 				990188B61D2F5C4700C9977F /* DetailLocationViewController.swift in Sources */,
 				99EB4F861D2D022B00C853B0 /* MapsTabBarViewController.swift in Sources */,
-				9916C3D71D2A7D95003CF835 /* StringExtension.swift in Sources */,
 				99EB4F841D2D022400C853B0 /* LocationMaps.swift in Sources */,
 				99FE87F51D33AF0C00475F73 /* DetailFollowViewController.swift in Sources */,
 				99FE87F11D33A7E600475F73 /* FollowingTableViewCell.swift in Sources */,

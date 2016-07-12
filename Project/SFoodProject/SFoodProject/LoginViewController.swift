@@ -31,8 +31,8 @@ class LoginViewController: UIViewController {
         return UIStatusBarStyle.LightContent
     }
     override func viewWillAppear(animated: Bool) {
-        self.usernameTextField.text = ""
-        self.passwordTextField.text = ""
+        self.usernameTextField.text = "admin"
+        self.passwordTextField.text = "admin"
         self.navigationController?.navigationBarHidden = true
     }
     

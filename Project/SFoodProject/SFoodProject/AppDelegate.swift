@@ -107,6 +107,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                       animations: {
                                         window.rootViewController = self.loginNavigation
                                         }, completion: nil)
+            self.mainTabBar?.reloadInputViews()
         }
     }
 
