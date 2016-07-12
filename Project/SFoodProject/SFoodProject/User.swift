@@ -33,4 +33,8 @@ class User {
     
     init() {
     }
+    
+    func getDictionary() -> Dictionary<String, AnyObject> {
+        return ["id": self.idUser, "name": self.fullName, "username": self.username, "password": self.password, "email": self.email, "phone": self.phone, "avatar": self.avatar, "gender": self.gender, "age": self.age]
+    }
 }

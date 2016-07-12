@@ -94,7 +94,8 @@ class RegisterViewController: UIViewController, UIScrollViewDelegate {
             }
         }
         
-        self.getUser()
+        let newUser = self.getUser()
+        self.insertData(newUser.getDictionary())
         self.navigationController?.popViewControllerAnimated(true)
         
     }
@@ -114,36 +115,39 @@ class RegisterViewController: UIViewController, UIScrollViewDelegate {
         return false
     }
     
-    func getUser() {
+    func getUser() -> User {
         
-        self.user.idUser = self.getNumberOfUser() + 1
-        self.user.fullName = self.fullNameTextField.text!
-        self.user.username = self.usernameTextField.text!
-        self.user.password = self.passwordTextField.text!
-        self.user.email = self.emailTextField.text!
-        self.user.phone = self.phoneTextField.text!
-        self.user.gender = (self.genderSegment.selectedSegmentIndex == 0) ? true : false
-        
-        if let age = Int(self.ageTextField.text!) {
-            self.user.age = age
-        } else {
-            self.user.age = 0
+        let idUser = self.getNumberOfUser() + 1
+        let fullName = self.fullNameTextField.text!
+        let username = self.usernameTextField.text!
+        let password = self.passwordTextField.text!
+        let email = self.emailTextField.text!
+        let phone = self.phoneTextField.text!
+        let gender = (self.genderSegment.selectedSegmentIndex == 0) ? true : false
+        var age = 0
+        if let ageOptional = Int(self.ageTextField.text!) {
+            age = ageOptional
         }
-        
+        var avatar: String = "default-avatar"
         if isChangeAvatar {
             let path = pathOfFile(self.convertDateToNameImage())
-            //saveImage(self.avatar.image!, path: path)
-            self.user.avatar = path
-        } else {
-           self.user.avatar = "default-avatar"
+            saveImage(self.avatarImageView.image!, path: path)
+            avatar = path
         }
-        
+        return User(idUser: idUser, fullName: fullName, username: username, password: password, email: email, phone: phone, avatar: avatar, gender: gender, age: age)
     }
     
     func getNumberOfUser() -> Int {
-        let path = NSBundle.mainBundle().pathForResource("users", ofType: ".plist")
+        let path = NSBundle.mainBundle().pathForResource("users", ofType: "plist")
         let data = NSArray(contentsOfFile: path!)
         return (data?.count)!
+    }
+    
+    func insertData(user: Dictionary<String, AnyObject>) {
+        let path = NSBundle.mainBundle().pathForResource("users", ofType: "plist")
+        let dataArray = NSMutableArray(contentsOfFile: path!)
+        dataArray!.addObject(user)
+        dataArray!.writeToFile(path!, atomically: false)
     }
     
 }
