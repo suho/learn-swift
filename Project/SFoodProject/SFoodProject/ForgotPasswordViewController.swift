@@ -24,7 +24,7 @@ class ForgotPasswordViewController: UIViewController {
         if email.checkValidEmail() {
             self.sendEmail(email)
         } else {
-            self.showMessage("Email Not Valid", viewController: self)
+            self.showMessage("Email Not Valid")
         }
         
     }
@@ -36,13 +36,6 @@ class ForgotPasswordViewController: UIViewController {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    func showMessage(message: String, viewController: UIViewController) {
-        let alertController = UIAlertController(title: "Message", message: "\(message)", preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        viewController.presentViewController(alertController, animated: true, completion: nil)
-    }
-    
     func sendEmail(email: String) {
         //Do Something Here
         self.navigationController?.popViewControllerAnimated(true)

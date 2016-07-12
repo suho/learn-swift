@@ -46,9 +46,9 @@ class LoginViewController: UIViewController {
             AppDelegate.sharedInstance.changeRootViewWhenLoginSuccess()
         } else {
             if self.checkValid(username, password: password) {
-                self.showMessage("Input Not Valid", viewController: self)
+                self.showMessage("Input Not Valid")
             } else {
-                self.showMessage("User Not Available", viewController: self)
+                self.showMessage("User Not Available")
             }
         }
     }
@@ -105,12 +105,6 @@ class LoginViewController: UIViewController {
         } else {
             return false
         }
-    }
-    
-    func showMessage(message: String, viewController: UIViewController) {
-        let alertController = UIAlertController(title: "Message", message: "\(message)", preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        viewController.presentViewController(alertController, animated: true, completion: nil)
     }
 
 }

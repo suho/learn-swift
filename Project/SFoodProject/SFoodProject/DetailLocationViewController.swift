@@ -19,7 +19,7 @@ class DetailLocationViewController: UIViewController {
     @IBOutlet weak var detailText: UILabel!
     @IBOutlet weak var mapLocationView: MKMapView!
     
-    var location = Location(images: ["food", "food", "food"], name: "Cafe 69", address: "69 Da Nang", previewText: "Cafe Xay", detailText: "Da Nang, Hai Chau, Nguyen Chi Thanh", coordinates: (0.00, 0.00), isFavorite: true)
+    var location = Location(images: ["food"], name: "Cafe 69", address: "69 Da Nang", previewText: "Cafe Xay", detailText: "Da Nang, Hai Chau, Nguyen Chi Thanh", coordinates: (0.00, 0.00), isFavorite: true)
     
     var favoriteButton: UIBarButtonItem!
     
@@ -32,6 +32,8 @@ class DetailLocationViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.orangeColor()
         
         self.imagesCollectionView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
+        
+        self.configPageControl()
         
         self.nameOfLocation.text = self.location.name
         self.address.text = self.location.address
@@ -51,6 +53,7 @@ class DetailLocationViewController: UIViewController {
         self.imagesCollectionView.delegate = self
         self.imagesCollectionView.dataSource = self
         self.imagesCollectionView.registerNib(UINib(nibName: "LocationDetailCollectionViewCell", bundle: nil) ,forCellWithReuseIdentifier: "cell")
+        self.imagesCollectionView.scrollEnabled = true
         
         let initialLocation = CLLocation(latitude: CLLocationDegrees(self.location.coordinates.0), longitude: CLLocationDegrees(self.location.coordinates.1))
         self.centerMapOnLocation(initialLocation)
@@ -73,12 +76,11 @@ class DetailLocationViewController: UIViewController {
        
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let touch = touches.first! as UITouch
-        if touch.view == self.mapLocationView {
-            print("")
-        }
+    func configPageControl() {
+        self.pageController.numberOfPages = self.location.images.count
+        self.pageController.currentPage = 0
     }
+    
     
     func changeFavorite() {
         if self.location.isFavorite {
@@ -101,7 +103,7 @@ class DetailLocationViewController: UIViewController {
 
 }
 
-extension DetailLocationViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension DetailLocationViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -121,17 +123,28 @@ extension DetailLocationViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        let size = self.imagesCollectionView.frame.size.height - (self.imagesCollectionView.frame.size.height/6)
+        return CGSize(width: self.imagesCollectionView.frame.size.height, height: self.imagesCollectionView.frame.size.height)
         
-        return CGSize(width: size , height: size)
-        
+    }
+
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return self.imagesCollectionView.frame.size.width - self.imagesCollectionView.frame.size.height
+
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        print("You Selected \(indexPath.row)")
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        let spacing = self.imagesCollectionView.frame.size.width - self.imagesCollectionView.frame.size.height
+        return UIEdgeInsets(top: 0, left: spacing/2, bottom: 0, right: spacing/2)
     }
+
 }
 
+extension DetailLocationViewController: UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        let pageNumber = round(self.imagesCollectionView.contentOffset.x / self.imagesCollectionView.frame.size.width)
+        self.pageController.currentPage = Int(pageNumber)
+    }
+}
 
 
 extension DetailLocationViewController: MKMapViewDelegate {
