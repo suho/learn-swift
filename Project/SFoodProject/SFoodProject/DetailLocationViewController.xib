@@ -14,6 +14,7 @@
                 <outlet property="imagesCollectionView" destination="Ohb-6V-PMn" id="VVl-Na-w13"/>
                 <outlet property="mapLocationView" destination="WeV-9B-DB7" id="53z-eX-IRd"/>
                 <outlet property="nameOfLocation" destination="MUI-N4-NbQ" id="JiO-64-mz8"/>
+                <outlet property="pageController" destination="4BB-4a-bdI" id="gV7-YY-dmq"/>
                 <outlet property="previewText" destination="lM8-bR-Nyt" id="SF9-Op-V2X"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,15 +27,11 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bx-wg-K8n">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ohb-6V-PMn">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2mZ-kJ-gne">
-                                <size key="itemSize" width="50" height="50"/>
-                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </collectionViewFlowLayout>
-                        </collectionView>
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="4BB-4a-bdI">
+                            <rect key="frame" x="141" y="101" width="39" height="37"/>
+                            <color key="pageIndicatorTintColor" red="1" green="0.64570451090000003" blue="0.25194880089999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="currentPageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </pageControl>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cafe ABC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUI-N4-NbQ">
                             <rect key="frame" x="119" y="148" width="82" height="23"/>
                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -70,6 +67,15 @@
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ohb-6V-PMn">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2mZ-kJ-gne">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
                     </subviews>
                     <constraints>
                         <constraint firstItem="HkF-5D-2dV" firstAttribute="centerX" secondItem="lM8-bR-Nyt" secondAttribute="centerX" id="1Nu-0c-BRV"/>
@@ -82,8 +88,10 @@
                         <constraint firstItem="t4q-pZ-5vi" firstAttribute="top" secondItem="MUI-N4-NbQ" secondAttribute="bottom" constant="10" id="MOP-kh-w7Q"/>
                         <constraint firstItem="HkF-5D-2dV" firstAttribute="top" secondItem="lM8-bR-Nyt" secondAttribute="bottom" constant="20" id="O93-3x-Ib1"/>
                         <constraint firstItem="FSs-2x-xic" firstAttribute="top" secondItem="WeV-9B-DB7" secondAttribute="bottom" id="XUv-fE-aA9"/>
+                        <constraint firstItem="4BB-4a-bdI" firstAttribute="bottom" secondItem="Ohb-6V-PMn" secondAttribute="bottom" id="YdY-i9-srY"/>
                         <constraint firstItem="HkF-5D-2dV" firstAttribute="width" secondItem="lM8-bR-Nyt" secondAttribute="width" id="ZMt-GX-iCW"/>
                         <constraint firstItem="WeV-9B-DB7" firstAttribute="centerX" secondItem="HkF-5D-2dV" secondAttribute="centerX" id="ZhR-sM-PNz"/>
+                        <constraint firstItem="4BB-4a-bdI" firstAttribute="centerX" secondItem="Ohb-6V-PMn" secondAttribute="centerX" id="aew-rH-YRh"/>
                         <constraint firstItem="Ohb-6V-PMn" firstAttribute="top" secondItem="1bx-wg-K8n" secondAttribute="top" id="b4h-TI-6qC"/>
                         <constraint firstItem="lM8-bR-Nyt" firstAttribute="top" secondItem="t4q-pZ-5vi" secondAttribute="bottom" constant="10" id="bdN-QZ-xxL"/>
                         <constraint firstItem="lM8-bR-Nyt" firstAttribute="width" secondItem="Ohb-6V-PMn" secondAttribute="width" constant="-10" id="kCB-LL-GUM"/>

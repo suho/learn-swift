@@ -12,6 +12,7 @@ import MapKit
 class DetailLocationViewController: UIViewController {
 
     @IBOutlet weak var imagesCollectionView: UICollectionView!
+    @IBOutlet weak var pageController: UIPageControl!
     @IBOutlet weak var nameOfLocation: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var previewText: UILabel!
@@ -130,6 +131,8 @@ extension DetailLocationViewController: UICollectionViewDelegate, UICollectionVi
         print("You Selected \(indexPath.row)")
     }
 }
+
+
 
 extension DetailLocationViewController: MKMapViewDelegate {
     
