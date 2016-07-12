@@ -25,10 +25,7 @@ class RegisterViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         self.title = "Register"
         self.navigationController?.navigationBarHidden = false
-        self.avatar.layer.cornerRadius = self.avatar.frame.height/2
-        self.avatar.layer.borderWidth = 1
-        self.avatar.layer.borderColor = UIColor.orangeColor().CGColor
-        self.avatar.layer.masksToBounds = true
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +33,10 @@ class RegisterViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidLayoutSubviews() {
+        self.avatar.layer.cornerRadius = self.avatar.frame.height/2
+        self.avatar.clipsToBounds = true
+    }
 
     @IBAction func tab(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)

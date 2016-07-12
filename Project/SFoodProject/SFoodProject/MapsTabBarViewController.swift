@@ -116,7 +116,11 @@ extension MapsTabBarViewController: MKMapViewDelegate {
           //print("You Tapped Right")
             let locationMap = view.annotation as! LocationMaps
             for location in self.locations {
-                if location.name == locationMap.title {
+                
+                let conditionLatitude = CLLocationDegrees(location.coordinates.0) == locationMap.coordinate.latitude
+                let conditionLongitude = CLLocationDegrees(location.coordinates.1) == locationMap.coordinate.longitude
+                
+                if conditionLatitude && conditionLongitude {
                     let detailView = DetailLocationViewController(nibName: "DetailLocationViewController", bundle: nil)
                     detailView.location = location
                     self.navigationController?.pushViewController(detailView, animated: true)

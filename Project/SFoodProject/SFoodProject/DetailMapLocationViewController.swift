@@ -87,9 +87,13 @@ class DetailMapLocationViewController: UIViewController {
             }
             
             let route = response.routes[0]
-            self.detailMapView.addOverlay((route.polyline), level: MKOverlayLevel.AboveRoads)
+            self.detailMapView.addOverlay((route.polyline), level: MKOverlayLevel.AboveLabels)
             
             let rect = route.polyline.boundingMapRect
+            //MKCoordinateRegionForMapRect(rect)
+            
+            //let coordinateRegion = MKCoordinateRegionMakeWithDistance(route.polyline.coordinate, 2000, 2000)
+            
             self.detailMapView.setRegion(MKCoordinateRegionForMapRect(rect), animated: true)
         }
     }
@@ -148,19 +152,21 @@ extension DetailMapLocationViewController: MKMapViewDelegate, CLLocationManagerD
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         
-        let locationUser = (self.locationManager.location?.coordinate)!
+        if let locationUser = self.locationManager.location?.coordinate {
+            let latitudeUser = locationUser.latitude
+            let longitudeUser = locationUser.longitude
+            
+            let latitudeLocation = self.locationMap.coordinate.latitude
+            let longitudeLocation = self.locationMap.coordinate.longitude
+            
+            
+            let coordinateMyLocation = CLLocationCoordinate2D(latitude: latitudeUser, longitude: longitudeUser)
+            let coordinateFoodLocation = CLLocationCoordinate2D(latitude: latitudeLocation, longitude: longitudeLocation)
+            
+            self.drawTwoPins(coordinateMyLocation, coordinateFoodLocation: coordinateFoodLocation)
+        }
         
-        let latitudeUser = locationUser.latitude
-        let longitudeUser = locationUser.longitude
         
-        let latitudeLocation = self.locationMap.coordinate.latitude
-        let longitudeLocation = self.locationMap.coordinate.longitude
-        
-        
-        let coordinateMyLocation = CLLocationCoordinate2D(latitude: latitudeUser, longitude: longitudeUser)
-        let coordinateFoodLocation = CLLocationCoordinate2D(latitude: latitudeLocation, longitude: longitudeLocation)
-        
-        self.drawTwoPins(coordinateMyLocation, coordinateFoodLocation: coordinateFoodLocation)
     }
     
 }

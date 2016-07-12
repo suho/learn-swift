@@ -3,16 +3,44 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>id</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Admin</string>
 		<key>username</key>
 		<string>admin</string>
 		<key>password</key>
 		<string>admin</string>
+		<key>email</key>
+		<string>admin@admin.com</string>
+		<key>phone</key>
+		<string>0935307484</string>
+		<key>avatar</key>
+		<string>user</string>
+		<key>gender</key>
+		<true/>
+		<key>age</key>
+		<integer>20</integer>
 	</dict>
     <dict>
+        <key>id</key>
+        <integer>2</integer>
+        <key>name</key>
+        <string>Hồ Văn Sự</string>
         <key>username</key>
         <string>hovansu</string>
         <key>password</key>
         <string>123456</string>
+        <key>email</key>
+        <string>hovansu8@gmail.com</string>
+        <key>phone</key>
+        <string>0967763091</string>
+        <key>avatar</key>
+        <string>user</string>
+        <key>gender</key>
+        <true/>
+        <key>age</key>
+        <integer>22</integer>
     </dict>
 </array>
 </plist>

@@ -15,12 +15,17 @@ class SettingTabBarViewController: UIViewController {
     let sections = ["Account", "Peoples", "Logout"]
     let items = [["Username", "Email", "Profile Details"], ["Following", "Follower"], ["Logout"]]
     
+    var user = User()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Settings"
         self.settingsTableView.delegate = self
         self.settingsTableView.dataSource = self
         self.settingsTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "tableCell")
+        //self.user = self.getUserById(AppDelegate.sharedInstance.idUser)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +33,34 @@ class SettingTabBarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.user = self.getUserById(AppDelegate.sharedInstance.idUser)
+        self.settingsTableView.reloadData()
+
+    }
+    
+    func getUserById(idUser: Int) -> User {
+        var result = User()
+        let path = NSBundle.mainBundle().pathForResource("users", ofType: "plist")
+        let users = NSArray(contentsOfFile: path!)
+        
+        
+        for user in users! {
+            let _idUser = user.objectForKey("id") as! Int
+            if _idUser == idUser {
+                let _name = user.objectForKey("name") as! String
+                let _username = user.objectForKey("username") as! String
+                let _password = user.objectForKey("password") as! String
+                let _email = user.objectForKey("email") as! String
+                let _phone = user.objectForKey("phone") as! String
+                let _avatar = user.objectForKey("avatar") as! String
+                let _gender = user.objectForKey("gender") as! Bool
+                let _age = user.objectForKey("age") as! Int
+                result = User(idUser: _idUser, fullName: _name, username: _username, password: _password, email: _email, phone: _phone, avatar: _avatar, gender: _gender, age: _age)
+            }
+        }
+        return result
+    }
 
 }
 
@@ -41,26 +74,34 @@ extension SettingTabBarViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return self.sections[section]
     }
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0
-    }
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
-    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("tableCell", forIndexPath: indexPath)
         cell.tintColor = UIColor.orangeColor()
-        cell.textLabel?.text = self.items[indexPath.section][indexPath.row]
-    
+        
+        var detailUser = ""
+        if indexPath.section == 0 && indexPath.row < 2 {
+            if indexPath.row == 0 {
+                detailUser = ": \(self.user.fullName)"
+            }
+            if indexPath.row == 1 {
+                detailUser = ": \(self.user.email)"
+            }
+        }
+        cell.textLabel?.text = "\(self.items[indexPath.section][indexPath.row])\(detailUser)"
         cell.userInteractionEnabled = false
         if (indexPath.section == 0 && indexPath.row == 2) || (indexPath.section == 1 && indexPath.row != 2) || (indexPath.section == 2) {
             cell.userInteractionEnabled = true
+            cell.accessoryType = .DisclosureIndicator
         }
         return cell
     }
+    
     func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
         print("Tapped \(indexPath.section), \(indexPath.row)")
     }
+    
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selectedCell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         if (indexPath.section == 0 && indexPath.row == 2) || (indexPath.section == 1 && indexPath.row != 2) || (indexPath.section == 2) {
@@ -69,10 +110,20 @@ extension SettingTabBarViewController: UITableViewDelegate, UITableViewDataSourc
         }
         switch indexPath.section {
         case 0:
-            print("profile")
+            //print("profile")
+            let detailProfile = DetailProfileViewController(nibName: "DetailProfileViewController", bundle: nil)
+            detailProfile.user = self.user
+            self.navigationController?.pushViewController(detailProfile, animated: true)
         case 1:
-            print("follow")
+            if indexPath.row == 0 {
+                let followingView = FollowViewController(nibName: "FollowViewController", bundle: nil)
+                self.navigationController?.pushViewController(followingView, animated: true)
+            } else {
+                let followingView = FollowViewController(nibName: "FollowViewController", bundle: nil)
+                self.navigationController?.pushViewController(followingView, animated: true)
+            }
         default:
+            self.user = User()
             AppDelegate.sharedInstance.changeRootWhenLogout()
         }
     }

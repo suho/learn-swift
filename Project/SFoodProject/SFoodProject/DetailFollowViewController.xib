@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailFollowViewController" customModule="SFoodProject" customModuleProvider="target">
+            <connections>
+                <outlet property="age" destination="Zg7-ec-32H" id="SgA-Jq-Ov6"/>
+                <outlet property="avatar" destination="pEA-l4-3Lh" id="c4f-eu-dZh"/>
+                <outlet property="email" destination="Gyp-wI-Qrn" id="wZS-nB-MpJ"/>
+                <outlet property="fullName" destination="Mxb-ZC-GUm" id="Xge-hO-cDl"/>
+                <outlet property="gender" destination="Fq5-os-E5o" id="eM9-rL-zYU"/>
+                <outlet property="phone" destination="KbG-PP-AjD" id="NFp-T6-OLV"/>
+                <outlet property="username" destination="pyM-1f-E1g" id="2NG-sm-IF7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EpD-73-R9e">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oOG-dc-G1t">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="170.5"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-avatar" translatesAutoresizingMaskIntoConstraints="NO" id="pEA-l4-3Lh">
+                                    <rect key="frame" x="106" y="32" width="107" height="106.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="pEA-l4-3Lh" secondAttribute="height" multiplier="1:1" id="gXA-Yj-TZM"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="pEA-l4-3Lh" firstAttribute="centerX" secondItem="oOG-dc-G1t" secondAttribute="centerX" id="KUP-XY-HW0"/>
+                                <constraint firstItem="pEA-l4-3Lh" firstAttribute="centerY" secondItem="oOG-dc-G1t" secondAttribute="centerY" id="Uha-aE-cxa"/>
+                                <constraint firstAttribute="width" secondItem="oOG-dc-G1t" secondAttribute="height" multiplier="15:8" id="h5y-gf-3xO"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mxb-ZC-GUm">
+                            <rect key="frame" x="80" y="190" width="160" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Mxb-ZC-GUm" secondAttribute="height" multiplier="16:3" id="Mcu-m8-ZfH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Name Filled-30" translatesAutoresizingMaskIntoConstraints="NO" id="tsw-md-M82">
+                            <rect key="frame" x="50" y="195" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="tsw-md-M82" secondAttribute="height" multiplier="1:1" id="Bdo-BK-jVA"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pyM-1f-E1g">
+                            <rect key="frame" x="80" y="230" width="160" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Collaborator Male-30" translatesAutoresizingMaskIntoConstraints="NO" id="fMO-a3-IZa">
+                            <rect key="frame" x="50" y="235" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="fMO-a3-IZa" secondAttribute="height" multiplier="1:1" id="skX-je-vgc"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zg7-ec-32H">
+                            <rect key="frame" x="80" y="270" width="160" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Age-30" translatesAutoresizingMaskIntoConstraints="NO" id="icl-ZP-Hc9">
+                            <rect key="frame" x="50" y="275" width="20" height="20"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email Filled-30" translatesAutoresizingMaskIntoConstraints="NO" id="efe-4J-M9i">
+                            <rect key="frame" x="50" y="315" width="20" height="20"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gyp-wI-Qrn">
+                            <rect key="frame" x="80" y="310" width="160" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone-30" translatesAutoresizingMaskIntoConstraints="NO" id="pEB-ok-lRa">
+                            <rect key="frame" x="50" y="355" width="20" height="20"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KbG-PP-AjD">
+                            <rect key="frame" x="80" y="350" width="160" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fq5-os-E5o">
+                            <rect key="frame" x="80" y="390" width="160" height="31"/>
+                            <segments>
+                                <segment title="Male"/>
+                                <segment title="Female"/>
+                            </segments>
+                        </segmentedControl>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gender-30" translatesAutoresizingMaskIntoConstraints="NO" id="tQh-Ol-hMv">
+                            <rect key="frame" x="50" y="395" width="20" height="20"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajv-3K-tHa">
+                            <rect key="frame" x="0.0" y="420" width="320" height="40"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="oOG-dc-G1t" firstAttribute="leading" secondItem="EpD-73-R9e" secondAttribute="leading" id="1zu-QL-K4i"/>
+                        <constraint firstItem="Fq5-os-E5o" firstAttribute="centerX" secondItem="KbG-PP-AjD" secondAttribute="centerX" id="2xI-U7-NjQ"/>
+                        <constraint firstItem="Zg7-ec-32H" firstAttribute="centerX" secondItem="pyM-1f-E1g" secondAttribute="centerX" id="4e9-Ae-CTf"/>
+                        <constraint firstItem="icl-ZP-Hc9" firstAttribute="height" secondItem="fMO-a3-IZa" secondAttribute="height" id="53p-1a-dbN"/>
+                        <constraint firstItem="tQh-Ol-hMv" firstAttribute="height" secondItem="pEB-ok-lRa" secondAttribute="height" id="6bN-bX-47K"/>
+                        <constraint firstItem="KbG-PP-AjD" firstAttribute="width" secondItem="Gyp-wI-Qrn" secondAttribute="width" id="6ue-Bk-cMH"/>
+                        <constraint firstItem="Zg7-ec-32H" firstAttribute="top" secondItem="pyM-1f-E1g" secondAttribute="bottom" constant="10" id="AOb-YA-Aar"/>
+                        <constraint firstItem="KbG-PP-AjD" firstAttribute="leading" secondItem="pEB-ok-lRa" secondAttribute="trailing" constant="10" id="CDZ-qV-A57"/>
+                        <constraint firstItem="Zg7-ec-32H" firstAttribute="height" secondItem="pyM-1f-E1g" secondAttribute="height" id="DeX-5z-tWF"/>
+                        <constraint firstAttribute="bottom" secondItem="ajv-3K-tHa" secondAttribute="bottom" id="Dtj-99-xNe"/>
+                        <constraint firstItem="pEB-ok-lRa" firstAttribute="height" secondItem="efe-4J-M9i" secondAttribute="height" id="Dwh-tr-cig"/>
+                        <constraint firstItem="Fq5-os-E5o" firstAttribute="top" secondItem="KbG-PP-AjD" secondAttribute="bottom" constant="10" id="FEw-oX-LSw"/>
+                        <constraint firstItem="Gyp-wI-Qrn" firstAttribute="width" secondItem="Zg7-ec-32H" secondAttribute="width" id="KIP-iP-q1L"/>
+                        <constraint firstItem="Mxb-ZC-GUm" firstAttribute="top" secondItem="oOG-dc-G1t" secondAttribute="bottom" constant="20" id="KKJ-Hg-HrT"/>
+                        <constraint firstItem="pyM-1f-E1g" firstAttribute="top" secondItem="Mxb-ZC-GUm" secondAttribute="bottom" constant="10" id="Kz7-a6-NVj"/>
+                        <constraint firstItem="pyM-1f-E1g" firstAttribute="width" secondItem="Mxb-ZC-GUm" secondAttribute="width" id="NY7-XP-HP6"/>
+                        <constraint firstItem="fMO-a3-IZa" firstAttribute="centerY" secondItem="pyM-1f-E1g" secondAttribute="centerY" id="Pdb-uf-6lt"/>
+                        <constraint firstItem="icl-ZP-Hc9" firstAttribute="centerY" secondItem="Zg7-ec-32H" secondAttribute="centerY" id="QKJ-w6-erB"/>
+                        <constraint firstItem="tQh-Ol-hMv" firstAttribute="centerY" secondItem="Fq5-os-E5o" secondAttribute="centerY" id="SIo-Pw-3LK"/>
+                        <constraint firstItem="tsw-md-M82" firstAttribute="height" secondItem="Mxb-ZC-GUm" secondAttribute="height" multiplier="2/3" id="Sju-6E-p95"/>
+                        <constraint firstItem="pyM-1f-E1g" firstAttribute="height" secondItem="Mxb-ZC-GUm" secondAttribute="height" id="SyA-EJ-un1"/>
+                        <constraint firstItem="Gyp-wI-Qrn" firstAttribute="top" secondItem="Zg7-ec-32H" secondAttribute="bottom" constant="10" id="TvM-Oc-VXL"/>
+                        <constraint firstItem="KbG-PP-AjD" firstAttribute="centerX" secondItem="Gyp-wI-Qrn" secondAttribute="centerX" id="TwO-ce-OTQ"/>
+                        <constraint firstItem="Gyp-wI-Qrn" firstAttribute="centerX" secondItem="Zg7-ec-32H" secondAttribute="centerX" id="Vhj-jJ-Bq6"/>
+                        <constraint firstItem="fMO-a3-IZa" firstAttribute="width" secondItem="tsw-md-M82" secondAttribute="width" id="YIw-5s-UKW"/>
+                        <constraint firstItem="KbG-PP-AjD" firstAttribute="height" secondItem="Gyp-wI-Qrn" secondAttribute="height" id="ZSP-65-nXi"/>
+                        <constraint firstItem="pyM-1f-E1g" firstAttribute="centerX" secondItem="Mxb-ZC-GUm" secondAttribute="centerX" id="bFF-0X-y8k"/>
+                        <constraint firstItem="Gyp-wI-Qrn" firstAttribute="height" secondItem="Zg7-ec-32H" secondAttribute="height" id="bql-1T-Q7C"/>
+                        <constraint firstItem="pEB-ok-lRa" firstAttribute="centerY" secondItem="KbG-PP-AjD" secondAttribute="centerY" id="bv7-8h-gMS"/>
+                        <constraint firstItem="efe-4J-M9i" firstAttribute="width" secondItem="icl-ZP-Hc9" secondAttribute="width" id="cGG-PE-XYZ"/>
+                        <constraint firstItem="icl-ZP-Hc9" firstAttribute="width" secondItem="fMO-a3-IZa" secondAttribute="width" id="chz-6v-h3R"/>
+                        <constraint firstItem="Fq5-os-E5o" firstAttribute="height" secondItem="KbG-PP-AjD" secondAttribute="height" id="dLQ-JO-pdc"/>
+                        <constraint firstAttribute="trailing" secondItem="ajv-3K-tHa" secondAttribute="trailing" id="fYm-6y-mmk"/>
+                        <constraint firstItem="Fq5-os-E5o" firstAttribute="leading" secondItem="tQh-Ol-hMv" secondAttribute="trailing" constant="10" id="hai-Lh-bCs"/>
+                        <constraint firstItem="tQh-Ol-hMv" firstAttribute="width" secondItem="pEB-ok-lRa" secondAttribute="width" id="hhb-Km-pIu"/>
+                        <constraint firstAttribute="trailing" secondItem="oOG-dc-G1t" secondAttribute="trailing" id="jbe-I2-4a5"/>
+                        <constraint firstItem="ajv-3K-tHa" firstAttribute="leading" secondItem="EpD-73-R9e" secondAttribute="leading" id="jgL-dx-6dT"/>
+                        <constraint firstItem="efe-4J-M9i" firstAttribute="height" secondItem="icl-ZP-Hc9" secondAttribute="height" id="jul-h0-vlv"/>
+                        <constraint firstItem="oOG-dc-G1t" firstAttribute="top" secondItem="EpD-73-R9e" secondAttribute="top" id="kYs-5U-oP5"/>
+                        <constraint firstItem="tsw-md-M82" firstAttribute="centerY" secondItem="Mxb-ZC-GUm" secondAttribute="centerY" id="lmI-DQ-Pyi"/>
+                        <constraint firstItem="efe-4J-M9i" firstAttribute="centerY" secondItem="Gyp-wI-Qrn" secondAttribute="centerY" id="m8D-pl-R1K"/>
+                        <constraint firstItem="ajv-3K-tHa" firstAttribute="top" secondItem="Fq5-os-E5o" secondAttribute="bottom" id="mvT-gX-tky"/>
+                        <constraint firstItem="Zg7-ec-32H" firstAttribute="leading" secondItem="icl-ZP-Hc9" secondAttribute="trailing" constant="10" id="roN-Gd-gs2"/>
+                        <constraint firstItem="pyM-1f-E1g" firstAttribute="leading" secondItem="fMO-a3-IZa" secondAttribute="trailing" constant="10" id="tLu-t3-xSx"/>
+                        <constraint firstItem="pEB-ok-lRa" firstAttribute="width" secondItem="efe-4J-M9i" secondAttribute="width" id="tZL-6H-XEw"/>
+                        <constraint firstItem="Mxb-ZC-GUm" firstAttribute="centerX" secondItem="oOG-dc-G1t" secondAttribute="centerX" id="tmg-DG-vRq"/>
+                        <constraint firstItem="Mxb-ZC-GUm" firstAttribute="leading" secondItem="tsw-md-M82" secondAttribute="trailing" constant="10" id="u2C-0A-BJ6"/>
+                        <constraint firstItem="KbG-PP-AjD" firstAttribute="top" secondItem="Gyp-wI-Qrn" secondAttribute="bottom" constant="10" id="ueZ-nd-Izf"/>
+                        <constraint firstItem="Zg7-ec-32H" firstAttribute="width" secondItem="pyM-1f-E1g" secondAttribute="width" id="vIr-5W-L0G"/>
+                        <constraint firstItem="Fq5-os-E5o" firstAttribute="width" secondItem="KbG-PP-AjD" secondAttribute="width" id="wMf-dZ-Art"/>
+                        <constraint firstItem="Gyp-wI-Qrn" firstAttribute="leading" secondItem="efe-4J-M9i" secondAttribute="trailing" constant="10" id="zBf-3t-Gk5"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="EpD-73-R9e" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Fod-1c-kiT"/>
+                <constraint firstItem="Mxb-ZC-GUm" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/2" id="M2Z-ee-3BB"/>
+                <constraint firstItem="ajv-3K-tHa" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="M8W-5K-L6p"/>
+                <constraint firstItem="EpD-73-R9e" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Q8P-BC-X16"/>
+                <constraint firstAttribute="bottom" secondItem="EpD-73-R9e" secondAttribute="bottom" id="Y4t-Sk-29t"/>
+                <constraint firstItem="oOG-dc-G1t" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="cBu-UH-Z1b"/>
+                <constraint firstItem="ajv-3K-tHa" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="40/568" id="cva-UI-uQZ"/>
+                <constraint firstItem="pEA-l4-3Lh" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/3" id="fAW-9u-Awd"/>
+                <constraint firstAttribute="trailing" secondItem="EpD-73-R9e" secondAttribute="trailing" id="g5i-Op-LMa"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Age-30" width="30" height="30"/>
+        <image name="Collaborator Male-30" width="30" height="30"/>
+        <image name="Email Filled-30" width="30" height="30"/>
+        <image name="Gender-30" width="30" height="30"/>
+        <image name="Name Filled-30" width="30" height="30"/>
+        <image name="Phone-30" width="30" height="30"/>
+        <image name="default-avatar" width="1032" height="1032"/>
+    </resources>
+</document>

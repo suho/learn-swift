@@ -170,9 +170,9 @@
 		<key>coordinates</key>
 		<dict>
 			<key>x</key>
-			<real>0.1</real>
+			<real>16.065911</real>
 			<key>y</key>
-			<real>0.1</real>
+			<real>108.222505</real>
 		</dict>
 		<key>isFavorite</key>
 		<false/>
@@ -195,9 +195,9 @@
 		<key>coordinates</key>
 		<dict>
 			<key>x</key>
-			<real>0.1</real>
+			<real>16.070349</real>
 			<key>y</key>
-			<real>0.1</real>
+			<real>108.2137521</real>
 		</dict>
 		<key>isFavorite</key>
 		<true/>
@@ -219,38 +219,13 @@
 		<string>Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe </string>
 		<key>coordinates</key>
 		<dict>
-			<key>x</key>
-			<real>0.1</real>
-			<key>y</key>
-			<real>0.1</real>
+            <key>x</key>
+            <real>16.070349</real>
+            <key>y</key>
+            <real>108.2137421</real>
 		</dict>
 		<key>isFavorite</key>
 		<false/>
-	</dict>
-	<dict>
-		<key>images</key>
-		<array>
-			<string>food</string>
-			<string>food</string>
-			<string>food</string>
-		</array>
-		<key>name</key>
-		<string>Cafe 6</string>
-		<key>address</key>
-		<string>123 ABC, DEF, GHI</string>
-		<key>previewText</key>
-		<string>Coffe Shop At Da Nang</string>
-		<key>detailText</key>
-		<string>Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe </string>
-		<key>coordinates</key>
-		<dict>
-			<key>x</key>
-			<real>0.1</real>
-			<key>y</key>
-			<real>0.1</real>
-		</dict>
-		<key>isFavorite</key>
-		<true/>
 	</dict>
 	<dict>
 		<key>images</key>
@@ -270,9 +245,34 @@
 		<key>coordinates</key>
 		<dict>
 			<key>x</key>
-			<real>0.1</real>
+			<real>16.069585</real>
 			<key>y</key>
-			<real>0.1</real>
+			<real>108.185206</real>
+		</dict>
+		<key>isFavorite</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>food</string>
+			<string>food</string>
+			<string>food</string>
+		</array>
+		<key>name</key>
+		<string>Cafe 11</string>
+		<key>address</key>
+		<string>123 ABC, DEF, GHI</string>
+		<key>previewText</key>
+		<string>Coffe Shop At Da Nang</string>
+		<key>detailText</key>
+		<string>Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe Coffe </string>
+		<key>coordinates</key>
+		<dict>
+			<key>x</key>
+            <real>16.069585</real>
+            <key>y</key>
+            <real>108.185100</real>
 		</dict>
 		<key>isFavorite</key>
 		<true/>
