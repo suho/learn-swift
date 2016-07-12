@@ -10,21 +10,31 @@ import UIKit
 
 class RegisterViewController: UIViewController, UIScrollViewDelegate {
 
+    @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var avatar: UIImageView!
-    @IBOutlet weak var username: UITextField!
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var confirmPassword: UITextField!
-    @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var phone: UITextField!
-    @IBOutlet weak var gender: UISegmentedControl!
-    @IBAction func registerAction(sender: AnyObject) {
-        print("Dang Ky")
-    }
+    
+    @IBOutlet weak var fullNameTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var ageTextField: UITextField!
+    
+    @IBOutlet weak var genderSegment: UISegmentedControl!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Register"
         self.navigationController?.navigationBarHidden = false
+        self.fullNameTextField.delegate = self
+        self.usernameTextField.delegate = self
+        self.passwordTextField.delegate = self
+        self.confirmPasswordTextField.delegate = self
+        self.emailTextField.delegate = self
+        self.phoneTextField.delegate = self
+        self.ageTextField.delegate = self
         
     }
 
@@ -34,15 +44,72 @@ class RegisterViewController: UIViewController, UIScrollViewDelegate {
     }
     
     override func viewDidLayoutSubviews() {
-        self.avatar.layer.cornerRadius = self.avatar.frame.height/2
-        self.avatar.clipsToBounds = true
+        self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.height/2
+        self.avatarImageView.clipsToBounds = true
     }
 
-    @IBAction func tab(sender: UITapGestureRecognizer) {
-        self.view.endEditing(true)
+    @IBAction func registerAction(sender: AnyObject) {
+        
+        let textFields: [UITextField] = [self.fullNameTextField, self.usernameTextField, self.passwordTextField, self.confirmPasswordTextField, self.emailTextField]
+        
+        if self.checkEmpty(textFields) {
+            return
+        } else {
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+        
         
     }
     
+    @IBAction func hideKeyBoardAction(sender: AnyObject) {
+        self.view.endEditing(true)
+        self.view.actionWhenHideKeyBoard()
+    }
     
+    func checkEmpty(textFields: [UITextField]) -> Bool {
+        for textField in textFields {
+            if textField.text!.isEmpty {
+                self.showMessage("Input Not Valid")
+                return true
+            }
+        }
+        return false
+    }
     
+}
+
+extension RegisterViewController: UITextFieldDelegate {
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        self.view.actionWhenShowKeyBoard()
+        return true
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        switch textField {
+            
+        case self.fullNameTextField:
+            self.usernameTextField.becomeFirstResponder()
+            
+        case self.usernameTextField:
+            self.passwordTextField.becomeFirstResponder()
+            
+        case self.passwordTextField:
+            self.confirmPasswordTextField.becomeFirstResponder()
+            
+        case self.confirmPasswordTextField:
+            self.emailTextField.becomeFirstResponder()
+            
+        case self.emailTextField:
+            self.phoneTextField.becomeFirstResponder()
+            
+        case self.phoneTextField:
+            self.ageTextField.becomeFirstResponder()
+            
+        default:
+            self.view.endEditing(true)
+            self.view.actionWhenHideKeyBoard()
+        }
+        
+        return true
+    }
 }
