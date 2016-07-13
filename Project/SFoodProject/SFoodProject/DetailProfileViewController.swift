@@ -78,6 +78,8 @@ class DetailProfileViewController: UIViewController {
             self.avatar.image = UIImage(contentsOfFile: self.user.avatar)
         }
         
+        print(self.user.avatar)
+        
     }
 
     override func didReceiveMemoryWarning() {

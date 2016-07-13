@@ -28,7 +28,7 @@ class MapsTabBarViewController: UIViewController {
         let locationMap = LocationMaps(image: "food", title: "Cầu Sông Hàn",
                               locationName: "Đà Nẵng",
                               discipline: "Cầu",
-                              coordinate: CLLocationCoordinate2D(latitude: 16.072056, longitude: 108.226926))
+                              coordinate: CLLocationCoordinate2D(latitude: 16.072146, longitude: 108.2263048))
         
         self.mapsView.addAnnotation(locationMap)
         self.mapsView.delegate = self
@@ -88,24 +88,22 @@ extension MapsTabBarViewController: MKMapViewDelegate {
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         
         if let annotation = annotation as? LocationMaps {
-            var view: MKPinAnnotationView
-            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier("pin")
-                as? MKPinAnnotationView {
-                dequeuedView.annotation = annotation
-                view = dequeuedView
-            } else {
-                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+            var view: MKAnnotationView
+            
+            view = MKAnnotationView(annotation: annotation, reuseIdentifier: "pin")
                 
-                view.canShowCallout = true
-                view.calloutOffset = CGPoint(x: -5, y: 5)
-                view.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
+            view.canShowCallout = true
+
+            view.calloutOffset = CGPoint(x: -5, y: 5)
+            view.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
                 
-                let buttonleft: UIButton = UIButton(type: UIButtonType.Custom)
-                buttonleft.frame.size.width = view.frame.size.height
-                buttonleft.frame.size.height = view.frame.size.height
-                buttonleft.setImage(UIImage(named: annotation.image)?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), forState:UIControlState.Normal)
-                view.leftCalloutAccessoryView = buttonleft
-            }
+            let buttonleft: UIButton = UIButton(type: UIButtonType.Custom)
+            buttonleft.frame.size.width = view.frame.size.height
+            buttonleft.frame.size.height = view.frame.size.height
+            buttonleft.setImage(UIImage(named: annotation.image)?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), forState:UIControlState.Normal)
+            view.leftCalloutAccessoryView = buttonleft
+            
+            view.image = UIImage(named: "Map Pin")
             return view
         }
         return nil

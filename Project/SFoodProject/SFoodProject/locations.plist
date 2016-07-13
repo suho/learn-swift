@@ -6,8 +6,8 @@
 		<key>images</key>
 		<array>
 			<string>food</string>
-			<string>food</string>
-			<string>food</string>
+			<string>cafe 61</string>
+			<string>The-CafeTNT</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 1</string>
@@ -30,8 +30,8 @@
 	<dict>
 		<key>images</key>
 		<array>
-			<string>food</string>
-			<string>food</string>
+			<string>cafe 61</string>
+			<string>food1</string>
 			<string>food</string>
 		</array>
 		<key>name</key>
@@ -55,8 +55,8 @@
 	<dict>
 		<key>images</key>
 		<array>
-			<string>food</string>
-			<string>food</string>
+			<string>cafe-ceol-2</string>
+			<string>fast-food</string>
 			<string>food</string>
 		</array>
 		<key>name</key>
@@ -80,9 +80,10 @@
 	<dict>
 		<key>images</key>
 		<array>
-			<string>food</string>
-			<string>food</string>
-			<string>food</string>
+			<string>fast-food</string>
+			<string>cafe</string>
+			<string>cafe 61</string>
+            <string>cafe-ceol-2</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 4</string>
@@ -105,9 +106,11 @@
 	<dict>
 		<key>images</key>
 		<array>
-			<string>food</string>
-			<string>food</string>
-			<string>food</string>
+			<string>food-tech</string>
+            <string>fast-food</string>
+            <string>cafe</string>
+            <string>cafe 61</string>
+            <string>cafe-ceol-2</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 5</string>
@@ -130,8 +133,8 @@
 	<dict>
 		<key>images</key>
 		<array>
-			<string>food</string>
-			<string>food</string>
+			<string>food1</string>
+			<string>Tokyo Cafe Book-500x500</string>
 			<string>food</string>
 		</array>
 		<key>name</key>
@@ -156,8 +159,9 @@
 		<key>images</key>
 		<array>
 			<string>food</string>
-			<string>food</string>
-			<string>food</string>
+            <string>food1</string>
+            <string>Tokyo Cafe Book-500x500</string>
+            <string>food</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 7</string>
@@ -180,9 +184,9 @@
 	<dict>
 		<key>images</key>
 		<array>
-			<string>food</string>
-			<string>2</string>
-			<string>3</string>
+            <string>mexican-coffe</string>
+            <string>cafe</string>
+            <string>cafe 61</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 8</string>
@@ -205,9 +209,10 @@
 	<dict>
 		<key>images</key>
 		<array>
-			<string>food</string>
-			<string>food</string>
-			<string>food</string>
+			<string>Tokyo Cafe Book-500x500</string>
+            <string>mexican-coffe</string>
+            <string>cafe</string>
+            <string>cafe 61</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 9</string>
@@ -230,9 +235,11 @@
 	<dict>
 		<key>images</key>
 		<array>
-			<string>food</string>
-			<string>food</string>
-			<string>food</string>
+			<string>cafe 61</string>
+            <string>Tokyo Cafe Book-500x500</string>
+            <string>mexican-coffe</string>
+            <string>cafe</string>
+            <string>cafe 61</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 10</string>
@@ -255,9 +262,10 @@
 	<dict>
 		<key>images</key>
 		<array>
-			<string>food</string>
-			<string>food</string>
-			<string>food</string>
+			<string>The-CafeTNT</string>
+            <string>food1</string>
+            <string>Tokyo Cafe Book-500x500</string>
+            <string>food</string>
 		</array>
 		<key>name</key>
 		<string>Cafe 11</string>

@@ -50,7 +50,7 @@
                                 <constraint firstAttribute="width" secondItem="pFh-71-EV0" secondAttribute="height" multiplier="71:10" id="GVH-R7-ebR"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password (*)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Rbf-AS-mtd">
                             <rect key="frame" x="54" y="257" width="213" height="30"/>
@@ -58,7 +58,7 @@
                                 <constraint firstAttribute="width" secondItem="Rbf-AS-mtd" secondAttribute="height" multiplier="71:10" id="KR0-YQ-5zl"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email (*)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GhJ-u0-7v7">
                             <rect key="frame" x="54" y="297" width="213" height="30"/>
@@ -74,7 +74,7 @@
                                 <constraint firstAttribute="width" secondItem="YCT-Re-1ne" secondAttribute="height" multiplier="71:10" id="Jhg-We-HDU"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jv2-ia-4Vh">
                             <rect key="frame" x="54" y="467" width="213" height="30"/>
@@ -95,7 +95,7 @@
                                 <constraint firstAttribute="width" secondItem="Fz3-Lp-Y3B" secondAttribute="height" multiplier="71:10" id="Lek-vS-fRs"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                         </textField>
                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IJZ-8V-82T">
                             <rect key="frame" x="54" y="417" width="213" height="31"/>

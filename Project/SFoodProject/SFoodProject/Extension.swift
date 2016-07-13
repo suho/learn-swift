@@ -45,4 +45,32 @@ extension UIViewController {
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alertController, animated: true, completion: nil)
     }
+    
+    
+    func convertDateToNameImage() -> String {
+        let format = NSDateFormatter()
+        format.dateFormat = "yyyy_MM_dd_HH_mm_ss"
+        
+        let dateString = format.stringFromDate(NSDate())
+        
+        return dateString
+    }
+}
+
+extension String {
+    
+    func checkValidEmail() -> Bool{
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        let result = emailTest.evaluateWithObject(self)
+        return result
+    }
+    
+    func checkValidNumber(minLenght: Int, maxLenght: Int) -> Bool {
+        let numberRegEx = "[0-9]{\(minLenght),\(maxLenght)}"
+        let numberTest = NSPredicate(format: "SELF MATCHES %@", numberRegEx)
+        let result = numberTest.evaluateWithObject(self)
+        return result
+    }
+    
 }
