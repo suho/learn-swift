@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		990AC5561D35EC3B0003553A /* LauchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 990AC5551D35EC3B0003553A /* LauchScreen.xib */; };
+		990AC5561D35EC3B0003553A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 990AC5551D35EC3B0003553A /* LaunchScreen.xib */; };
 		990AC5591D35EC5B0003553A /* LoginAndSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AC5571D35EC5B0003553A /* LoginAndSignUpViewController.swift */; };
 		990AC55A1D35EC5B0003553A /* LoginAndSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 990AC5581D35EC5B0003553A /* LoginAndSignUpViewController.xib */; };
 		998DD96F1D35CFBF00C0A8DE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998DD96D1D35CFBF00C0A8DE /* HomeViewController.swift */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		990AC5551D35EC3B0003553A /* LauchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LauchScreen.xib; path = Controllers/Base/LauchScreen.xib; sourceTree = "<group>"; };
+		990AC5551D35EC3B0003553A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = Controllers/Base/LaunchScreen.xib; sourceTree = "<group>"; };
 		990AC5571D35EC5B0003553A /* LoginAndSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginAndSignUpViewController.swift; path = "Controllers/Navigation/Login And SignUp/LoginAndSignUpViewController.swift"; sourceTree = "<group>"; };
 		990AC5581D35EC5B0003553A /* LoginAndSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginAndSignUpViewController.xib; path = "Controllers/Navigation/Login And SignUp/LoginAndSignUpViewController.xib"; sourceTree = "<group>"; };
 		998DD9521D35CE6700C0A8DE /* BasicAppProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicAppProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,7 +135,7 @@
 		998DD9681D35CECA00C0A8DE /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				990AC5551D35EC3B0003553A /* LauchScreen.xib */,
+				990AC5551D35EC3B0003553A /* LaunchScreen.xib */,
 				998DD9751D35D01C00C0A8DE /* AppDelegate.swift */,
 			);
 			name = Base;
@@ -234,7 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				990AC55A1D35EC5B0003553A /* LoginAndSignUpViewController.xib in Resources */,
-				990AC5561D35EC3B0003553A /* LauchScreen.xib in Resources */,
+				990AC5561D35EC3B0003553A /* LaunchScreen.xib in Resources */,
 				998DD9701D35CFBF00C0A8DE /* HomeViewController.xib in Resources */,
 				998DD9741D35D01000C0A8DE /* Assets.xcassets in Resources */,
 			);

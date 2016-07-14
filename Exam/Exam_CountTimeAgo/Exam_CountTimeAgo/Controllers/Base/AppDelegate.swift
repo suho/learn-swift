@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  BasicAppProject
+//  Exam_CountTimeAgo
 //
 //  Created by Mylo Ho on 7/13/16.
 //  Copyright © 2016 Ho Van Su. All rights reserved.
@@ -13,14 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
+        // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         if let window = window {
-
-            let loginAndSignUpViewController = LoginAndSignUpViewController(nibName: "LoginAndSignUpViewController", bundle: nil)
             
-            window.rootViewController = loginAndSignUpViewController
+            let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+            
+            let navigationController = UINavigationController(rootViewController: homeViewController)
+            
+            window.rootViewController = navigationController
             
             window.backgroundColor = UIColor.whiteColor()
             window.makeKeyAndVisible()
@@ -28,8 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    
-    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

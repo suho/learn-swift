@@ -12,6 +12,7 @@
                 <outlet property="arrowImage" destination="rGx-aK-Jhv" id="LfV-dS-eib"/>
                 <outlet property="enterButton" destination="uCT-Yx-k9q" id="43J-Fd-Whr"/>
                 <outlet property="facebookButton" destination="nnL-3p-LDt" id="c3F-HL-EOn"/>
+                <outlet property="leadingSpaceArrow" destination="rRc-aW-dzL" id="54o-Ik-YAs"/>
                 <outlet property="loginButton" destination="3JC-uR-oZD" id="60e-tN-Xgz"/>
                 <outlet property="passwordTextField" destination="ys2-xQ-lyz" id="Z5o-zD-UB9"/>
                 <outlet property="signUpButton" destination="fOo-ef-c9c" id="4Wk-K2-eHg"/>
@@ -35,19 +36,13 @@
                     <rect key="frame" x="156" y="0.0" width="62.5" height="215.5"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOo-ef-c9c">
-                    <rect key="frame" x="26" y="168.5" width="130" height="47"/>
+                    <rect key="frame" x="41" y="168" width="115" height="47"/>
                     <connections>
                         <action selector="moveViewSignUp:" destination="-1" eventType="touchUpInside" id="8LT-Na-116"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JC-uR-oZD">
-                    <rect key="frame" x="218" y="168.5" width="130" height="47"/>
-                    <connections>
-                        <action selector="moveViewLogin:" destination="-1" eventType="touchUpInside" id="wKK-rM-m4P"/>
-                    </connections>
-                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="rGx-aK-Jhv">
-                    <rect key="frame" x="90" y="215.5" width="15" height="6.5"/>
+                    <rect key="frame" x="90" y="215" width="15" height="6.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="rGx-aK-Jhv" secondAttribute="height" multiplier="51:22" id="Ez6-T5-gRq"/>
                     </constraints>
@@ -108,7 +103,7 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1c-0T-3Ro">
-                    <rect key="frame" x="0.0" y="221.5" width="375" height="39.5"/>
+                    <rect key="frame" x="0.0" y="221" width="375" height="39.5"/>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="or" translatesAutoresizingMaskIntoConstraints="NO" id="uMB-i7-3Uf">
                     <rect key="frame" x="176" y="458" width="23" height="54.5"/>
@@ -148,9 +143,15 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e22-rf-Qhi">
                     <rect key="frame" x="0.0" y="645" width="375" height="21.5"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JC-uR-oZD">
+                    <rect key="frame" x="218" y="168" width="125" height="47"/>
+                    <connections>
+                        <action selector="moveViewLogin:" destination="-1" eventType="touchUpInside" id="wKK-rM-m4P"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
-                <constraint firstItem="fOo-ef-c9c" firstAttribute="width" secondItem="Hap-LB-Qnn" secondAttribute="width" multiplier="130/375" id="00U-CY-YIq"/>
+                <constraint firstItem="fOo-ef-c9c" firstAttribute="width" secondItem="Hap-LB-Qnn" secondAttribute="width" multiplier="115/375" id="00U-CY-YIq"/>
                 <constraint firstItem="eB7-2c-i8Y" firstAttribute="top" secondItem="d5o-Ch-IKe" secondAttribute="bottom" id="0pf-xc-5yt"/>
                 <constraint firstItem="nnL-3p-LDt" firstAttribute="top" secondItem="nae-W9-5Fb" secondAttribute="bottom" id="0xQ-VJ-ftF"/>
                 <constraint firstItem="fOo-ef-c9c" firstAttribute="bottom" secondItem="Hap-LB-Qnn" secondAttribute="bottom" id="18L-Cu-zVz"/>
@@ -216,7 +217,7 @@
                 <constraint firstItem="e22-rf-Qhi" firstAttribute="top" secondItem="iCw-36-XO2" secondAttribute="bottom" id="qQr-Pd-jOS"/>
                 <constraint firstItem="Hap-LB-Qnn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="r3A-G1-En6"/>
                 <constraint firstItem="rGx-aK-Jhv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="rRc-aW-dzL"/>
-                <constraint firstItem="3JC-uR-oZD" firstAttribute="width" secondItem="Hap-LB-Qnn" secondAttribute="width" multiplier="130/375" id="s6K-MP-vjE"/>
+                <constraint firstItem="3JC-uR-oZD" firstAttribute="width" secondItem="Hap-LB-Qnn" secondAttribute="width" multiplier="125/375" id="s6K-MP-vjE"/>
                 <constraint firstItem="nnL-3p-LDt" firstAttribute="centerX" secondItem="uCT-Yx-k9q" secondAttribute="centerX" id="sUH-91-ppw"/>
                 <constraint firstItem="nOY-HH-VBt" firstAttribute="top" secondItem="Hap-LB-Qnn" secondAttribute="top" id="sdj-pv-zqR"/>
                 <constraint firstItem="r1c-0T-3Ro" firstAttribute="top" secondItem="rGx-aK-Jhv" secondAttribute="bottom" id="tXr-u8-K3T"/>
