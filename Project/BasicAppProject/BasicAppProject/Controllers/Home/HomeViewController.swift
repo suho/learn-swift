@@ -34,16 +34,17 @@ class HomeViewController: UIViewController {
                 if statusCode == 200 {
                     print("Get Data Success")
                     do {
+                        
                         let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
                         
                         if let meta = json["meta"] as? NSDictionary {
-                            if let code = meta["code"] as? Int{
-                                print(code)
-                            }
                             
-                            if let requestId = meta["requestId"] as? String{
-                                print(requestId)
-                            }
+                            let code = meta["code"] ?? 0
+                            
+                            let requestId = meta["requestId"] ?? ""
+                            
+                            print(code!)
+                            print(requestId!)
                             
                         }
                         
