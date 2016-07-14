@@ -361,10 +361,8 @@ class HomeViewController: UIViewController {
         return shortResultNumber
     }
     
-    func useFunction() {
-        /*
-         * Use Func Of Apple
-         *
+    func useFunction() -> [String]? {
+
          let dateComponentsFormatter = NSDateComponentsFormatter()
          dateComponentsFormatter.unitsStyle = NSDateComponentsFormatterUnitsStyle.Full
          
@@ -381,7 +379,7 @@ class HomeViewController: UIViewController {
          } else {
          return arrayDiffirentDate
          }
-         */
+        
     }
 
 }
