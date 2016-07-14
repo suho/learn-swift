@@ -45,6 +45,37 @@ class HomeViewController: UIViewController {
         self.timeLabel.text = self.getResult()
     }
     
+    
+    func getResult() -> String {
+        
+        let datePresent: String = convertDateToString(NSDate())
+        let datePast: String = convertDateToString(self.pastDate)
+        
+        let numbersDivDate = getDivDate(datePresent, datePast: datePast)
+        
+        let shortResultNumber = getShortResultNumber(numbersDivDate)
+        
+        let finallyResult = getFinallyResult(shortResultNumber)
+        
+        let stringResult = getStringFromFinallyDictionary(finallyResult)
+        
+        return stringResult
+        
+        
+    }
+    
+    func getDivDate(datePresent: String, datePast: String) -> [Int] {
+        var resultNumber = [Int]()
+        
+        let numbersDatePresent: [Int] = splitStringDate(datePresent)
+        let numbersDatePast: [Int] = splitStringDate(datePast)
+        
+        for i in 0..<6 {
+            resultNumber.append(numbersDatePresent[i]-numbersDatePast[i])
+        }
+        return resultNumber
+    }
+    
     func getNewTime() {
         self.datePicker.maximumDate = NSDate()
     }
@@ -70,30 +101,7 @@ class HomeViewController: UIViewController {
         return numbers
     }
     
-    func getResult() -> String {
-        
-        let datePresent: String = convertDateToString(NSDate())
-        let datePast: String = convertDateToString(self.pastDate)
-        
-        let numbersDatePresent: [Int] = splitStringDate(datePresent)
-        let numbersDatePast: [Int] = splitStringDate(datePast)
-        
-        var resultNumber = [Int]()
-        
-        for i in 0..<6 {
-            resultNumber.append(numbersDatePresent[i]-numbersDatePast[i])
-        }
-        
-        let shortResultNumber = getShortResultNumber(resultNumber)
-        
-        let finallyResult = getFinallyResult(shortResultNumber)
-        
-        let stringResult = getStringFromFinallyDictionary(finallyResult)
-        
-        return stringResult
-        
-        
-    }
+    
     
     func getStringFromFinallyDictionary(finallyResult: [Dictionary<String, Int>]) -> String {
         var arrayWithTwoUnit = [Dictionary<String, Int>]()
@@ -293,6 +301,11 @@ class HomeViewController: UIViewController {
                 
                 numberDay = numberDay % 7
                 
+                if NSDate().getDay > getMaxDayOfMoth(self.pastDate.monthYear.0, year: self.pastDate.monthYear.1) {
+                    numberDay -= (NSDate().getDay - getMaxDayOfMoth(self.pastDate.monthYear.0, year: self.pastDate.monthYear.1))
+                }
+                
+                
                 if numberDay != 0 {
                     var unit = "day"
                     if numberDay > 1 {
@@ -391,4 +404,11 @@ extension NSDate {
         let components = NSCalendar.currentCalendar().components([.Day, .Month, .Year], fromDate: self)
         return (components.month, components.year)
     }
+    
+    
+    var getDay: Int {
+        let components = NSCalendar.currentCalendar().components([.Day, .Month, .Year], fromDate: self)
+        return components.day
+    }
+    
 }

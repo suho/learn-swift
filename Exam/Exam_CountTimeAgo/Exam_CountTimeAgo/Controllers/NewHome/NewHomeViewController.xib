@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewHomeViewController" customModule="Exam_CountTimeAgo" customModuleProvider="target">
+            <connections>
+                <outlet property="datePicker" destination="O2K-16-8ZJ" id="7V3-AD-ghA"/>
+                <outlet property="time" destination="Gfd-9O-BQh" id="96y-nQ-AwT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="O2K-16-8ZJ">
+                    <rect key="frame" x="0.0" y="352" width="320" height="216"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="O2K-16-8ZJ" secondAttribute="height" multiplier="40:27" id="R5v-nR-hQR"/>
+                    </constraints>
+                    <date key="date" timeIntervalSinceReferenceDate="490176987.030788">
+                        <!--2016-07-14 08:16:27 +0000-->
+                    </date>
+                </datePicker>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gb7-ED-XYo">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDn-8Z-3p3">
+                    <rect key="frame" x="145" y="178" width="29" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dRz-CI-vDb">
+                    <rect key="frame" x="0.0" y="309" width="320" height="43"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIO-BU-rrr">
+                            <rect key="frame" x="263" y="7" width="37" height="30"/>
+                            <state key="normal" title="Done"/>
+                            <connections>
+                                <action selector="doneAction:" destination="-1" eventType="touchUpInside" id="ay2-mb-98c"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="gIO-BU-rrr" firstAttribute="centerY" secondItem="dRz-CI-vDb" secondAttribute="centerY" id="77U-zb-NBL"/>
+                        <constraint firstAttribute="trailing" secondItem="gIO-BU-rrr" secondAttribute="trailing" constant="20" id="J90-lR-ct0"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfd-9O-BQh">
+                    <rect key="frame" x="10" y="150" width="300" height="23"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="O2K-16-8ZJ" secondAttribute="trailing" id="261-j8-yQz"/>
+                <constraint firstItem="O2K-16-8ZJ" firstAttribute="top" secondItem="dRz-CI-vDb" secondAttribute="bottom" id="3BM-DD-uTF"/>
+                <constraint firstItem="Gfd-9O-BQh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7px-8e-87K"/>
+                <constraint firstItem="gb7-ED-XYo" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="150/568" id="HmC-he-2O4"/>
+                <constraint firstAttribute="bottom" secondItem="O2K-16-8ZJ" secondAttribute="bottom" id="JyO-vI-Ga2"/>
+                <constraint firstItem="dRz-CI-vDb" firstAttribute="height" secondItem="O2K-16-8ZJ" secondAttribute="height" multiplier="1/5" id="KKY-OG-IUN"/>
+                <constraint firstItem="O2K-16-8ZJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LwR-1O-GX6"/>
+                <constraint firstItem="gb7-ED-XYo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OTd-Jp-v5C"/>
+                <constraint firstItem="dRz-CI-vDb" firstAttribute="centerX" secondItem="O2K-16-8ZJ" secondAttribute="centerX" id="THy-TY-QzA"/>
+                <constraint firstItem="Gfd-9O-BQh" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" constant="-20" id="UNq-Km-dHu"/>
+                <constraint firstItem="gb7-ED-XYo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="g3P-lC-ATP"/>
+                <constraint firstItem="MDn-8Z-3p3" firstAttribute="centerX" secondItem="Gfd-9O-BQh" secondAttribute="centerX" id="pCp-G7-W3m"/>
+                <constraint firstItem="dRz-CI-vDb" firstAttribute="width" secondItem="O2K-16-8ZJ" secondAttribute="width" id="u9D-BA-UyL"/>
+                <constraint firstItem="Gfd-9O-BQh" firstAttribute="top" secondItem="gb7-ED-XYo" secondAttribute="bottom" id="veX-YS-1bc"/>
+                <constraint firstAttribute="trailing" secondItem="gb7-ED-XYo" secondAttribute="trailing" id="y1s-e2-fnf"/>
+                <constraint firstItem="MDn-8Z-3p3" firstAttribute="top" secondItem="Gfd-9O-BQh" secondAttribute="bottom" constant="5" id="yTA-Pm-hCi"/>
+                <constraint firstItem="O2K-16-8ZJ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="z2B-LT-kDo"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="268" y="324"/>
+        </view>
+    </objects>
+</document>

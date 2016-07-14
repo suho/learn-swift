@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         if let window = window {
 
-            let loginAndSignUpViewController = LoginAndSignUpViewController(nibName: "LoginAndSignUpViewController", bundle: nil)
+            let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
             
-            window.rootViewController = loginAndSignUpViewController
+            window.rootViewController = homeViewController
             
             window.backgroundColor = UIColor.whiteColor()
             window.makeKeyAndVisible()

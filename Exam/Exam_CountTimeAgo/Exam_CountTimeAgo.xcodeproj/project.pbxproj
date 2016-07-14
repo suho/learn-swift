@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9958C1FE1D3781A900345F12 /* NewHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9958C1FC1D3781A900345F12 /* NewHomeViewController.swift */; };
+		9958C1FF1D3781A900345F12 /* NewHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9958C1FD1D3781A900345F12 /* NewHomeViewController.xib */; };
 		99B2CD0A1D36A28D005E3202 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B2CD091D36A28D005E3202 /* AppDelegate.swift */; };
 		99B2CD0C1D36A299005E3202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99B2CD0B1D36A299005E3202 /* Assets.xcassets */; };
 		99B2CD121D36A2DE005E3202 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B2CD101D36A2DE005E3202 /* HomeViewController.swift */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9958C1FC1D3781A900345F12 /* NewHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewHomeViewController.swift; path = Controllers/NewHome/NewHomeViewController.swift; sourceTree = "<group>"; };
+		9958C1FD1D3781A900345F12 /* NewHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewHomeViewController.xib; path = Controllers/NewHome/NewHomeViewController.xib; sourceTree = "<group>"; };
 		99B2CCEF1D36A18E005E3202 /* Exam_CountTimeAgo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exam_CountTimeAgo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99B2CD091D36A28D005E3202 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Controllers/Base/AppDelegate.swift; sourceTree = "<group>"; };
 		99B2CD0B1D36A299005E3202 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Images/Assets.xcassets; sourceTree = "<group>"; };
@@ -33,6 +37,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9958C1FB1D37818B00345F12 /* NewHome */ = {
+			isa = PBXGroup;
+			children = (
+				9958C1FC1D3781A900345F12 /* NewHomeViewController.swift */,
+				9958C1FD1D3781A900345F12 /* NewHomeViewController.xib */,
+			);
+			name = NewHome;
+			sourceTree = "<group>";
+		};
 		99B2CCE61D36A18E005E3202 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +75,7 @@
 		99B2CD041D36A1DD005E3202 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9958C1FB1D37818B00345F12 /* NewHome */,
 				99B2CD0F1D36A2CA005E3202 /* Home */,
 				99B2CD051D36A1ED005E3202 /* Base */,
 			);
@@ -169,6 +183,7 @@
 			files = (
 				99B2CD0C1D36A299005E3202 /* Assets.xcassets in Resources */,
 				99B2CD131D36A2DE005E3202 /* HomeViewController.xib in Resources */,
+				9958C1FF1D3781A900345F12 /* NewHomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9958C1FE1D3781A900345F12 /* NewHomeViewController.swift in Sources */,
 				99B2CD0A1D36A28D005E3202 /* AppDelegate.swift in Sources */,
 				99B2CD121D36A2DE005E3202 /* HomeViewController.swift in Sources */,
 			);
@@ -316,6 +332,7 @@
 				99B2CD031D36A18E005E3202 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

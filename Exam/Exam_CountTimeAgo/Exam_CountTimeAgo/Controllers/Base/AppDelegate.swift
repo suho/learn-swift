@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         if let window = window {
             
-            let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+            let homeViewController = NewHomeViewController(nibName: "NewHomeViewController", bundle: nil)
             
             let navigationController = UINavigationController(rootViewController: homeViewController)
             
