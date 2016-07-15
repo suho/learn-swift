@@ -27,4 +27,7 @@ class Location {
         self.coordinates = coordinates
         self.isFavorite = isFavorite
     }
+    
+    init() {
+    }
 }

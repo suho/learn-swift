@@ -10,7 +10,10 @@ import UIKit
 
 class HomeTabBarViewController: UIViewController {
     
+    let readAPI = ReadAPI()
+    
     @IBOutlet weak var locationTableView: UITableView!
+    
     var locations = [Location]()
     
     class var sharedInstance: HomeTabBarViewController {
@@ -28,14 +31,19 @@ class HomeTabBarViewController: UIViewController {
         self.locationTableView.dataSource = self
         self.locationTableView.registerNib(UINib(nibName: "LocationTableViewCell", bundle: nil),forCellReuseIdentifier: "cellLocation")
         
-        self.locations = self.readDataFromPlist()
+        self.locations = self.readAPI.locations
+        
+        self.locationTableView.reloadData()
+
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.locations = self.readDataFromPlist()
+        
+        self.locations = self.readAPI.locations
+        
         self.locationTableView.reloadData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -52,6 +52,8 @@
 		99FE87F21D33A7E600475F73 /* FollowingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99FE87F01D33A7E600475F73 /* FollowingTableViewCell.xib */; };
 		99FE87F51D33AF0C00475F73 /* DetailFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE87F31D33AF0C00475F73 /* DetailFollowViewController.swift */; };
 		99FE87F61D33AF0C00475F73 /* DetailFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99FE87F41D33AF0C00475F73 /* DetailFollowViewController.xib */; };
+		99FFCE9A1D3872C2005438D4 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FFCE991D3872C2005438D4 /* Venue.swift */; };
+		99FFCE9F1D3874FC005438D4 /* GetAndReadAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FFCE9E1D3874FC005438D4 /* GetAndReadAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,8 @@
 		99FE87F01D33A7E600475F73 /* FollowingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowingTableViewCell.xib; sourceTree = "<group>"; };
 		99FE87F31D33AF0C00475F73 /* DetailFollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailFollowViewController.swift; sourceTree = "<group>"; };
 		99FE87F41D33AF0C00475F73 /* DetailFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailFollowViewController.xib; sourceTree = "<group>"; };
+		99FFCE991D3872C2005438D4 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		99FFCE9E1D3874FC005438D4 /* GetAndReadAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAndReadAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 				99FFCE971D387127005438D4 /* Define */,
 				99FFCE881D386FC6005438D4 /* Models */,
 				99FFCE841D386F87005438D4 /* Resources */,
+				99FFCE9C1D387436005438D4 /* Services */,
 				99FFCE871D386FB5005438D4 /* Supports */,
 			);
 			path = SFoodProject;
@@ -289,7 +294,7 @@
 		99FFCE881D386FC6005438D4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				99FFCE981D387235005438D4 /* Venues */,
+				99FFCE981D387235005438D4 /* Venue */,
 				99FFCE8E1D387049005438D4 /* User */,
 				99FFCE8B1D386FFE005438D4 /* Location */,
 				99FFCE8A1D386FE7005438D4 /* Singleton */,
@@ -433,11 +438,28 @@
 			name = Define;
 			sourceTree = "<group>";
 		};
-		99FFCE981D387235005438D4 /* Venues */ = {
+		99FFCE981D387235005438D4 /* Venue */ = {
 			isa = PBXGroup;
 			children = (
+				99FFCE991D3872C2005438D4 /* Venue.swift */,
 			);
-			name = Venues;
+			name = Venue;
+			sourceTree = "<group>";
+		};
+		99FFCE9C1D387436005438D4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				99FFCE9D1D3874E5005438D4 /* API */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		99FFCE9D1D3874E5005438D4 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				99FFCE9E1D3874FC005438D4 /* GetAndReadAPI.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,6 +555,7 @@
 				9916C3D41D2A72D3003CF835 /* ForgotPasswordViewController.swift in Sources */,
 				99EB4F8B1D2D0CF900C853B0 /* SettingTabBarViewController.swift in Sources */,
 				991B82751D2B9F86002F0BC6 /* SingletonClass.swift in Sources */,
+				99FFCE9F1D3874FC005438D4 /* GetAndReadAPI.swift in Sources */,
 				990188BE1D2F9EB900C9977F /* DetailMapLocationViewController.swift in Sources */,
 				991B82791D2BB51B002F0BC6 /* Location.swift in Sources */,
 				991B827E1D2BBBA4002F0BC6 /* LocationTableViewCell.swift in Sources */,
@@ -546,6 +569,7 @@
 				990188B61D2F5C4700C9977F /* DetailLocationViewController.swift in Sources */,
 				99EB4F861D2D022B00C853B0 /* MapsTabBarViewController.swift in Sources */,
 				99EB4F841D2D022400C853B0 /* LocationMaps.swift in Sources */,
+				99FFCE9A1D3872C2005438D4 /* Venue.swift in Sources */,
 				99FE87F51D33AF0C00475F73 /* DetailFollowViewController.swift in Sources */,
 				99FE87F11D33A7E600475F73 /* FollowingTableViewCell.swift in Sources */,
 				99FE87ED1D339FDF00475F73 /* FollowViewController.swift in Sources */,

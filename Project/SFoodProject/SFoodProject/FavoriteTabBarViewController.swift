@@ -21,10 +21,6 @@ class FavoriteTabBarViewController: UIViewController {
         self.favoriteTableView.delegate = self
         self.favoriteTableView.dataSource = self
         self.favoriteTableView.registerNib(UINib(nibName: "FavoriteTableViewCell", bundle: nil), forCellReuseIdentifier: "cellFavorite")
-        
-
-        
-        self.favorites = self.getFavoriteData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +46,7 @@ class FavoriteTabBarViewController: UIViewController {
     
     func getFavoriteData() -> [Location] {
         
-        let locations = HomeTabBarViewController.sharedInstance.readDataFromPlist()
+        let locations = HomeTabBarViewController.sharedInstance.locations
         var result = [Location]()
         for location in locations {
             if location.isFavorite {

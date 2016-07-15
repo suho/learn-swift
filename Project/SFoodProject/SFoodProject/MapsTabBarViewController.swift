@@ -18,26 +18,24 @@ class MapsTabBarViewController: UIViewController {
     
     var locations = [Location]()
     
+    let readAPI = ReadAPI()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Maps"
-        let initialLocation = CLLocation(latitude: 16.072056, longitude: 108.226926)
+        
+        self.locations = self.readAPI.locations
+        
+        let initialLocation = CLLocation(latitude: (self.locations.first?.coordinates.0)!, longitude: (self.locations.first?.coordinates.1)!)
         self.centerMapOnLocation(initialLocation)
         
-        let locationMap = LocationMaps(image: "food", title: "Cầu Sông Hàn",
-                              locationName: "Đà Nẵng",
-                              discipline: "Cầu",
-                              coordinate: CLLocationCoordinate2D(latitude: 16.072146, longitude: 108.2263048))
-        
-        self.mapsView.addAnnotation(locationMap)
         self.mapsView.delegate = self
-        
-        self.readDataFromPlist()
+
         let annotations = self.getMapsAnnotations()
         self.mapsView.addAnnotations(annotations)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -57,29 +55,6 @@ class MapsTabBarViewController: UIViewController {
         }
         return result
     }
-    
-    func readDataFromPlist() {
-        let path = NSBundle.mainBundle().pathForResource("locations", ofType: "plist")
-        let locations = NSArray(contentsOfFile: path!)
-        
-        for location in locations! {
-            let images = location.objectForKey("images") as! NSArray
-            let name = location.objectForKey("name") as! String
-            let address = location.objectForKey("address") as! String
-            let previewText = location.objectForKey("previewText") as! String
-            let detailText = location.objectForKey("detailText") as! String
-            let coordinates = location.objectForKey("coordinates") as! NSDictionary
-            let coordinatesX = coordinates.objectForKey("x") as! Double
-            let coordinatesY = coordinates.objectForKey("y") as! Double
-            let coordinate = (coordinatesX, coordinatesY)
-            let isFavorite = location.objectForKey("isFavorite") as! Bool
-            
-            let dataLocation = Location(images: images as! [String], name: name, address: address, previewText: previewText, detailText: detailText, coordinates: coordinate, isFavorite: isFavorite)
-            self.locations.append(dataLocation)
-        }
-    }
-    
-
 }
 
 extension MapsTabBarViewController: MKMapViewDelegate {
