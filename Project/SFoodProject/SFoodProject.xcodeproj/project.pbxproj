@@ -134,54 +134,310 @@
 		99F2B9691D2A543B009B502C /* SFoodProject */ = {
 			isa = PBXGroup;
 			children = (
-				99F4132C1D2F527B0015BB24 /* RegisterViewController.swift */,
-				99F4132A1D2F52750015BB24 /* RegisterViewController.xib */,
-				99EB4F871D2D023000C853B0 /* MapsTabBarViewController.xib */,
-				99EB4F851D2D022B00C853B0 /* MapsTabBarViewController.swift */,
-				99EB4F831D2D022400C853B0 /* LocationMaps.swift */,
-				991B82701D2B9F86002F0BC6 /* HomeTabBarViewController.swift */,
-				991B82711D2B9F86002F0BC6 /* HomeTabBarViewController.xib */,
-				991B82721D2B9F86002F0BC6 /* SingletonClass.swift */,
-				99F2B9821D2A5DC7009B502C /* Assets.xcassets */,
-				99F2B96A1D2A543B009B502C /* AppDelegate.swift */,
-				99F2B96C1D2A543B009B502C /* ViewController.swift */,
-				99F2B9731D2A543B009B502C /* LaunchScreen.storyboard */,
-				99F2B9761D2A543B009B502C /* Info.plist */,
-				99F2B97C1D2A553C009B502C /* LoginViewController.swift */,
-				99F2B97D1D2A553C009B502C /* LoginViewController.xib */,
-				9916C3D21D2A72D3003CF835 /* ForgotPasswordViewController.swift */,
-				9916C3D31D2A72D3003CF835 /* ForgotPasswordViewController.xib */,
-				991B82781D2BB51B002F0BC6 /* Location.swift */,
-				991B827A1D2BB721002F0BC6 /* locations.plist */,
-				991B827C1D2BBBA4002F0BC6 /* LocationTableViewCell.swift */,
-				991B827D1D2BBBA4002F0BC6 /* LocationTableViewCell.xib */,
-				99EB4F6F1D2C9F8900C853B0 /* FavoriteTabBarViewController.swift */,
-				99EB4F701D2C9F8900C853B0 /* FavoriteTabBarViewController.xib */,
-				99EB4F731D2CA1BD00C853B0 /* FavoriteTableViewCell.swift */,
-				99EB4F741D2CA1BD00C853B0 /* FavoriteTableViewCell.xib */,
-				99EB4F891D2D0CF900C853B0 /* SettingTabBarViewController.swift */,
-				99EB4F8A1D2D0CF900C853B0 /* SettingTabBarViewController.xib */,
-				990188B41D2F5C4700C9977F /* DetailLocationViewController.swift */,
-				990188B51D2F5C4700C9977F /* DetailLocationViewController.xib */,
-				990188B81D2F84DA00C9977F /* LocationDetailCollectionViewCell.swift */,
-				990188B91D2F84DA00C9977F /* LocationDetailCollectionViewCell.xib */,
-				990188BC1D2F9EB900C9977F /* DetailMapLocationViewController.swift */,
-				990188BD1D2F9EB900C9977F /* DetailMapLocationViewController.xib */,
-				99FE87DF1D332AEE00475F73 /* users.plist */,
-				99FE87E11D332ED000475F73 /* DetailProfileViewController.swift */,
-				99FE87E21D332ED000475F73 /* DetailProfileViewController.xib */,
-				99FE87E51D334F4700475F73 /* User.swift */,
-				99FE87E71D33940A00475F73 /* ChangePasswordViewController.swift */,
-				99FE87E81D33940A00475F73 /* ChangePasswordViewController.xib */,
-				99FE87EB1D339FDF00475F73 /* FollowViewController.swift */,
-				99FE87EC1D339FDF00475F73 /* FollowViewController.xib */,
-				99FE87EF1D33A7E600475F73 /* FollowingTableViewCell.swift */,
-				99FE87F01D33A7E600475F73 /* FollowingTableViewCell.xib */,
-				99FE87F31D33AF0C00475F73 /* DetailFollowViewController.swift */,
-				99FE87F41D33AF0C00475F73 /* DetailFollowViewController.xib */,
-				994F890C1D349C5700EE0426 /* Extension.swift */,
+				99FFCE791D386ED4005438D4 /* Controllers */,
+				99FFCE971D387127005438D4 /* Define */,
+				99FFCE881D386FC6005438D4 /* Models */,
+				99FFCE841D386F87005438D4 /* Resources */,
+				99FFCE871D386FB5005438D4 /* Supports */,
 			);
 			path = SFoodProject;
+			sourceTree = "<group>";
+		};
+		99FFCE791D386ED4005438D4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				99FFCE831D386F6E005438D4 /* Base */,
+				99FFCE7A1D386EEC005438D4 /* Navigation */,
+				99FFCE7E1D386F19005438D4 /* TabBar */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		99FFCE7A1D386EEC005438D4 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				99FFCE7D1D386F0A005438D4 /* ForgotPassword */,
+				99FFCE7C1D386EFF005438D4 /* Register */,
+				99FFCE7B1D386EF3005438D4 /* Login */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		99FFCE7B1D386EF3005438D4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				99F2B97C1D2A553C009B502C /* LoginViewController.swift */,
+				99F2B97D1D2A553C009B502C /* LoginViewController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		99FFCE7C1D386EFF005438D4 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				99F4132C1D2F527B0015BB24 /* RegisterViewController.swift */,
+				99F4132A1D2F52750015BB24 /* RegisterViewController.xib */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		99FFCE7D1D386F0A005438D4 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				9916C3D21D2A72D3003CF835 /* ForgotPasswordViewController.swift */,
+				9916C3D31D2A72D3003CF835 /* ForgotPasswordViewController.xib */,
+			);
+			name = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		99FFCE7E1D386F19005438D4 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				99FFCE801D386F2A005438D4 /* Favorites */,
+				99FFCE7F1D386F20005438D4 /* Home */,
+				99FFCE811D386F3A005438D4 /* Maps */,
+				99FFCE821D386F4A005438D4 /* Settings */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		99FFCE7F1D386F20005438D4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				991B82701D2B9F86002F0BC6 /* HomeTabBarViewController.swift */,
+				991B82711D2B9F86002F0BC6 /* HomeTabBarViewController.xib */,
+				99FFCE8F1D387061005438D4 /* DetailLocation */,
+				99FFCE8C1D38701A005438D4 /* LocationTableCell */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		99FFCE801D386F2A005438D4 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				99FFCE8D1D387034005438D4 /* FavoriteTableCell */,
+				99EB4F6F1D2C9F8900C853B0 /* FavoriteTabBarViewController.swift */,
+				99EB4F701D2C9F8900C853B0 /* FavoriteTabBarViewController.xib */,
+			);
+			name = Favorites;
+			sourceTree = "<group>";
+		};
+		99FFCE811D386F3A005438D4 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				99EB4F851D2D022B00C853B0 /* MapsTabBarViewController.swift */,
+				99EB4F871D2D023000C853B0 /* MapsTabBarViewController.xib */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		99FFCE821D386F4A005438D4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				99FFCE941D3870F8005438D4 /* Follow */,
+				99FFCE921D3870D5005438D4 /* DetailProfile */,
+				99EB4F891D2D0CF900C853B0 /* SettingTabBarViewController.swift */,
+				99EB4F8A1D2D0CF900C853B0 /* SettingTabBarViewController.xib */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		99FFCE831D386F6E005438D4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				99F2B96A1D2A543B009B502C /* AppDelegate.swift */,
+				99F2B9731D2A543B009B502C /* LaunchScreen.storyboard */,
+				99F2B96C1D2A543B009B502C /* ViewController.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		99FFCE841D386F87005438D4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				99FFCE861D386F9B005438D4 /* Plist */,
+				99FFCE851D386F92005438D4 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		99FFCE851D386F92005438D4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				99F2B9821D2A5DC7009B502C /* Assets.xcassets */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		99FFCE861D386F9B005438D4 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				99FE87DF1D332AEE00475F73 /* users.plist */,
+				991B827A1D2BB721002F0BC6 /* locations.plist */,
+			);
+			name = Plist;
+			sourceTree = "<group>";
+		};
+		99FFCE871D386FB5005438D4 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				99F2B9761D2A543B009B502C /* Info.plist */,
+			);
+			name = Supports;
+			sourceTree = "<group>";
+		};
+		99FFCE881D386FC6005438D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				99FFCE981D387235005438D4 /* Venues */,
+				99FFCE8E1D387049005438D4 /* User */,
+				99FFCE8B1D386FFE005438D4 /* Location */,
+				99FFCE8A1D386FE7005438D4 /* Singleton */,
+				99FFCE891D386FCF005438D4 /* Map */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		99FFCE891D386FCF005438D4 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				99EB4F831D2D022400C853B0 /* LocationMaps.swift */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		99FFCE8A1D386FE7005438D4 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				991B82721D2B9F86002F0BC6 /* SingletonClass.swift */,
+			);
+			name = Singleton;
+			sourceTree = "<group>";
+		};
+		99FFCE8B1D386FFE005438D4 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				991B82781D2BB51B002F0BC6 /* Location.swift */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
+		99FFCE8C1D38701A005438D4 /* LocationTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				991B827C1D2BBBA4002F0BC6 /* LocationTableViewCell.swift */,
+				991B827D1D2BBBA4002F0BC6 /* LocationTableViewCell.xib */,
+			);
+			name = LocationTableCell;
+			sourceTree = "<group>";
+		};
+		99FFCE8D1D387034005438D4 /* FavoriteTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				99EB4F741D2CA1BD00C853B0 /* FavoriteTableViewCell.xib */,
+				99EB4F731D2CA1BD00C853B0 /* FavoriteTableViewCell.swift */,
+			);
+			name = FavoriteTableCell;
+			sourceTree = "<group>";
+		};
+		99FFCE8E1D387049005438D4 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				99FE87E51D334F4700475F73 /* User.swift */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		99FFCE8F1D387061005438D4 /* DetailLocation */ = {
+			isa = PBXGroup;
+			children = (
+				99FFCE911D3870C5005438D4 /* DetailLocationMap */,
+				99FFCE901D38706D005438D4 /* LocationCollectionCell */,
+				990188B41D2F5C4700C9977F /* DetailLocationViewController.swift */,
+				990188B51D2F5C4700C9977F /* DetailLocationViewController.xib */,
+			);
+			name = DetailLocation;
+			sourceTree = "<group>";
+		};
+		99FFCE901D38706D005438D4 /* LocationCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				990188B81D2F84DA00C9977F /* LocationDetailCollectionViewCell.swift */,
+				990188B91D2F84DA00C9977F /* LocationDetailCollectionViewCell.xib */,
+			);
+			name = LocationCollectionCell;
+			sourceTree = "<group>";
+		};
+		99FFCE911D3870C5005438D4 /* DetailLocationMap */ = {
+			isa = PBXGroup;
+			children = (
+				990188BD1D2F9EB900C9977F /* DetailMapLocationViewController.xib */,
+				990188BC1D2F9EB900C9977F /* DetailMapLocationViewController.swift */,
+			);
+			name = DetailLocationMap;
+			sourceTree = "<group>";
+		};
+		99FFCE921D3870D5005438D4 /* DetailProfile */ = {
+			isa = PBXGroup;
+			children = (
+				99FFCE931D3870E5005438D4 /* ChangePassword */,
+				99FE87E21D332ED000475F73 /* DetailProfileViewController.xib */,
+				99FE87E11D332ED000475F73 /* DetailProfileViewController.swift */,
+			);
+			name = DetailProfile;
+			sourceTree = "<group>";
+		};
+		99FFCE931D3870E5005438D4 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				99FE87E81D33940A00475F73 /* ChangePasswordViewController.xib */,
+				99FE87E71D33940A00475F73 /* ChangePasswordViewController.swift */,
+			);
+			name = ChangePassword;
+			sourceTree = "<group>";
+		};
+		99FFCE941D3870F8005438D4 /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+				99FFCE961D387116005438D4 /* DetailFollow */,
+				99FFCE951D387105005438D4 /* FollowTableCell */,
+				99FE87EB1D339FDF00475F73 /* FollowViewController.swift */,
+				99FE87EC1D339FDF00475F73 /* FollowViewController.xib */,
+			);
+			name = Follow;
+			sourceTree = "<group>";
+		};
+		99FFCE951D387105005438D4 /* FollowTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				99FE87F01D33A7E600475F73 /* FollowingTableViewCell.xib */,
+				99FE87EF1D33A7E600475F73 /* FollowingTableViewCell.swift */,
+			);
+			name = FollowTableCell;
+			sourceTree = "<group>";
+		};
+		99FFCE961D387116005438D4 /* DetailFollow */ = {
+			isa = PBXGroup;
+			children = (
+				99FE87F41D33AF0C00475F73 /* DetailFollowViewController.xib */,
+				99FE87F31D33AF0C00475F73 /* DetailFollowViewController.swift */,
+			);
+			name = DetailFollow;
+			sourceTree = "<group>";
+		};
+		99FFCE971D387127005438D4 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				994F890C1D349C5700EE0426 /* Extension.swift */,
+			);
+			name = Define;
+			sourceTree = "<group>";
+		};
+		99FFCE981D387235005438D4 /* Venues */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Venues;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
