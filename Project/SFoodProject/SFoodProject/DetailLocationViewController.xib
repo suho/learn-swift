@@ -27,27 +27,27 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bx-wg-K8n">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cafe ABC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUI-N4-NbQ">
-                            <rect key="frame" x="119" y="148" width="82" height="23"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cafe ABC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUI-N4-NbQ">
+                            <rect key="frame" x="10" y="148" width="300" height="23"/>
                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkF-5D-2dV">
-                            <rect key="frame" x="5" y="322" width="310" height="90"/>
+                            <rect key="frame" x="5" y="312" width="310" height="90"/>
                             <string key="text">detail_text detail_text detail_text detail_text detail_text detail_text detail_text detail_text detail_text detail_text detail_text detail_text detail_text detail_text detail_text detail_text detail_text detail_text </string>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WeV-9B-DB7">
-                            <rect key="frame" x="5" y="422" width="310" height="165"/>
+                            <rect key="frame" x="5" y="412" width="310" height="165"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="WeV-9B-DB7" secondAttribute="height" multiplier="15:8" id="u9C-cm-EVs"/>
                             </constraints>
                         </mapView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSs-2x-xic">
-                            <rect key="frame" x="0.0" y="587" width="320" height="30"/>
+                            <rect key="frame" x="0.0" y="577" width="320" height="30"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4q-pZ-5vi">
                             <rect key="frame" x="5" y="181" width="310" height="21"/>
@@ -86,7 +86,7 @@
                         <constraint firstItem="FSs-2x-xic" firstAttribute="leading" secondItem="1bx-wg-K8n" secondAttribute="leading" id="Bjo-mv-aUB"/>
                         <constraint firstAttribute="bottom" secondItem="FSs-2x-xic" secondAttribute="bottom" id="KCb-55-NS5"/>
                         <constraint firstItem="t4q-pZ-5vi" firstAttribute="top" secondItem="MUI-N4-NbQ" secondAttribute="bottom" constant="10" id="MOP-kh-w7Q"/>
-                        <constraint firstItem="HkF-5D-2dV" firstAttribute="top" secondItem="lM8-bR-Nyt" secondAttribute="bottom" constant="20" id="O93-3x-Ib1"/>
+                        <constraint firstItem="HkF-5D-2dV" firstAttribute="top" secondItem="lM8-bR-Nyt" secondAttribute="bottom" constant="10" id="O93-3x-Ib1"/>
                         <constraint firstItem="FSs-2x-xic" firstAttribute="top" secondItem="WeV-9B-DB7" secondAttribute="bottom" id="XUv-fE-aA9"/>
                         <constraint firstItem="4BB-4a-bdI" firstAttribute="bottom" secondItem="Ohb-6V-PMn" secondAttribute="bottom" constant="23" id="YdY-i9-srY"/>
                         <constraint firstItem="HkF-5D-2dV" firstAttribute="width" secondItem="lM8-bR-Nyt" secondAttribute="width" id="ZMt-GX-iCW"/>
@@ -105,6 +105,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="MUI-N4-NbQ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" constant="-20" id="07F-pF-8HM"/>
                 <constraint firstAttribute="bottom" secondItem="1bx-wg-K8n" secondAttribute="bottom" id="0Oh-CS-Urp"/>
                 <constraint firstItem="Ohb-6V-PMn" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="138/568" id="CSc-nY-3Hs"/>
                 <constraint firstItem="Ohb-6V-PMn" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="IEa-nO-Tv0"/>

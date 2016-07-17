@@ -19,7 +19,7 @@ class DetailLocationViewController: UIViewController {
     @IBOutlet weak var detailText: UILabel!
     @IBOutlet weak var mapLocationView: MKMapView!
     
-    var location = Location(images: ["food"], name: "Cafe 69", address: "69 Da Nang", previewText: "Cafe Xay", detailText: "Da Nang, Hai Chau, Nguyen Chi Thanh", coordinates: (0.00, 0.00), isFavorite: true)
+    var location = Location(id: "1", images: [UIImage(named: "cafe 61")!], name: "Cafe 69", address: "69 Da Nang", previewText: "Cafe Xay", detailText: "Da Nang, Hai Chau, Nguyen Chi Thanh", coordinates: (0.00, 0.00), isFavorite: true)
     
     var favoriteButton: UIBarButtonItem!
     
@@ -57,7 +57,7 @@ class DetailLocationViewController: UIViewController {
         
         let initialLocation = CLLocation(latitude: CLLocationDegrees(self.location.coordinates.0), longitude: CLLocationDegrees(self.location.coordinates.1))
         self.centerMapOnLocation(initialLocation)
-        let locationMap = LocationMaps(image: "\(self.location.images.first!)", title: "\(self.location.name)",
+        let locationMap = LocationMaps(image: "", imageData: self.location.images.first!, title: "\(self.location.name)",
                                        locationName: "\(self.location.address)",
                                        discipline: "\(self.location.previewText)",
                                        coordinate: CLLocationCoordinate2D(latitude: CLLocationDegrees(self.location.coordinates.0), longitude: CLLocationDegrees(self.location.coordinates.1)))
@@ -116,7 +116,7 @@ extension DetailLocationViewController: UICollectionViewDelegate, UICollectionVi
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! LocationDetailCollectionViewCell
         
-        cell.image.image = UIImage(named: "\(self.location.images[indexPath.row])")
+        cell.image.image = self.location.images[indexPath.row]
 
         return cell
     }
@@ -170,7 +170,7 @@ extension DetailLocationViewController: MKMapViewDelegate {
                 buttonleft.frame.size.height = view.frame.size.height
                 
                 
-                buttonleft.setImage(UIImage(named: "\(annotation.image)")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), forState:UIControlState.Normal)
+                buttonleft.setImage((annotation.imageData).imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), forState:UIControlState.Normal)
                 view.leftCalloutAccessoryView = buttonleft
             }
             return view

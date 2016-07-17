@@ -13,7 +13,7 @@ class DetailMapLocationViewController: UIViewController {
     
     @IBOutlet weak var detailMapView: MKMapView!
     
-    var location = Location(images: ["food", "food", "food"], name: "Cafe 69", address: "69 Da Nang", previewText: "Cafe Xay", detailText: "Da Nang, Hai Chau, Nguyen Chi Thanh", coordinates: (0.00, 0.00), isFavorite: true)
+    var location = Location(id: "", images: [UIImage(named: "cafe 61")!], name: "Cafe 69", address: "69 Da Nang", previewText: "Cafe Xay", detailText: "Da Nang, Hai Chau, Nguyen Chi Thanh", coordinates: (0.00, 0.00), isFavorite: true)
     
     let regionRadius: CLLocationDistance = 2100
     
@@ -29,7 +29,7 @@ class DetailMapLocationViewController: UIViewController {
         let initialLocation = CLLocation(latitude: CLLocationDegrees(self.location.coordinates.0), longitude: CLLocationDegrees(self.location.coordinates.1))
         self.centerMapOnLocation(initialLocation)
         
-        self.locationMap = LocationMaps(image: "\(self.location.images.first!)", title: "\(self.location.name)",
+        self.locationMap = LocationMaps(image: "", imageData: self.location.images.first!, title: "\(self.location.name)",
                                        locationName: "\(self.location.address)",
                                        discipline: "\(self.location.previewText)",
                                        coordinate: CLLocationCoordinate2D(latitude: CLLocationDegrees(self.location.coordinates.0), longitude: CLLocationDegrees(self.location.coordinates.1)))
@@ -121,7 +121,7 @@ extension DetailMapLocationViewController: MKMapViewDelegate, CLLocationManagerD
                 buttonleft.frame.size.height = view.frame.size.height
                 
                 
-                buttonleft.setImage(UIImage(named: "\(annotation.image)")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), forState:UIControlState.Normal)
+                buttonleft.setImage((annotation.imageData).imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), forState:UIControlState.Normal)
                 view.leftCalloutAccessoryView = buttonleft
             }
             return view

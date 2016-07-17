@@ -21,6 +21,9 @@
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AMK-HS-rrt">
                     <rect key="frame" x="53" y="180" width="213" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="AMK-HS-rrt" secondAttribute="height" multiplier="71:10" id="uzs-IG-LJ8"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
                 </textField>
@@ -50,7 +53,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9V-yr-4no">
-                    <rect key="frame" x="53.5" y="310" width="213" height="30"/>
+                    <rect key="frame" x="53" y="310" width="213" height="30"/>
                     <color key="backgroundColor" red="1" green="0.72191748418564605" blue="0.31194741988988894" alpha="0.56551724137931036" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Forgot Password?">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,13 +63,13 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an Account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="zue-Ws-RDv">
-                    <rect key="frame" x="54" y="370" width="213" height="30"/>
+                    <rect key="frame" x="53" y="370" width="213" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWP-yO-rNm">
-                    <rect key="frame" x="53.5" y="410" width="213" height="30"/>
+                    <rect key="frame" x="53" y="410" width="213" height="30"/>
                     <color key="backgroundColor" red="1" green="0.64570451086308334" blue="0.25194880089013527" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Create Account Now">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -81,6 +84,7 @@
                 <constraint firstItem="JM0-gD-nbn" firstAttribute="width" secondItem="AMK-HS-rrt" secondAttribute="width" id="12Y-H4-VIe"/>
                 <constraint firstItem="z9V-yr-4no" firstAttribute="top" secondItem="8Kq-rY-IhG" secondAttribute="bottom" constant="10" id="1Gd-J4-Cuj"/>
                 <constraint firstItem="dWP-yO-rNm" firstAttribute="top" secondItem="zue-Ws-RDv" secondAttribute="bottom" constant="10" id="3mL-Dg-Tgc"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dWP-yO-rNm" secondAttribute="bottom" constant="20" id="3yb-A2-eC1"/>
                 <constraint firstItem="AMK-HS-rrt" firstAttribute="top" secondItem="fym-CY-Suj" secondAttribute="bottom" constant="40" id="4sr-d9-ewA"/>
                 <constraint firstItem="8Kq-rY-IhG" firstAttribute="centerX" secondItem="JM0-gD-nbn" secondAttribute="centerX" id="5NS-bq-TKx"/>
                 <constraint firstItem="19C-Re-HgT" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="40/568" id="ATi-cI-B2X"/>
@@ -95,6 +99,7 @@
                 <constraint firstItem="zue-Ws-RDv" firstAttribute="height" secondItem="z9V-yr-4no" secondAttribute="height" id="OZV-Ih-mNe"/>
                 <constraint firstItem="19C-Re-HgT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SLf-wv-hoq"/>
                 <constraint firstItem="fym-CY-Suj" firstAttribute="top" secondItem="19C-Re-HgT" secondAttribute="bottom" id="UOT-0G-wiO"/>
+                <constraint firstItem="JM0-gD-nbn" firstAttribute="height" secondItem="AMK-HS-rrt" secondAttribute="height" id="azW-tG-K9L"/>
                 <constraint firstAttribute="trailing" secondItem="19C-Re-HgT" secondAttribute="trailing" id="bcr-5p-dXj"/>
                 <constraint firstItem="8Kq-rY-IhG" firstAttribute="height" secondItem="JM0-gD-nbn" secondAttribute="height" id="cdI-dj-b2Z"/>
                 <constraint firstItem="dWP-yO-rNm" firstAttribute="width" secondItem="z9V-yr-4no" secondAttribute="width" id="g6U-nu-1C6"/>
@@ -104,7 +109,7 @@
                 <constraint firstItem="dWP-yO-rNm" firstAttribute="centerX" secondItem="z9V-yr-4no" secondAttribute="centerX" id="oPy-Zs-Ztz"/>
                 <constraint firstItem="JM0-gD-nbn" firstAttribute="top" secondItem="AMK-HS-rrt" secondAttribute="bottom" constant="10" id="ush-pk-jM8"/>
                 <constraint firstItem="AMK-HS-rrt" firstAttribute="centerX" secondItem="fym-CY-Suj" secondAttribute="centerX" id="v6U-LW-l8Q"/>
-                <constraint firstItem="zue-Ws-RDv" firstAttribute="top" secondItem="z9V-yr-4no" secondAttribute="bottom" constant="30" id="veO-Vr-Pde"/>
+                <constraint firstItem="zue-Ws-RDv" firstAttribute="top" secondItem="z9V-yr-4no" secondAttribute="bottom" priority="999" constant="30" id="veO-Vr-Pde"/>
                 <constraint firstItem="8Kq-rY-IhG" firstAttribute="top" secondItem="JM0-gD-nbn" secondAttribute="bottom" constant="20" id="vxV-Km-ZFm"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

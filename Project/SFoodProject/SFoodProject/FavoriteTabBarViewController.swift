@@ -12,6 +12,8 @@ class FavoriteTabBarViewController: UIViewController {
 
     @IBOutlet weak var favoriteTableView: UITableView!
     
+    let readAPI = ReadAPI()
+    
     var favorites = [Location]()
     
     override func viewDidLoad() {
@@ -46,7 +48,8 @@ class FavoriteTabBarViewController: UIViewController {
     
     func getFavoriteData() -> [Location] {
         
-        let locations = HomeTabBarViewController.sharedInstance.locations
+        let locations = self.readAPI.venues
+        
         var result = [Location]()
         for location in locations {
             if location.isFavorite {

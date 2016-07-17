@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    var messageFrame = UIView()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = true
@@ -31,8 +32,8 @@ class LoginViewController: UIViewController {
         return UIStatusBarStyle.LightContent
     }
     override func viewWillAppear(animated: Bool) {
-        self.usernameTextField.text = ""
-        self.passwordTextField.text = ""
+        self.usernameTextField.text = "admin"
+        self.passwordTextField.text = "admin"
         self.navigationController?.navigationBarHidden = true
     }
     
@@ -42,8 +43,14 @@ class LoginViewController: UIViewController {
         
         if self.checkAccount(username, password: password) {
             //print("Dang nhap thanh cong")
-            AppDelegate.sharedInstance.idUser = self.getIdUser(username, password: password)
-            AppDelegate.sharedInstance.changeRootViewWhenLoginSuccess()
+            progressBarDisplayer("Logining...", true)
+            runAfterDelay(2) {
+                AppDelegate.sharedInstance.idUser = self.getIdUser(username, password: password)
+                AppDelegate.sharedInstance.changeRootViewWhenLoginSuccess()
+                self.messageFrame.removeFromSuperview()
+            }
+            
+            
         } else {
             if self.checkValid(username, password: password) {
                 self.showMessage("Input Not Valid")
@@ -105,6 +112,29 @@ class LoginViewController: UIViewController {
         } else {
             return false
         }
+    }
+    
+    func runAfterDelay(delay: NSTimeInterval, block: dispatch_block_t) {
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
+        dispatch_after(time, dispatch_get_main_queue(), block)
+    }
+    
+    
+    
+    
+    func progressBarDisplayer(msg:String, _ indicator:Bool ) {
+        
+        var activityIndicator = UIActivityIndicatorView()
+        messageFrame = UIView(frame: CGRect(x: view.frame.midX - 25, y: view.frame.midY - 25 , width: 50, height: 50))
+        messageFrame.layer.cornerRadius = 15
+        messageFrame.backgroundColor = UIColor(white: 0, alpha: 0.7)
+        if indicator {
+            activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
+            activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+            activityIndicator.startAnimating()
+            messageFrame.addSubview(activityIndicator)
+        }
+        view.addSubview(messageFrame)
     }
 
 }

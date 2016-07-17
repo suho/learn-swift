@@ -30,16 +30,12 @@ class HomeTabBarViewController: UIViewController {
         self.locationTableView.delegate = self
         self.locationTableView.dataSource = self
         self.locationTableView.registerNib(UINib(nibName: "LocationTableViewCell", bundle: nil),forCellReuseIdentifier: "cellLocation")
-        
-        self.locations = self.readAPI.locations
-        
-        self.locationTableView.reloadData()
 
     }
     
     override func viewWillAppear(animated: Bool) {
         
-        self.locations = self.readAPI.locations
+        self.locations = self.readAPI.venues
         
         self.locationTableView.reloadData()
     }
@@ -49,30 +45,34 @@ class HomeTabBarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func readDataFromPlist() -> [Location] {
-        let path = NSBundle.mainBundle().pathForResource("locations", ofType: "plist")
-        let locations = NSArray(contentsOfFile: path!)
-        
-        var result = [Location]()
-        
-        for location in locations! {
-            let images = location.objectForKey("images") as! NSArray
-            let name = location.objectForKey("name") as! String
-            let address = location.objectForKey("address") as! String
-            let previewText = location.objectForKey("previewText") as! String
-            let detailText = location.objectForKey("detailText") as! String
-            let coordinates = location.objectForKey("coordinates") as! NSDictionary
-            let coordinatesX = coordinates.objectForKey("x") as! Double
-            let coordinatesY = coordinates.objectForKey("y") as! Double
-            let coordinate = (coordinatesX, coordinatesY)
-            let isFavorite = location.objectForKey("isFavorite") as! Bool
-            
-            let dataLocation = Location(images: images as! [String], name: name, address: address, previewText: previewText, detailText: detailText, coordinates: coordinate, isFavorite: isFavorite)
-            result.append(dataLocation)
-        }
-        
-        return result
-    }
+//    func readDataFromPlist() -> [Location] {
+//        let path = NSBundle.mainBundle().pathForResource("locations", ofType: "plist")
+//        let locations = NSArray(contentsOfFile: path!)
+//        
+//        var result = [Location]()
+//        
+//        for location in locations! {
+//            let images = location.objectForKey("images") as! NSArray
+//            var imageData: [UIImage] = []
+//            for image in images {
+//                imageData.append(UIImage(named: image as! String)!)
+//            }
+//            let name = location.objectForKey("name") as! String
+//            let address = location.objectForKey("address") as! String
+//            let previewText = location.objectForKey("previewText") as! String
+//            let detailText = location.objectForKey("detailText") as! String
+//            let coordinates = location.objectForKey("coordinates") as! NSDictionary
+//            let coordinatesX = coordinates.objectForKey("x") as! Double
+//            let coordinatesY = coordinates.objectForKey("y") as! Double
+//            let coordinate = (coordinatesX, coordinatesY)
+//            let isFavorite = location.objectForKey("isFavorite") as! Bool
+//            
+//            let dataLocation = Location(id: "", images: imageData, name: name, address: address, previewText: previewText, detailText: detailText, coordinates: coordinate, isFavorite: isFavorite)
+//            result.append(dataLocation)
+//        }
+//        
+//        return result
+//    }
 
 }
 

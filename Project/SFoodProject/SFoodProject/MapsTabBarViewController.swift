@@ -14,7 +14,7 @@ class MapsTabBarViewController: UIViewController {
     @IBOutlet weak var mapsView: MKMapView!
     
     
-    let regionRadius: CLLocationDistance = 1500
+    let regionRadius: CLLocationDistance = 2500
     
     var locations = [Location]()
     
@@ -25,7 +25,7 @@ class MapsTabBarViewController: UIViewController {
         
         self.title = "Maps"
         
-        self.locations = self.readAPI.locations
+        self.locations = self.readAPI.venues
         
         let initialLocation = CLLocation(latitude: (self.locations.first?.coordinates.0)!, longitude: (self.locations.first?.coordinates.1)!)
         self.centerMapOnLocation(initialLocation)
@@ -50,7 +50,7 @@ class MapsTabBarViewController: UIViewController {
         var result = [LocationMaps]()
         let locations = self.locations
         for location in locations {
-            let annotation = LocationMaps(image: location.images.first! ,title: location.name, locationName: location.address, discipline: "Coffe", coordinate: CLLocationCoordinate2D(latitude: CLLocationDegrees(location.coordinates.0), longitude: CLLocationDegrees(location.coordinates.1)))
+            let annotation = LocationMaps(image: "", imageData: location.images.first!, title: location.name, locationName: location.address, discipline: "Coffe", coordinate: CLLocationCoordinate2D(latitude: CLLocationDegrees(location.coordinates.0), longitude: CLLocationDegrees(location.coordinates.1)))
             result.append(annotation)
         }
         return result
@@ -66,6 +66,7 @@ extension MapsTabBarViewController: MKMapViewDelegate {
             var view: MKAnnotationView
             
             view = MKAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+            view.image = UIImage(named: "Map Pin")
                 
             view.canShowCallout = true
 
@@ -75,10 +76,10 @@ extension MapsTabBarViewController: MKMapViewDelegate {
             let buttonleft: UIButton = UIButton(type: UIButtonType.Custom)
             buttonleft.frame.size.width = view.frame.size.height
             buttonleft.frame.size.height = view.frame.size.height
-            buttonleft.setImage(UIImage(named: annotation.image)?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), forState:UIControlState.Normal)
+            buttonleft.setImage((annotation.imageData).imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), forState:UIControlState.Normal)
             view.leftCalloutAccessoryView = buttonleft
             
-            view.image = UIImage(named: "Map Pin")
+            
             return view
         }
         return nil

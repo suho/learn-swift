@@ -16,7 +16,7 @@ class FavoriteTableViewCell: UITableViewCell {
     @IBOutlet weak var starButton: UIButton!
     @IBOutlet weak var contentViewCustom: UIView!
     
-    var location: Location = Location(images: ["a", "abc"], name: "Cafe ABC", address: "123 ABC, DEF, GHI", previewText: "", detailText: "", coordinates: (0, 0), isFavorite: true)
+    var location: Location = Location(id: "", images: [UIImage(named: "cafe 61")!], name: "Cafe ABC", address: "123 ABC, DEF, GHI", previewText: "", detailText: "", coordinates: (0, 0), isFavorite: true)
     
 
     override func awakeFromNib() {
@@ -44,7 +44,7 @@ class FavoriteTableViewCell: UITableViewCell {
     
     func setData(location: Location) {
         self.location = location
-        self.imageFirst.image = UIImage(named: location.images.first!)
+        self.imageFirst.image = location.images.first!
         self.name.text = location.name
         self.address.text = location.address
         if self.location.isFavorite {

@@ -21,7 +21,7 @@
                         <rect key="frame" x="8" y="8" width="384" height="117.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caffe ABC" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xvn-qh-kHl">
-                                <rect key="frame" x="137" y="15" width="130.5" height="24"/>
+                                <rect key="frame" x="137" y="15" width="145.5" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -52,7 +52,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="EPJ-fl-7HH" firstAttribute="height" secondItem="FO1-9o-CoX" secondAttribute="height" multiplier="40/117.5" id="3Fj-CF-dhN"/>
-                            <constraint firstItem="xvn-qh-kHl" firstAttribute="height" secondItem="FO1-9o-CoX" secondAttribute="height" multiplier="24/117.5" id="3Tn-LO-MRr"/>
+                            <constraint firstItem="xvn-qh-kHl" firstAttribute="height" secondItem="FO1-9o-CoX" secondAttribute="height" multiplier="35/117.5" id="3Tn-LO-MRr"/>
                             <constraint firstItem="7rn-rz-CeE" firstAttribute="width" secondItem="FO1-9o-CoX" secondAttribute="width" multiplier="200.5/384" id="3tn-ZX-lsd"/>
                             <constraint firstItem="7rn-rz-CeE" firstAttribute="bottom" secondItem="ocz-UB-ou4" secondAttribute="bottom" constant="-5" id="6lA-j5-Hdk"/>
                             <constraint firstItem="ocz-UB-ou4" firstAttribute="top" secondItem="FO1-9o-CoX" secondAttribute="top" id="8AZ-Vc-W2T"/>
@@ -60,7 +60,7 @@
                             <constraint firstItem="xvn-qh-kHl" firstAttribute="top" secondItem="ocz-UB-ou4" secondAttribute="top" constant="15" id="Htn-r7-xTr"/>
                             <constraint firstItem="7rn-rz-CeE" firstAttribute="leading" secondItem="ocz-UB-ou4" secondAttribute="trailing" constant="20" id="IrI-lh-Vjd"/>
                             <constraint firstItem="ocz-UB-ou4" firstAttribute="height" secondItem="FO1-9o-CoX" secondAttribute="height" id="Uzn-Sm-o0s"/>
-                            <constraint firstItem="xvn-qh-kHl" firstAttribute="width" secondItem="FO1-9o-CoX" secondAttribute="width" multiplier="130.5/384" id="XKR-rY-xq9"/>
+                            <constraint firstItem="xvn-qh-kHl" firstAttribute="width" secondItem="FO1-9o-CoX" secondAttribute="width" multiplier="145.5/384" id="XKR-rY-xq9"/>
                             <constraint firstItem="ocz-UB-ou4" firstAttribute="leading" secondItem="FO1-9o-CoX" secondAttribute="leading" id="XwQ-xb-0bI"/>
                             <constraint firstAttribute="trailing" secondItem="EPJ-fl-7HH" secondAttribute="trailing" constant="10" id="dU6-9i-AN6"/>
                             <constraint firstItem="7rn-rz-CeE" firstAttribute="height" secondItem="FO1-9o-CoX" secondAttribute="height" multiplier="37/117.5" id="lRE-E1-2vq"/>
