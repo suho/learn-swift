@@ -22,6 +22,10 @@
 		991B827B1D2BB721002F0BC6 /* locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 991B827A1D2BB721002F0BC6 /* locations.plist */; };
 		991B827E1D2BBBA4002F0BC6 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B827C1D2BBBA4002F0BC6 /* LocationTableViewCell.swift */; };
 		991B827F1D2BBBA4002F0BC6 /* LocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 991B827D1D2BBBA4002F0BC6 /* LocationTableViewCell.xib */; };
+		994F26171D3C76C900528DFE /* ImageAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994F26151D3C76C900528DFE /* ImageAPIViewController.swift */; };
+		994F26181D3C76C900528DFE /* ImageAPIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 994F26161D3C76C900528DFE /* ImageAPIViewController.xib */; };
+		994F261C1D3C77A700528DFE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994F261A1D3C77A700528DFE /* CollectionViewCell.swift */; };
+		994F261D1D3C77A700528DFE /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 994F261B1D3C77A700528DFE /* CollectionViewCell.xib */; };
 		994F890D1D349C5700EE0426 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994F890C1D349C5700EE0426 /* Extension.swift */; };
 		99EB4F711D2C9F8900C853B0 /* FavoriteTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB4F6F1D2C9F8900C853B0 /* FavoriteTabBarViewController.swift */; };
 		99EB4F721D2C9F8900C853B0 /* FavoriteTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99EB4F701D2C9F8900C853B0 /* FavoriteTabBarViewController.xib */; };
@@ -72,6 +76,10 @@
 		991B827A1D2BB721002F0BC6 /* locations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = locations.plist; sourceTree = "<group>"; };
 		991B827C1D2BBBA4002F0BC6 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		991B827D1D2BBBA4002F0BC6 /* LocationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationTableViewCell.xib; sourceTree = "<group>"; };
+		994F26151D3C76C900528DFE /* ImageAPIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAPIViewController.swift; sourceTree = "<group>"; };
+		994F26161D3C76C900528DFE /* ImageAPIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageAPIViewController.xib; sourceTree = "<group>"; };
+		994F261A1D3C77A700528DFE /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		994F261B1D3C77A700528DFE /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		994F890C1D349C5700EE0426 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		99EB4F6F1D2C9F8900C853B0 /* FavoriteTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTabBarViewController.swift; sourceTree = "<group>"; };
 		99EB4F701D2C9F8900C853B0 /* FavoriteTabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteTabBarViewController.xib; sourceTree = "<group>"; };
@@ -119,6 +127,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		994F26141D3C76B000528DFE /* TestImageAPI */ = {
+			isa = PBXGroup;
+			children = (
+				994F26191D3C778800528DFE /* ImagesAPICollectionView */,
+				994F26151D3C76C900528DFE /* ImageAPIViewController.swift */,
+				994F26161D3C76C900528DFE /* ImageAPIViewController.xib */,
+			);
+			name = TestImageAPI;
+			sourceTree = "<group>";
+		};
+		994F26191D3C778800528DFE /* ImagesAPICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				994F261A1D3C77A700528DFE /* CollectionViewCell.swift */,
+				994F261B1D3C77A700528DFE /* CollectionViewCell.xib */,
+			);
+			name = ImagesAPICollectionView;
+			sourceTree = "<group>";
+		};
 		99F2B95E1D2A543B009B502C = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +188,7 @@
 		99FFCE7A1D386EEC005438D4 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				994F26141D3C76B000528DFE /* TestImageAPI */,
 				99FFCE7D1D386F0A005438D4 /* ForgotPassword */,
 				99FFCE7C1D386EFF005438D4 /* Register */,
 				99FFCE7B1D386EF3005438D4 /* Login */,
@@ -542,6 +570,8 @@
 				99F2B97F1D2A553C009B502C /* LoginViewController.xib in Resources */,
 				99FE87EA1D33940A00475F73 /* ChangePasswordViewController.xib in Resources */,
 				99FE87E41D332ED000475F73 /* DetailProfileViewController.xib in Resources */,
+				994F26181D3C76C900528DFE /* ImageAPIViewController.xib in Resources */,
+				994F261D1D3C77A700528DFE /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +592,8 @@
 				99FE87E91D33940A00475F73 /* ChangePasswordViewController.swift in Sources */,
 				99EB4F711D2C9F8900C853B0 /* FavoriteTabBarViewController.swift in Sources */,
 				990188BA1D2F84DA00C9977F /* LocationDetailCollectionViewCell.swift in Sources */,
+				994F261C1D3C77A700528DFE /* CollectionViewCell.swift in Sources */,
+				994F26171D3C76C900528DFE /* ImageAPIViewController.swift in Sources */,
 				99FE87E61D334F4700475F73 /* User.swift in Sources */,
 				994F890D1D349C5700EE0426 /* Extension.swift in Sources */,
 				99F4132D1D2F527B0015BB24 /* RegisterViewController.swift in Sources */,

@@ -52,7 +52,12 @@ class LocationTableViewCell: UITableViewCell {
     
     func setData(location: Location) {
         self.location = location
-        self.imageFirst.image = location.images.first!
+        if let imageData = location.images.first {
+            self.imageFirst.image = imageData
+        } else {
+            self.imageFirst.image = UIImage(named: "cafe 61")!
+        }
+        
         self.name.text = location.name
         self.address.text = location.address
         if location.isFavorite {

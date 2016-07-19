@@ -9,15 +9,21 @@
 import Foundation
 import UIKit
 
+protocol ReadAPIDelegate {
+    func sendImages(images: [UIImage])
+}
+
 class ReadAPI {
     
     var venues: [Venue] = []
     var images: [UIImage] = []
     
+    var delegate: ReadAPIDelegate?
+    
     init() {
         //self.getDataFromAPI()
         
-        self.getLocationFromAPI(16.070531, lng: 108.224599, limit: 10, offset: 0)
+        //self.getLocationFromAPI(16.070531, lng: 108.224599, limit: 10, offset: 0)
         
         //self.getImageFromAPI("4d4361d01928a35daba1ad70")
         
@@ -154,9 +160,11 @@ class ReadAPI {
                 for group in groups {
                     if let items = group["items"] as? NSArray {
                         for item in items {
+                            
                             let objectVenue = Venue(id: "", images: [UIImage(named: "cafe 61")!], name: "", address: "", previewText: "", detailText: "", coordinates: (0, 0), isFavorite: false)
                             
                             if let venue = item["venue"] as? NSDictionary {
+                                
                                 if let id = venue["id"] as? String {
                                     objectVenue.id = id
                                 }
@@ -190,6 +198,8 @@ class ReadAPI {
                                 }
                             }
                             
+                            
+                            
                             if arc4random_uniform(20) % 3 == 0 {
                                 objectVenue.isFavorite = true
                             }
@@ -211,12 +221,10 @@ class ReadAPI {
     }
     
     
-    func getImageFromAPI(idVenue: String) -> [UIImage] {
-        
-        var result: [UIImage] = []
+    func getImageFromAPI(idVenue: String) {
         
         
-        let url: String = "https://api.foursquare.com/v2/venues/\(idVenue)/photos?oauth_token=3IHPZFJ0LWOKCHTHQMWAOZMX40VQV0S3PMZKNUMYZGHUP4WJ&v=20160524"
+        let url: String = "https://api.foursquare.com/v2/venues/\(idVenue)/photos?oauth_token=I5CRJXSC1ZCEWD35BGOSFNH0DXHTYUJGX4LACH2AU53EQGKP&v=20160718"
         
         let request: NSMutableURLRequest = NSMutableURLRequest()
         request.URL = NSURL(string: url)
@@ -236,7 +244,7 @@ class ReadAPI {
                     do {
                         let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
                         
-                        result = self.readImageFromAPI(json)
+                        self.images = self.readImageFromAPI(json)
                         
                     } catch {
                         print("Error with Data")
@@ -245,8 +253,7 @@ class ReadAPI {
             }
         })
         dataTask.resume()
-        
-        return result
+
     }
     
     func readImageFromAPI(data: AnyObject) -> [UIImage] {
@@ -263,19 +270,23 @@ class ReadAPI {
                         if let suffix = item["suffix"] as? String {
                             url += suffix
                         }
-                        print(url)
+                        
+                        //print(url)
                         
                         if let urlData = NSURL(string: url) {
                             if let data = NSData(contentsOfURL: urlData) {
                                 result.append(UIImage(data: data)!)
                             }
                         }
+                        
+                        if let delegate = self.delegate {
+                            delegate.sendImages(result)
+                        }
                     }
                 }
             }
             
         }
-        print(result.count)
         return result
     }
     
