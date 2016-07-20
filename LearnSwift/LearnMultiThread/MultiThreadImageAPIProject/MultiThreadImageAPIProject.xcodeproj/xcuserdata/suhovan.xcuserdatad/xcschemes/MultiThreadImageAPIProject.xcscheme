@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "99052EE41D3DC61D00FA68F7"
+               BlueprintIdentifier = "99C53E961D3DC3AD00ACE92C"
                BuildableName = "MultiThreadImageAPIProject.app"
                BlueprintName = "MultiThreadImageAPIProject"
                ReferencedContainer = "container:MultiThreadImageAPIProject.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "99052EE41D3DC61D00FA68F7"
+            BlueprintIdentifier = "99C53E961D3DC3AD00ACE92C"
             BuildableName = "MultiThreadImageAPIProject.app"
             BlueprintName = "MultiThreadImageAPIProject"
             ReferencedContainer = "container:MultiThreadImageAPIProject.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "99052EE41D3DC61D00FA68F7"
+            BlueprintIdentifier = "99C53E961D3DC3AD00ACE92C"
             BuildableName = "MultiThreadImageAPIProject.app"
             BlueprintName = "MultiThreadImageAPIProject"
             ReferencedContainer = "container:MultiThreadImageAPIProject.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "99052EE41D3DC61D00FA68F7"
+            BlueprintIdentifier = "99C53E961D3DC3AD00ACE92C"
             BuildableName = "MultiThreadImageAPIProject.app"
             BlueprintName = "MultiThreadImageAPIProject"
             ReferencedContainer = "container:MultiThreadImageAPIProject.xcodeproj">
