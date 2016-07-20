@@ -66,12 +66,12 @@ class LoginViewController: UIViewController {
             progressBarDisplayer(true)
             
             runAfterDelay(0.5) {
-//                AppDelegate.sharedInstance.idUser = self.getIdUser(username, password: password)
-//                AppDelegate.sharedInstance.changeRootViewWhenLoginSuccess()
-                let imageAPIViewController = ImageAPIViewController(nibName: "ImageAPIViewController", bundle: nil)
+                AppDelegate.sharedInstance.idUser = self.getIdUser(username, password: password)
+                AppDelegate.sharedInstance.changeRootViewWhenLoginSuccess()
+//                let imageAPIViewController = ImageAPIViewController(nibName: "ImageAPIViewController", bundle: nil)
 //                imageAPIViewController.images = self.imagesDataAPI
 //                print(self.imagesDataAPI)
-                self.navigationController?.pushViewController(imageAPIViewController, animated: true)
+//                self.navigationController?.pushViewController(imageAPIViewController, animated: true)
                 self.messageFrame.removeFromSuperview()
             }
             
@@ -139,10 +139,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func runAfterDelay(delay: NSTimeInterval, block: dispatch_block_t) {
-        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
-        dispatch_after(time, dispatch_get_main_queue(), block)
-    }
+    
     
     
     
@@ -175,9 +172,5 @@ extension LoginViewController: UITextFieldDelegate {
 }
 
 
-extension LoginViewController: ReadAPIDelegate {
-    func sendImages(images: [UIImage]) {
-        self.imagesDataAPI = images
-    }
-}
+
 

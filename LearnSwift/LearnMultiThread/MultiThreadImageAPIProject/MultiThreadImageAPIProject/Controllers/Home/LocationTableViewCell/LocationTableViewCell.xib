@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="155" id="KGk-i7-Jjw" customClass="LocationTableViewCell" customModule="MultiThreadImageAPIProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="442" height="155"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="442" height="154.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeX-Xf-voo">
+                        <rect key="frame" x="0.0" y="0.0" width="442" height="154.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GAZ-Ad-ww2">
+                                <rect key="frame" x="0.0" y="0.0" width="154.5" height="154.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GAZ-Ad-ww2" secondAttribute="height" id="D01-kk-GlU"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdc-4L-Xf4">
+                                <rect key="frame" x="154" y="0.0" width="287.5" height="154.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzn-4I-nBw">
+                                        <rect key="frame" x="47" y="10" width="192" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvr-hr-ncx">
+                                        <rect key="frame" x="47.5" y="54" width="192" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Dvr-hr-ncx" firstAttribute="top" secondItem="pzn-4I-nBw" secondAttribute="bottom" constant="20" id="280-Ee-trJ"/>
+                                    <constraint firstItem="pzn-4I-nBw" firstAttribute="width" secondItem="wdc-4L-Xf4" secondAttribute="width" multiplier="2/3" id="HCM-Pc-C2t"/>
+                                    <constraint firstItem="Dvr-hr-ncx" firstAttribute="width" secondItem="pzn-4I-nBw" secondAttribute="width" id="Ty8-dC-mUn"/>
+                                    <constraint firstItem="pzn-4I-nBw" firstAttribute="centerX" secondItem="wdc-4L-Xf4" secondAttribute="centerX" id="WpG-51-p1F"/>
+                                    <constraint firstItem="pzn-4I-nBw" firstAttribute="top" secondItem="wdc-4L-Xf4" secondAttribute="top" constant="10" id="iX4-rD-SsR"/>
+                                    <constraint firstItem="Dvr-hr-ncx" firstAttribute="centerX" secondItem="pzn-4I-nBw" secondAttribute="centerX" id="rSf-bK-e8P"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GAZ-Ad-ww2" firstAttribute="leading" secondItem="eeX-Xf-voo" secondAttribute="leading" id="M4L-NO-hkt"/>
+                            <constraint firstAttribute="trailing" secondItem="wdc-4L-Xf4" secondAttribute="trailing" id="QTM-H3-IEl"/>
+                            <constraint firstItem="wdc-4L-Xf4" firstAttribute="leading" secondItem="GAZ-Ad-ww2" secondAttribute="trailing" id="Y8x-bm-lEt"/>
+                            <constraint firstItem="wdc-4L-Xf4" firstAttribute="top" secondItem="eeX-Xf-voo" secondAttribute="top" id="dZv-Av-6k1"/>
+                            <constraint firstAttribute="bottom" secondItem="wdc-4L-Xf4" secondAttribute="bottom" id="gqa-sM-Yu2"/>
+                            <constraint firstItem="GAZ-Ad-ww2" firstAttribute="height" secondItem="eeX-Xf-voo" secondAttribute="height" id="p1a-Ji-ctt"/>
+                            <constraint firstItem="GAZ-Ad-ww2" firstAttribute="centerY" secondItem="eeX-Xf-voo" secondAttribute="centerY" id="rRI-Dk-3Qv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eeX-Xf-voo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="V76-gt-366"/>
+                    <constraint firstAttribute="trailing" secondItem="eeX-Xf-voo" secondAttribute="trailing" id="Z1n-GE-B1U"/>
+                    <constraint firstItem="eeX-Xf-voo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lHS-Qb-1bi"/>
+                    <constraint firstAttribute="bottom" secondItem="eeX-Xf-voo" secondAttribute="bottom" id="ona-HE-mi0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addressLabel" destination="Dvr-hr-ncx" id="RqU-yX-Eos"/>
+                <outlet property="nameLabel" destination="pzn-4I-nBw" id="M7W-s7-B8R"/>
+                <outlet property="thumbnail" destination="GAZ-Ad-ww2" id="7qX-OO-I6h"/>
+            </connections>
+            <point key="canvasLocation" x="420" y="266.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -9,18 +9,23 @@
 import Foundation
 import UIKit
 
+
+let token = "1MVJWVXEGQEKVMAGXN1L0UTY22NP4UEMI2BOP1XRNVOQEFS2&v=20160719"
 protocol ReadAPIDelegate {
-    func sendImages(images: [UIImage])
+    func sendImages(id: String, _ image: UIImage)
+    func sendObject(venue: Venue)
+    func sendAllImages(images: [UIImage])
 }
 
 class ReadAPI {
-    
+        let cache = NSCache()
     var venues: [Venue] = []
     var images: [UIImage] = []
     
     var delegate: ReadAPIDelegate?
     
     init() {
+        
         //self.getDataFromAPI()
         
         //self.getLocationFromAPI(16.070531, lng: 108.224599, limit: 10, offset: 0)
@@ -120,8 +125,8 @@ class ReadAPI {
     }
     
     func getLocationFromAPI(lat: Double, lng: Double, limit: Int, offset: Int) {
-        
-        let url: String = "https://api.foursquare.com/v2/venues/explore?oauth_token=3IHPZFJ0LWOKCHTHQMWAOZMX40VQV0S3PMZKNUMYZGHUP4WJ&v=20160524&ll=\(lat),\(lng)&limit=\(limit)&offset=\(offset)"
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        let url: String = "https://api.foursquare.com/v2/venues/explore?oauth_token=\(token)&ll=\(lat),\(lng)&limit=\(limit)&offset=\(offset)"
         
         let request: NSMutableURLRequest = NSMutableURLRequest()
         request.URL = NSURL(string: url)
@@ -140,8 +145,8 @@ class ReadAPI {
                 if statusCode == 200 {
                     do {
                         let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
-                        let venues = self.readLocationFromAPI(json)
-                        self.venues = venues
+                        self.readLocationFromAPI(json)
+                        //self.venues = venues
                     } catch {
                         print("Error with Data")
                     }
@@ -152,7 +157,7 @@ class ReadAPI {
 
     }
     
-    func readLocationFromAPI(data: AnyObject) -> [Venue] {
+    func readLocationFromAPI(data: AnyObject)/* -> [Venue] */{
         var result = [Venue]()
         
         if let response = data["response"] as? NSDictionary {
@@ -162,6 +167,9 @@ class ReadAPI {
                         for item in items {
                             
                             let objectVenue = Venue(id: "", images: [UIImage(named: "cafe 61")!], name: "", address: "", previewText: "", detailText: "", coordinates: (0, 0), isFavorite: false)
+                            
+                        
+                            
                             
                             if let venue = item["venue"] as? NSDictionary {
                                 
@@ -198,11 +206,12 @@ class ReadAPI {
                                 }
                             }
                             
+                            self.getImageFromAPI(objectVenue.id)
                             
                             
-                            if arc4random_uniform(20) % 3 == 0 {
-                                objectVenue.isFavorite = true
-                            }
+                            
+                            objectVenue.isFavorite = false
+                            
                             
                             if let tips = item["tips"] as? NSArray {
                                 for tip in tips {
@@ -211,18 +220,64 @@ class ReadAPI {
                                     }
                                 }
                             }
+                            
                             result.append(objectVenue)
+                            
+                            
+                            
+                            if let delegate = self.delegate {
+                                delegate.sendObject(objectVenue)
+                            }
+                            
                         }
                     }
                 }
             }
         }
-        return result
+        self.venues = result
+        //return result
     }
     
     
-    func getImageFromAPI(idVenue: String) {
+    func getImageFromAPI(idVenue: String) -> UIImage {
         
+        var image = UIImage(named: "cafe 61")!
+        
+        let url: String = "https://api.foursquare.com/v2/venues/\(idVenue)/photos?oauth_token=\(token)"
+        
+        let request: NSMutableURLRequest = NSMutableURLRequest()
+        request.URL = NSURL(string: url)
+        request.cachePolicy = .UseProtocolCachePolicy
+        request.timeoutInterval = 10.0
+        request.HTTPMethod = "GET"
+        
+        let session = NSURLSession.sharedSession()
+        
+        let dataTask = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                print(error)
+            } else {
+                let httpResponse = response as? NSHTTPURLResponse
+                let statusCode = httpResponse?.statusCode
+                if statusCode == 200 {
+                    do {
+                        let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+                        
+                        image = self.readOneImageFromAPI(idVenue, data: json)
+                        
+                    } catch {
+                        print("Error with Data")
+                    }
+                }
+            }
+        })
+        dataTask.resume()
+        return image
+
+    }
+    
+    
+    func getAllImageFromAPI(idVenue: String) {
         
         let url: String = "https://api.foursquare.com/v2/venues/\(idVenue)/photos?oauth_token=I5CRJXSC1ZCEWD35BGOSFNH0DXHTYUJGX4LACH2AU53EQGKP&v=20160718"
         
@@ -244,7 +299,7 @@ class ReadAPI {
                     do {
                         let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
                         
-                        self.images = self.readImageFromAPI(json)
+                        self.readAllImageFromAPI(json)
                         
                     } catch {
                         print("Error with Data")
@@ -253,7 +308,7 @@ class ReadAPI {
             }
         })
         dataTask.resume()
-
+        
     }
     
     func readImageFromAPI(data: AnyObject) -> [UIImage] {
@@ -279,13 +334,86 @@ class ReadAPI {
                             }
                         }
                         
-                        if let delegate = self.delegate {
-                            delegate.sendImages(result)
-                        }
+//                        if let delegate = self.delegate {
+//                            delegate.sendImages(result)
+//                        }
                     }
                 }
             }
             
+        }
+        return result
+    }
+    
+    
+    func readAllImageFromAPI(data: AnyObject) {
+        
+        var result: [UIImage] = []
+        
+        if let response = data["response"] as? NSDictionary {
+            if let photos = response["photos"] as? NSDictionary {
+                if let items = photos["items"] as? NSArray {
+                    for item in items {
+                        var url = ""
+                        if let prefix = item["prefix"] as? String {
+                            url += prefix + "300x300"
+                        }
+                        if let suffix = item["suffix"] as? String {
+                            url += suffix
+                        }
+                        
+                        //print(url)
+                        
+                        if let urlData = NSURL(string: url) {
+                            if let data = NSData(contentsOfURL: urlData) {
+                                result.append(UIImage(data: data)!)
+                            }
+                        }
+                        
+                        
+                            delegate?.sendAllImages(result)
+                        
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    func readOneImageFromAPI(id: String, data: AnyObject) -> UIImage {
+        
+        var result = UIImage(named: "cafe 61")!
+        
+        if let response = data["response"] as? NSDictionary {
+            if let photos = response["photos"] as? NSDictionary {
+                if let items = photos["items"] as? NSArray {
+                    
+                    for item in items {
+                        var url = ""
+                        if let prefix = item["prefix"] as? String {
+                            url += prefix + "300x300"
+                        }
+                        if let suffix = item["suffix"] as? String {
+                            url += suffix
+                        }
+                        
+                        if let image = cache.objectForKey(url) as? UIImage {
+                                result = image
+                            
+                        } else {
+                            if let urlData = NSURL(string: url) {
+                                if let data = NSData(contentsOfURL: urlData) {
+                                    result = UIImage(data: data)!
+                                    cache.setObject(result, forKey: url)
+                                }
+                            }
+                        }
+                        delegate?.sendImages(id, result)
+                        break
+                        
+                    }
+                }
+            }
         }
         return result
     }

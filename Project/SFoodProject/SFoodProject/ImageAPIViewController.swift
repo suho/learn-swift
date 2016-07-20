@@ -16,12 +16,12 @@ class ImageAPIViewController: UIViewController {
     
     let readAPI = ReadAPI()
     
-    var messageFrame = UIView()
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.readAPI.getImageFromAPI("4d4361d01928a35daba1ad70")
-        self.readAPI.delegate = self
+        //self.readAPI.delegate = self
         self.images = self.readAPI.images
         self.imagesAPICollectionView.delegate = self
         self.imagesAPICollectionView.dataSource = self
@@ -39,6 +39,8 @@ class ImageAPIViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    var messageFrame = UIView()
     
     func progressBarDisplayer(indicator: Bool) {
         
@@ -87,13 +89,16 @@ extension ImageAPIViewController: UICollectionViewDelegate, UICollectionViewData
     
 }
 
-extension ImageAPIViewController: ReadAPIDelegate {
-    func sendImages(images: [UIImage]) {
-        dispatch_async(dispatch_get_main_queue(), {
-            self.images = images
-            self.imagesAPICollectionView.reloadData()
-            self.messageFrame.removeFromSuperview()
-        })
-        
-    }
-}
+//extension ImageAPIViewController: ReadAPIDelegate {
+//    func sendImages(images: [UIImage]) {
+//        dispatch_async(dispatch_get_main_queue(), {
+//            self.images = images
+//            self.imagesAPICollectionView.reloadData()
+//            self.messageFrame.removeFromSuperview()
+//        })
+//        
+//    }
+//    func sendObject(venues: [Venue]) {
+//        return
+//    }
+//}
