@@ -9,7 +9,14 @@
 import UIKit
 
 class CacheManager {
-    static let sharedInstance = NSCache()
+    
+    static let sharedInstance = CacheManager()
+    
+    let cache = NSCache()
+    
+    init() {
+        cache.countLimit = 100
+    }
 }
 
 class ImagesDetailViewController: UIViewController {
@@ -53,7 +60,7 @@ class ImagesDetailViewController: UIViewController {
         
         for (index, url) in urls.enumerate() {
             
-            if let image = CacheManager.sharedInstance.objectForKey(url) as? UIImage {
+            if let image = CacheManager.sharedInstance.cache.objectForKey(url) as? UIImage {
                 
                 self.images[index] = image
                 
@@ -66,7 +73,7 @@ class ImagesDetailViewController: UIViewController {
                     if !error {
                         let image = UIImage(data: data!)!
                         self.images[index] = image
-                        CacheManager.sharedInstance.setObject(image, forKey: url)
+                        CacheManager.sharedInstance.cache.setObject(image, forKey: url)
                         
                         var indexPaths = [NSIndexPath]()
                         

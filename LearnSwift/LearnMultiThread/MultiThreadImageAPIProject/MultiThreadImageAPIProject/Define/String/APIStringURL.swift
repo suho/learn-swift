@@ -10,7 +10,7 @@ import Foundation
 
 class APIStringURL {
     
-    static let tokenAPI = "oauth_token=1MVJWVXEGQEKVMAGXN1L0UTY22NP4UEMI2BOP1XRNVOQEFS2&v=20160720"
+    static let tokenAPI = "oauth_token=I5CRJXSC1ZCEWD35BGOSFNH0DXHTYUJGX4LACH2AU53EQGKP&v=20160718"
     static let imagesPrefixURL = "https://api.foursquare.com/v2/venues/"
     static let imagesSuffixURL = "/photos?"
     static let imageSizeOriginal = "original"

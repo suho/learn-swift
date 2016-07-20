@@ -14,8 +14,9 @@ class HomeViewController: UIViewController {
     
     var venues = [Venue]()
     
-    let limit = 50
-    let offset = 0
+    let limit = 10
+    var offset = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,9 +86,6 @@ class HomeViewController: UIViewController {
             self.progressBarDisplayer(true)
         }
         
-        
-        
-        
     }
     
     func getThumbnail(venue: Venue, index: Int) {
@@ -118,6 +116,8 @@ class HomeViewController: UIViewController {
     
     }
     
+    
+    
     func downloadImage(url: String, index: Int) {
         
         let request = APIRequest.getRequestWith("GET", url: url, parameter: nil)
@@ -132,6 +132,68 @@ class HomeViewController: UIViewController {
                 self.locationTableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.None)
             }
         }
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        
+
+            
+
+            
+            let endScrolling = scrollView.contentOffset.y + scrollView.frame.size.height
+            
+            if endScrolling >= scrollView.contentSize.height {
+                
+                self.offset += self.limit
+                
+                let venuesURLAPI = "https://api.foursquare.com/v2/venues/explore?\(APIStringURL.tokenAPI)&ll=16.070531,108.224599&limit=\(self.limit)&offset=\(self.offset)"
+                
+                let request = APIRequest.getRequestWith("GET", url: venuesURLAPI, parameter: nil)
+                
+                APIProcess.sharedInstance.connectAPI(request) { (data, error, message) in
+                    if error {
+                        print("Get Data From API Have Error: \(message)")
+                    } else {
+                        do {
+                            
+                            if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
+                                
+                                if let response = json["response"] {
+                                    if let groups = response["groups"] as? NSArray {
+                                        for group in groups {
+                                            if let items = group["items"] as? NSArray {
+                                                
+                                                for (index, item) in items.enumerate() {
+                                                    
+                                                    if let item = item as? NSDictionary {
+                                                        if let venue = Venue.getVenueFromJson(item) {
+                                                            self.venues.append(venue)
+                                                            let indexContinue = index + self.offset
+                                                            self.getThumbnail(venue, index: indexContinue)
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        } catch {
+                            print("API Have Error!!")
+                        }
+                        
+                    }
+
+                    self.locationTableView.reloadData()
+                    
+                
+                
+                
+            }
+        }
+        
+        
     }
     
     var messageFrame = UIView()
