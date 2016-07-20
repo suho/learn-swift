@@ -25,10 +25,21 @@ class MapsTabBarViewController: UIViewController {
         
         self.title = "Maps"
         
-        self.locations = self.readAPI.venues
         
-        let initialLocation = CLLocation(latitude: (self.locations.first?.coordinates.0)!, longitude: (self.locations.first?.coordinates.1)!)
-        self.centerMapOnLocation(initialLocation)
+        self.readAPI.delegate = self
+        self.readAPI.getLocationFromAPI(16.070531, lng: 108.224599, limit: 10, offset: 0)
+        
+        if let latitude = self.locations.first?.coordinates.0 {
+            if let longitude = self.locations.first?.coordinates.1 {
+                let initialLocation = CLLocation(latitude: latitude, longitude: longitude)
+                self.centerMapOnLocation(initialLocation)
+            }
+        } else {
+            self.centerMapOnLocation(CLLocation(latitude: 16.070531, longitude: 108.224599))
+        }
+        
+        
+        
         
         self.mapsView.delegate = self
 
@@ -103,5 +114,28 @@ extension MapsTabBarViewController: MKMapViewDelegate {
             
             
         }
+    }
+}
+
+extension MapsTabBarViewController: ReadAPIDelegate {
+    func sendImages(id: String, _ image: UIImage) {
+        
+    }
+    func sendAllImages(images: [UIImage]) {
+        
+    }
+    func sendObject(venues: Venue) {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.locations.append(venues)
+            var result = [LocationMaps]()
+            let locations = self.locations
+            for location in locations {
+                let annotation = LocationMaps(image: "", imageData: location.images.first!, title: location.name, locationName: location.address, discipline: "Coffe", coordinate: CLLocationCoordinate2D(latitude: CLLocationDegrees(location.coordinates.0), longitude: CLLocationDegrees(location.coordinates.1)))
+                result.append(annotation)
+            }
+            let annotations = result
+            self.mapsView.addAnnotations(annotations)
+            self.mapsView.reloadInputViews()
+        })
     }
 }

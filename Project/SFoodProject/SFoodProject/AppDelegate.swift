@@ -41,6 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let loginViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
             self.loginNavigation = UINavigationController(rootViewController: loginViewController)
             
+            
+            
             //init mainTabBar
             //navi Home
             let homeNavigation = UINavigationController()

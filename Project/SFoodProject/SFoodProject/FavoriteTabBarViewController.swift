@@ -12,9 +12,9 @@ class FavoriteTabBarViewController: UIViewController {
 
     @IBOutlet weak var favoriteTableView: UITableView!
     
-    let readAPI = ReadAPI()
-    
     var favorites = [Location]()
+    
+    var images: [Dictionary<String, UIImage>] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,25 +38,8 @@ class FavoriteTabBarViewController: UIViewController {
         
         self.navigationItem.rightBarButtonItem = deleteButton
         
-        self.favorites = self.getFavoriteData()
         
-        for i in 0..<self.favorites.count {
-            self.favorites[i].isFavorite = true
-        }
-        self.favoriteTableView.reloadData()
-    }
-    
-    func getFavoriteData() -> [Location] {
         
-        let locations = self.readAPI.venues
-        
-        var result = [Location]()
-        for location in locations {
-            if location.isFavorite {
-                result.append(location)
-            }
-        }
-        return result
     }
     
     func deleteAllFavoritesAciton() {

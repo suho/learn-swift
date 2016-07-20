@@ -50,13 +50,10 @@ class LocationTableViewCell: UITableViewCell {
         self.contentViewCustom.clipsToBounds = true
     }
     
-    func setData(location: Location) {
+    func setData(location: Location, image: UIImage) {
         self.location = location
-        if let imageData = location.images.first {
-            self.imageFirst.image = imageData
-        } else {
-            self.imageFirst.image = UIImage(named: "cafe 61")!
-        }
+        
+        self.imageFirst.image = image
         
         self.name.text = location.name
         self.address.text = location.address
