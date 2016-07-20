@@ -23,6 +23,7 @@ class ImageAPIViewController: UIViewController {
         self.readAPI.getImageFromAPI("4d4361d01928a35daba1ad70")
         //self.readAPI.delegate = self
         self.images = self.readAPI.images
+        
         self.imagesAPICollectionView.delegate = self
         self.imagesAPICollectionView.dataSource = self
         self.imagesAPICollectionView.registerNib(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")

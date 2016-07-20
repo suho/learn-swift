@@ -21,6 +21,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GAZ-Ad-ww2">
                                 <rect key="frame" x="0.0" y="0.0" width="154.5" height="154.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GAZ-Ad-ww2" secondAttribute="height" id="D01-kk-GlU"/>
                                 </constraints>
@@ -28,14 +29,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdc-4L-Xf4">
                                 <rect key="frame" x="154" y="0.0" width="287.5" height="154.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzn-4I-nBw">
-                                        <rect key="frame" x="47" y="10" width="192" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="pzn-4I-nBw">
+                                        <rect key="frame" x="47" y="10" width="192" height="77.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvr-hr-ncx">
-                                        <rect key="frame" x="47.5" y="54" width="192" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dvr-hr-ncx">
+                                        <rect key="frame" x="47" y="107" width="192" height="37.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -47,7 +48,9 @@
                                     <constraint firstItem="pzn-4I-nBw" firstAttribute="width" secondItem="wdc-4L-Xf4" secondAttribute="width" multiplier="2/3" id="HCM-Pc-C2t"/>
                                     <constraint firstItem="Dvr-hr-ncx" firstAttribute="width" secondItem="pzn-4I-nBw" secondAttribute="width" id="Ty8-dC-mUn"/>
                                     <constraint firstItem="pzn-4I-nBw" firstAttribute="centerX" secondItem="wdc-4L-Xf4" secondAttribute="centerX" id="WpG-51-p1F"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dvr-hr-ncx" secondAttribute="bottom" constant="10" id="ZdD-80-D1j"/>
                                     <constraint firstItem="pzn-4I-nBw" firstAttribute="top" secondItem="wdc-4L-Xf4" secondAttribute="top" constant="10" id="iX4-rD-SsR"/>
+                                    <constraint firstItem="pzn-4I-nBw" firstAttribute="height" secondItem="wdc-4L-Xf4" secondAttribute="height" multiplier="1/2" id="knA-p1-2j6"/>
                                     <constraint firstItem="Dvr-hr-ncx" firstAttribute="centerX" secondItem="pzn-4I-nBw" secondAttribute="centerX" id="rSf-bK-e8P"/>
                                 </constraints>
                             </view>

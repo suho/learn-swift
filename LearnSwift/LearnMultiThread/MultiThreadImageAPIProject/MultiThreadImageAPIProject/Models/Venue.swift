@@ -37,6 +37,10 @@ class Venue {
         self.location = location
     }
     
+    init() {
+        
+    }
+    
     static func getVenueFromJson(json: NSDictionary) -> Venue? {
         var venue: Venue?
         var location: Location?
@@ -46,7 +50,7 @@ class Venue {
             let id = venueDictionary["id"] as? String ?? ""
             let name = venueDictionary["name"] as? String ?? ""
             
-            if let locationDictionary = json["location"] as? NSDictionary {
+            if let locationDictionary = venueDictionary["location"] as? NSDictionary {
                 
                 let address = locationDictionary["address"] as? String ?? ""
                 let latitude = locationDictionary["lat"] as? Double ?? 0
@@ -64,7 +68,7 @@ class Venue {
     
     static func getImagesFromJson(json: NSDictionary) -> [String] {
         
-        var imagesURL: [String]!
+        var imagesURL = [String]()
         
         if let items = json.objectForKey("items") as? NSArray {
             
@@ -73,7 +77,7 @@ class Venue {
                 let prefix = item.objectForKey("prefix") as? String ?? ""
                 let suffix = item.objectForKey("suffix") as? String ?? ""
                 
-                let imageURL = prefix + APIStringURL.imagesSizeCustom + suffix
+                let imageURL = "\(prefix)\(APIStringURL.imagesSizeCustom)\(suffix)"
                 
                 imagesURL.append(imageURL)
             }
@@ -81,6 +85,8 @@ class Venue {
         
         return imagesURL
     }
+    
+    
     
     
 }

@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
             
-            window.rootViewController = homeViewController
+            let navi = UINavigationController(rootViewController: homeViewController)
+            
+            window.rootViewController = navi
             
             window.backgroundColor = UIColor.whiteColor()
             window.makeKeyAndVisible()

@@ -171,7 +171,6 @@ extension HomeTabBarViewController: ReadAPIDelegate {
         dispatch_async(dispatch_get_main_queue(), {
             if self.images.count < self.locations.count {
                 self.images.append(Dictionary(dictionaryLiteral: (id, image)))
-                print(self.images.count)
                 self.locationTableView.reloadData()
             }
             
