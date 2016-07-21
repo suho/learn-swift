@@ -17,6 +17,8 @@ class HomeViewController: UIViewController {
     let limit = 10
     var offset = 0
     
+    var refreshCtrl: UIRefreshControl!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,54 +26,16 @@ class HomeViewController: UIViewController {
         self.navigationController?.navigationBarHidden = false
         self.title = "HOME"
         
+        self.refreshCtrl = UIRefreshControl()
+        self.refreshCtrl.addTarget(self, action: #selector(refreshTableView), forControlEvents: .ValueChanged)
+        
+        
         self.locationTableView.registerNib(UINib(nibName: "LocationTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         self.locationTableView.delegate = self
         self.locationTableView.dataSource = self
+        self.locationTableView.addSubview(self.refreshCtrl)
         
-        let venuesURLAPI = "https://api.foursquare.com/v2/venues/explore?\(APIStringURL.tokenAPI)&ll=16.070531,108.224599&limit=\(self.limit)&offset=\(self.offset)"
-        
-        let request = APIRequest.getRequestWith("GET", url: venuesURLAPI, parameter: nil)
-        
-        APIProcess.sharedInstance.connectAPI(request) { (data, error, message) in
-            
-            
-            
-            if error {
-                print("Get Data From API Have Error: \(message)")
-            } else {
-                self.messageFrame.removeFromSuperview()
-                do {
-                    
-                    if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
-                        
-                        if let response = json["response"] {
-                            if let groups = response["groups"] as? NSArray {
-                                for group in groups {
-                                    if let items = group["items"] as? NSArray {
-                                        
-                                        for (index, item) in items.enumerate() {
-                                            
-                                            if let item = item as? NSDictionary {
-                                                if let venue = Venue.getVenueFromJson(item) {
-                                                    self.venues.append(venue)
-                                                    self.getThumbnail(venue, index: index)
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
-                } catch {
-                    print("API Have Error!!")
-                }
-                
-            }
-            self.locationTableView.reloadData()
-            
-        }
+        self.getVenueFromAPI(self.limit, offset: self.offset, isReload: false, isRefresh: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,6 +49,14 @@ class HomeViewController: UIViewController {
         if self.venues.count == 0 {
             self.progressBarDisplayer(true)
         }
+        
+    }
+    
+    func refreshTableView() {
+        
+        self.venues = []
+        
+        self.getVenueFromAPI(self.limit, offset: 0, isReload: false, isRefresh: true)
         
     }
     
@@ -125,72 +97,29 @@ class HomeViewController: UIViewController {
         APIProcess.sharedInstance.connectAPI(request) { (data, error, message) in
             
             if !error {
-                let venue = self.venues[index]
-                venue.thumbnail = UIImage(data: data!)
-                var indexPaths = [NSIndexPath]()
-                indexPaths.append(NSIndexPath(forRow: index, inSection: 0))
-                self.locationTableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.None)
+                
+                if self.venues.count > index {
+                    let venue = self.venues[index]
+                    venue.thumbnail = UIImage(data: data!)
+                    var indexPaths = [NSIndexPath]()
+                    indexPaths.append(NSIndexPath(forRow: index, inSection: 0))
+                    self.locationTableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.None)
+                }
+                
+                
             }
         }
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        
 
-            
-
-            
             let endScrolling = scrollView.contentOffset.y + scrollView.frame.size.height
             
             if endScrolling >= scrollView.contentSize.height {
                 
                 self.offset += self.limit
                 
-                let venuesURLAPI = "https://api.foursquare.com/v2/venues/explore?\(APIStringURL.tokenAPI)&ll=16.070531,108.224599&limit=\(self.limit)&offset=\(self.offset)"
-                
-                let request = APIRequest.getRequestWith("GET", url: venuesURLAPI, parameter: nil)
-                
-                APIProcess.sharedInstance.connectAPI(request) { (data, error, message) in
-                    if error {
-                        print("Get Data From API Have Error: \(message)")
-                    } else {
-                        do {
-                            
-                            if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
-                                
-                                if let response = json["response"] {
-                                    if let groups = response["groups"] as? NSArray {
-                                        for group in groups {
-                                            if let items = group["items"] as? NSArray {
-                                                
-                                                for (index, item) in items.enumerate() {
-                                                    
-                                                    if let item = item as? NSDictionary {
-                                                        if let venue = Venue.getVenueFromJson(item) {
-                                                            self.venues.append(venue)
-                                                            let indexContinue = index + self.offset
-                                                            self.getThumbnail(venue, index: indexContinue)
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            
-                        } catch {
-                            print("API Have Error!!")
-                        }
-                        
-                    }
-
-                    self.locationTableView.reloadData()
-                    
-                
-                
-                
-            }
+                self.getVenueFromAPI(self.limit, offset: self.offset, isReload: true, isRefresh: false)
         }
         
         
@@ -212,6 +141,65 @@ class HomeViewController: UIViewController {
         view.addSubview(messageFrame)
     }
     
+    
+    func getVenueFromAPI(limit: Int, offset: Int, isReload: Bool, isRefresh: Bool) {
+        
+        let venuesURLAPI = "https://api.foursquare.com/v2/venues/explore?\(APIStringURL.tokenAPI)&ll=16.070531,108.224599&limit=\(limit)&offset=\(offset)"
+        
+        let request = APIRequest.getRequestWith("GET", url: venuesURLAPI, parameter: nil)
+        
+        APIProcess.sharedInstance.connectAPI(request) { (data, error, message) in
+
+            if error {
+                print("Get Data From API Have Error: \(message)")
+            } else {
+                self.messageFrame.removeFromSuperview()
+                do {
+                    
+                    if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
+                        
+                        if let response = json["response"] {
+                            if let groups = response["groups"] as? NSArray {
+                                for group in groups {
+                                    if let items = group["items"] as? NSArray {
+                                        
+                                        for (index, item) in items.enumerate() {
+                                            
+                                            if let item = item as? NSDictionary {
+                                                if let venue = Venue.getVenueFromJson(item) {
+                                                    self.venues.append(venue)
+                                                    if isReload {
+                                                        let indexContinue = index + self.offset
+                                                        self.getThumbnail(venue, index: indexContinue)
+                                                    } else {
+                                                        self.getThumbnail(venue, index: index)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                } catch {
+                    print("API Have Error!!")
+                }
+                
+            }
+            
+            if isRefresh {
+                if self.refreshCtrl.refreshing {
+                    self.refreshCtrl.endRefreshing()
+                }
+            }
+            
+            self.locationTableView.reloadData()
+        }
+        
+    }
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -231,17 +219,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as? LocationTableViewCell
         
-        let venue = self.venues[indexPath.row]
-        
-        cell?.nameLabel.text = venue.name
-        
-        cell?.addressLabel.text = venue.location?.address
-        
-        if venue.thumbnail != nil {
-            cell?.thumbnail.image = venue.thumbnail
-        } else {
-            cell?.thumbnail.image = nil
+        if self.venues.count > indexPath.row {
+            let venue = self.venues[indexPath.row]
+            
+            cell?.nameLabel.text = venue.name
+            
+            cell?.addressLabel.text = venue.location?.address
+            
+            if venue.thumbnail != nil {
+                cell?.thumbnail.image = venue.thumbnail
+            } else {
+                cell?.thumbnail.image = nil
+            }
         }
+        
         
         return cell!
     }
