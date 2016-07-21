@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="APIAndGoogleMaps" customModuleProvider="target">
+            <connections>
+                <outlet property="getNewButton" destination="cVx-Gd-d24" id="jt6-oy-uOa"/>
+                <outlet property="googleMapsView" destination="slT-mf-Q0p" id="gi6-k9-p6z"/>
+                <outlet property="mapPin" destination="Acm-Wc-88O" id="V9b-qF-YnP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slT-mf-Q0p" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Map Pin" translatesAutoresizingMaskIntoConstraints="NO" id="Acm-Wc-88O">
+                    <rect key="frame" x="145" y="254" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="0dD-aN-cSV"/>
+                        <constraint firstAttribute="width" secondItem="Acm-Wc-88O" secondAttribute="height" multiplier="1:1" id="SoC-5i-NWu"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVx-Gd-d24">
+                    <rect key="frame" x="5" y="488" width="75" height="75"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="4wp-EL-izZ"/>
+                        <constraint firstAttribute="width" secondItem="cVx-Gd-d24" secondAttribute="height" id="BF9-8E-h9c"/>
+                    </constraints>
+                    <state key="normal" title="Get"/>
+                    <connections>
+                        <action selector="getNewLocationAction:" destination="-1" eventType="touchUpInside" id="5UU-rg-8cq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="cVx-Gd-d24" secondAttribute="bottom" constant="5" id="2V5-hT-DVF"/>
+                <constraint firstAttribute="bottom" secondItem="slT-mf-Q0p" secondAttribute="bottom" id="UPZ-GJ-z0j"/>
+                <constraint firstItem="Acm-Wc-88O" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dvt-Ir-90P"/>
+                <constraint firstItem="slT-mf-Q0p" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lOt-aF-q9r"/>
+                <constraint firstItem="Acm-Wc-88O" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-15" id="n2I-9F-3gJ"/>
+                <constraint firstItem="cVx-Gd-d24" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="qfO-RU-Yxq"/>
+                <constraint firstItem="slT-mf-Q0p" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wO8-Dz-64a"/>
+                <constraint firstAttribute="trailing" secondItem="slT-mf-Q0p" secondAttribute="trailing" id="zux-4Z-zem"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Map Pin" width="30" height="30"/>
+    </resources>
+</document>
