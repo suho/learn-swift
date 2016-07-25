@@ -56,6 +56,8 @@ class HomeViewController: UIViewController {
         
         self.venues = []
         
+        CacheManager.sharedInstance.cache.removeAllObjects()
+        
         self.getVenueFromAPI(self.limit, offset: 0, isReload: false, isRefresh: true)
         
     }

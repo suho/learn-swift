@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  MultiThreadImageAPIProject
+//  DemoGcdApiDownloaderLoadmore
 //
-//  Created by Mylo Ho on 7/19/16.
+//  Created by Mylo Ho on 7/22/16.
 //  Copyright © 2016 Ho Van Su. All rights reserved.
 //
 
@@ -18,20 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-            
         let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-            
-        let navi = UINavigationController(rootViewController: homeViewController)
-            
-        window?.rootViewController = navi
-            
+        let navigation = UINavigationController(rootViewController: homeViewController)
+        window?.rootViewController = navigation
         window?.backgroundColor = UIColor.whiteColor()
         window?.makeKeyAndVisible()
-        
         let skView = SKView(frame: CGRect(x: 30, y: 10, width: 60, height: 20))
         skView.showsFPS = true
         window?.rootViewController?.view.addSubview(skView)
-        
         return true
     }
 

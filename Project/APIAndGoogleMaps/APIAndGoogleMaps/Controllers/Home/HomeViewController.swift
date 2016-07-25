@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
     
     let zoomMap: Float = 14
     
-    let limit = 30
+    let limit = 100
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,7 @@ class HomeViewController: UIViewController {
         
         let coordinateCenter = self.getCoordinateCenter()
         
-        //self.googleMapsView.clear()
+        self.googleMapsView.clear()
         
         self.getVenueFromAPI(coordinateCenter, limit: self.limit, offset: 0)
         
@@ -63,6 +63,18 @@ class HomeViewController: UIViewController {
                 do {
                     
                     if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? [String: AnyObject] {
+                        
+                        if let meta = json["meta"] as? [String: AnyObject] {
+                            if let code = meta["code"] as? Int {
+                                switch code {
+                                    case 304, 400, 401, 403, 404, 406, 410, 420, 422, 429, 500, 502, 503, 504:
+                                        print("Webservice Have Error!!!")
+                                        return
+                                    default:
+                                        print("Webservice Not Error!!!")
+                                }
+                            }
+                        }
                         
                         if let response = json["response"] {
                             if let groups = response["groups"] as? [[String: AnyObject]] {

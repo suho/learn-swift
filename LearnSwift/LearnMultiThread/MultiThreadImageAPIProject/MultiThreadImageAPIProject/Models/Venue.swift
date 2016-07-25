@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+typealias DownloadImageCompletion = (UIImage) -> (Void)
+
 class Location {
     
     var address = ""
@@ -78,12 +80,15 @@ class Venue {
                 let suffix = item.objectForKey("suffix") as? String ?? ""
                 
                 let imageURL = "\(prefix)\(APIStringURL.imagesSizeCustom)\(suffix)"
-                
                 imagesURL.append(imageURL)
             }
         }
         
         return imagesURL
+    }
+    
+    static func downloadImage(completion:DownloadImageCompletion) {
+        //completion(
     }
     
     
