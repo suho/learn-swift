@@ -9,7 +9,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddClassViewController" customModule="RealmDemoProject" customModuleProvider="target">
             <connections>
-                <outlet property="addImageAction" destination="akz-n5-8kR" id="Y72-rj-uyn"/>
                 <outlet property="avatarImageView" destination="B6r-iH-AL1" id="Dcm-xt-cq5"/>
                 <outlet property="nameClassTextField" destination="l8q-he-bdX" id="i8X-uC-9Vz"/>
                 <outlet property="nameFacultyTextField" destination="l7f-yC-TPi" id="qZq-Uu-aoh"/>
@@ -57,6 +56,9 @@
                                 <constraint firstAttribute="width" constant="40" id="rNK-hp-tdA"/>
                             </constraints>
                             <state key="normal" backgroundImage="Plus"/>
+                            <connections>
+                                <action selector="addImageAction:" destination="-1" eventType="touchUpInside" id="1KO-Ib-wJD"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>

@@ -13,6 +13,7 @@ class Class: Object {
     dynamic var idClass = ""
     dynamic var nameClass = ""
     dynamic var facultyName = ""
+    dynamic var imageName = ""
     
     let students = List<Student>()
     

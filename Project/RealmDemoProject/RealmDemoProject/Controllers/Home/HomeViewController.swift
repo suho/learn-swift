@@ -13,12 +13,15 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var classTableView: UITableView!
     
+    var classes: Results<Class>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "DUT"
         self.classTableView.delegate = self
         self.classTableView.dataSource = self
         self.classTableView.registerNib(UINib(nibName: "CustomClassTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
+        self.reloadTableView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +31,7 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.setButtonRight()
+        self.reloadTableView()
     }
     
     //MARK: Set UI - Button Right of Navigation Bar
@@ -43,6 +47,17 @@ class HomeViewController: UIViewController {
         let addClassViewController = AddClassViewController(nibName: "AddClassViewController", bundle: nil)
         self.navigationController?.pushViewController(addClassViewController, animated: true)
     }
+    
+    //MARK: Reload Table View
+    func reloadTableView() {
+        do {
+            let realm = try Realm()
+            self.classes = realm.objects(Class)
+            self.classTableView.reloadData()
+        } catch {
+            print("Realm Have Error!!")
+        }
+    }
 
 }
 
@@ -52,17 +67,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 1
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.classes.count
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 100
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("customCell", forIndexPath: indexPath) as? CustomClassTableViewCell
+        let classObject = self.classes[indexPath.row]
+        cell?.setData(classObject)
         return cell!
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailClassViewController = DeltailClassViewController(nibName: "DeltailClassViewController", bundle: nil)
+        detailClassViewController.classObject = self.classes[indexPath.row]
         self.navigationController?.pushViewController(detailClassViewController, animated: true)
     }
     

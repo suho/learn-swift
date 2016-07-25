@@ -16,6 +16,6 @@ class Student: Object {
     dynamic var gender = true
     dynamic var imageName = ""
     
-    let classObject = LinkingObjects(fromType: Class.self, property: "class")
+    let classObject = LinkingObjects(fromType: Class.self, property: "students")
     
 }

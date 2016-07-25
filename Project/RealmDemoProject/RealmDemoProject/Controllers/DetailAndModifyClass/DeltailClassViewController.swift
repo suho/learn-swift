@@ -14,9 +14,18 @@ class DeltailClassViewController: UIViewController {
     @IBOutlet weak var facultyTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var numberOfStudents: UITextField!
+    
+    var classObject = Class()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Detail Class"
+        self.setDataUI()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        self.setAvatarUI()
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,6 +43,24 @@ class DeltailClassViewController: UIViewController {
     }
     @IBAction func deleteClassAction(sender: AnyObject) {
         
+    }
+
+
+    
+    //MARK: Set Avatar UI
+    func setAvatarUI() {
+        self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.size.height / 2
+        self.avatarImageView.clipsToBounds = true
+    }
+    
+    //MARK: Set Data UI
+    func setDataUI() {
+        self.facultyTextField.text = classObject.facultyName
+        self.nameTextField.text = classObject.nameClass
+        self.numberOfStudents.text = "\(classObject.students.count)"
+        if !classObject.imageName.isEmpty {
+            self.avatarImageView.image = FileManager.sharedInstance.loadFile(classObject.imageName, typeDirectory: .DocumentDirectory)
+        }
     }
     
     //MARK: Set Modify Button Of Navigation Bar
