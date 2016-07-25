@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddStudentViewController" customModule="RealmDemoProject" customModuleProvider="target">
+            <connections>
+                <outlet property="ageStudentTextField" destination="Rjs-GY-0hW" id="qB6-IT-7p7"/>
+                <outlet property="avatarImageView" destination="TVW-sf-sDf" id="VTf-1R-jOu"/>
+                <outlet property="genderSegment" destination="epV-xt-p0P" id="ShJ-Ak-CgA"/>
+                <outlet property="nameStudentTextField" destination="HWo-bf-Rr9" id="lUt-vu-MWB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7Y-la-8zN">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="TVW-sf-sDf">
+                            <rect key="frame" x="106" y="70" width="107" height="106.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="TVW-sf-sDf" secondAttribute="height" multiplier="1:1" id="jFG-0X-uqL"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rjs-GY-0hW">
+                            <rect key="frame" x="30" y="306" width="259" height="35"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="epV-xt-p0P">
+                            <rect key="frame" x="30" y="356" width="259" height="36"/>
+                            <segments>
+                                <segment title="Male"/>
+                                <segment title="Female"/>
+                            </segments>
+                        </segmentedControl>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frl-Pf-Pqs">
+                            <rect key="frame" x="30" y="411" width="259" height="34.5"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Add">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="addStudentAction:" destination="-1" eventType="touchUpInside" id="nDC-vl-JmE"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8jd-CB-OOF">
+                            <rect key="frame" x="30" y="206.5" width="259" height="35"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HWo-bf-Rr9">
+                            <rect key="frame" x="30" y="256.5" width="259" height="34.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="TVW-sf-sDf" firstAttribute="top" secondItem="J7Y-la-8zN" secondAttribute="top" constant="70" id="13s-vk-Znz"/>
+                        <constraint firstItem="8jd-CB-OOF" firstAttribute="centerX" secondItem="HWo-bf-Rr9" secondAttribute="centerX" id="15F-eE-K9Z"/>
+                        <constraint firstItem="epV-xt-p0P" firstAttribute="height" secondItem="Rjs-GY-0hW" secondAttribute="height" id="2Dm-Gh-xVU"/>
+                        <constraint firstItem="8jd-CB-OOF" firstAttribute="height" secondItem="HWo-bf-Rr9" secondAttribute="height" id="3F3-Rc-lwc"/>
+                        <constraint firstItem="epV-xt-p0P" firstAttribute="top" secondItem="Rjs-GY-0hW" secondAttribute="bottom" constant="15" id="6pz-h2-U9x"/>
+                        <constraint firstItem="TVW-sf-sDf" firstAttribute="centerX" secondItem="J7Y-la-8zN" secondAttribute="centerX" id="75N-Rp-aou"/>
+                        <constraint firstItem="HWo-bf-Rr9" firstAttribute="top" secondItem="8jd-CB-OOF" secondAttribute="bottom" constant="15" id="Afm-dI-Wnq"/>
+                        <constraint firstAttribute="bottom" secondItem="frl-Pf-Pqs" secondAttribute="bottom" constant="30" id="DYR-ij-OMn"/>
+                        <constraint firstItem="HWo-bf-Rr9" firstAttribute="leading" secondItem="J7Y-la-8zN" secondAttribute="leading" constant="30" id="Fp1-Ws-hRt"/>
+                        <constraint firstItem="HWo-bf-Rr9" firstAttribute="centerX" secondItem="TVW-sf-sDf" secondAttribute="centerX" id="GEP-P8-7zy"/>
+                        <constraint firstItem="8jd-CB-OOF" firstAttribute="top" secondItem="TVW-sf-sDf" secondAttribute="bottom" constant="30" id="GJF-xt-mZe"/>
+                        <constraint firstItem="frl-Pf-Pqs" firstAttribute="centerX" secondItem="epV-xt-p0P" secondAttribute="centerX" id="HfF-5n-8ud"/>
+                        <constraint firstItem="frl-Pf-Pqs" firstAttribute="width" secondItem="epV-xt-p0P" secondAttribute="width" id="Hg5-eq-OgY"/>
+                        <constraint firstItem="Rjs-GY-0hW" firstAttribute="top" secondItem="HWo-bf-Rr9" secondAttribute="bottom" constant="15" id="JZe-ED-WXz"/>
+                        <constraint firstItem="Rjs-GY-0hW" firstAttribute="height" secondItem="HWo-bf-Rr9" secondAttribute="height" id="PZD-kd-7XP"/>
+                        <constraint firstAttribute="trailing" secondItem="HWo-bf-Rr9" secondAttribute="trailing" constant="30" id="Plz-Q5-zlS"/>
+                        <constraint firstItem="8jd-CB-OOF" firstAttribute="centerX" secondItem="TVW-sf-sDf" secondAttribute="centerX" id="STV-zb-s8j"/>
+                        <constraint firstItem="Rjs-GY-0hW" firstAttribute="width" secondItem="HWo-bf-Rr9" secondAttribute="width" id="UbZ-NF-720"/>
+                        <constraint firstItem="frl-Pf-Pqs" firstAttribute="height" secondItem="epV-xt-p0P" secondAttribute="height" id="VnP-07-cIj"/>
+                        <constraint firstItem="epV-xt-p0P" firstAttribute="centerX" secondItem="Rjs-GY-0hW" secondAttribute="centerX" id="fTu-uG-Ujd"/>
+                        <constraint firstItem="8jd-CB-OOF" firstAttribute="width" secondItem="HWo-bf-Rr9" secondAttribute="width" id="fyE-zT-qKn"/>
+                        <constraint firstItem="frl-Pf-Pqs" firstAttribute="top" secondItem="epV-xt-p0P" secondAttribute="bottom" constant="20" id="gB5-rT-uWv"/>
+                        <constraint firstItem="HWo-bf-Rr9" firstAttribute="height" secondItem="TVW-sf-sDf" secondAttribute="height" multiplier="35/107" id="uEW-8A-GwE"/>
+                        <constraint firstItem="Rjs-GY-0hW" firstAttribute="centerX" secondItem="HWo-bf-Rr9" secondAttribute="centerX" id="w8F-Pp-e8E"/>
+                        <constraint firstItem="epV-xt-p0P" firstAttribute="width" secondItem="Rjs-GY-0hW" secondAttribute="width" id="wo6-oa-yRP"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="TVW-sf-sDf" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/3" id="5MV-4Q-w5Q"/>
+                <constraint firstItem="J7Y-la-8zN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LUc-is-JKK"/>
+                <constraint firstItem="J7Y-la-8zN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="R9G-pa-VTv"/>
+                <constraint firstAttribute="trailing" secondItem="J7Y-la-8zN" secondAttribute="trailing" id="Upn-r4-KrD"/>
+                <constraint firstAttribute="bottom" secondItem="J7Y-la-8zN" secondAttribute="bottom" id="hzu-Re-fpW"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="default" width="150" height="150"/>
+    </resources>
+</document>

@@ -5,9 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="RealmDemoProject" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StudentsViewController" customModule="RealmDemoProject" customModuleProvider="target">
             <connections>
-                <outlet property="classTableView" destination="k5F-dj-S8j" id="NOC-M5-Hli"/>
+                <outlet property="studentsTableView" destination="c97-aS-Ujf" id="BQc-yN-Z4o"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,17 +16,17 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k5F-dj-S8j">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c97-aS-Ujf">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="k5F-dj-S8j" secondAttribute="bottom" id="4j3-q0-zkt"/>
-                <constraint firstItem="k5F-dj-S8j" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VHn-IP-ril"/>
-                <constraint firstAttribute="trailing" secondItem="k5F-dj-S8j" secondAttribute="trailing" id="ZQI-B0-8M7"/>
-                <constraint firstItem="k5F-dj-S8j" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="i2R-il-iaQ"/>
+                <constraint firstItem="c97-aS-Ujf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="14f-il-SPl"/>
+                <constraint firstAttribute="trailing" secondItem="c97-aS-Ujf" secondAttribute="trailing" id="IW4-7b-F53"/>
+                <constraint firstItem="c97-aS-Ujf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fGo-2g-DYF"/>
+                <constraint firstAttribute="bottom" secondItem="c97-aS-Ujf" secondAttribute="bottom" id="ykJ-tX-2Ki"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

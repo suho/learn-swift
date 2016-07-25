@@ -13,6 +13,22 @@
 		991B59FC1D45AB3C005F11C3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 991B59FA1D45AB3C005F11C3 /* HomeViewController.xib */; };
 		995967AC1D45AE100068614D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995967AB1D45AE100068614D /* AppDelegate.swift */; };
 		995967AE1D45AE1F0068614D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 995967AD1D45AE1F0068614D /* Assets.xcassets */; };
+		995967B41D45BFB40068614D /* CustomClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995967B21D45BFB40068614D /* CustomClassTableViewCell.swift */; };
+		995967B51D45BFB40068614D /* CustomClassTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 995967B31D45BFB40068614D /* CustomClassTableViewCell.xib */; };
+		995967B91D45C5E60068614D /* AddClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995967B71D45C5E60068614D /* AddClassViewController.swift */; };
+		995967BA1D45C5E60068614D /* AddClassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 995967B81D45C5E60068614D /* AddClassViewController.xib */; };
+		995967C31D45EA6E0068614D /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995967C11D45EA6E0068614D /* StudentsViewController.swift */; };
+		995967C41D45EA6E0068614D /* StudentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 995967C21D45EA6E0068614D /* StudentsViewController.xib */; };
+		995967C81D45F1350068614D /* AddStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995967C61D45F1350068614D /* AddStudentViewController.swift */; };
+		995967C91D45F1350068614D /* AddStudentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 995967C71D45F1350068614D /* AddStudentViewController.xib */; };
+		995967CD1D45F6B90068614D /* CustomStudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995967CB1D45F6B90068614D /* CustomStudentTableViewCell.swift */; };
+		995967CE1D45F6B90068614D /* CustomStudentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 995967CC1D45F6B90068614D /* CustomStudentTableViewCell.xib */; };
+		995967D21D45FB6D0068614D /* DetailAndModifyStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995967D01D45FB6D0068614D /* DetailAndModifyStudentViewController.swift */; };
+		995967D31D45FB6D0068614D /* DetailAndModifyStudentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 995967D11D45FB6D0068614D /* DetailAndModifyStudentViewController.xib */; };
+		995967D61D45FFE90068614D /* DeltailClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995967D41D45FFE90068614D /* DeltailClassViewController.swift */; };
+		995967D71D45FFE90068614D /* DeltailClassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 995967D51D45FFE90068614D /* DeltailClassViewController.xib */; };
+		995967DC1D460C2A0068614D /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995967DB1D460C2A0068614D /* Student.swift */; };
+		995967DE1D460C590068614D /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995967DD1D460C590068614D /* Class.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +42,22 @@
 		995967AB1D45AE100068614D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AppDelegate/AppDelegate.swift; sourceTree = "<group>"; };
 		995967AD1D45AE1F0068614D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Images/Assets.xcassets; sourceTree = "<group>"; };
 		995967AF1D45AE2A0068614D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supports/Info.plist; sourceTree = "<group>"; };
+		995967B21D45BFB40068614D /* CustomClassTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomClassTableViewCell.swift; path = Controllers/Home/CustomClassTableViewCell/CustomClassTableViewCell.swift; sourceTree = "<group>"; };
+		995967B31D45BFB40068614D /* CustomClassTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomClassTableViewCell.xib; path = Controllers/Home/CustomClassTableViewCell/CustomClassTableViewCell.xib; sourceTree = "<group>"; };
+		995967B71D45C5E60068614D /* AddClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddClassViewController.swift; path = Controllers/AddClass/AddClassViewController.swift; sourceTree = "<group>"; };
+		995967B81D45C5E60068614D /* AddClassViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddClassViewController.xib; path = Controllers/AddClass/AddClassViewController.xib; sourceTree = "<group>"; };
+		995967C11D45EA6E0068614D /* StudentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentsViewController.swift; path = Controllers/Students/StudentsViewController.swift; sourceTree = "<group>"; };
+		995967C21D45EA6E0068614D /* StudentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StudentsViewController.xib; path = Controllers/Students/StudentsViewController.xib; sourceTree = "<group>"; };
+		995967C61D45F1350068614D /* AddStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddStudentViewController.swift; path = Controllers/AddStudent/AddStudentViewController.swift; sourceTree = "<group>"; };
+		995967C71D45F1350068614D /* AddStudentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddStudentViewController.xib; path = Controllers/AddStudent/AddStudentViewController.xib; sourceTree = "<group>"; };
+		995967CB1D45F6B90068614D /* CustomStudentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomStudentTableViewCell.swift; path = Controllers/Students/CustomStudentTableViewCell/CustomStudentTableViewCell.swift; sourceTree = "<group>"; };
+		995967CC1D45F6B90068614D /* CustomStudentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomStudentTableViewCell.xib; path = Controllers/Students/CustomStudentTableViewCell/CustomStudentTableViewCell.xib; sourceTree = "<group>"; };
+		995967D01D45FB6D0068614D /* DetailAndModifyStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailAndModifyStudentViewController.swift; path = Controllers/DetailAndModifyStudent/DetailAndModifyStudentViewController.swift; sourceTree = "<group>"; };
+		995967D11D45FB6D0068614D /* DetailAndModifyStudentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailAndModifyStudentViewController.xib; path = Controllers/DetailAndModifyStudent/DetailAndModifyStudentViewController.xib; sourceTree = "<group>"; };
+		995967D41D45FFE90068614D /* DeltailClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeltailClassViewController.swift; path = Controllers/DetailAndModifyClass/DeltailClassViewController.swift; sourceTree = "<group>"; };
+		995967D51D45FFE90068614D /* DeltailClassViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DeltailClassViewController.xib; path = Controllers/DetailAndModifyClass/DeltailClassViewController.xib; sourceTree = "<group>"; };
+		995967DB1D460C2A0068614D /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = Models/Student.swift; sourceTree = "<group>"; };
+		995967DD1D460C590068614D /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Class.swift; path = Models/Class.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +104,7 @@
 			children = (
 				991B59F21D45AA99005F11C3 /* AppDelegate */,
 				991B59F71D45AB0A005F11C3 /* Controllers */,
+				995967D81D460AA10068614D /* Models */,
 				991B59F31D45AAA3005F11C3 /* Resources */,
 				991B59F61D45AAFF005F11C3 /* Supports */,
 			);
@@ -122,7 +155,12 @@
 		991B59F71D45AB0A005F11C3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				995967B61D45C5C10068614D /* AddClass */,
+				995967C51D45F1130068614D /* AddStudent */,
+				995967BB1D45CDE40068614D /* DetailAndModifyClass */,
+				995967CF1D45FACD0068614D /* DetailAndModifyStudent */,
 				991B59F81D45AB14005F11C3 /* Home */,
+				995967C01D45EA3C0068614D /* Students */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -130,10 +168,84 @@
 		991B59F81D45AB14005F11C3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				995967B11D45BF7D0068614D /* CustomClassTableViewCell */,
 				991B59F91D45AB3C005F11C3 /* HomeViewController.swift */,
 				991B59FA1D45AB3C005F11C3 /* HomeViewController.xib */,
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		995967B11D45BF7D0068614D /* CustomClassTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				995967B21D45BFB40068614D /* CustomClassTableViewCell.swift */,
+				995967B31D45BFB40068614D /* CustomClassTableViewCell.xib */,
+			);
+			name = CustomClassTableViewCell;
+			sourceTree = "<group>";
+		};
+		995967B61D45C5C10068614D /* AddClass */ = {
+			isa = PBXGroup;
+			children = (
+				995967B71D45C5E60068614D /* AddClassViewController.swift */,
+				995967B81D45C5E60068614D /* AddClassViewController.xib */,
+			);
+			name = AddClass;
+			sourceTree = "<group>";
+		};
+		995967BB1D45CDE40068614D /* DetailAndModifyClass */ = {
+			isa = PBXGroup;
+			children = (
+				995967D41D45FFE90068614D /* DeltailClassViewController.swift */,
+				995967D51D45FFE90068614D /* DeltailClassViewController.xib */,
+			);
+			name = DetailAndModifyClass;
+			sourceTree = "<group>";
+		};
+		995967C01D45EA3C0068614D /* Students */ = {
+			isa = PBXGroup;
+			children = (
+				995967CA1D45F68B0068614D /* CustomStudentTableViewCell */,
+				995967C11D45EA6E0068614D /* StudentsViewController.swift */,
+				995967C21D45EA6E0068614D /* StudentsViewController.xib */,
+			);
+			name = Students;
+			sourceTree = "<group>";
+		};
+		995967C51D45F1130068614D /* AddStudent */ = {
+			isa = PBXGroup;
+			children = (
+				995967C61D45F1350068614D /* AddStudentViewController.swift */,
+				995967C71D45F1350068614D /* AddStudentViewController.xib */,
+			);
+			name = AddStudent;
+			sourceTree = "<group>";
+		};
+		995967CA1D45F68B0068614D /* CustomStudentTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				995967CB1D45F6B90068614D /* CustomStudentTableViewCell.swift */,
+				995967CC1D45F6B90068614D /* CustomStudentTableViewCell.xib */,
+			);
+			name = CustomStudentTableViewCell;
+			sourceTree = "<group>";
+		};
+		995967CF1D45FACD0068614D /* DetailAndModifyStudent */ = {
+			isa = PBXGroup;
+			children = (
+				995967D01D45FB6D0068614D /* DetailAndModifyStudentViewController.swift */,
+				995967D11D45FB6D0068614D /* DetailAndModifyStudentViewController.xib */,
+			);
+			name = DetailAndModifyStudent;
+			sourceTree = "<group>";
+		};
+		995967D81D460AA10068614D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				995967DD1D460C590068614D /* Class.swift */,
+				995967DB1D460C2A0068614D /* Student.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		A48DF003565344636EB09734 /* Frameworks */ = {
@@ -205,8 +317,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995967C41D45EA6E0068614D /* StudentsViewController.xib in Resources */,
 				991B59EB1D45AA84005F11C3 /* LaunchScreen.storyboard in Resources */,
+				995967B51D45BFB40068614D /* CustomClassTableViewCell.xib in Resources */,
+				995967D71D45FFE90068614D /* DeltailClassViewController.xib in Resources */,
+				995967CE1D45F6B90068614D /* CustomStudentTableViewCell.xib in Resources */,
+				995967D31D45FB6D0068614D /* DetailAndModifyStudentViewController.xib in Resources */,
+				995967C91D45F1350068614D /* AddStudentViewController.xib in Resources */,
 				995967AE1D45AE1F0068614D /* Assets.xcassets in Resources */,
+				995967BA1D45C5E60068614D /* AddClassViewController.xib in Resources */,
 				991B59FC1D45AB3C005F11C3 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,8 +385,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995967CD1D45F6B90068614D /* CustomStudentTableViewCell.swift in Sources */,
+				995967DE1D460C590068614D /* Class.swift in Sources */,
 				995967AC1D45AE100068614D /* AppDelegate.swift in Sources */,
+				995967D61D45FFE90068614D /* DeltailClassViewController.swift in Sources */,
+				995967DC1D460C2A0068614D /* Student.swift in Sources */,
+				995967C81D45F1350068614D /* AddStudentViewController.swift in Sources */,
+				995967C31D45EA6E0068614D /* StudentsViewController.swift in Sources */,
+				995967B91D45C5E60068614D /* AddClassViewController.swift in Sources */,
 				991B59FB1D45AB3C005F11C3 /* HomeViewController.swift in Sources */,
+				995967D21D45FB6D0068614D /* DetailAndModifyStudentViewController.swift in Sources */,
+				995967B41D45BFB40068614D /* CustomClassTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
