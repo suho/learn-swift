@@ -25,8 +25,6 @@ class AddClassViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Add New Class"
         self.imagePicker.delegate = self
-        self.notificationCenter.addObserver(self, selector: nil, name: NotificationCenterKey.addNewClass, object: nil)
-
     }
 
     override func viewWillLayoutSubviews() {

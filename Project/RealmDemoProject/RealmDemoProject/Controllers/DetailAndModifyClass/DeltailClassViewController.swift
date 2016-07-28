@@ -49,8 +49,6 @@ class DeltailClassViewController: UIViewController {
 
     // MARK: Set Up Notification Center
     func setUpNotificationCenter() {
-        self.notificationCenter.addObserver(self, selector: nil, name: NotificationCenterKey.deleteClass, object: nil)
-        self.notificationCenter.addObserver(self, selector: nil, name: NotificationCenterKey.modifyClass, object: nil)
         self.notificationCenter.addObserver(self, selector: #selector(self.updateInfomation), name: NotificationCenterKey.addNewStudent, object: nil)
         self.notificationCenter.addObserver(self, selector: #selector(self.updateInfomation), name: NotificationCenterKey.deleteStudent, object: nil)
     }

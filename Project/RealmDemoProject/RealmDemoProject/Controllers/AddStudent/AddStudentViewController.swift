@@ -45,7 +45,6 @@ class AddStudentViewController: UIViewController {
 
     // MARK: Set Up Notification
     func setUpNotificationCenter() {
-        self.notificationCenter.addObserver(self, selector: nil, name: NotificationCenterKey.addNewStudent, object: nil)
     }
 
     @IBAction func addStudentAction(sender: AnyObject) {
