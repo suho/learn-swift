@@ -10,20 +10,20 @@ import Foundation
 import UIKit
 
 class FileManager: NSObject {
-    
+
     static let sharedInstance = FileManager()
-    
+
     func getPathDirectory(typeDirectory: NSSearchPathDirectory) -> [String] {
         return NSSearchPathForDirectoriesInDomains(typeDirectory, NSSearchPathDomainMask.UserDomainMask, true)
     }
-    
+
     func getPathFile(name: String, typeDirectory: NSSearchPathDirectory) -> String? {
         let pathFile = getPathDirectory(typeDirectory)
         var path = pathFile.first as NSString?
         path = path?.stringByAppendingPathComponent(name)
         return path as? String
     }
-    
+
     func checkFileExist(name: String, typeDirectory: NSSearchPathDirectory) -> Bool {
         let path = getPathFile(name, typeDirectory: typeDirectory)
         if NSFileManager.defaultManager().fileExistsAtPath(path!) {
@@ -32,8 +32,11 @@ class FileManager: NSObject {
             return false
         }
     }
-    
+
     func deleteFile(name: String, typeDirectory: NSSearchPathDirectory) -> Bool {
+        if name.isEmpty {
+            return false
+        }
         guard let path = getPathFile(name, typeDirectory: typeDirectory) else {
             return false
         }
@@ -44,7 +47,7 @@ class FileManager: NSObject {
         }
         return true
     }
-    
+
     func saveFile(file: UIImage, name: String, typeDirectory: NSSearchPathDirectory) -> Bool {
         guard let path = getPathFile(name, typeDirectory: typeDirectory) else { return false }
         let data = UIImageJPEGRepresentation(file, 1)
@@ -60,7 +63,7 @@ class FileManager: NSObject {
             return checkFileExist(name, typeDirectory: typeDirectory)
         }
     }
-    
+
     func loadFile(name: String, typeDirectory: NSSearchPathDirectory) -> UIImage? {
         if checkFileExist(name, typeDirectory: typeDirectory) {
             guard let path = getPathFile(name, typeDirectory: typeDirectory) else { return nil }

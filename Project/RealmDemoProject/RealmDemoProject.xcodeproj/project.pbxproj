@@ -30,7 +30,8 @@
 		995967DC1D460C2A0068614D /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995967DB1D460C2A0068614D /* Student.swift */; };
 		995967DE1D460C590068614D /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995967DD1D460C590068614D /* Class.swift */; };
 		995967E11D4615500068614D /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995967E01D4615500068614D /* FileManager.swift */; };
-		995967E31D4628F30068614D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995967E21D4628F30068614D /* File.swift */; };
+		995967E31D4628F30068614D /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995967E21D4628F30068614D /* RealmManager.swift */; };
+		999968A71D48511800BCB2B7 /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999968A61D48511800BCB2B7 /* NotificationCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +62,8 @@
 		995967DB1D460C2A0068614D /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = Models/Student.swift; sourceTree = "<group>"; };
 		995967DD1D460C590068614D /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Class.swift; path = Models/Class.swift; sourceTree = "<group>"; };
 		995967E01D4615500068614D /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileManager.swift; path = Libraries/FileManager.swift; sourceTree = "<group>"; };
-		995967E21D4628F30068614D /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = File.swift; path = Models/File.swift; sourceTree = "<group>"; };
+		995967E21D4628F30068614D /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmManager.swift; path = Models/RealmManager.swift; sourceTree = "<group>"; };
+		999968A61D48511800BCB2B7 /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationCenter.swift; path = Define/Notification/NotificationCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				991B59F21D45AA99005F11C3 /* AppDelegate */,
 				991B59F71D45AB0A005F11C3 /* Controllers */,
+				999968A41D4850EE00BCB2B7 /* Define */,
 				995967DF1D46153B0068614D /* Libraries */,
 				995967D81D460AA10068614D /* Models */,
 				991B59F31D45AAA3005F11C3 /* Resources */,
@@ -249,7 +252,7 @@
 			children = (
 				995967DD1D460C590068614D /* Class.swift */,
 				995967DB1D460C2A0068614D /* Student.swift */,
-				995967E21D4628F30068614D /* File.swift */,
+				995967E21D4628F30068614D /* RealmManager.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -260,6 +263,22 @@
 				995967E01D4615500068614D /* FileManager.swift */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		999968A41D4850EE00BCB2B7 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				999968A51D4850F400BCB2B7 /* Notification */,
+			);
+			name = Define;
+			sourceTree = "<group>";
+		};
+		999968A51D4850F400BCB2B7 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				999968A61D48511800BCB2B7 /* NotificationCenter.swift */,
+			);
+			name = Notification;
 			sourceTree = "<group>";
 		};
 		A48DF003565344636EB09734 /* Frameworks */ = {
@@ -283,6 +302,7 @@
 				991B59DB1D45AA84005F11C3 /* Resources */,
 				8942E988CDA16F3B0E1BD604 /* [CP] Embed Pods Frameworks */,
 				9DCBF503EF9153D98CB20533 /* [CP] Copy Pods Resources */,
+				99ADDA731D476D4300568C01 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -362,6 +382,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmDemoProject/Pods-RealmDemoProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		99ADDA731D476D4300568C01 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 		9DCBF503EF9153D98CB20533 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -408,8 +442,9 @@
 				995967C81D45F1350068614D /* AddStudentViewController.swift in Sources */,
 				995967C31D45EA6E0068614D /* StudentsViewController.swift in Sources */,
 				995967B91D45C5E60068614D /* AddClassViewController.swift in Sources */,
+				999968A71D48511800BCB2B7 /* NotificationCenter.swift in Sources */,
 				991B59FB1D45AB3C005F11C3 /* HomeViewController.swift in Sources */,
-				995967E31D4628F30068614D /* File.swift in Sources */,
+				995967E31D4628F30068614D /* RealmManager.swift in Sources */,
 				995967D21D45FB6D0068614D /* DetailAndModifyStudentViewController.swift in Sources */,
 				995967B41D45BFB40068614D /* CustomClassTableViewCell.swift in Sources */,
 			);

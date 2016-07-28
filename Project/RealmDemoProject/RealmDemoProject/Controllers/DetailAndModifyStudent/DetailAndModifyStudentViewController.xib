@@ -9,8 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailAndModifyStudentViewController" customModule="RealmDemoProject" customModuleProvider="target">
             <connections>
+                <outlet property="addImageButton" destination="PuA-T4-kOU" id="Ku8-PW-EZT"/>
                 <outlet property="ageTextField" destination="Ryj-zQ-u1w" id="VxV-WU-BmC"/>
                 <outlet property="avatarImageView" destination="WJH-dS-bue" id="03z-EK-0vm"/>
+                <outlet property="deleteStudentButton" destination="gP0-si-6Az" id="Z48-cb-dkO"/>
                 <outlet property="genderSegment" destination="nN2-FO-6eN" id="gt5-Z7-Khd"/>
                 <outlet property="idTextField" destination="vAF-W4-7fa" id="yCu-JK-59u"/>
                 <outlet property="nameTextField" destination="hAs-hg-CBt" id="50n-As-P4u"/>
@@ -31,24 +33,24 @@
                                 <constraint firstAttribute="width" secondItem="WJH-dS-bue" secondAttribute="height" multiplier="1:1" id="FKO-mT-8BZ"/>
                             </constraints>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ryj-zQ-u1w">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ryj-zQ-u1w">
                             <rect key="frame" x="30" y="306" width="259" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nN2-FO-6eN">
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nN2-FO-6eN">
                             <rect key="frame" x="30" y="356" width="259" height="36.5"/>
                             <segments>
                                 <segment title="Male"/>
                                 <segment title="Female"/>
                             </segments>
                         </segmentedControl>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vAF-W4-7fa">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vAF-W4-7fa">
                             <rect key="frame" x="30" y="206" width="259" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAs-hg-CBt">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAs-hg-CBt">
                             <rect key="frame" x="30" y="256" width="259" height="34.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -61,6 +63,17 @@
                             </state>
                             <connections>
                                 <action selector="deleteStudentAction:" destination="-1" eventType="touchUpInside" id="LbD-UR-JWF"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuA-T4-kOU">
+                            <rect key="frame" x="173" y="136" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="PuA-T4-kOU" secondAttribute="height" multiplier="1:1" id="36H-C1-qfA"/>
+                                <constraint firstAttribute="width" constant="40" id="wNP-oY-2W5"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="Plus"/>
+                            <connections>
+                                <action selector="addImageAction:" destination="-1" eventType="touchUpInside" id="O0V-0R-rTw"/>
                             </connections>
                         </button>
                     </subviews>
@@ -76,6 +89,7 @@
                         <constraint firstItem="hAs-hg-CBt" firstAttribute="top" secondItem="vAF-W4-7fa" secondAttribute="bottom" constant="15" id="SqY-hb-A65"/>
                         <constraint firstItem="hAs-hg-CBt" firstAttribute="leading" secondItem="FXi-ug-zQx" secondAttribute="leading" constant="30" id="Zj7-Li-1We"/>
                         <constraint firstItem="vAF-W4-7fa" firstAttribute="width" secondItem="hAs-hg-CBt" secondAttribute="width" id="aTf-Qx-VZ2"/>
+                        <constraint firstItem="PuA-T4-kOU" firstAttribute="bottom" secondItem="WJH-dS-bue" secondAttribute="bottom" id="bmu-EH-rtg"/>
                         <constraint firstAttribute="bottom" secondItem="nN2-FO-6eN" secondAttribute="bottom" constant="30" id="by5-6a-1WZ"/>
                         <constraint firstItem="Ryj-zQ-u1w" firstAttribute="width" secondItem="hAs-hg-CBt" secondAttribute="width" id="hiB-QM-jFK"/>
                         <constraint firstItem="gP0-si-6Az" firstAttribute="height" secondItem="nN2-FO-6eN" secondAttribute="height" id="hyi-Fi-p9X"/>
@@ -90,6 +104,7 @@
                         <constraint firstItem="hAs-hg-CBt" firstAttribute="height" secondItem="WJH-dS-bue" secondAttribute="height" multiplier="35/107" id="rto-qQ-KLK"/>
                         <constraint firstItem="Ryj-zQ-u1w" firstAttribute="centerX" secondItem="hAs-hg-CBt" secondAttribute="centerX" id="s0Z-NN-5J0"/>
                         <constraint firstItem="gP0-si-6Az" firstAttribute="width" secondItem="nN2-FO-6eN" secondAttribute="width" id="wQc-EH-OxD"/>
+                        <constraint firstItem="PuA-T4-kOU" firstAttribute="trailing" secondItem="WJH-dS-bue" secondAttribute="trailing" id="xvI-a0-0o3"/>
                     </constraints>
                 </scrollView>
             </subviews>
@@ -105,6 +120,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Plus" width="30" height="30"/>
         <image name="default" width="150" height="150"/>
     </resources>
 </document>

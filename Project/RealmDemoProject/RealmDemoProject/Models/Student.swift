@@ -15,7 +15,12 @@ class Student: Object {
     dynamic var age = 0
     dynamic var gender = true
     dynamic var imageName = ""
+    dynamic var idClass = ""
     
     let classObject = LinkingObjects(fromType: Class.self, property: "students")
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
     
 }

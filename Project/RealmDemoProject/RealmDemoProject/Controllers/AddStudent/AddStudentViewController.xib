@@ -12,6 +12,7 @@
                 <outlet property="ageStudentTextField" destination="Rjs-GY-0hW" id="qB6-IT-7p7"/>
                 <outlet property="avatarImageView" destination="TVW-sf-sDf" id="VTf-1R-jOu"/>
                 <outlet property="genderSegment" destination="epV-xt-p0P" id="ShJ-Ak-CgA"/>
+                <outlet property="idStudentTextField" destination="8jd-CB-OOF" id="lTn-yy-MMe"/>
                 <outlet property="nameStudentTextField" destination="HWo-bf-Rr9" id="lUt-vu-MWB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -53,15 +54,26 @@
                             </connections>
                         </button>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8jd-CB-OOF">
-                            <rect key="frame" x="30" y="206.5" width="259" height="35"/>
+                            <rect key="frame" x="30" y="206" width="259" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HWo-bf-Rr9">
-                            <rect key="frame" x="30" y="256.5" width="259" height="34.5"/>
+                            <rect key="frame" x="30" y="256" width="259" height="34.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8M-oJ-cXa">
+                            <rect key="frame" x="173" y="136.5" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="Hih-AJ-8TV"/>
+                                <constraint firstAttribute="width" secondItem="C8M-oJ-cXa" secondAttribute="height" multiplier="1:1" id="xvQ-ea-BAj"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="Plus"/>
+                            <connections>
+                                <action selector="addImageAction:" destination="-1" eventType="touchUpInside" id="FQ6-TI-A7O"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstItem="TVW-sf-sDf" firstAttribute="top" secondItem="J7Y-la-8zN" secondAttribute="top" constant="70" id="13s-vk-Znz"/>
@@ -72,6 +84,7 @@
                         <constraint firstItem="TVW-sf-sDf" firstAttribute="centerX" secondItem="J7Y-la-8zN" secondAttribute="centerX" id="75N-Rp-aou"/>
                         <constraint firstItem="HWo-bf-Rr9" firstAttribute="top" secondItem="8jd-CB-OOF" secondAttribute="bottom" constant="15" id="Afm-dI-Wnq"/>
                         <constraint firstAttribute="bottom" secondItem="frl-Pf-Pqs" secondAttribute="bottom" constant="30" id="DYR-ij-OMn"/>
+                        <constraint firstItem="C8M-oJ-cXa" firstAttribute="trailing" secondItem="TVW-sf-sDf" secondAttribute="trailing" id="DiM-tf-a8n"/>
                         <constraint firstItem="HWo-bf-Rr9" firstAttribute="leading" secondItem="J7Y-la-8zN" secondAttribute="leading" constant="30" id="Fp1-Ws-hRt"/>
                         <constraint firstItem="HWo-bf-Rr9" firstAttribute="centerX" secondItem="TVW-sf-sDf" secondAttribute="centerX" id="GEP-P8-7zy"/>
                         <constraint firstItem="8jd-CB-OOF" firstAttribute="top" secondItem="TVW-sf-sDf" secondAttribute="bottom" constant="30" id="GJF-xt-mZe"/>
@@ -86,6 +99,7 @@
                         <constraint firstItem="epV-xt-p0P" firstAttribute="centerX" secondItem="Rjs-GY-0hW" secondAttribute="centerX" id="fTu-uG-Ujd"/>
                         <constraint firstItem="8jd-CB-OOF" firstAttribute="width" secondItem="HWo-bf-Rr9" secondAttribute="width" id="fyE-zT-qKn"/>
                         <constraint firstItem="frl-Pf-Pqs" firstAttribute="top" secondItem="epV-xt-p0P" secondAttribute="bottom" constant="20" id="gB5-rT-uWv"/>
+                        <constraint firstItem="C8M-oJ-cXa" firstAttribute="bottom" secondItem="TVW-sf-sDf" secondAttribute="bottom" id="meW-RG-swC"/>
                         <constraint firstItem="HWo-bf-Rr9" firstAttribute="height" secondItem="TVW-sf-sDf" secondAttribute="height" multiplier="35/107" id="uEW-8A-GwE"/>
                         <constraint firstItem="Rjs-GY-0hW" firstAttribute="centerX" secondItem="HWo-bf-Rr9" secondAttribute="centerX" id="w8F-Pp-e8E"/>
                         <constraint firstItem="epV-xt-p0P" firstAttribute="width" secondItem="Rjs-GY-0hW" secondAttribute="width" id="wo6-oa-yRP"/>
@@ -104,6 +118,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Plus" width="30" height="30"/>
         <image name="default" width="150" height="150"/>
     </resources>
 </document>

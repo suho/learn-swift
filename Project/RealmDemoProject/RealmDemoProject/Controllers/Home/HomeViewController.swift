@@ -12,51 +12,118 @@ import RealmSwift
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var classTableView: UITableView!
-    
+
     var classes: Results<Class>!
-    
+
+    let notificationCenter = NSNotificationCenter.defaultCenter()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "DUT"
+        self.loadData()
+        self.setButtonRight()
         self.classTableView.delegate = self
         self.classTableView.dataSource = self
         self.classTableView.registerNib(UINib(nibName: "CustomClassTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
-        self.reloadTableView()
+        self.setUpNotificationCenter()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.setButtonRight()
-        self.reloadTableView()
+
+    // MARK: Set Up Notification Center
+    func setUpNotificationCenter() {
+        self.notificationCenter.addObserver(self, selector: #selector(self.insertCell), name: NotificationCenterKey.addNewClass, object: nil)
+        self.notificationCenter.addObserver(self, selector: #selector(self.deleteCell), name: NotificationCenterKey.deleteClass, object: nil)
+        self.notificationCenter.addObserver(self, selector: #selector(self.updateCell), name: NotificationCenterKey.modifyClass, object: nil)
+        self.notificationCenter.addObserver(self, selector: #selector(self.updateCell), name: NotificationCenterKey.addNewStudent, object: nil)
+        self.notificationCenter.addObserver(self, selector: #selector(self.updateCell), name: NotificationCenterKey.deleteStudent, object: nil)
     }
-    
-    //MARK: Set UI - Button Right of Navigation Bar
+
+    // MARK: Set UI - Button Right of Navigation Bar
     func setButtonRight() {
-        let addClassButton: UIBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: self, action: #selector(self.showAddClassView))
-        addClassButton.image = UIImage(named: "Add List")
+        let image = UIImage(named: "Add List")
+        let addClassButton: UIBarButtonItem = UIBarButtonItem(image: image, style: .Done, target: self, action: #selector(self.showAddClassView))
         self.navigationItem.rightBarButtonItem = addClassButton
-        
     }
-    
-    //MARK: Add Class By Realm
+
+    // MARK: Add Class By Realm
     func showAddClassView() {
         let addClassViewController = AddClassViewController(nibName: "AddClassViewController", bundle: nil)
         self.navigationController?.pushViewController(addClassViewController, animated: true)
     }
-    
-    //MARK: Reload Table View
-    func reloadTableView() {
+
+    // MARK: Reload Data
+    func loadData() {
         do {
             let realm = try Realm()
             self.classes = realm.objects(Class)
-            self.classTableView.reloadData()
         } catch {
             print("Realm Have Error!!")
         }
+    }
+
+    // MARK: Insert Cell Onto Table
+    func insertCell() {
+        do {
+            let realm = try Realm()
+            self.classes = realm.objects(Class)
+            self.classTableView.beginUpdates()
+            var indexPaths = [NSIndexPath]()
+            indexPaths.append(NSIndexPath(forRow: self.classes.count - 1, inSection: 0))
+            self.classTableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Right)
+            self.classTableView.endUpdates()
+        } catch {
+            print("Realm Have Error!!")
+        }
+
+    }
+
+    // MARK: Delete Cell Of Table View
+    func deleteCell(notification: NSNotification) {
+
+        var indexPath = NSIndexPath()
+
+        if let infoUser = notification.userInfo {
+            if let index = infoUser["indexPathClass"] as? NSIndexPath {
+                indexPath = index
+            }
+        }
+
+        do {
+            let realm = try Realm()
+            self.classes = realm.objects(Class)
+        } catch {
+            print("Realm Have Error!!")
+        }
+        self.classTableView.beginUpdates()
+        var indexPaths = [NSIndexPath]()
+        indexPaths.append(indexPath)
+        self.classTableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Left)
+        self.classTableView.endUpdates()
+    }
+
+    // Update Cell
+
+    func updateCell(notification: NSNotification) {
+        var indexPath = NSIndexPath()
+        if let infoUser = notification.userInfo {
+            if let index = infoUser["indexPathClass"] as? NSIndexPath {
+                indexPath = index
+            }
+        }
+        do {
+            let realm = try Realm()
+            self.classes = realm.objects(Class)
+        } catch {
+            print("Realm Have Error!!")
+        }
+        self.classTableView.beginUpdates()
+        var indexPaths = [NSIndexPath]()
+        indexPaths.append(indexPath)
+        self.classTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        self.classTableView.endUpdates()
     }
 
 }
@@ -80,8 +147,29 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailClassViewController = DeltailClassViewController(nibName: "DeltailClassViewController", bundle: nil)
-        detailClassViewController.classObject = self.classes[indexPath.row]
+        detailClassViewController.classOfStudents = self.classes[indexPath.row]
+        detailClassViewController.indexPathClass = indexPath
         self.navigationController?.pushViewController(detailClassViewController, animated: true)
     }
-    
+
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+
+            let classObj = self.classes[indexPath.row]
+
+            for student in classObj.students {
+                let imageNameToDelete = student.imageName
+                RealmManager.sharedInstance.deleteObject(student)
+                FileManager.sharedInstance.deleteFile(imageNameToDelete, typeDirectory: .CachesDirectory)
+            }
+
+            let imageNameToDelete = classObj.imageName
+            FileManager.sharedInstance.deleteFile(imageNameToDelete, typeDirectory: .CachesDirectory)
+            classObj.delete()
+
+            self.loadData()
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
+        }
+    }
+
 }
