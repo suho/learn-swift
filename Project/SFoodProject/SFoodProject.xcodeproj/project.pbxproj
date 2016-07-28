@@ -14,6 +14,7 @@
 		990188BB1D2F84DA00C9977F /* LocationDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 990188B91D2F84DA00C9977F /* LocationDetailCollectionViewCell.xib */; };
 		990188BE1D2F9EB900C9977F /* DetailMapLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990188BC1D2F9EB900C9977F /* DetailMapLocationViewController.swift */; };
 		990188BF1D2F9EB900C9977F /* DetailMapLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 990188BD1D2F9EB900C9977F /* DetailMapLocationViewController.xib */; };
+		990EC1FA1D49EFDB00FC2A1D /* VenueRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990EC1F91D49EFDB00FC2A1D /* VenueRealm.swift */; };
 		9916C3D41D2A72D3003CF835 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916C3D21D2A72D3003CF835 /* ForgotPasswordViewController.swift */; };
 		9916C3D51D2A72D3003CF835 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9916C3D31D2A72D3003CF835 /* ForgotPasswordViewController.xib */; };
 		991B82731D2B9F86002F0BC6 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B82701D2B9F86002F0BC6 /* HomeTabBarViewController.swift */; };
@@ -69,6 +70,7 @@
 		990188B91D2F84DA00C9977F /* LocationDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		990188BC1D2F9EB900C9977F /* DetailMapLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailMapLocationViewController.swift; sourceTree = "<group>"; };
 		990188BD1D2F9EB900C9977F /* DetailMapLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailMapLocationViewController.xib; sourceTree = "<group>"; };
+		990EC1F91D49EFDB00FC2A1D /* VenueRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueRealm.swift; sourceTree = "<group>"; };
 		9916C3D21D2A72D3003CF835 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		9916C3D31D2A72D3003CF835 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		991B82701D2B9F86002F0BC6 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,14 @@
 				83CC891FF9F8D426BF8582EB /* Pods_SFoodProject.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		990EC1F81D49EFC400FC2A1D /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				990EC1F91D49EFDB00FC2A1D /* VenueRealm.swift */,
+			);
+			name = RealmModels;
 			sourceTree = "<group>";
 		};
 		994F26141D3C76B000528DFE /* TestImageAPI */ = {
@@ -337,6 +347,7 @@
 		99FFCE881D386FC6005438D4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				990EC1F81D49EFC400FC2A1D /* RealmModels */,
 				99FFCE981D387235005438D4 /* Venue */,
 				99FFCE8E1D387049005438D4 /* User */,
 				99FFCE8B1D386FFE005438D4 /* Location */,
@@ -667,6 +678,7 @@
 				99FE87E91D33940A00475F73 /* ChangePasswordViewController.swift in Sources */,
 				99EB4F711D2C9F8900C853B0 /* FavoriteTabBarViewController.swift in Sources */,
 				990188BA1D2F84DA00C9977F /* LocationDetailCollectionViewCell.swift in Sources */,
+				990EC1FA1D49EFDB00FC2A1D /* VenueRealm.swift in Sources */,
 				994F261C1D3C77A700528DFE /* CollectionViewCell.swift in Sources */,
 				994F26171D3C76C900528DFE /* ImageAPIViewController.swift in Sources */,
 				99FE87E61D334F4700475F73 /* User.swift in Sources */,
