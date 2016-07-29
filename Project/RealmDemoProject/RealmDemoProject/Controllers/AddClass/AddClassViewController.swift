@@ -15,6 +15,10 @@ class AddClassViewController: UIViewController {
     @IBOutlet weak var nameFacultyTextField: UITextField!
     @IBOutlet weak var nameClassTextField: UITextField!
 
+    var addCompleted: ((String) -> Void)?
+
+    // var getClass: ((Int) -> Class)?
+
     let imagePicker = UIImagePickerController()
 
     var image: UIImage! = nil
@@ -63,7 +67,10 @@ class AddClassViewController: UIViewController {
 
             RealmManager.sharedInstance.addObject(classObject)
             self.navigationController?.popViewControllerAnimated(true)
-            self.notificationCenter.postNotificationName(NotificationCenterKey.addNewClass, object: nil)
+            addCompleted!("OK")
+            // let myClass = getClass!(1)
+            // print(myClass)
+            // self.notificationCenter.postNotificationName(NotificationCenterKey.addNewClass, object: nil)
         }
     }
 
