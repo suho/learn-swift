@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="YoutubeAPIProject" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="lOM-4D-aL3" id="jgj-KD-08N"/>
+                <outlet property="searchBar" destination="MP9-3v-GZu" id="UIZ-fO-7Jc"/>
+                <outlet property="searchTableView" destination="F9m-0W-D3j" id="7Kx-7b-reC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,12 +26,22 @@
                     <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lOM-4D-aL3">
+                    <rect key="frame" x="135" y="259" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="8KT-l6-HF1"/>
+                        <constraint firstAttribute="width" constant="50" id="YAn-0s-ZRt"/>
+                    </constraints>
+                    <color key="color" red="0.46314152269999997" green="0.80832432160000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="MP9-3v-GZu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6lg-Rl-nbH"/>
                 <constraint firstItem="MP9-3v-GZu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="BVc-7A-D4X"/>
+                <constraint firstItem="lOM-4D-aL3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FKs-uK-rZ2"/>
                 <constraint firstItem="F9m-0W-D3j" firstAttribute="top" secondItem="MP9-3v-GZu" secondAttribute="bottom" id="QTT-SD-yqV"/>
+                <constraint firstItem="lOM-4D-aL3" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Sp7-h6-fVC"/>
                 <constraint firstItem="F9m-0W-D3j" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YUJ-h5-nXw"/>
                 <constraint firstAttribute="trailing" secondItem="MP9-3v-GZu" secondAttribute="trailing" id="d9k-51-shq"/>
                 <constraint firstAttribute="bottom" secondItem="F9m-0W-D3j" secondAttribute="bottom" id="jcD-1b-tQw"/>
