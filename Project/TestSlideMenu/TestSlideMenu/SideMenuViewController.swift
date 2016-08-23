@@ -1,18 +1,19 @@
 //
-//  ViewController.swift
+//  SideMenuViewController.swift
 //  TestSlideMenu
 //
-//  Created by Mylo Ho on 7/31/16.
+//  Created by Mylo Ho on 8/1/16.
 //  Copyright © 2016 Ho Van Su. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class SideMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +21,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-

@@ -1,35 +1,38 @@
 //
 //  AppDelegate.swift
-//  APIAndGoogleMaps
+//  FacebookLogin
 //
-//  Created by Mylo Ho on 7/21/16.
+//  Created by Mylo Ho on 8/23/16.
 //  Copyright © 2016 Ho Van Su. All rights reserved.
 //
 
 import UIKit
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    let googleMapsApiKey = "AIzaSyBA9bJr7fTfH1RzpXmGRGOMCjAwPGIU93g"
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        if let window = window {
+        let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        window?.rootViewController = homeViewController
+        window?.backgroundColor = UIColor.whiteColor()
+        window?.makeKeyAndVisible()
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
 
-            GMSServices.provideAPIKey(self.googleMapsApiKey)
-
-            let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-
-            window.rootViewController = homeViewController
-
-            window.backgroundColor = UIColor.whiteColor()
-            window.makeKeyAndVisible()
-        }
-        return true
+    func application(application: UIApplication,
+        openURL url: NSURL,
+        sourceApplication: String?,
+        annotation: AnyObject) -> Bool {
+            return FBSDKApplicationDelegate.sharedInstance().application(
+                application,
+                openURL: url,
+                sourceApplication: sourceApplication,
+                annotation: annotation)
     }
 
     func applicationWillResignActive(application: UIApplication) {
