@@ -12,7 +12,14 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    let readAPI = ReadAPI()
+    
     var messageFrame = UIView()
+    
+    var imagesDataAPI: [UIImage] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = true
@@ -41,12 +48,30 @@ class LoginViewController: UIViewController {
         let username = self.usernameTextField.text!
         let password = self.passwordTextField.text!
         
+//        var imagesAPI: [UIImage] = []
+//        
+//        if self.readAPI.images.count > 5 {
+//            imagesAPI = self.readAPI.images
+//        } else {
+//            if let urlData = NSURL(string: "https://www.intego.com/mac-security-blog/wp-content/uploads/2016/02/Apple_Swift_logo.png") {
+//                if let data = NSData(contentsOfURL: urlData) {
+//                    imagesAPI = [UIImage(data: data)!]
+//                }
+//            }
+//        }
+        
+        
         if self.checkAccount(username, password: password) {
             //print("Dang nhap thanh cong")
-            progressBarDisplayer("Logining...", true)
-            runAfterDelay(2) {
+            progressBarDisplayer(true)
+            
+            runAfterDelay(0.5) {
                 AppDelegate.sharedInstance.idUser = self.getIdUser(username, password: password)
                 AppDelegate.sharedInstance.changeRootViewWhenLoginSuccess()
+//                let imageAPIViewController = ImageAPIViewController(nibName: "ImageAPIViewController", bundle: nil)
+//                imageAPIViewController.images = self.imagesDataAPI
+//                print(self.imagesDataAPI)
+//                self.navigationController?.pushViewController(imageAPIViewController, animated: true)
                 self.messageFrame.removeFromSuperview()
             }
             
@@ -114,23 +139,19 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func runAfterDelay(delay: NSTimeInterval, block: dispatch_block_t) {
-        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
-        dispatch_after(time, dispatch_get_main_queue(), block)
-    }
     
     
     
     
-    func progressBarDisplayer(msg:String, _ indicator:Bool ) {
+    
+    func progressBarDisplayer(indicator: Bool) {
         
         var activityIndicator = UIActivityIndicatorView()
-        messageFrame = UIView(frame: CGRect(x: view.frame.midX - 25, y: view.frame.midY - 25 , width: 50, height: 50))
-        messageFrame.layer.cornerRadius = 15
+        messageFrame = UIView(frame: self.view.bounds)
         messageFrame.backgroundColor = UIColor(white: 0, alpha: 0.7)
         if indicator {
             activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
-            activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+            activityIndicator.frame = CGRect(x: messageFrame.frame.size.width/2 - 25, y: messageFrame.frame.size.height/2 - 25, width: 50, height: 50)
             activityIndicator.startAnimating()
             messageFrame.addSubview(activityIndicator)
         }
@@ -149,3 +170,7 @@ extension LoginViewController: UITextFieldDelegate {
         return true
     }
 }
+
+
+
+

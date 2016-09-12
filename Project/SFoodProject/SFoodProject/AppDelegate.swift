@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var loginNavigation: UINavigationController?
     var mainTabBar: UITabBarController?
     var idUser = Int()
-    
+
     class var sharedInstance: AppDelegate {
         struct Static {
             static var onceToken: dispatch_once_t = 0
@@ -26,87 +26,83 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return Static.instance!
     }
-    
-
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        
+
         if let window = self.window {
-            
-            //init loginNavigation
-            //init LoginViewController
-            
+
+            // init loginNavigation
+            // init LoginViewController
+
             let loginViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
             self.loginNavigation = UINavigationController(rootViewController: loginViewController)
-            
-            //init mainTabBar
-            //navi Home
+
+            // init mainTabBar
+            // navi Home
             let homeNavigation = UINavigationController()
             let homeViewController = HomeTabBarViewController(nibName: "HomeTabBarViewController", bundle: nil)
             homeNavigation.viewControllers = [homeViewController]
             homeNavigation.title = "Home"
             homeNavigation.tabBarItem.image = UIImage(named: "home-logo")?.imageWithRenderingMode(.Automatic)
-            
-            //navi Map
+
+            // navi Map
             let mapsNavigation = UINavigationController()
             let mapsViewController = MapsTabBarViewController(nibName: "MapsTabBarViewController", bundle: nil)
             mapsNavigation.viewControllers = [mapsViewController]
             mapsNavigation.title = "Maps"
             mapsNavigation.tabBarItem.image = UIImage(named: "map-icon")?.imageWithRenderingMode(.Automatic)
 
-            //navi Favorite
+            // navi Favorite
             let favoriteNavigation = UINavigationController()
             let favoriteViewController = FavoriteTabBarViewController(nibName: "FavoriteTabBarViewController", bundle: nil)
             favoriteNavigation.viewControllers = [favoriteViewController]
             favoriteNavigation.title = "Favorite"
             favoriteNavigation.tabBarItem.image = UIImage(named: "bookmark-icon")?.imageWithRenderingMode(.Automatic)
-            
-            //navi Setting
-            
+
+            // navi Setting
+
             let settingsNavigation = UINavigationController()
             let settingsViewController = SettingTabBarViewController(nibName: "SettingTabBarViewController", bundle: nil)
             settingsNavigation.viewControllers = [settingsViewController]
             settingsNavigation.title = "Settings"
             settingsNavigation.tabBarItem.image = UIImage(named: "settings-icon")?.imageWithRenderingMode(.Automatic)
-            
-            
-            //set mainTabBar
+
+            // set mainTabBar
             self.mainTabBar = UITabBarController()
             self.mainTabBar?.viewControllers = [homeNavigation, favoriteNavigation, mapsNavigation, settingsNavigation]
             self.mainTabBar?.tabBar.tintColor = UIColor.orangeColor()
             self.mainTabBar?.tabBar.barTintColor = UIColor.whiteColor()
-            
-            
-            //set rootViewController
+
+            // set rootViewController
             window.rootViewController = self.loginNavigation
             window.backgroundColor = UIColor.whiteColor()
             window.makeKeyAndVisible()
-            
+
         }
         return true
     }
-    
+
     func changeRootViewWhenLoginSuccess() {
         if let window = self.window {
-            
+
             self.mainTabBar?.selectedIndex = 0
 
             window.rootViewController = self.mainTabBar
 
         }
     }
-    
+
     func changeRootWhenLogout() {
         if let window = self.window {
             let loginViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
             loginNavigation = UINavigationController(rootViewController: loginViewController)
-            
+
             UIView.transitionWithView(window, duration: 0.6, options: UIViewAnimationOptions.TransitionCrossDissolve,
-                                      animations: {
-                                        window.rootViewController = self.loginNavigation
-                                        }, completion: nil)
+                animations: {
+                    window.rootViewController = self.loginNavigation
+                }, completion: nil)
             self.mainTabBar?.reloadInputViews()
         }
     }
@@ -132,7 +128,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
 
 }
 

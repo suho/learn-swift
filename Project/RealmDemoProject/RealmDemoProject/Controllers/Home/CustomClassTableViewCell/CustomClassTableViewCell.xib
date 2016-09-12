@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="KGk-i7-Jjw" customClass="CustomClassTableViewCell" customModule="RealmDemoProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="340" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gix-cf-SAZ">
+                        <rect key="frame" x="8" y="8" width="324" height="83.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="ZQX-fF-fvI">
+                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="83.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZQX-fF-fvI" secondAttribute="height" id="X1S-8n-Sfm"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Faculty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0l1-6k-Y44">
+                                <rect key="frame" x="93.5" y="5" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STw-8b-wnU">
+                                <rect key="frame" x="94" y="31" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NumberOfStudent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KS-Zp-b5g">
+                                <rect key="frame" x="94" y="57.5" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0l1-6k-Y44" firstAttribute="top" secondItem="ZQX-fF-fvI" secondAttribute="top" constant="5" id="7X2-rj-Ehe"/>
+                            <constraint firstItem="STw-8b-wnU" firstAttribute="centerY" secondItem="ZQX-fF-fvI" secondAttribute="centerY" id="GUv-ya-YI9"/>
+                            <constraint firstItem="0l1-6k-Y44" firstAttribute="leading" secondItem="ZQX-fF-fvI" secondAttribute="trailing" constant="10" id="MfG-Ul-qEA"/>
+                            <constraint firstItem="8KS-Zp-b5g" firstAttribute="leading" secondItem="ZQX-fF-fvI" secondAttribute="trailing" constant="10" id="YY8-r8-8gm"/>
+                            <constraint firstItem="ZQX-fF-fvI" firstAttribute="height" secondItem="Gix-cf-SAZ" secondAttribute="height" id="jW7-K2-5GR"/>
+                            <constraint firstItem="STw-8b-wnU" firstAttribute="leading" secondItem="ZQX-fF-fvI" secondAttribute="trailing" constant="10" id="phh-oP-D2i"/>
+                            <constraint firstItem="ZQX-fF-fvI" firstAttribute="leading" secondItem="Gix-cf-SAZ" secondAttribute="leading" id="wJY-8n-c2t"/>
+                            <constraint firstItem="ZQX-fF-fvI" firstAttribute="centerY" secondItem="Gix-cf-SAZ" secondAttribute="centerY" id="yXx-R5-u0Y"/>
+                            <constraint firstItem="8KS-Zp-b5g" firstAttribute="bottom" secondItem="ZQX-fF-fvI" secondAttribute="bottom" constant="-5" id="zfU-Bm-rL4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="Gix-cf-SAZ" secondAttribute="bottom" id="2hP-eu-WEB"/>
+                    <constraint firstItem="Gix-cf-SAZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Efc-7A-yz6"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Gix-cf-SAZ" secondAttribute="trailing" id="PwZ-5K-o3x"/>
+                    <constraint firstItem="Gix-cf-SAZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="vVA-6S-qnJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarClassImageView" destination="ZQX-fF-fvI" id="lf7-zE-7DS"/>
+                <outlet property="mainContentView" destination="Gix-cf-SAZ" id="3cU-5q-PAA"/>
+                <outlet property="nameClassLabel" destination="STw-8b-wnU" id="7gd-CQ-sU1"/>
+                <outlet property="nameFacultyLabel" destination="0l1-6k-Y44" id="3xz-DP-gDv"/>
+                <outlet property="numberOfStudentLabel" destination="8KS-Zp-b5g" id="bIw-pr-QKZ"/>
+            </connections>
+            <point key="canvasLocation" x="222" y="297"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="default" width="150" height="150"/>
+    </resources>
+</document>

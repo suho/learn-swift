@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="69" id="KGk-i7-Jjw" customClass="CustomVenueTableViewCell" customModule="DemoGcdApiDownloaderLoadmore" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="68.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="krm-05-9wh">
+                        <rect key="frame" x="0.0" y="0.0" width="68.5" height="68.5"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="krm-05-9wh" secondAttribute="height" id="LF1-nH-swp"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="tIh-iO-oXq">
+                        <rect key="frame" x="88.5" y="0.5" width="213.5" height="68.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tIh-iO-oXq" firstAttribute="leading" secondItem="krm-05-9wh" secondAttribute="trailing" constant="20" id="0dr-lo-e4m"/>
+                    <constraint firstItem="krm-05-9wh" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="7ne-o2-w46"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="tIh-iO-oXq" secondAttribute="trailing" constant="10" id="WYC-xn-ql6"/>
+                    <constraint firstItem="krm-05-9wh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gdL-I2-6JA"/>
+                    <constraint firstItem="tIh-iO-oXq" firstAttribute="centerY" secondItem="krm-05-9wh" secondAttribute="centerY" id="pLC-Bs-VTk"/>
+                    <constraint firstItem="tIh-iO-oXq" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="pjg-XQ-b5o"/>
+                    <constraint firstItem="krm-05-9wh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zOO-75-xNE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameVenueLabel" destination="tIh-iO-oXq" id="av4-Uy-yap"/>
+                <outlet property="thumbnailImageView" destination="krm-05-9wh" id="o9b-sh-07c"/>
+            </connections>
+            <point key="canvasLocation" x="229" y="309.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,25 @@
+# reporter: json
+use_nested_configs: true
+disabled_rules:
+  - todo # 開発中のみignore
+  - trailing_whitespace
+  - colon
+  - comma
+  - cyclomatic_complexity
+  - function_parameter_count
+  - conditional_binding_cascade
+  - legacy_cggeometry_functions
+excluded:
+  - Carthage
+  - Pods
+line_length: 150
+function_body_length: 80
+type_body_length: 
+ - 600 #warning
+ - 800 #error
+file_length:
+  warning: 800
+  error: 1200
+variable_name:
+  excluded: # excluded via string array
+    - id

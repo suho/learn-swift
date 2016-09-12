@@ -12,12 +12,16 @@ import MapKit
 class DetailLocationViewController: UIViewController {
 
     @IBOutlet weak var imagesCollectionView: UICollectionView!
-    @IBOutlet weak var pageController: UIPageControl!
+    //@IBOutlet weak var pageController: UIPageControl!
     @IBOutlet weak var nameOfLocation: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var previewText: UILabel!
     @IBOutlet weak var detailText: UILabel!
     @IBOutlet weak var mapLocationView: MKMapView!
+    
+    var images: [UIImage] = []
+    
+    let readAPI = ReadAPI()
     
     var location = Location(id: "1", images: [UIImage(named: "cafe 61")!], name: "Cafe 69", address: "69 Da Nang", previewText: "Cafe Xay", detailText: "Da Nang, Hai Chau, Nguyen Chi Thanh", coordinates: (0.00, 0.00), isFavorite: true)
     
@@ -25,8 +29,14 @@ class DetailLocationViewController: UIViewController {
     
     let regionRadius: CLLocationDistance = 500
     
+    override func viewWillAppear(animated: Bool) {
+        self.readAPI.getAllImageFromAPI(self.location.id)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.readAPI.delegate = self
+        //self.readAPI.getAllImageFromAPI(self.location.id)
         
         self.title = "Details"
         self.navigationController?.navigationBar.tintColor = UIColor.orangeColor()
@@ -77,8 +87,8 @@ class DetailLocationViewController: UIViewController {
     }
     
     func configPageControl() {
-        self.pageController.numberOfPages = self.location.images.count
-        self.pageController.currentPage = 0
+        //self.pageController.numberOfPages = self.location.images.count
+        //self.pageController.currentPage = 0
     }
     
     
@@ -109,14 +119,14 @@ extension DetailLocationViewController: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.location.images.count
+        return self.images.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! LocationDetailCollectionViewCell
         
-        cell.image.image = self.location.images[indexPath.row]
+        cell.image.image = self.images[indexPath.row]
 
         return cell
     }
@@ -141,8 +151,8 @@ extension DetailLocationViewController: UICollectionViewDelegate, UICollectionVi
 
 extension DetailLocationViewController: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        let pageNumber = round(self.imagesCollectionView.contentOffset.x / self.imagesCollectionView.frame.size.width)
-        self.pageController.currentPage = Int(pageNumber)
+        //let pageNumber = round(self.imagesCollectionView.contentOffset.x / self.imagesCollectionView.frame.size.width)
+        //self.pageController.currentPage = Int(pageNumber)
     }
 }
 
@@ -180,16 +190,37 @@ extension DetailLocationViewController: MKMapViewDelegate {
     
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
         let detailMapView = DetailMapLocationViewController(nibName: "DetailMapLocationViewController", bundle: nil)
+        self.location.images = self.images
         detailMapView.location = self.location
         self.navigationController?.pushViewController(detailMapView, animated: true)
     }
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         let detailMapView = DetailMapLocationViewController(nibName: "DetailMapLocationViewController", bundle: nil)
+        self.location.images = self.images
         detailMapView.location = self.location
         self.navigationController?.pushViewController(detailMapView, animated: true)
     }
     
+}
+
+
+extension DetailLocationViewController: ReadAPIDelegate {
+    
+    func sendImages(id: String, _ image: UIImage) {
+        return
+    }
+    
+    func sendObject(venues: Venue) {
+        return
+    }
+    
+    func sendAllImages(images: [UIImage]) {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.images = images
+            self.imagesCollectionView.reloadData()
+        })
+    }
 }
 
 
