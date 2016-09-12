@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="TestLoginFoursquare" customModuleProvider="target">
+            <connections>
+                <outlet property="tokenLabel" destination="EW5-ac-2du" id="6MD-91-8XR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Token" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EW5-ac-2du">
+                    <rect key="frame" x="20" y="200" width="280" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otd-ey-H0x">
+                    <rect key="frame" x="130" y="269" width="59" height="30"/>
+                    <state key="normal" title="Connect"/>
+                    <connections>
+                        <action selector="connectFourSquareAction:" destination="-1" eventType="touchUpInside" id="jWw-0n-XeJ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="otd-ey-H0x" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1Iy-dB-6uS"/>
+                <constraint firstItem="EW5-ac-2du" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="53T-I2-l1K"/>
+                <constraint firstItem="EW5-ac-2du" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="200" id="6cM-UA-UW6"/>
+                <constraint firstItem="otd-ey-H0x" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Fjz-D6-O8W"/>
+                <constraint firstItem="EW5-ac-2du" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="T1d-Dw-wwF"/>
+                <constraint firstAttribute="trailing" secondItem="EW5-ac-2du" secondAttribute="trailing" constant="20" id="ZFo-b0-acs"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

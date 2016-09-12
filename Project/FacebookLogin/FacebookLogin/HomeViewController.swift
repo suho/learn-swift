@@ -16,12 +16,11 @@ class HomeViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if FBSDKAccessToken.currentAccessToken() != nil {
-
-        } else {
-            loginFacebookButton.loginBehavior = .Web
-            loginFacebookButton.readPermissions = ["public_profile"]
-            loginFacebookButton.delegate = self
+        loginFacebookButton.loginBehavior = .Browser
+        loginFacebookButton.readPermissions = ["public_profile", "email"]
+        loginFacebookButton.delegate = self
+        if let accessToken = FBSDKAccessToken.currentAccessToken() {
+            print(accessToken.userID)
         }
     }
 
@@ -31,7 +30,12 @@ class HomeViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
 
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-
+        guard let result = result, token = result.token else {
+            return
+        }
+        print(token.appID)
+        print(token.userID)
+        print(token.tokenString)
     }
 
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {

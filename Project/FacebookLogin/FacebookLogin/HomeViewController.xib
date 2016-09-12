@@ -27,6 +27,7 @@
                 <constraint firstItem="GTv-St-Kx0" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="V8R-5P-Qtf"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="81" y="172"/>
         </view>
     </objects>
 </document>
