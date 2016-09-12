@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
         self.classTableView.dataSource = self
         self.classTableView.registerNib(UINib(nibName: "CustomClassTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
         self.setUpNotificationCenter()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +35,7 @@ class HomeViewController: UIViewController {
 
     // MARK: Set Up Notification Center
     func setUpNotificationCenter() {
-        self.notificationCenter.addObserver(self, selector: #selector(self.insertCell), name: NotificationCenterKey.addNewClass, object: nil)
+        // self.notificationCenter.addObserver(self, selector: #selector(self.insertCell), name: NotificationCenterKey.addNewClass, object: nil)
         self.notificationCenter.addObserver(self, selector: #selector(self.deleteCell), name: NotificationCenterKey.deleteClass, object: nil)
         self.notificationCenter.addObserver(self, selector: #selector(self.updateCell), name: NotificationCenterKey.modifyClass, object: nil)
         self.notificationCenter.addObserver(self, selector: #selector(self.updateCell), name: NotificationCenterKey.addNewStudent, object: nil)
@@ -51,6 +52,13 @@ class HomeViewController: UIViewController {
     // MARK: Add Class By Realm
     func showAddClassView() {
         let addClassViewController = AddClassViewController(nibName: "AddClassViewController", bundle: nil)
+        addClassViewController.addCompleted = { (message) in
+            print(message)
+            self.insertCell()
+        }
+//        addClassViewController.getClass = { (index) in
+//            return self.classes.first!
+//        }
         self.navigationController?.pushViewController(addClassViewController, animated: true)
     }
 

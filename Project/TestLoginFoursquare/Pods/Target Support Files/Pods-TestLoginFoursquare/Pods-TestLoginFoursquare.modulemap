@@ -1,0 +1,6 @@
+framework module Pods_TestLoginFoursquare {
+  umbrella header "Pods-TestLoginFoursquare-umbrella.h"
+
+  export *
+  module * { export * }
+}

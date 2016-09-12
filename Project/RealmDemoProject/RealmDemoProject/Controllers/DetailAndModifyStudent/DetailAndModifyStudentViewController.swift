@@ -54,8 +54,6 @@ class DetailAndModifyStudentViewController: UIViewController {
 
     // MARK: Set Up Notification Center
     func setUpNotification() {
-        self.notificationCenter.addObserver(self, selector: nil, name: NotificationCenterKey.deleteStudent, object: nil)
-        self.notificationCenter.addObserver(self, selector: nil, name: NotificationCenterKey.modifyStudent, object: nil)
     }
 
     @IBAction func deleteStudentAction(sender: AnyObject) {
