@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="nameLabel" destination="FPi-Kg-21G" id="N3j-G4-mBa"/>
+                <outlet property="nameTextField" destination="Hf5-Gi-tHo" id="O9Q-T9-NPg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hf5-Gi-tHo">
+                    <rect key="frame" x="110" y="269" width="100" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="blo-0k-qYc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q62-wq-uKe">
+                    <rect key="frame" x="141" y="319" width="38" height="30"/>
+                    <state key="normal" title="Show"/>
+                    <connections>
+                        <action selector="showAction:" destination="-1" eventType="touchUpInside" id="wKg-Hu-6z2"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPi-Kg-21G">
+                    <rect key="frame" x="160" y="219" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="q62-wq-uKe" firstAttribute="centerX" secondItem="Hf5-Gi-tHo" secondAttribute="centerX" id="8g3-ZL-k9e"/>
+                <constraint firstItem="Hf5-Gi-tHo" firstAttribute="top" secondItem="FPi-Kg-21G" secondAttribute="bottom" constant="50" id="Nj5-yb-3zS"/>
+                <constraint firstItem="FPi-Kg-21G" firstAttribute="centerX" secondItem="Hf5-Gi-tHo" secondAttribute="centerX" id="SMe-h3-YtT"/>
+                <constraint firstItem="Hf5-Gi-tHo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ssr-SD-PrK"/>
+                <constraint firstItem="Hf5-Gi-tHo" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ug5-Gc-nZp"/>
+                <constraint firstItem="q62-wq-uKe" firstAttribute="top" secondItem="Hf5-Gi-tHo" secondAttribute="bottom" constant="20" id="XVl-4N-mtY"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
