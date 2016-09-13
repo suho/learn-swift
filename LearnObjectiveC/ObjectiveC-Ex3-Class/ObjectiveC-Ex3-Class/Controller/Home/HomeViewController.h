@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Human.h"
+#import "Man.h"
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UIViewController {
+    Human *human;
+}
+- (IBAction)showInfomationAction:(id)sender;
 
 @end

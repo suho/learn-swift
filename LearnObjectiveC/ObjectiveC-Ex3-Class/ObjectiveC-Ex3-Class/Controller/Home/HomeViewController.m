@@ -16,7 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    human = [[Human alloc] init];
+    [human setName:@"ABC"];
+    human.address = @"Da Nang";
     
+    Man *man = [[Man alloc] init];
+    man.isGay = false;
+    [man showInfo];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,4 +30,7 @@
     
 }
 
+- (IBAction)showInfomationAction:(id)sender {
+    [human showInfo];
+}
 @end
