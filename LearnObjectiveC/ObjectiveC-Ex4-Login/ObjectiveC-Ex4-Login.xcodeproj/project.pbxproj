@@ -1,0 +1,357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		999D28381D893A3200AEB538 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 999D28371D893A3200AEB538 /* LaunchScreen.storyboard */; };
+		999D283B1D893A3900AEB538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 999D283A1D893A3900AEB538 /* Assets.xcassets */; };
+		999D283F1D893A4100AEB538 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 999D283D1D893A4100AEB538 /* Info.plist */; };
+		999D28401D893A4100AEB538 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 999D283E1D893A4100AEB538 /* main.m */; };
+		999D28441D893A5100AEB538 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 999D28431D893A5100AEB538 /* AppDelegate.m */; };
+		999D28491D893A8500AEB538 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 999D28471D893A8500AEB538 /* LoginViewController.m */; };
+		999D284A1D893A8500AEB538 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 999D28481D893A8500AEB538 /* LoginViewController.xib */; };
+		999D28511D893D2D00AEB538 /* LogoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 999D284F1D893D2D00AEB538 /* LogoutViewController.m */; };
+		999D28521D893D2D00AEB538 /* LogoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 999D28501D893D2D00AEB538 /* LogoutViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		999D281B1D8939BA00AEB538 /* ObjectiveC-Ex4-Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ObjectiveC-Ex4-Login.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		999D28371D893A3200AEB538 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		999D283A1D893A3900AEB538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		999D283D1D893A4100AEB538 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		999D283E1D893A4100AEB538 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		999D28421D893A5100AEB538 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		999D28431D893A5100AEB538 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		999D28461D893A8500AEB538 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		999D28471D893A8500AEB538 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		999D28481D893A8500AEB538 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		999D284E1D893D2D00AEB538 /* LogoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutViewController.h; sourceTree = "<group>"; };
+		999D284F1D893D2D00AEB538 /* LogoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoutViewController.m; sourceTree = "<group>"; };
+		999D28501D893D2D00AEB538 /* LogoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoutViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		999D28181D8939BA00AEB538 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		999D28121D8939BA00AEB538 = {
+			isa = PBXGroup;
+			children = (
+				999D281D1D8939BA00AEB538 /* ObjectiveC-Ex4-Login */,
+				999D281C1D8939BA00AEB538 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		999D281C1D8939BA00AEB538 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				999D281B1D8939BA00AEB538 /* ObjectiveC-Ex4-Login.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		999D281D1D8939BA00AEB538 /* ObjectiveC-Ex4-Login */ = {
+			isa = PBXGroup;
+			children = (
+				999D28351D8939EA00AEB538 /* Controllers */,
+				999D28361D893A3200AEB538 /* LaunchScreen */,
+				999D28391D893A3900AEB538 /* Resources */,
+				999D283C1D893A4100AEB538 /* Support */,
+			);
+			path = "ObjectiveC-Ex4-Login";
+			sourceTree = "<group>";
+		};
+		999D28351D8939EA00AEB538 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				999D28411D893A5100AEB538 /* AppDelegate */,
+				999D28451D893A7700AEB538 /* Login */,
+				999D284D1D893D1E00AEB538 /* Logout */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		999D28361D893A3200AEB538 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				999D28371D893A3200AEB538 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		999D28391D893A3900AEB538 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				999D283A1D893A3900AEB538 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		999D283C1D893A4100AEB538 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				999D283D1D893A4100AEB538 /* Info.plist */,
+				999D283E1D893A4100AEB538 /* main.m */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		999D28411D893A5100AEB538 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				999D28421D893A5100AEB538 /* AppDelegate.h */,
+				999D28431D893A5100AEB538 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		999D28451D893A7700AEB538 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				999D28461D893A8500AEB538 /* LoginViewController.h */,
+				999D28471D893A8500AEB538 /* LoginViewController.m */,
+				999D28481D893A8500AEB538 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		999D284D1D893D1E00AEB538 /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+				999D284E1D893D2D00AEB538 /* LogoutViewController.h */,
+				999D284F1D893D2D00AEB538 /* LogoutViewController.m */,
+				999D28501D893D2D00AEB538 /* LogoutViewController.xib */,
+			);
+			path = Logout;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		999D281A1D8939BA00AEB538 /* ObjectiveC-Ex4-Login */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 999D28321D8939BA00AEB538 /* Build configuration list for PBXNativeTarget "ObjectiveC-Ex4-Login" */;
+			buildPhases = (
+				999D28171D8939BA00AEB538 /* Sources */,
+				999D28181D8939BA00AEB538 /* Frameworks */,
+				999D28191D8939BA00AEB538 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ObjectiveC-Ex4-Login";
+			productName = "ObjectiveC-Ex4-Login";
+			productReference = 999D281B1D8939BA00AEB538 /* ObjectiveC-Ex4-Login.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		999D28131D8939BA00AEB538 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Ho Van Su";
+				TargetAttributes = {
+					999D281A1D8939BA00AEB538 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = W6VWBYHU5C;
+					};
+				};
+			};
+			buildConfigurationList = 999D28161D8939BA00AEB538 /* Build configuration list for PBXProject "ObjectiveC-Ex4-Login" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 999D28121D8939BA00AEB538;
+			productRefGroup = 999D281C1D8939BA00AEB538 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				999D281A1D8939BA00AEB538 /* ObjectiveC-Ex4-Login */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		999D28191D8939BA00AEB538 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				999D284A1D893A8500AEB538 /* LoginViewController.xib in Resources */,
+				999D28381D893A3200AEB538 /* LaunchScreen.storyboard in Resources */,
+				999D283B1D893A3900AEB538 /* Assets.xcassets in Resources */,
+				999D283F1D893A4100AEB538 /* Info.plist in Resources */,
+				999D28521D893D2D00AEB538 /* LogoutViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		999D28171D8939BA00AEB538 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				999D28441D893A5100AEB538 /* AppDelegate.m in Sources */,
+				999D28401D893A4100AEB538 /* main.m in Sources */,
+				999D28511D893D2D00AEB538 /* LogoutViewController.m in Sources */,
+				999D28491D893A8500AEB538 /* LoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		999D28301D8939BA00AEB538 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		999D28311D8939BA00AEB538 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		999D28331D8939BA00AEB538 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/ObjectiveC-Ex4-Login/Support/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.suhv.ObjectiveC-Ex4-Login";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		999D28341D8939BA00AEB538 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/ObjectiveC-Ex4-Login/Support/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.suhv.ObjectiveC-Ex4-Login";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		999D28161D8939BA00AEB538 /* Build configuration list for PBXProject "ObjectiveC-Ex4-Login" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				999D28301D8939BA00AEB538 /* Debug */,
+				999D28311D8939BA00AEB538 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		999D28321D8939BA00AEB538 /* Build configuration list for PBXNativeTarget "ObjectiveC-Ex4-Login" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				999D28331D8939BA00AEB538 /* Debug */,
+				999D28341D8939BA00AEB538 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 999D28131D8939BA00AEB538 /* Project object */;
+}

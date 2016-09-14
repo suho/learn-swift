@@ -8,8 +8,7 @@
 
 #import "Human.h"
 
-@interface Man : Human {
-}
+@interface Man : Human
 
 @property (nonatomic) bool isGay;
 
